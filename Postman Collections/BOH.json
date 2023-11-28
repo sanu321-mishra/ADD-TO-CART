@@ -102,6 +102,30 @@
 				},
 				{
 					"name": "Get Todays form status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9172bd98-7f42-4187-92ea-4e466df79d8e",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Each element in the data array has formName, status, serviceDate, id, and isDueDateExceeded properties\", function () {\r",
+									"    pm.response.json().data.forEach(function(form) {\r",
+									"        pm.expect(form).to.have.all.keys('formName', 'status', 'serviceDate', 'id', 'isDueDateExceeded');\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "39c31bf8-83c6-464b-a763-6b5ad913644f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -115,6 +139,32 @@
 				},
 				{
 					"name": "Get Inventory Pending Form",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ea33ba1e-cc50-432c-8b11-5cb16c0fdd67",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Each element in the data array has formName, status, serviceDate, id, and isDueDateExceeded properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    data.forEach(function(form) {\r",
+									"        pm.expect(form).to.be.an('object').that.has.all.keys('formName', 'status', 'serviceDate', 'id', 'isDueDateExceeded');\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "2c82917d-fde6-41c9-a02b-bc719c6261ca",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
