@@ -1,0 +1,795 @@
+{
+	"info": {
+		"_postman_id": "4e033a36-c6b3-441f-adbe-21116eba6376",
+		"name": "BOH Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inventory dashboard",
+			"item": [
+				{
+					"name": "Get Inventory Summary For Dashboard",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d02f7d6f-cb1b-4163-9f86-26450d33459a",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Each itemized inventory has properties name, beginningPerpetual, totalIn, totalOut, currentPerpetual, and id\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    jsonData.data.itemizedInventories.forEach(function(item) {\r",
+									"        pm.expect(item).to.be.an('object').that.has.all.keys('name', 'beginningPerpetual', 'totalIn', 'totalOut', 'currentPerpetual', 'id');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Each category summary has properties name and count\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    jsonData.data.categorySummaries.forEach(function(category) {\r",
+									"        pm.expect(category).to.be.an('object').that.has.all.keys('name', 'count');\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "e5cfa4f5-b0bb-4a08-9380-aa40b06b4e92",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/SF-0145/summary"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Inventory Transfer Pending",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a84f799-7ac9-4a3d-bbdc-bc9e4bc481fc",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object');\r",
+									"    pm.expect(jsonData).to.have.property('title');\r",
+									"    pm.expect(jsonData).to.have.property('data');\r",
+									"    pm.expect(jsonData).to.have.property('statusCode');\r",
+									"    pm.expect(jsonData).to.have.property('isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Each element in the data array has serviceDate, status, transferType, and id properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    jsonData.data.forEach(function(transfer) {\r",
+									"        pm.expect(transfer).to.have.property('serviceDate');\r",
+									"        pm.expect(transfer).to.have.property('status');\r",
+									"        pm.expect(transfer).to.have.property('transferType');\r",
+									"        pm.expect(transfer).to.have.property('id');\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "9c3a5cea-9262-4652-8cd6-ff0ed3e2cb8b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/SF-0145/pendingproducttransfers"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Todays form status",
+					"id": "39c31bf8-83c6-464b-a763-6b5ad913644f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/SF-0145/todaysforms"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Inventory Pending Form",
+					"id": "2c82917d-fde6-41c9-a02b-bc719c6261ca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/SF-0145/pendingforms"
+					},
+					"response": []
+				}
+			],
+			"id": "eece15e7-f2bf-45f2-aa4e-14bc3283b4df",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2db74fa6-2e46-43be-b0b4-0207094c3f31",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2789d0c1-66cd-4acc-85b4-c4fd27202b8b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Occurrencelog",
+			"item": [
+				{
+					"name": "Get OccurrenceLog BY ID",
+					"id": "eaaacf38-a59b-45dc-b9af-63b5e1d17132",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}production/occurrencelogs/e29cf995-eed9-4736-8a27-3049811cb266"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Occurrence Log Data",
+					"id": "e952521f-0a8f-40c6-9c8a-526434cd8297",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sfcode\": \"sf-01\",\r\n  \"statusId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"occuranceIncidentTypeId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"occuranceDate\": \"2023-11-28T09:20:15.061Z\",\r\n  \"note\": \"Hello villain\",\r\n  \"occuranceSfcodeList\": \"string\",\r\n  \"occuranceStartDateTime\": \"2023-11-28T09:20:15.061Z\",\r\n  \"ocurranceEndDateTime\": \"2023-11-28T09:20:15.061Z\",\r\n  \"isFieldOfficeCalled\": true,\r\n  \"isSendEmail\": true,\r\n  \"emailSentStatus\": 0,\r\n  \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/production/occurrencelogs"
+					},
+					"response": []
+				},
+				{
+					"name": "Update OccurrenceLog Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9781aa8a-5f0d-4722-aee4-200f264224dc",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with specific properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object');\r",
+									"    pm.expect(jsonData).to.have.property('title');\r",
+									"    pm.expect(jsonData).to.have.property('statusCode');\r",
+									"    pm.expect(jsonData).to.have.property('error');\r",
+									"    pm.expect(jsonData).to.have.property('isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "fb59c741-a648-4b6d-9014-be00cf6397fd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sfcode\": \"sf-0146\",\r\n  \"statusId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"occuranceIncidentTypeId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"occuranceDate\": \"2023-11-28T10:02:40.285Z\",\r\n  \"note\": \"string\",\r\n  \"occuranceSfcodeList\": \"string\",\r\n  \"occuranceStartDateTime\": \"2023-11-28T10:02:40.285Z\",\r\n  \"ocurranceEndDateTime\": \"2023-11-28T10:02:40.285Z\",\r\n  \"isFieldOfficeCalled\": true,\r\n  \"isSendEmail\": true,\r\n  \"emailSentStatus\": 0,\r\n  \"isActive\": true,\r\n  \"isDeleted\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/production/occurrencelogs/f0a096b0-9f5b-48fc-ba86-e9903cab528b"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Occurrence Log Data",
+					"id": "25da4a4e-2838-44b5-9bba-1d5ec7c4b40f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/occurrencelogs/f0a096b0-9f5b-48fc-ba86-e9903cab528b"
+					},
+					"response": []
+				}
+			],
+			"id": "bd5337b4-767b-4b35-9e21-340bb27ed298"
+		},
+		{
+			"name": "Production Dashboard",
+			"item": [
+				{
+					"name": "Todays Form status",
+					"id": "0eec2891-f575-4269-98c3-e3b4b1e1f3ce",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/SF-0145/todaysforms"
+					},
+					"response": []
+				},
+				{
+					"name": "Incomplete Form",
+					"id": "622ce883-5d2e-4749-a859-550fb0b729ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/SF-0145/incompleteforms"
+					},
+					"response": []
+				},
+				{
+					"name": "Upcoming School Trip Forms",
+					"id": "79440d36-cdbe-4646-a2ac-c4be3c7c4621",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/SF-0145/upcomingschooltripforms"
+					},
+					"response": []
+				}
+			],
+			"id": "6c99d971-f25f-4c92-a39d-e83c32534b61"
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "Occurrence Log",
+					"id": "75115d77-e401-4be1-8421-045146146c31",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/productions/occurrences?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"productions",
+								"occurrences"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "SF-0145"
+								},
+								{
+									"key": "From",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "To",
+									"value": "2024-10-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Production Record",
+					"id": "40118790-0670-4869-bfd0-60bb3cbfe9a9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"productions",
+								"productionrecords"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "SF-0145"
+								},
+								{
+									"key": "From",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "To",
+									"value": "2024-10-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "School Trip Lunch",
+					"id": "6f56c029-73e3-405e-9b63-b4c85c22bf6d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode=SF-0145&From=2020-10-01&To=2024-10-30&IsSchoolTripOnly=true",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"productions",
+								"productionrecords"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "SF-0145"
+								},
+								{
+									"key": "From",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "To",
+									"value": "2024-10-30"
+								},
+								{
+									"key": "IsSchoolTripOnly",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Physical Inventory",
+					"id": "401d1646-7d05-4447-825d-448a4f679d70",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/physicalinventories?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"physicalinventories"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "SF-0145"
+								},
+								{
+									"key": "From",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "To",
+									"value": "2024-10-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Transfer",
+					"id": "5cef4985-17c0-431a-8e1c-2f4ae4bd29b6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/producttransfers?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"producttransfers"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "SF-0145"
+								},
+								{
+									"key": "From",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "To",
+									"value": "2024-10-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recons statement",
+					"id": "93e4f42e-4c75-4e08-93b9-54ac3f3d227a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"reconcilliations"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "SF-0145"
+								},
+								{
+									"key": "From",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "To",
+									"value": "2024-10-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recons Statement Pending Review Only",
+					"id": "57dbff1b-5d5e-4548-b842-71016a4a468e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode=SF-0145&From=2020-10-01&To=2024-10-30&IsPendingReviewOnly=true",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"reconcilliations"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "SF-0145"
+								},
+								{
+									"key": "From",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "To",
+									"value": "2024-10-30"
+								},
+								{
+									"key": "IsPendingReviewOnly",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adjustment",
+					"id": "4dbeb058-3d9e-4c7f-aa1e-346ae240359f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/adjustments?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"adjustments"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "SF-0145"
+								},
+								{
+									"key": "From",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "To",
+									"value": "2024-10-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Requisitions",
+					"id": "c9030df8-8178-49b5-89a5-157a23b3ad73",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/requisitions?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"requisitions"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "SF-0145"
+								},
+								{
+									"key": "From",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "To",
+									"value": "2024-10-30"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "37e79f11-107a-493a-ad88-3e66a46489be"
+		},
+		{
+			"name": "Get Module Settings on school",
+			"id": "d074e0b4-e69e-41aa-9214-30c2f9c2f9b5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Module setting on school",
+			"id": "42748ab2-4bc9-4a22-ad9f-e9172ad197cf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b"
+			},
+			"response": []
+		},
+		{
+			"name": "Update InAppNotification  Status",
+			"id": "cea74fb5-846f-4b37-ac1f-859638d64a85",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "{{BaseUrl}}api/common/inappnotifications/sfcode/SF-0146"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Audit Trail",
+			"id": "9c708751-7584-4bbf-9623-dfe33ead7a22",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}api/common/audittrails/primarykey/1111e5f1-b856-4582-9390-1f0980deeab5"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Unseen Notification",
+			"id": "6096a9f9-b968-4a65-8444-8bafec66924c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}api/common/inappnotifications/unseentotal/sfcode/SF-0146"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notification with pagination",
+			"id": "3bb71032-c98a-405f-9e42-c0da8c8f050e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}api/common/inappnotifications?SfCode=SF-0146&Page=1&PageSize=10",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"common",
+						"inappnotifications"
+					],
+					"query": [
+						{
+							"key": "SfCode",
+							"value": "SF-0146"
+						},
+						{
+							"key": "Page",
+							"value": "1"
+						},
+						{
+							"key": "PageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogedIn User Detail",
+			"id": "480a6ec8-3465-406f-8ab1-a4589c34a665",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}api/userAccess/users"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": {
+			"password": "Svamtest01",
+			"username": "test01",
+			"clientSecret": "ibJaz09jrm",
+			"clientId": "1a3bafaf-9867-4a50-b6dd-99b33cd53ce0",
+			"accessTokenUrl": "https://svam.verify.ibm.com/oidc/endpoint/default/token",
+			"grant_type": "password_credentials",
+			"tokenName": "IBM Verify",
+			"addTokenTo": "header"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1fc15b94-8c85-4d84-b354-effd15989b26",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4e73fa15-0279-4465-8e66-084630cc4233",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
