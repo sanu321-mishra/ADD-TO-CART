@@ -1097,12 +1097,13 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"grant_type": "password_credentials",
+			"clientId": "870d20e3-bf5d-4daa-b648-780346e224d9",
+			"authUrl": "https://svam.verify.ibm.com/v1.0/endpoint/default/authorize",
+			"grant_type": "authorization_code_with_pkce",
 			"useBrowser": false,
 			"password": "Svamtest01",
 			"username": "test01",
 			"clientSecret": "ibJaz09jrm",
-			"clientId": "1a3bafaf-9867-4a50-b6dd-99b33cd53ce0",
 			"accessTokenUrl": "https://svam.verify.ibm.com/oidc/endpoint/default/token",
 			"tokenName": "IBM Verify",
 			"addTokenTo": "header"
@@ -1112,7 +1113,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e59b5e83-c527-4fc4-ae2c-c0570191b3e8",
+				"id": "9b42780e-cb94-43ae-9bf3-970f2d14db9e",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1122,7 +1123,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "e5e3565a-6d2f-40ee-9efe-21e4869ba898",
+				"id": "2d66b437-7dd6-4721-90a1-1522abf303df",
 				"type": "text/javascript",
 				"exec": [
 					""
