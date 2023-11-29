@@ -752,6 +752,43 @@
 				},
 				{
 					"name": "Physical Inventory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "eb20d227-9fd8-4bfa-b6a1-0f1df89f1d30",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response data contains count, data, and total properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    pm.expect(data).to.have.property('count');\r",
+									"    pm.expect(data).to.have.property('data');\r",
+									"    pm.expect(data).to.have.property('total');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response isSuccess is a boolean\", function () {\r",
+									"    pm.expect(pm.response.json().isSuccess).to.be.a('boolean');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8818f2a6-96ce-4d24-90ca-b4a263893d64",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "401d1646-7d05-4447-825d-448a4f679d70",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -789,6 +826,65 @@
 				},
 				{
 					"name": "Product Transfer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8f037455-91a4-4e3d-87f3-b35d8da9648c",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response data property has count, data, and total properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    pm.expect(data).to.have.property('count');\r",
+									"    pm.expect(data).to.have.property('data');\r",
+									"    pm.expect(data).to.have.property('total');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Each element in the count array has status, statusId, and total properties\", function () {\r",
+									"    pm.response.json().data.count.forEach(function(item) {\r",
+									"        pm.expect(item).to.have.property('status');\r",
+									"        pm.expect(item).to.have.property('statusId');\r",
+									"        pm.expect(item).to.have.property('total');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Each element in the data array has productTransferId, transferredOn, sfCode, buildingCode, status, and statusId properties\", function () {\r",
+									"    pm.response.json().data.data.forEach(function(item) {\r",
+									"        pm.expect(item).to.have.property('productTransferId');\r",
+									"        pm.expect(item).to.have.property('transferredOn');\r",
+									"        pm.expect(item).to.have.property('sfCode');\r",
+									"        pm.expect(item).to.have.property('buildingCode');\r",
+									"        pm.expect(item).to.have.property('status');\r",
+									"        pm.expect(item).to.have.property('statusId');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has statusCode, isSuccess, and title properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property('statusCode');\r",
+									"    pm.expect(jsonData).to.have.property('isSuccess');\r",
+									"    pm.expect(jsonData).to.have.property('title');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "3ebd1319-1c48-431f-b85b-529e3e089b5b",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "5cef4985-17c0-431a-8e1c-2f4ae4bd29b6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -826,6 +922,43 @@
 				},
 				{
 					"name": "Recons statement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d46c3f4b-9f52-491a-b604-c63891679ef7",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response data contains count, data, and total properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    pm.expect(data).to.have.property('count');\r",
+									"    pm.expect(data).to.have.property('data');\r",
+									"    pm.expect(data).to.have.property('total');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains isSuccess property with value true\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('isSuccess', true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "482120ca-3ea6-4163-b7ae-f3e8eef3760f",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "93e4f42e-4c75-4e08-93b9-54ac3f3d227a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -863,6 +996,69 @@
 				},
 				{
 					"name": "Recons Statement Pending Review Only",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cb9a0e40-3a34-4b6f-989e-e5398ae652a1",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a title property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('title');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a count array with status, statusId, and total properties\", function () {\r",
+									"    pm.response.json().data.count.forEach(function(count) {\r",
+									"        pm.expect(count).to.have.property('status');\r",
+									"        pm.expect(count).to.have.property('statusId');\r",
+									"        pm.expect(count).to.have.property('total');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a data array with reconciliationID, serviceDate, submissionDate, verifiedDate, buildingCode, sfCode, reconStatus, and statusId properties\", function () {\r",
+									"    pm.response.json().data.data.forEach(function(data) {\r",
+									"        pm.expect(data).to.have.property('reconciliationID');\r",
+									"        pm.expect(data).to.have.property('serviceDate');\r",
+									"        pm.expect(data).to.have.property('submissionDate');\r",
+									"        pm.expect(data).to.have.property('verifiedDate');\r",
+									"        pm.expect(data).to.have.property('buildingCode');\r",
+									"        pm.expect(data).to.have.property('sfCode');\r",
+									"        pm.expect(data).to.have.property('reconStatus');\r",
+									"        pm.expect(data).to.have.property('statusId');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a total property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('total');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a statusCode property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('statusCode');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a isSuccess property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "aac8de24-4e17-4428-a6f8-7dd94fb05586",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "57dbff1b-5d5e-4548-b842-71016a4a468e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
