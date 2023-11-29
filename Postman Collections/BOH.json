@@ -1100,6 +1100,53 @@
 				},
 				{
 					"name": "Adjustment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "369e0ba8-ac7e-44e0-8521-f8c21d6b5f2c",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Count array contains objects with total property\", function () {\r",
+									"    var countArray = pm.response.json().data.count;\r",
+									"    countArray.forEach(function(item) {\r",
+									"        pm.expect(item).to.have.property('total');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Data array contains objects with adjustmentId, serviceDate, sfCode, and buildingCode properties\", function () {\r",
+									"    var dataArray = pm.response.json().data.data;\r",
+									"    dataArray.forEach(function(item) {\r",
+									"        pm.expect(item).to.have.all.keys('adjustmentId', 'serviceDate', 'sfCode', 'buildingCode');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Total property is a number\", function () {\r",
+									"    pm.expect(jsonData.data).to.have.property('total').that.is.a('number');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "666a599e-9aec-427c-b6fd-ce48292b0b7a",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "4dbeb058-3d9e-4c7f-aa1e-346ae240359f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1137,6 +1184,65 @@
 				},
 				{
 					"name": "Requisitions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c342ef91-a332-4f19-823d-ae9be3ec6a65",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains count array with status, statusId, and total properties\", function () {\r",
+									"    pm.expect(pm.response.json().data.count).to.be.an('array').that.is.not.empty;\r",
+									"    pm.response.json().data.count.forEach(function(item) {\r",
+									"        pm.expect(item).to.have.property('status');\r",
+									"        pm.expect(item).to.have.property('statusId');\r",
+									"        pm.expect(item).to.have.property('total');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains data array with id, serviceDate, sfCode, buildingCode, status, and statusId properties\", function () {\r",
+									"    pm.expect(pm.response.json().data.data).to.be.an('array').that.is.not.empty;\r",
+									"    pm.response.json().data.data.forEach(function(item) {\r",
+									"        pm.expect(item).to.have.property('id');\r",
+									"        pm.expect(item).to.have.property('serviceDate');\r",
+									"        pm.expect(item).to.have.property('sfCode');\r",
+									"        pm.expect(item).to.have.property('buildingCode');\r",
+									"        pm.expect(item).to.have.property('status');\r",
+									"        pm.expect(item).to.have.property('statusId');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains total property\", function () {\r",
+									"    pm.expect(pm.response.json().data).to.have.property('total');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains statusCode property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('statusCode');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains isSuccess property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f7757480-c8cd-4264-825e-b98215021577",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "c9030df8-8178-49b5-89a5-157a23b3ad73",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1177,6 +1283,59 @@
 		},
 		{
 			"name": "Get Module Settings on school",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d0fa4447-0a20-45a9-a7ea-c25be8f88437",
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an object with data property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has data property with data array\", function () {\r",
+							"    pm.expect(pm.response.json().data).to.have.property('data').that.is.an('array');\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Each element in the data array has sfCode property\", function () {\r",
+							"    pm.response.json().data.data.forEach(function(item) {\r",
+							"        pm.expect(item).to.have.property('sfCode');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Each element in the data array has type property\", function () {\r",
+							"    pm.response.json().data.data.forEach(function(item) {\r",
+							"        pm.expect(item).to.have.property('type');\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response has statusCode property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('statusCode');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has isSuccess property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('isSuccess');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "978ffaff-4cd3-4e6a-9fd5-17c23b056634",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "d074e0b4-e69e-41aa-9214-30c2f9c2f9b5",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
