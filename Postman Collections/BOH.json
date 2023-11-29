@@ -345,14 +345,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"sfcode\": \"sf-0146\",\r\n  \"statusId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"occuranceIncidentTypeId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"occuranceDate\": \"2023-11-28T10:02:40.285Z\",\r\n  \"note\": \"string\",\r\n  \"occuranceSfcodeList\": \"string\",\r\n  \"occuranceStartDateTime\": \"2023-11-28T10:02:40.285Z\",\r\n  \"ocurranceEndDateTime\": \"2023-11-28T10:02:40.285Z\",\r\n  \"isFieldOfficeCalled\": true,\r\n  \"isSendEmail\": true,\r\n  \"emailSentStatus\": 0,\r\n  \"isActive\": true,\r\n  \"isDeleted\": true\r\n}",
+							"raw": "{\r\n  \"sfcode\": \"sf-0146\",\r\n  \"statusId\": \"6C63E7E4-7A1E-4520-805A-E41DC0966C07\",\r\n  \"occuranceDate\": \"2023-11-28T09:20:15.061Z\",\r\n  \"note\": \"Hello villain 46\",\r\n  \"occuranceSfcodeList\": \"string\",\r\n  \"occuranceStartDateTime\": \"2023-11-28T09:20:15.061Z\",\r\n  \"ocurranceEndDateTime\": \"2023-11-28T09:20:15.061Z\",\r\n  \"isFieldOfficeCalled\": true,\r\n  \"isSendEmail\": true,\r\n  \"emailSentStatus\": 0,\r\n  \"isActive\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/occurrencelogs/f0a096b0-9f5b-48fc-ba86-e9903cab528b/sfcode/SF-0146"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/7BE4209A-C049-4260-A8C6-6AFDBF7F5EFB/sfcode/SF-0146"
 					},
 					"response": []
 				},
