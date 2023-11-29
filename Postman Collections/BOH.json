@@ -1533,16 +1533,16 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"redirect_uri": "https://localhost:44368/swagger/oauth2-redirect.html",
-			"grant_type": "authorization_code_with_pkce",
 			"clientId": "1a3bafaf-9867-4a50-b6dd-99b33cd53ce0",
+			"redirect_uri": "https://oauth.pstmn.io/v1/callback",
+			"tokenName": "",
+			"grant_type": "authorization_code_with_pkce",
 			"authUrl": "https://svam.verify.ibm.com/v1.0/endpoint/default/authorize",
 			"useBrowser": false,
 			"password": "Svamtest01",
 			"username": "test01",
 			"clientSecret": "ibJaz09jrm",
 			"accessTokenUrl": "https://svam.verify.ibm.com/oidc/endpoint/default/token",
-			"tokenName": "IBM Verify",
 			"addTokenTo": "header"
 		}
 	},
@@ -1550,7 +1550,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e505a95a-978a-4892-96a2-a1680469b9cc",
+				"id": "072036e3-5e3b-426e-b80a-e587626084a2",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1560,7 +1560,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "b2b2d2b5-ee55-4e03-9c4d-2bc7c38cfebe",
+				"id": "65232c75-0be0-4315-a91d-c425c7f77e6f",
 				"type": "text/javascript",
 				"exec": [
 					""
