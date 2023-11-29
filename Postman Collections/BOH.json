@@ -311,7 +311,29 @@
 					"response": []
 				}
 			],
-			"id": "bd5337b4-767b-4b35-9e21-340bb27ed298"
+			"id": "bd5337b4-767b-4b35-9e21-340bb27ed298",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c2230c3a-7ef0-4f14-bc2c-92591173ef47",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "565cf252-0bae-47d7-a1ce-3052d65be472",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		},
 		{
 			"name": "Production Dashboard",
