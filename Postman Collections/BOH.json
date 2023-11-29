@@ -219,6 +219,51 @@
 			"item": [
 				{
 					"name": "Get OccurrenceLog BY ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9c69a6fb-b223-46a2-b9b9-512b91bd8743",
+								"exec": [
+									"pm.test(\"Schema is valid\", function () {\r",
+									"  var schema = {\r",
+									"    type: \"object\",\r",
+									"    properties: {\r",
+									"      title: {\r",
+									"        type: \"string\"\r",
+									"      },\r",
+									"      data: {\r",
+									"        type: \"object\",\r",
+									"        properties: {\r",
+									"          id: { type: \"string\" },\r",
+									"          sfcode: { type: \"string\" },\r",
+									"          statusId: { type: \"string\" },\r",
+									"          occuranceDate: { type: \"string\" }\r",
+									"        },\r",
+									"        required: [\"id\", \"sfcode\", \"statusId\", \"occuranceDate\"]\r",
+									"      },\r",
+									"      statusCode: { type: \"number\" },\r",
+									"      isSuccess: { type: \"boolean\" }\r",
+									"    },\r",
+									"    required: [\"title\", \"data\", \"statusCode\", \"isSuccess\"]\r",
+									"  };\r",
+									"\r",
+									"});// Verify the length of data properties\r",
+									"pm.test(\"The data properties must not be empty\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    const data = responseData.data;\r",
+									"   \r",
+									"    pm.expect(Object.keys(data).length).to.be.greaterThan(0, \"Data properties should not be empty\");\r",
+									"\r",
+									"    for (const key in data) {\r",
+									"        pm.expect(data[key].length).to.be.greaterThan(0, \"Data property values should not be empty\");\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "eaaacf38-a59b-45dc-b9af-63b5e1d17132",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
