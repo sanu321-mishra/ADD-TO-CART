@@ -277,6 +277,20 @@
 				},
 				{
 					"name": "Add Occurrence Log Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "893fa8fa-b482-49e0-af52-ddc55246cc3d",
+								"exec": [
+									"pm.test(\"Response status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "e952521f-0a8f-40c6-9c8a-526434cd8297",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
