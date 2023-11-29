@@ -319,19 +319,19 @@
 							"script": {
 								"id": "9781aa8a-5f0d-4722-aee4-200f264224dc",
 								"exec": [
-									"pm.test(\"Status code is 401\", function () {\r",
-									"    pm.response.to.have.status(401);\r",
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
 									"});\r",
-									"\r",
-									"pm.test(\"Response is an object with specific properties\", function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData).to.be.an('object');\r",
-									"    pm.expect(jsonData).to.have.property('title');\r",
-									"    pm.expect(jsonData).to.have.property('statusCode');\r",
-									"    pm.expect(jsonData).to.have.property('error');\r",
-									"    pm.expect(jsonData).to.have.property('isSuccess');\r",
-									"});"
+									""
 								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "69a6dbca-f220-4809-aa63-2126f06d6cdc",
+								"exec": [],
 								"type": "text/javascript"
 							}
 						}
