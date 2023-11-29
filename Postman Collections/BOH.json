@@ -683,6 +683,34 @@
 				},
 				{
 					"name": "School Trip Lunch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7340e011-0444-4b29-834b-9f9e7fd18e01",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Data is only for productionRecordStructureType equal to School Trip Lunch\", function () {\r",
+									"    pm.response.json().data.data.forEach(function(record) {\r",
+									"        pm.expect(record.productionRecordStructureType).to.equal(\"School Trip Lunch\");\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "45638ea8-4e65-4146-93db-6a950704460e",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "6f56c029-73e3-405e-9b63-b4c85c22bf6d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
