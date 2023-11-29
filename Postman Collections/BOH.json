@@ -399,6 +399,40 @@
 			"item": [
 				{
 					"name": "Todays Form status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7459a1d6-24d7-4341-8ba4-5984c217ae28",
+								"exec": [
+									"// Test to check if the response contains the correct content type\r",
+									"pm.test(\"Response has the correct content type\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"// Test to check if the serviceDate only comes for today's date\r",
+									"pm.test(\"Service date is only for today's date\", function () {\r",
+									"    var today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format\r",
+									"    pm.response.json().data.forEach(function(record) {\r",
+									"        pm.expect(record.serviceDate).to.equal(today);\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "06d768d4-739a-4b93-80cf-5a486ee01724",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "0eec2891-f575-4269-98c3-e3b4b1e1f3ce",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -412,6 +446,37 @@
 				},
 				{
 					"name": "Incomplete Form",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "15d2e84e-28b9-46fc-9797-adab3a0c6b7a",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"No verified Status\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    const forms = responseData.data;\r",
+									"\r",
+									"    forms.forEach((form) => {\r",
+									"        pm.expect(form.status).to.not.equal('verified');\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "15daefdc-1220-4129-886e-8a41f1b5cd7e",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "622ce883-5d2e-4749-a859-550fb0b729ff",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -432,7 +497,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/SF-0145/upcomingschooltripforms"
+						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/SF-0146/upcomingschooltripforms"
 					},
 					"response": []
 				}
