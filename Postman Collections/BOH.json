@@ -170,6 +170,7 @@
 									"    var data = pm.response.json().data;\r",
 									"    data.forEach(function(form) {\r",
 									"        pm.expect(form).to.be.an('object').that.has.all.keys('formName', 'status', 'serviceDate', 'id', 'isDueDateExceeded');\r",
+									"        \r",
 									"    });\r",
 									"});"
 								],
