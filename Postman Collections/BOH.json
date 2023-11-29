@@ -226,7 +226,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}production/occurrencelogs/e29cf995-eed9-4736-8a27-3049811cb266"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/e29cf995-eed9-4736-8a27-3049811cb266"
 					},
 					"response": []
 				},
