@@ -21,36 +21,29 @@
 									"});\r",
 									"\r",
 									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Each itemized inventory has properties name, beginningPerpetual, totalIn, totalOut, currentPerpetual, and id\", function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    jsonData.data.itemizedInventories.forEach(function(item) {\r",
+									"    pm.response.json().data.itemizedInventories.forEach(function(item) {\r",
 									"        pm.expect(item).to.be.an('object').that.has.all.keys('name', 'beginningPerpetual', 'totalIn', 'totalOut', 'currentPerpetual', 'id');\r",
 									"    });\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Each category summary has properties name and count\", function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    \r",
-									"    pm.expect(jsonData.data.categorySummaries).to.be.an('array');\r",
-									"\r",
-									"    jsonData.data.categorySummaries.forEach(function(category) {\r",
-									"        try {\r",
-									"            pm.expect(category).to.be.an('object');\r",
-									"\r",
-									"            pm.expect(category).to.have.property('name');\r",
-									"            pm.expect(category).to.have.property('count');\r",
-									"\r",
-									"        } catch (error) {\r",
-									"            console.error(\"Error in category:\", category, \"\\n\", error);\r",
-									"        }\r",
+									"    pm.response.json().data.categorySummaries.forEach(function(category) {\r",
+									"        pm.expect(category).to.be.an('object').that.has.all.keys('name', 'count');\r",
 									"    });\r",
-									"});\r",
-									""
+									"});"
 								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f21b5b36-e694-4b7d-b09a-805230ade549",
+								"exec": [],
 								"type": "text/javascript"
 							}
 						}
