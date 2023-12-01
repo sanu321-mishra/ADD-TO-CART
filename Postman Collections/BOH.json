@@ -1526,7 +1526,8 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"clientId": "1a3bafaf-9867-4a50-b6dd-99b33cd53ce0",
+			"clientSecret": "",
+			"clientId": "870d20e3-bf5d-4daa-b648-780346e224d9",
 			"redirect_uri": "https://oauth.pstmn.io/v1/callback",
 			"tokenName": "",
 			"grant_type": "authorization_code_with_pkce",
@@ -1534,7 +1535,6 @@
 			"useBrowser": false,
 			"password": "Svamtest01",
 			"username": "test01",
-			"clientSecret": "ibJaz09jrm",
 			"accessTokenUrl": "https://svam.verify.ibm.com/oidc/endpoint/default/token",
 			"addTokenTo": "header"
 		}
@@ -1543,7 +1543,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "072036e3-5e3b-426e-b80a-e587626084a2",
+				"id": "ba5e2bdf-ddba-46cc-9783-76951e5a9334",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1553,7 +1553,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "65232c75-0be0-4315-a91d-c425c7f77e6f",
+				"id": "4193e7f8-c92d-491c-b873-667c1389dfed",
 				"type": "text/javascript",
 				"exec": [
 					""
