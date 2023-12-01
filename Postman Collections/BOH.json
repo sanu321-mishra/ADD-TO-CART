@@ -1526,8 +1526,8 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"clientSecret": "",
 			"clientId": "870d20e3-bf5d-4daa-b648-780346e224d9",
+			"clientSecret": "",
 			"redirect_uri": "https://oauth.pstmn.io/v1/callback",
 			"tokenName": "",
 			"grant_type": "authorization_code_with_pkce",
@@ -1543,7 +1543,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ba5e2bdf-ddba-46cc-9783-76951e5a9334",
+				"id": "d20f4e8a-3672-4ec4-9bfe-a7d599587f89",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1553,7 +1553,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "4193e7f8-c92d-491c-b873-667c1389dfed",
+				"id": "3e6d815e-ea60-4343-b931-5216c060494e",
 				"type": "text/javascript",
 				"exec": [
 					""
