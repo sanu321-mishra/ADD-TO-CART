@@ -1769,46 +1769,6 @@
 			"response": []
 		},
 		{
-			"name": "Admin Static Text",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "ac79ada3-453c-4393-b5f9-8aa4b726de32",
-						"exec": [
-							"pm.test(\"Response status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "c2fea579-9ce2-4357-827e-72ef9f72aa00",
-						"exec": [],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"id": "2bc15d2c-f8f0-40f7-8b96-c21ecf45c1c5",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{BaseUrl}}api/administration/statictext"
-			},
-			"response": []
-		},
-		{
 			"name": "Admin Module Setting",
 			"event": [
 				{
