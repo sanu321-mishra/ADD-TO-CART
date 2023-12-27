@@ -486,7 +486,7 @@
 									"});\r",
 									"\r",
 									"pm.test(\"Response data has a serviceDate property with an upcoming date\", function () {\r",
-									"    var serviceDate = pm.response.json().data.serviceDate;\r",
+									"    var serviceDate = pm.response.json().data[0].serviceDate;\r",
 									"    var upcomingDate = new Date(serviceDate) > new Date();\r",
 									"    pm.expect(upcomingDate).to.be.true;\r",
 									"});\r",
@@ -518,7 +518,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/SF-0146/upcomingschooltripforms"
+						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/SF-0145/upcomingschooltripforms"
 					},
 					"response": []
 				},
