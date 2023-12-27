@@ -1393,7 +1393,9 @@
 					"listen": "prerequest",
 					"script": {
 						"id": "30552feb-8b89-4a06-bf63-4405117a6246",
-						"exec": [],
+						"exec": [
+							""
+						],
 						"type": "text/javascript"
 					}
 				}
@@ -1405,7 +1407,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{BaseUrl}}api/common/audittrails/primarykey/1111e5f1-b856-4582-9390-1f0980deeab5"
+				"url": "{{BaseUrl}}api/administration/audittrails/primarykey/1111e5f1-b856-4582-9390-1f0980deeab5"
 			},
 			"response": []
 		},
