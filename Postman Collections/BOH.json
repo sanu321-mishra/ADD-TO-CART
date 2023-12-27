@@ -485,12 +485,13 @@
 									"  pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"\r",
 									"pm.test(\"Response data has a serviceDate property with an upcoming date\", function () {\r",
 									"    var serviceDate = pm.response.json().data.serviceDate;\r",
 									"    var upcomingDate = new Date(serviceDate) > new Date();\r",
 									"    pm.expect(upcomingDate).to.be.true;\r",
-									"});pm.test(\"Response has a title property\", function () {\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a title property\", function () {\r",
 									"    pm.expect(pm.response.json()).to.have.property('title');\r",
 									"});\r",
 									"\r",
@@ -503,7 +504,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "b5339ae6-11a5-4c5c-a3f0-10683ba8ef6d",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
