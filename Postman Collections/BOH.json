@@ -526,6 +526,19 @@
 						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/SF-0146/upcomingschooltripforms"
 					},
 					"response": []
+				},
+				{
+					"name": "Calender",
+					"id": "50e61d12-725c-4e5e-9200-93e3a9791a83",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/sf-0146/calendar"
+					},
+					"response": []
 				}
 			],
 			"id": "6c99d971-f25f-4c92-a39d-e83c32534b61"
@@ -1506,7 +1519,9 @@
 					"listen": "prerequest",
 					"script": {
 						"id": "72a4bd67-54ed-4757-a64f-14434ec6703d",
-						"exec": [],
+						"exec": [
+							""
+						],
 						"type": "text/javascript"
 					}
 				}
@@ -1518,7 +1533,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{BaseUrl}}api/userAccess/users"
+				"url": "{{BaseUrl}}api/useraccess/loggedinuserdetail"
 			},
 			"response": []
 		}
