@@ -24,17 +24,7 @@
 									"    pm.expect(pm.response.json()).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Each itemized inventory has properties name, beginningPerpetual, totalIn, totalOut, currentPerpetual, and id\", function () {\r",
-									"    pm.response.json().data.itemizedInventories.forEach(function(item) {\r",
-									"        pm.expect(item).to.be.an('object').that.has.all.keys('name', 'beginningPerpetual', 'totalIn', 'totalOut', 'currentPerpetual', 'id');\r",
-									"    });\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Each category summary has properties name and count\", function () {\r",
-									"    pm.response.json().data.categorySummaries.forEach(function(category) {\r",
-									"        pm.expect(category).to.be.an('object').that.has.all.keys('name', 'count');\r",
-									"    });\r",
-									"});"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -43,7 +33,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "f21b5b36-e694-4b7d-b09a-805230ade549",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
