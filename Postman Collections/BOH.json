@@ -256,7 +256,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/e29cf995-eed9-4736-8a27-3049811cb266"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/sf-0145/4184363a-6116-48e3-9bcd-06bd62d59a5e"
 					},
 					"response": []
 				},
