@@ -1606,6 +1606,44 @@
 		},
 		{
 			"name": "Inventory EDR log",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "81d70cf0-5e07-4d58-a715-29f1ea3ebb87",
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an object with data property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has a data array with elements\", function () {\r",
+							"    pm.expect(pm.response.json().data.data).to.be.an('array').that.is.not.empty;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has a statusCode property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('statusCode');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has an isSuccess property\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.property('isSuccess');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "434e5a71-eb75-4b6f-af18-76ffb9961abb",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "ce6202bf-ac41-46a1-9e18-0990d1f078de",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -1614,6 +1652,112 @@
 				"method": "GET",
 				"header": [],
 				"url": "{{BaseUrl}}api/inventory/inventories/sfcode/sf-0145/edrlogs"
+			},
+			"response": []
+		},
+		{
+			"name": "EDR Log Detail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3372d544-1abf-460f-9c8d-6efd3667b608",
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test for the existence of properties in the root object\r",
+							"pm.test(\"Response has title, data, statusCode, and isSuccess properties\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('title');\r",
+							"    pm.expect(jsonData).to.have.property('data');\r",
+							"    pm.expect(jsonData).to.have.property('statusCode');\r",
+							"    pm.expect(jsonData).to.have.property('isSuccess');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7f771208-022d-456f-b44c-8deab741f3f4",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "aa1a6164-5aad-42a5-b54c-fae323c697e7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}api/inventory/inventories/sfcode/sf-0145/edrlogdetails?EDRLogId=fb84fc94-9dca-4429-a766-3988df3d79b0",
+					"host": [
+						"{{BaseUrl}}api"
+					],
+					"path": [
+						"inventory",
+						"inventories",
+						"sfcode",
+						"sf-0145",
+						"edrlogdetails"
+					],
+					"query": [
+						{
+							"key": "EDRLogId",
+							"value": "fb84fc94-9dca-4429-a766-3988df3d79b0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin App Setting",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "73cd609e-dfce-44dd-bd7e-eb33069f9c1a",
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is within acceptable range\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9ba3ab2b-58f9-48f7-9b89-8b7a4c9777c7",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "2c991ce2-7407-479c-bc1a-c6a78284b62a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}api/administration/appsetting"
 			},
 			"response": []
 		}
