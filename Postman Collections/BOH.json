@@ -518,7 +518,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/SF-0145/upcomingschooltripforms"
+						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/{{sfcode}}/upcomingschooltripforms"
 					},
 					"response": []
 				},
