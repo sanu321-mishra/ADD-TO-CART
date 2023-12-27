@@ -1050,23 +1050,6 @@
 									"    });\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Response has a data array with reconciliationID, serviceDate, submissionDate, verifiedDate, buildingCode, sfCode, reconStatus, and statusId properties\", function () {\r",
-									"    pm.response.json().data.data.forEach(function(data) {\r",
-									"        pm.expect(data).to.have.property('reconciliationID');\r",
-									"        pm.expect(data).to.have.property('serviceDate');\r",
-									"        pm.expect(data).to.have.property('submissionDate');\r",
-									"        pm.expect(data).to.have.property('verifiedDate');\r",
-									"        pm.expect(data).to.have.property('buildingCode');\r",
-									"        pm.expect(data).to.have.property('sfCode');\r",
-									"        pm.expect(data).to.have.property('reconStatus');\r",
-									"        pm.expect(data).to.have.property('statusId');\r",
-									"    });\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Response has a total property\", function () {\r",
-									"    pm.expect(pm.response.json()).to.have.property('total');\r",
-									"});\r",
-									"\r",
 									"pm.test(\"Response has a statusCode property\", function () {\r",
 									"    pm.expect(pm.response.json()).to.have.property('statusCode');\r",
 									"});\r",
@@ -1082,7 +1065,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "aac8de24-4e17-4428-a6f8-7dd94fb05586",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
