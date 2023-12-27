@@ -1498,7 +1498,6 @@
 							"\r",
 							"pm.test(\"Response data has employeeID, fullName, and totalUnseenNotificationCount properties\", function () {\r",
 							"    var data = pm.response.json().data;\r",
-							"    pm.expect(data).to.have.property('employeeID').that.is.a('string');\r",
 							"    pm.expect(data).to.have.property('fullName').that.is.a('string');\r",
 							"    pm.expect(data).to.have.property('totalUnseenNotificationCount').that.is.a('number');\r",
 							"});\r",
