@@ -529,6 +529,33 @@
 				},
 				{
 					"name": "Calender",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c77ab1a7-5c47-4151-8951-c155700b88dc",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "5f9cc1f4-f21c-4555-984e-7e2342d6c4f4",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "50e61d12-725c-4e5e-9200-93e3a9791a83",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1534,6 +1561,59 @@
 				"method": "GET",
 				"header": [],
 				"url": "{{BaseUrl}}api/useraccess/loggedinuserdetail"
+			},
+			"response": []
+		},
+		{
+			"name": "Inventory Daily Requisition",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f5894cd7-91e2-4681-bd86-adfa5ea0c58e",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "17f0924c-e723-4d1a-8853-4dfeb787eab7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/sf-0145"
+			},
+			"response": []
+		},
+		{
+			"name": "Inventory EDR log",
+			"id": "ce6202bf-ac41-46a1-9e18-0990d1f078de",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}api/inventory/inventories/sfcode/sf-0145/edrlogs"
 			},
 			"response": []
 		}
