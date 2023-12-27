@@ -1423,7 +1423,9 @@
 					"listen": "prerequest",
 					"script": {
 						"id": "9444e897-19bd-4ec3-a00a-8fe87471ef3e",
-						"exec": [],
+						"exec": [
+							""
+						],
 						"type": "text/javascript"
 					}
 				}
@@ -1435,7 +1437,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{BaseUrl}}api/common/inappnotifications/unseentotal/sfcode/SF-0146"
+				"url": "{{BaseUrl}}api/administration/inappnotifications/unseentotal/sfcode/SF-0146"
 			},
 			"response": []
 		},
@@ -1449,26 +1451,24 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BaseUrl}}api/common/inappnotifications?SfCode=SF-0145&Page=1&PageSize=10",
+					"raw": "{{BaseUrl}}api/administration/inappnotifications/sfcode/sf-0145?Page=1&PageSize=1",
 					"host": [
 						"{{BaseUrl}}api"
 					],
 					"path": [
-						"common",
-						"inappnotifications"
+						"administration",
+						"inappnotifications",
+						"sfcode",
+						"sf-0145"
 					],
 					"query": [
-						{
-							"key": "SfCode",
-							"value": "SF-0145"
-						},
 						{
 							"key": "Page",
 							"value": "1"
 						},
 						{
 							"key": "PageSize",
-							"value": "10"
+							"value": "1"
 						}
 					]
 				}
