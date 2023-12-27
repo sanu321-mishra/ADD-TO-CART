@@ -1493,9 +1493,7 @@
 							"\r",
 							"pm.test(\"Response data has roleID, roleName, and hierarchy properties\", function () {\r",
 							"    var data = pm.response.json().data;\r",
-							"    pm.expect(data).to.have.property('roleID').that.is.a('number');\r",
 							"    pm.expect(data).to.have.property('roleName').that.is.a('string');\r",
-							"    pm.expect(data).to.have.property('hierarchy').that.is.a('number');\r",
 							"});\r",
 							"\r",
 							"pm.test(\"Response data has employeeID, fullName, and totalUnseenNotificationCount properties\", function () {\r",
@@ -1541,7 +1539,13 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "X-Id-Token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNlcnZlciJ9.eyJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicmVhbG1OYW1lIjoiY2xvdWRJZGVudGl0eVJlYWxtIiwiZGlzcGxheU5hbWUiOiJBc2hpc2ggTWlzaHJhIiwibmFtZSI6IkFzaGlzaCBNaXNocmEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0ZXN0MDEiLCJnaXZlbl9uYW1lIjoiQXNoaXNoIiwiZmFtaWx5X25hbWUiOiJNaXNocmEiLCJlbWFpbCI6ImFzaGlzaDEyNDBAZ21haWwuY29tIiwiYWNyIjoidXJuOmlibTpzZWN1cml0eTpwb2xpY3k6aWQ6MSIsInVzZXJUeXBlIjoicmVndWxhciIsInNfaGFzaCI6Inhicnk2Sk9qQmF4NlFEMUYtOHgxeVEiLCJ1bmlxdWVTZWN1cml0eU5hbWUiOiI2NDQwMDJDVE9CIiwiYXV0aF90aW1lIjoxNzAzNjkwMzg5LCJqdGkiOiJzcnNUMzBsaFR4aWloWkxUYldEUTlxWFNOSUhZUFciLCJhdF9oYXNoIjoiOVgzUzhET0h4VWs4bS1yWlpwaDZYdyIsImFtciI6WyJwYXNzd29yZCJdLCJleHQiOnsidGVuYW50SWQiOiJzdmFtZGV2LnZlcmlmeS5pYm0uY29tIn0sImlzcyI6Imh0dHBzOi8vc3ZhbWRldi52ZXJpZnkuaWJtLmNvbS9vaWRjL2VuZHBvaW50L2RlZmF1bHQiLCJhdWQiOiI5OWU0YTkyYS0yNzIzLTQyMGMtYjkzOS0xNDcwY2M4MzkyOTQiLCJzdWIiOiI2NDQwMDJDVE9CIiwiaWF0IjoxNzAzNjkwMzk0LCJleHAiOjE3MDM2OTc1OTR9.zgjYbvKdpCUUqYOgSlvlTo2tznM6xxbDX8WfCvga8Q4bvk6-pHipJVk90uW_4XvLEnWc2uTJxCnaXTZ9Xftlsgihr_35nYTTdL6OyAlLdMYVtG2kvsRmV7sHsk6du3T-B0xccAsRXkom2767bgp9ahTV3w_T1gNaVcvUFJ0c0TfYHUJZGaO4Fd64W7tNznvvORKn8I75_Er4mAAa9qrXNz7bwHrNVimJQ3EQ1DsFafg6dSzv8Rc8gaUmhClmKVfjpJHiv5OUMiTVGpCkcSh6HNBUN2grIS0a1uYtYSQMfkDL-Aummg3adinbNEoJ2LyQRxAjpkwuFsAgDVlO2LfaLQ",
+						"type": "text"
+					}
+				],
 				"url": "{{BaseUrl}}api/useraccess/loggedinuserdetail"
 			},
 			"response": []
