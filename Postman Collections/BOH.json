@@ -1800,6 +1800,47 @@
 				"url": "{{BaseUrl}}api/administration/statictext"
 			},
 			"response": []
+		},
+		{
+			"name": "Admin Module Setting",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7898fc59-20d9-422a-a2e6-0d61528de937",
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ba59341a-2361-4817-8c5a-df0309937a4b",
+						"exec": [],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "7ecf2130-2cee-46ba-848c-a660b0e63f50",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BaseUrl}}api/administration/modulesettings/district/8D175F75-E627-4BAD-9DBF-3108ACCBD35B"
+			},
+			"response": []
 		}
 	],
 	"auth": {
