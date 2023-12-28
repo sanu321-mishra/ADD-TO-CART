@@ -1875,10 +1875,10 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"clientId": "{{clientId}}",
 			"tokenName": "BOH-JwtToken",
 			"grant_type": "password_credentials",
 			"clientSecret": "h3nzHimJUG",
-			"clientId": "99e4a92a-2723-420c-b939-1470cc839294",
 			"accessTokenUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/token",
 			"authUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/authorize",
 			"redirect_uri": "https://oauth.pstmn.io/v1/callback",
@@ -1892,7 +1892,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "30212819-1895-4cd2-b6bb-632eb0aaaf2c",
+				"id": "b491bd67-6cd0-4776-859c-9bad9c2ea4b9",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1902,7 +1902,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "91f4bf38-deb7-4bee-a295-375e7d3ac543",
+				"id": "ab577450-4343-4a5b-990c-735f0f330c3c",
 				"type": "text/javascript",
 				"exec": [
 					""
