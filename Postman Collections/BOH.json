@@ -1570,7 +1570,16 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"isInventory\": false,\r\n  \"isProduction\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b/sfcode/SF-0149"
 					},
 					"response": []
 				},
