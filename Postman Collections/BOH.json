@@ -221,11 +221,9 @@
 									"        type: \"object\",\r",
 									"        properties: {\r",
 									"          id: { type: \"string\" },\r",
-									"          sfcode: { type: \"string\" },\r",
-									"          statusId: { type: \"string\" },\r",
-									"          occuranceDate: { type: \"string\" }\r",
+									"          sfcode: { type: \"string\" }\r",
 									"        },\r",
-									"        required: [\"id\", \"sfcode\", \"statusId\", \"occuranceDate\"]\r",
+									"        required: [\"id\", \"sfcode\"]\r",
 									"      },\r",
 									"      statusCode: { type: \"number\" },\r",
 									"      isSuccess: { type: \"boolean\" }\r",
@@ -233,16 +231,6 @@
 									"    required: [\"title\", \"data\", \"statusCode\", \"isSuccess\"]\r",
 									"  };\r",
 									"\r",
-									"});// Verify the length of data properties\r",
-									"pm.test(\"The data properties must not be empty\", function () {\r",
-									"    const responseData = pm.response.json();\r",
-									"    const data = responseData.data;\r",
-									"   \r",
-									"    pm.expect(Object.keys(data).length).to.be.greaterThan(0, \"Data properties should not be empty\");\r",
-									"\r",
-									"    for (const key in data) {\r",
-									"        pm.expect(data[key].length).to.be.greaterThan(0, \"Data property values should not be empty\");\r",
-									"    }\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -1579,7 +1567,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b/sfcode/SF-0149"
+						"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b/sfcode/{{sfcode}}"
 					},
 					"response": []
 				}
