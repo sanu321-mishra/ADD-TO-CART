@@ -47,7 +47,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/SF-0145/summary"
+						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/summary"
 					},
 					"response": []
 				},
@@ -93,7 +93,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/SF-0145/pendingproducttransfers"
+						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/pendingproducttransfers"
 					},
 					"response": []
 				},
@@ -130,7 +130,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/SF-0145/todaysforms"
+						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/todaysforms"
 					},
 					"response": []
 				},
@@ -170,7 +170,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/SF-0145/pendingforms"
+						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/pendingforms"
 					},
 					"response": []
 				}
@@ -256,7 +256,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/sf-0145/4184363a-6116-48e3-9bcd-06bd62d59a5e"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/4184363a-6116-48e3-9bcd-06bd62d59a5e"
 					},
 					"response": []
 				},
@@ -292,7 +292,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/SF-0146"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}"
 					},
 					"response": []
 				},
@@ -316,7 +316,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "69a6dbca-f220-4809-aa63-2126f06d6cdc",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -337,7 +339,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/occurrencelogs/7BE4209A-C049-4260-A8C6-6AFDBF7F5EFB/sfcode/SF-0146"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/7BE4209A-C049-4260-A8C6-6AFDBF7F5EFB/sfcode/{{sfcode}}"
 					},
 					"response": []
 				},
@@ -413,7 +415,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "06d768d4-739a-4b93-80cf-5a486ee01724",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -425,7 +429,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/SF-0145/todaysforms"
+						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/{{sfcode}}/todaysforms"
 					},
 					"response": []
 				},
@@ -457,7 +461,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "15daefdc-1220-4129-886e-8a41f1b5cd7e",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -469,7 +475,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/SF-0145/incompleteforms"
+						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/{{sfcode}}/incompleteforms"
 					},
 					"response": []
 				},
@@ -546,7 +552,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "5f9cc1f4-f21c-4555-984e-7e2342d6c4f4",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -558,7 +566,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/sf-0146/calendar"
+						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/{{sfcode}}/calendar"
 					},
 					"response": []
 				}
@@ -605,7 +613,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "0bc161d5-65a2-4f06-84d8-14449fbea7a9",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -618,7 +628,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/occurrences?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/productions/occurrences?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -630,7 +640,7 @@
 							"query": [
 								{
 									"key": "SfCode",
-									"value": "SF-0145"
+									"value": "{{sfcode}}"
 								},
 								{
 									"key": "From",
@@ -669,7 +679,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "eb7579c1-1ce1-44ad-a5d1-737fbb0e065d",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -682,7 +694,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -694,7 +706,7 @@
 							"query": [
 								{
 									"key": "SfCode",
-									"value": "SF-0145"
+									"value": "{{sfcode}}"
 								},
 								{
 									"key": "From",
@@ -734,7 +746,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "45638ea8-4e65-4146-93db-6a950704460e",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -747,7 +761,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode=SF-0145&From=2020-10-01&To=2024-10-30&IsSchoolTripOnly=true",
+							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30&IsSchoolTripOnly=true",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -759,7 +773,7 @@
 							"query": [
 								{
 									"key": "SfCode",
-									"value": "SF-0145"
+									"value": "{{sfcode}}"
 								},
 								{
 									"key": "From",
@@ -812,7 +826,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "8818f2a6-96ce-4d24-90ca-b4a263893d64",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -825,7 +841,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/physicalinventories?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/inventories/physicalinventories?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -837,7 +853,7 @@
 							"query": [
 								{
 									"key": "SfCode",
-									"value": "SF-0145"
+									"value": "{{sfcode}}"
 								},
 								{
 									"key": "From",
@@ -908,7 +924,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "3ebd1319-1c48-431f-b85b-529e3e089b5b",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -921,7 +939,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/producttransfers?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/inventories/producttransfers?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -933,7 +951,7 @@
 							"query": [
 								{
 									"key": "SfCode",
-									"value": "SF-0145"
+									"value": "{{sfcode}}"
 								},
 								{
 									"key": "From",
@@ -982,7 +1000,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "482120ca-3ea6-4163-b7ae-f3e8eef3760f",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -995,7 +1015,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1007,7 +1027,7 @@
 							"query": [
 								{
 									"key": "SfCode",
-									"value": "SF-0145"
+									"value": "{{sfcode}}"
 								},
 								{
 									"key": "From",
