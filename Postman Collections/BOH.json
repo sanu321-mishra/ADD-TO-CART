@@ -1100,7 +1100,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode=SF-0145&From=2020-10-01&To=2024-10-30&IsPendingReviewOnly=true",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30&IsPendingReviewOnly=true",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1112,7 +1112,7 @@
 							"query": [
 								{
 									"key": "SfCode",
-									"value": "SF-0145"
+									"value": "{{sfcode}}"
 								},
 								{
 									"key": "From",
@@ -1175,7 +1175,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "666a599e-9aec-427c-b6fd-ce48292b0b7a",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -1188,7 +1190,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/adjustments?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/inventories/adjustments?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1200,7 +1202,7 @@
 							"query": [
 								{
 									"key": "SfCode",
-									"value": "SF-0145"
+									"value": "{{sfcode}}"
 								},
 								{
 									"key": "From",
@@ -1271,7 +1273,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "f7757480-c8cd-4264-825e-b98215021577",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -1284,7 +1288,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/requisitions?SfCode=SF-0145&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/inventories/requisitions?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1296,7 +1300,7 @@
 							"query": [
 								{
 									"key": "SfCode",
-									"value": "SF-0145"
+									"value": "{{sfcode}}"
 								},
 								{
 									"key": "From",
@@ -1434,7 +1438,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/inappnotifications/unseentotal/sfcode/SF-0146"
+						"url": "{{BaseUrl}}api/administration/inappnotifications/unseentotal/sfcode/{{sfcode}}"
 					},
 					"response": []
 				},
@@ -1533,7 +1537,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/administration/inappnotifications/sfcode/sf-0145?Page=1&PageSize=1",
+							"raw": "{{BaseUrl}}api/administration/inappnotifications/sfcode/{{sfcode}}?Page=1&PageSize=1",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1541,7 +1545,7 @@
 								"administration",
 								"inappnotifications",
 								"sfcode",
-								"sf-0145"
+								"{{sfcode}}"
 							],
 							"query": [
 								{
@@ -1579,7 +1583,7 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"url": "{{BaseUrl}}api/common/inappnotifications/sfcode/SF-0146"
+						"url": "{{BaseUrl}}api/common/inappnotifications/sfcode/{{sfcode}}"
 					},
 					"response": []
 				}
@@ -1613,7 +1617,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "f5894cd7-91e2-4681-bd86-adfa5ea0c58e",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -1625,7 +1631,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/sf-0145"
+						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}"
 					},
 					"response": []
 				},
@@ -1664,7 +1670,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "434e5a71-eb75-4b6f-af18-76ffb9961abb",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -1676,7 +1684,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/sf-0145/edrlogs"
+						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/edrlogs"
 					},
 					"response": []
 				},
@@ -1708,7 +1716,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "7f771208-022d-456f-b44c-8deab741f3f4",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -1721,7 +1731,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/inventories/sfcode/sf-0145/edrlogdetails?EDRLogId=fb84fc94-9dca-4429-a766-3988df3d79b0",
+							"raw": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/edrlogdetails?EDRLogId=fb84fc94-9dca-4429-a766-3988df3d79b0",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1729,7 +1739,7 @@
 								"inventory",
 								"inventories",
 								"sfcode",
-								"sf-0145",
+								"{{sfcode}}",
 								"edrlogdetails"
 							],
 							"query": [
