@@ -1572,7 +1572,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"isInventory\": false,\r\n  \"isProduction\": true\r\n}",
+							"raw": "{\r\n  \"isInventory\": true,\r\n  \"isProduction\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1580,19 +1580,6 @@
 							}
 						},
 						"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b/sfcode/SF-0149"
-					},
-					"response": []
-				},
-				{
-					"name": "Update InAppNotification  Status",
-					"id": "cea74fb5-846f-4b37-ac1f-859638d64a85",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"url": "{{BaseUrl}}api/common/inappnotifications/sfcode/{{sfcode}}"
 					},
 					"response": []
 				}
