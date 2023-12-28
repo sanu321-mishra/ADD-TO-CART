@@ -1295,185 +1295,276 @@
 			"id": "37e79f11-107a-493a-ad88-3e66a46489be"
 		},
 		{
-			"name": "Get Module Settings on school",
-			"event": [
+			"name": "Admin",
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"id": "d0fa4447-0a20-45a9-a7ea-c25be8f88437",
-						"exec": [
-							"pm.test(\"Response status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "7534bc88-f6f8-4399-b8ab-18f2292e8f8a",
-						"exec": [],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"id": "d074e0b4-e69e-41aa-9214-30c2f9c2f9b5",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b"
-			},
-			"response": []
-		},
-		{
-			"name": "Update Module setting on school",
-			"id": "42748ab2-4bc9-4a22-ad9f-e9172ad197cf",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b"
-			},
-			"response": []
-		},
-		{
-			"name": "Update InAppNotification  Status",
-			"id": "cea74fb5-846f-4b37-ac1f-859638d64a85",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": "{{BaseUrl}}api/common/inappnotifications/sfcode/SF-0146"
-			},
-			"response": []
-		},
-		{
-			"name": "Get Audit Trail",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "39dc9560-8136-458e-a889-9fe331e9ab9d",
-						"exec": [
-							"pm.test(\"Response status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "30552feb-8b89-4a06-bf63-4405117a6246",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"id": "9c708751-7584-4bbf-9623-dfe33ead7a22",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{BaseUrl}}api/administration/audittrails/primarykey/1111e5f1-b856-4582-9390-1f0980deeab5"
-			},
-			"response": []
-		},
-		{
-			"name": "Get Unseen Notification",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "20964d6e-5c19-4fa0-b9ea-5bed5050cbdf",
-						"exec": [
-							"pm.test(\"Response status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "9444e897-19bd-4ec3-a00a-8fe87471ef3e",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"id": "6096a9f9-b968-4a65-8444-8bafec66924c",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{BaseUrl}}api/administration/inappnotifications/unseentotal/sfcode/SF-0146"
-			},
-			"response": []
-		},
-		{
-			"name": "Get Notification with pagination",
-			"id": "3bb71032-c98a-405f-9e42-c0da8c8f050e",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{BaseUrl}}api/administration/inappnotifications/sfcode/sf-0145?Page=1&PageSize=1",
-					"host": [
-						"{{BaseUrl}}api"
-					],
-					"path": [
-						"administration",
-						"inappnotifications",
-						"sfcode",
-						"sf-0145"
-					],
-					"query": [
+					"name": "Get Module Settings on school",
+					"event": [
 						{
-							"key": "Page",
-							"value": "1"
+							"listen": "test",
+							"script": {
+								"id": "d0fa4447-0a20-45a9-a7ea-c25be8f88437",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
 						},
 						{
-							"key": "PageSize",
-							"value": "1"
+							"listen": "prerequest",
+							"script": {
+								"id": "7534bc88-f6f8-4399-b8ab-18f2292e8f8a",
+								"exec": [],
+								"type": "text/javascript"
+							}
 						}
-					]
+					],
+					"id": "d074e0b4-e69e-41aa-9214-30c2f9c2f9b5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Audit Trail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "39dc9560-8136-458e-a889-9fe331e9ab9d",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "30552feb-8b89-4a06-bf63-4405117a6246",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "9c708751-7584-4bbf-9623-dfe33ead7a22",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/audittrails/primarykey/1111e5f1-b856-4582-9390-1f0980deeab5"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Unseen Notification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "20964d6e-5c19-4fa0-b9ea-5bed5050cbdf",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9444e897-19bd-4ec3-a00a-8fe87471ef3e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "6096a9f9-b968-4a65-8444-8bafec66924c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/inappnotifications/unseentotal/sfcode/SF-0146"
+					},
+					"response": []
+				},
+				{
+					"name": "Admin App Setting",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "73cd609e-dfce-44dd-bd7e-eb33069f9c1a",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is within acceptable range\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9ba3ab2b-58f9-48f7-9b89-8b7a4c9777c7",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "2c991ce2-7407-479c-bc1a-c6a78284b62a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/appsetting"
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Module Setting",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7898fc59-20d9-422a-a2e6-0d61528de937",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ba59341a-2361-4817-8c5a-df0309937a4b",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "7ecf2130-2cee-46ba-848c-a660b0e63f50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/modulesettings/district/8D175F75-E627-4BAD-9DBF-3108ACCBD35B"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Notification with pagination",
+					"id": "3bb71032-c98a-405f-9e42-c0da8c8f050e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/administration/inappnotifications/sfcode/sf-0145?Page=1&PageSize=1",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"administration",
+								"inappnotifications",
+								"sfcode",
+								"sf-0145"
+							],
+							"query": [
+								{
+									"key": "Page",
+									"value": "1"
+								},
+								{
+									"key": "PageSize",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Module setting on school",
+					"id": "42748ab2-4bc9-4a22-ad9f-e9172ad197cf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b"
+					},
+					"response": []
+				},
+				{
+					"name": "Update InAppNotification  Status",
+					"id": "cea74fb5-846f-4b37-ac1f-859638d64a85",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "{{BaseUrl}}api/common/inappnotifications/sfcode/SF-0146"
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"id": "626f27b8-14cb-4814-8b99-655e58c6fb52"
 		},
 		{
 			"name": "LogedIn User Detail",
@@ -1721,91 +1812,6 @@
 						}
 					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "Admin App Setting",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "73cd609e-dfce-44dd-bd7e-eb33069f9c1a",
-						"exec": [
-							"pm.test(\"Response status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response time is within acceptable range\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "9ba3ab2b-58f9-48f7-9b89-8b7a4c9777c7",
-						"exec": [],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"id": "2c991ce2-7407-479c-bc1a-c6a78284b62a",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{BaseUrl}}api/administration/appsetting"
-			},
-			"response": []
-		},
-		{
-			"name": "Admin Module Setting",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "7898fc59-20d9-422a-a2e6-0d61528de937",
-						"exec": [
-							"pm.test(\"Response status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
-							"});\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "ba59341a-2361-4817-8c5a-df0309937a4b",
-						"exec": [],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"id": "7ecf2130-2cee-46ba-848c-a660b0e63f50",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "{{BaseUrl}}api/administration/modulesettings/district/8D175F75-E627-4BAD-9DBF-3108ACCBD35B"
 			},
 			"response": []
 		}
