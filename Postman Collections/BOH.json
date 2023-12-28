@@ -1897,6 +1897,8 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"password": "bohpass1",
+			"username": "cking",
 			"clientId": "{{clientId}}",
 			"tokenName": "BOH-JwtToken",
 			"grant_type": "password_credentials",
@@ -1905,8 +1907,6 @@
 			"authUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/authorize",
 			"redirect_uri": "https://oauth.pstmn.io/v1/callback",
 			"useBrowser": false,
-			"password": "Svamtest01",
-			"username": "test01",
 			"addTokenTo": "header"
 		}
 	},
@@ -1914,7 +1914,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b491bd67-6cd0-4776-859c-9bad9c2ea4b9",
+				"id": "2265b2cd-9c50-491a-8cf6-59f0bbf40046",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1924,7 +1924,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ab577450-4343-4a5b-990c-735f0f330c3c",
+				"id": "6e62db7c-3ec1-454f-9102-aeb23bb44b28",
 				"type": "text/javascript",
 				"exec": [
 					""
