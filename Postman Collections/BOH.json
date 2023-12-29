@@ -1902,8 +1902,8 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"password": "Svamtest01",
-			"username": "smyles",
+			"password": "bohpass1",
+			"username": "cking",
 			"clientId": "{{clientId}}",
 			"tokenName": "BOH-JwtToken",
 			"grant_type": "password_credentials",
@@ -1919,7 +1919,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "8947bbc2-4bdc-4866-958f-346842937053",
+				"id": "1b83b217-a5b9-4b2e-a63d-bcf3f35c18cc",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1929,7 +1929,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "d2cf6e64-2565-4820-8238-cf750999c709",
+				"id": "cc4ea8c6-1cf6-4337-811a-6b06357d8c45",
 				"type": "text/javascript",
 				"exec": [
 					""
