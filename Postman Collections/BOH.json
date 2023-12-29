@@ -704,7 +704,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From={{From}}{{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -720,7 +720,7 @@
 								},
 								{
 									"key": "From",
-									"value": "{{From}}{{From}}"
+									"value": "{{From}}"
 								},
 								{
 									"key": "To",
