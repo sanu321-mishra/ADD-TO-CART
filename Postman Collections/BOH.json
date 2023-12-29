@@ -1025,7 +1025,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From=2023-12-29&To=2023-12-29",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1041,11 +1041,11 @@
 								},
 								{
 									"key": "From",
-									"value": "2023-12-29"
+									"value": "{{From}}"
 								},
 								{
 									"key": "To",
-									"value": "2023-12-29"
+									"value": "{{To}}"
 								}
 							]
 						}
@@ -1110,7 +1110,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From=2023-12-29&To=2023-12-29&IsPendingReviewOnly=true",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsPendingReviewOnly=true",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1126,11 +1126,11 @@
 								},
 								{
 									"key": "From",
-									"value": "2023-12-29"
+									"value": "{{From}}"
 								},
 								{
 									"key": "To",
-									"value": "2023-12-29"
+									"value": "{{To}}"
 								},
 								{
 									"key": "IsPendingReviewOnly",
