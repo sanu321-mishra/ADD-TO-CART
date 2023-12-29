@@ -1195,7 +1195,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/adjustments?SfCode={{sfcode}}&From={{From}}&To=",
+							"raw": "{{BaseUrl}}api/reports/inventories/adjustments?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1215,7 +1215,7 @@
 								},
 								{
 									"key": "To",
-									"value": ""
+									"value": "{{To}}"
 								}
 							]
 						}
@@ -1293,7 +1293,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/requisitions?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/inventories/requisitions?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1309,11 +1309,11 @@
 								},
 								{
 									"key": "From",
-									"value": "2020-10-01"
+									"value": "{{From}}"
 								},
 								{
 									"key": "To",
-									"value": "2024-10-30"
+									"value": "{{To}}"
 								}
 							]
 						}
