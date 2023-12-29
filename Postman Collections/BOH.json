@@ -638,7 +638,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/occurrences?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/productions/occurrences?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -654,11 +654,11 @@
 								},
 								{
 									"key": "From",
-									"value": "2020-10-01"
+									"value": "{{From}}"
 								},
 								{
 									"key": "To",
-									"value": "2024-10-30"
+									"value": "{{To}}"
 								}
 							]
 						}
@@ -704,7 +704,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From={{From}}{{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -720,11 +720,11 @@
 								},
 								{
 									"key": "From",
-									"value": "2020-10-01"
+									"value": "{{From}}{{From}}"
 								},
 								{
 									"key": "To",
-									"value": "2024-10-30"
+									"value": "{{To}}"
 								}
 							]
 						}
@@ -771,7 +771,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30&IsSchoolTripOnly=true",
+							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsSchoolTripOnly=true",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -787,11 +787,11 @@
 								},
 								{
 									"key": "From",
-									"value": "2020-10-01"
+									"value": "{{From}}"
 								},
 								{
 									"key": "To",
-									"value": "2024-10-30"
+									"value": "{{To}}"
 								},
 								{
 									"key": "IsSchoolTripOnly",
@@ -851,7 +851,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/physicalinventories?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/inventories/physicalinventories?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -867,11 +867,11 @@
 								},
 								{
 									"key": "From",
-									"value": "2020-10-01"
+									"value": "{{From}}"
 								},
 								{
 									"key": "To",
-									"value": "2024-10-30"
+									"value": "{{To}}"
 								}
 							]
 						}
@@ -949,7 +949,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/producttransfers?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/inventories/producttransfers?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -965,11 +965,11 @@
 								},
 								{
 									"key": "From",
-									"value": "2020-10-01"
+									"value": "{{From}}"
 								},
 								{
 									"key": "To",
-									"value": "2024-10-30"
+									"value": "{{To}}"
 								}
 							]
 						}
@@ -1025,7 +1025,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1041,11 +1041,11 @@
 								},
 								{
 									"key": "From",
-									"value": "2020-10-01"
+									"value": "{{From}}"
 								},
 								{
 									"key": "To",
-									"value": "2024-10-30"
+									"value": "{{To}}"
 								}
 							]
 						}
@@ -1110,7 +1110,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30&IsPendingReviewOnly=true",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsPendingReviewOnly=true",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1126,11 +1126,11 @@
 								},
 								{
 									"key": "From",
-									"value": "2020-10-01"
+									"value": "{{From}}"
 								},
 								{
 									"key": "To",
-									"value": "2024-10-30"
+									"value": "{{To}}"
 								},
 								{
 									"key": "IsPendingReviewOnly",
@@ -1195,7 +1195,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/adjustments?SfCode={{sfcode}}&From=2020-10-01&To=2024-10-30",
+							"raw": "{{BaseUrl}}api/reports/inventories/adjustments?SfCode={{sfcode}}&From={{From}}&To=",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1211,11 +1211,11 @@
 								},
 								{
 									"key": "From",
-									"value": "2020-10-01"
+									"value": "{{From}}"
 								},
 								{
 									"key": "To",
-									"value": "2024-10-30"
+									"value": ""
 								}
 							]
 						}
