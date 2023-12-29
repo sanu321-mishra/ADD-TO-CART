@@ -1025,7 +1025,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From=2023-12-29&To=2023-12-29",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1041,11 +1041,11 @@
 								},
 								{
 									"key": "From",
-									"value": "{{From}}"
+									"value": "2023-12-29"
 								},
 								{
 									"key": "To",
-									"value": "{{To}}"
+									"value": "2023-12-29"
 								}
 							]
 						}
@@ -1110,7 +1110,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsPendingReviewOnly=true",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From=2023-12-29&To=2023-12-29&IsPendingReviewOnly=true",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1126,11 +1126,11 @@
 								},
 								{
 									"key": "From",
-									"value": "{{From}}"
+									"value": "2023-12-29"
 								},
 								{
 									"key": "To",
-									"value": "{{To}}"
+									"value": "2023-12-29"
 								},
 								{
 									"key": "IsPendingReviewOnly",
@@ -1314,6 +1314,90 @@
 								{
 									"key": "To",
 									"value": "{{To}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Daily Requisition",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d46c3f4b-9f52-491a-b604-c63891679ef7",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response data contains count, data, and total properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    pm.expect(data).to.have.property('count');\r",
+									"    pm.expect(data).to.have.property('data');\r",
+									"    pm.expect(data).to.have.property('total');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains isSuccess property with value true\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('isSuccess', true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "482120ca-3ea6-4163-b7ae-f3e8eef3760f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "2e320795-a62c-4d5c-9d64-1c0984bbe347",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/requisitions?sfCode={{sfcode}}&from={{From}}&to={{To}}&page=1&pageSize=10",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"requisitions"
+							],
+							"query": [
+								{
+									"key": "sfCode",
+									"value": "{{sfcode}}"
+								},
+								{
+									"key": "from",
+									"value": "{{From}}"
+								},
+								{
+									"key": "to",
+									"value": "{{To}}"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
 								}
 							]
 						}
