@@ -1986,10 +1986,10 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"password": "bohpass1",
-			"username": "cking",
+			"password": "Svamtest01",
+			"tokenName": "BOH-Smyles",
+			"username": "smyles",
 			"clientId": "{{clientId}}",
-			"tokenName": "BOH-JwtToken",
 			"grant_type": "password_credentials",
 			"clientSecret": "h3nzHimJUG",
 			"accessTokenUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/token",
@@ -2003,7 +2003,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1b83b217-a5b9-4b2e-a63d-bcf3f35c18cc",
+				"id": "62081ba0-d6f1-44a4-a26d-2d799b7f2b17",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2013,7 +2013,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "cc4ea8c6-1cf6-4337-811a-6b06357d8c45",
+				"id": "e5b6cc91-7d75-4cbf-bf57-b49c1493a045",
 				"type": "text/javascript",
 				"exec": [
 					""
