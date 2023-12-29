@@ -1518,7 +1518,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "ba59341a-2361-4817-8c5a-df0309937a4b",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -1530,7 +1532,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/modulesettings/district/8D175F75-E627-4BAD-9DBF-3108ACCBD35B"
+						"url": "{{BaseUrl}}api/administration/modulesettings/district/5fa25767-2eb8-4d12-92b2-851299095c52"
 					},
 					"response": []
 				},
@@ -1586,7 +1588,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/administration/modulesettings/district/8d175f75-e627-4bad-9dbf-3108accbd35b/sfcode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/administration/modulesettings/district/5fa25767-2eb8-4d12-92b2-851299095c52/sfcode/{{sfcode}}"
 					},
 					"response": []
 				}
