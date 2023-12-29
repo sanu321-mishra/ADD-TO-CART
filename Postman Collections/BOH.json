@@ -1986,7 +1986,7 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"password": "Svamtest01",
+			"password": "bohpass1",
 			"tokenName": "BOH-Smyles",
 			"username": "smyles",
 			"clientId": "{{clientId}}",
@@ -2003,7 +2003,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "62081ba0-d6f1-44a4-a26d-2d799b7f2b17",
+				"id": "f3c876ab-3df9-4ab0-8c89-c5911b2441d8",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2013,7 +2013,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "e5b6cc91-7d75-4cbf-bf57-b49c1493a045",
+				"id": "63982d6c-53d4-4254-a9d5-ec9e9c4e529f",
 				"type": "text/javascript",
 				"exec": [
 					""
