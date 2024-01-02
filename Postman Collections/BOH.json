@@ -704,14 +704,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconciliationrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"productions",
-								"productionrecords"
+								"inventories",
+								"reconciliationrecords"
 							],
 							"query": [
 								{
@@ -1398,6 +1398,171 @@
 								{
 									"key": "pageSize",
 									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recons Records",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d46c3f4b-9f52-491a-b604-c63891679ef7",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response data contains count, data, and total properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    pm.expect(data).to.have.property('count');\r",
+									"    pm.expect(data).to.have.property('data');\r",
+									"    pm.expect(data).to.have.property('total');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains isSuccess property with value true\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('isSuccess', true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "482120ca-3ea6-4163-b7ae-f3e8eef3760f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "11d4fba5-ca72-4d6b-b769-321191c7b669",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"reconcilliations"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "{{sfcode}}"
+								},
+								{
+									"key": "From",
+									"value": "{{From}}"
+								},
+								{
+									"key": "To",
+									"value": "{{To}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recons Records Pending Review Only",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cb9a0e40-3a34-4b6f-989e-e5398ae652a1",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a title property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('title');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a count array with status, statusId, and total properties\", function () {\r",
+									"    pm.response.json().data.count.forEach(function(count) {\r",
+									"        pm.expect(count).to.have.property('status');\r",
+									"        pm.expect(count).to.have.property('statusId');\r",
+									"        pm.expect(count).to.have.property('total');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a statusCode property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('statusCode');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a isSuccess property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "aac8de24-4e17-4428-a6f8-7dd94fb05586",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "80f40d60-17ae-4784-ac08-c804dadf6a4f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/reconciliationrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsPendingReviewOnly=true",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"reconciliationrecords"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "{{sfcode}}"
+								},
+								{
+									"key": "From",
+									"value": "{{From}}"
+								},
+								{
+									"key": "To",
+									"value": "{{To}}"
+								},
+								{
+									"key": "IsPendingReviewOnly",
+									"value": "true"
 								}
 							]
 						}
