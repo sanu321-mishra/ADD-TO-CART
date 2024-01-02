@@ -1701,9 +1701,18 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"RequisitionId\" : \"31845118-b20b-49b5-9268-0613151b99e7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/submit"
 					},
 					"response": []
 				}
