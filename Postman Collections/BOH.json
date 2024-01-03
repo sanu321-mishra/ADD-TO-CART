@@ -2298,7 +2298,7 @@
 					"response": []
 				},
 				{
-					"name": "Save Daily Requisition",
+					"name": "Add Daily Requisition",
 					"event": [
 						{
 							"listen": "test",
