@@ -2347,6 +2347,57 @@
 						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}"
 					},
 					"response": []
+				},
+				{
+					"name": "Add Daily Requisition Detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f5894cd7-91e2-4681-bd86-adfa5ea0c58e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "3d2dc2cb-f915-4ee2-a893-c572f88ea59a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ServiceDate\": \"2024-01-01\",\r\n    \"Note\": \"test note\",\r\n    \"IsService\": true,\r\n    \"WorkFlowActionId\":\"Create\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}"
+					},
+					"response": []
 				}
 			],
 			"id": "532f4277-3725-41f0-b332-e9e05f44fcd7"
