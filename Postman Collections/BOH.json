@@ -2349,6 +2349,74 @@
 					"response": []
 				},
 				{
+					"name": "Update Daily Requisition",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f5894cd7-91e2-4681-bd86-adfa5ea0c58e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "5a14daf4-fff7-421b-ae54-a8ea19d3e7b7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"serviceDate\": \"2024-01-04T05:00:27.459Z\",\r\n  \"isService\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}?id=f11a1a05-8cd3-4a38-8b25-949cda68818e",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"inventory",
+								"dailyrequisitions",
+								"sfCode",
+								"{{sfcode}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "f11a1a05-8cd3-4a38-8b25-949cda68818e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Add Daily Requisition Detail",
 					"event": [
 						{
@@ -2388,14 +2456,116 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ServiceDate\": \"2024-01-01\",\r\n    \"Note\": \"test note\",\r\n    \"IsService\": true,\r\n    \"WorkFlowActionId\":\"Create\"\r\n}",
+							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"inventoryItemId\": \"525D6564-A183-4CC8-8686-000B4E9AF8A1\",\r\n      \"quantity\": 4,\r\n      \"dailyRequisitionId\": \"f11a1a05-8cd3-4a38-8b25-949cda68818e\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/requisitiondetails"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Daily Requisition Detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f5894cd7-91e2-4681-bd86-adfa5ea0c58e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "28b2aa8f-0663-4cfd-88a9-6c7d2b767b33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"id\": \"4186828A-93CD-4D48-B14A-C35002BC817D\",\r\n      \"inventoryItemId\": \"525D6564-A183-4CC8-8686-000B4E9AF8A1\",\r\n      \"quantity\": 6,\r\n      \"dailyRequisitionId\": \"f11a1a05-8cd3-4a38-8b25-949cda68818e\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/requisitiondetails"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Daily Requisition Detail Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f5894cd7-91e2-4681-bd86-adfa5ea0c58e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "6b3acf9f-87e0-4cc0-a6b8-358b6a16f595",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"id\": \"4186828A-93CD-4D48-B14A-C35002BC817D\",\r\n      \"inventoryItemId\": \"525D6564-A183-4CC8-8686-000B4E9AF8A1\",\r\n      \"quantity\": 6,\r\n      \"dailyRequisitionId\": \"f11a1a05-8cd3-4a38-8b25-949cda68818e\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/requisitiondetails"
 					},
 					"response": []
 				}
