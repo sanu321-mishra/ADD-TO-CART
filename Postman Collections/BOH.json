@@ -2298,6 +2298,74 @@
 					"response": []
 				},
 				{
+					"name": "Get Daily Requisition",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f5894cd7-91e2-4681-bd86-adfa5ea0c58e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "faa46a7f-6abb-45e2-a78e-68febdd41719",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}?id=f11a1a05-8cd3-4a38-8b25-949cda68818e",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"inventory",
+								"dailyrequisitions",
+								"sfCode",
+								"{{sfcode}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "f11a1a05-8cd3-4a38-8b25-949cda68818e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Add Daily Requisition",
 					"event": [
 						{
@@ -2519,7 +2587,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Daily Requisition Detail Copy",
+					"name": "Delete Daily Requisition Detail",
 					"event": [
 						{
 							"listen": "test",
@@ -2558,7 +2626,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"id\": \"4186828A-93CD-4D48-B14A-C35002BC817D\",\r\n      \"inventoryItemId\": \"525D6564-A183-4CC8-8686-000B4E9AF8A1\",\r\n      \"quantity\": 6,\r\n      \"dailyRequisitionId\": \"f11a1a05-8cd3-4a38-8b25-949cda68818e\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"id\": \"4186828A-93CD-4D48-B14A-C35002BC817D\",\r\n      \"inventoryItemId\": \"525D6564-A183-4CC8-8686-000B4E9AF8A1\",\r\n      \"quantity\": 0,\r\n      \"dailyRequisitionId\": \"f11a1a05-8cd3-4a38-8b25-949cda68818e\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
