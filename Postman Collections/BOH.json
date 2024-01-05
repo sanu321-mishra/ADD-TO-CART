@@ -2366,6 +2366,74 @@
 					"response": []
 				},
 				{
+					"name": "Get Daily Requisition Detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f5894cd7-91e2-4681-bd86-adfa5ea0c58e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "050881f3-6f6d-4a15-81d7-c7446edefaec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}?id=f11a1a05-8cd3-4a38-8b25-949cda68818e",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"inventory",
+								"dailyrequisitions",
+								"sfCode",
+								"{{sfcode}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "f11a1a05-8cd3-4a38-8b25-949cda68818e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Add Daily Requisition",
 					"event": [
 						{
