@@ -2373,14 +2373,23 @@
 							"script": {
 								"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
 								"exec": [
-									"pm.test(\"Response status code is 200\", function () {\r",
+									"pm.test('Response status code is 200', function () {\r",
 									"    pm.response.to.have.status(200);\r",
-									"});\r",
+									"})\r",
 									"\r",
-									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"pm.test('Response is an object with title, data, statusCode, and isSuccess properties', function () {\r",
 									"    var jsonData = pm.response.json();\r",
 									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
-									"});"
+									"})\r",
+									"\r",
+									"pm.test(\"Each element in the data array has non-empty itemName and inventoryItemId\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    jsonData.data.forEach(function(item) {\r",
+									"        pm.expect(item.itemName).to.be.a('string').and.to.not.be.empty;\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -2413,7 +2422,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}?id=f11a1a05-8cd3-4a38-8b25-949cda68818e",
+							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/requisitiondetails?id=13b9049c-5b6e-40da-a9a9-0ca249ff466b",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2421,12 +2430,13 @@
 								"inventory",
 								"dailyrequisitions",
 								"sfCode",
-								"{{sfcode}}"
+								"{{sfcode}}",
+								"requisitiondetails"
 							],
 							"query": [
 								{
 									"key": "id",
-									"value": "f11a1a05-8cd3-4a38-8b25-949cda68818e"
+									"value": "13b9049c-5b6e-40da-a9a9-0ca249ff466b"
 								}
 							]
 						}
