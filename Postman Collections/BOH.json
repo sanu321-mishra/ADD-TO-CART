@@ -442,6 +442,54 @@
 				},
 				{
 					"name": "Update OccurrenceLog Header",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "204b1228-b6d9-4f60-bab6-0d69c6766596",
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 405\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(405);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type is application/problem+json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/problem+json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.title).to.exist;\r",
+									"    pm.expect(responseData.statusCode).to.exist;\r",
+									"    pm.expect(responseData.error).to.exist;\r",
+									"    pm.expect(responseData.isSuccess).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Verify that traceId is present in the error object\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.error).to.exist;\r",
+									"    pm.expect(responseData.error.traceId).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"IsSuccess field is a boolean\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "3e4c148e-33c0-4919-b235-8b71290fc2f9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
