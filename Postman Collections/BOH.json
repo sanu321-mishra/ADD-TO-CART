@@ -2735,8 +2735,8 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"username": "smyles",
 			"tokenName": "BOH-CKing",
-			"username": "cking",
 			"password": "bohpass1",
 			"clientId": "{{clientId}}",
 			"grant_type": "password_credentials",
@@ -2752,7 +2752,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "0dcefeb1-dc44-4b5a-a0fb-982b68d1071e",
+				"id": "eb7881e9-775d-4d2e-8a8f-5a46323144be",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2762,7 +2762,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "6b157761-e71b-45b0-96e5-cde6940635db",
+				"id": "64462b09-e262-4ab6-8e29-794da704ae57",
 				"type": "text/javascript",
 				"exec": [
 					""
