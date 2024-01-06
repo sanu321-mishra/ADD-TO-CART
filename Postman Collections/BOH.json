@@ -441,14 +441,15 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Update OccurrenceLog Header",
 					"id": "3e4c148e-33c0-4919-b235-8b71290fc2f9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/7BE4209A-C049-4260-A8C6-6AFDBF7F5EFB/header"
 					},
 					"response": []
 				}
