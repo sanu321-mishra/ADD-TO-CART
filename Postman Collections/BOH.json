@@ -2408,21 +2408,21 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/edrlogdetails?EDRLogId=fb84fc94-9dca-4429-a766-3988df3d79b0",
+							"raw": "{{BaseUrl}}api/inventory/edrlog/sfcode/{{sfcode}}/details?EDRLogId=e1075fe0-8bbb-4584-affa-9c0ffa950aff",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"inventory",
-								"inventories",
+								"edrlog",
 								"sfcode",
 								"{{sfcode}}",
-								"edrlogdetails"
+								"details"
 							],
 							"query": [
 								{
 									"key": "EDRLogId",
-									"value": "fb84fc94-9dca-4429-a766-3988df3d79b0"
+									"value": "e1075fe0-8bbb-4584-affa-9c0ffa950aff"
 								}
 							]
 						}
@@ -2559,8 +2559,7 @@
 							{
 								"key": "X-Id-Token",
 								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNlcnZlciJ9.eyJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicmVhbG1OYW1lIjoiY2xvdWRJZGVudGl0eVJlYWxtIiwiZGlzcGxheU5hbWUiOiJDaGFybGllIEtpbmciLCJuYW1lIjoiQ2hhcmxpZSBLaW5nIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiY2tpbmciLCJnaXZlbl9uYW1lIjoiQ2hhcmxpZSIsImZhbWlseV9uYW1lIjoiS2luZyIsImVtYWlsIjoiY2tpbmdAc3ZhbWRldi5jb20iLCJhY3IiOiJ1cm46aWJtOnNlY3VyaXR5OnBvbGljeTppZDoxIiwidXNlclR5cGUiOiJyZWd1bGFyIiwic19oYXNoIjoiUjF5aHZsSEhiOFZ6Z1lycEJwUklldyIsInVuaXF1ZVNlY3VyaXR5TmFtZSI6IjY0NDAwMkQxNFkiLCJhdXRoX3RpbWUiOjE3MDM3NzYzNjgsImp0aSI6IjdUSmpBRXY1Wm9vWjhjTFZRUlVWTWdQSDRDU1NMQSIsImF0X2hhc2giOiI2QWd2WUdJbXFSY2hPYjg3MC1iVFNRIiwiYW1yIjpbInBhc3N3b3JkIl0sImV4dCI6eyJ0ZW5hbnRJZCI6InN2YW1kZXYudmVyaWZ5LmlibS5jb20ifSwiaXNzIjoiaHR0cHM6Ly9zdmFtZGV2LnZlcmlmeS5pYm0uY29tL29pZGMvZW5kcG9pbnQvZGVmYXVsdCIsImF1ZCI6Ijk5ZTRhOTJhLTI3MjMtNDIwYy1iOTM5LTE0NzBjYzgzOTI5NCIsInN1YiI6IjY0NDAwMkQxNFkiLCJpYXQiOjE3MDM3NzYzNzAsImV4cCI6MTcwMzc4MzU3MH0.ck-0wB63kVsStqVkqxDI0EIwgK91WpkVECOqdAOCRGuXykWGIucebROVcHJ767R7YT23McreyFq5hQJYM15AzeaN3r1IgAH8o3bHQ_sHIlyDARg8qd9aE4bUmwdlu3A-j5TJvuSLfqoyzfGAcCwP5ATx_v_TbOxmhISqWIQEjQEEIMyn4aeQF5njc3fh9A2vIVqrDy8TMlvXyHUFxhll9hfnsWFMXHWf5GOrbrtkN1m4g5GMGBKRgp0IwXTSYhyB8Hp3WA1yjGGSyfreEuFxBycTDPaGzP0veL38CYM8qQJ1SMhx8O8z_pORLPeadadqiRAFwmPxI7SZ-lyjxXmtWw",
-								"type": "text",
-								"disabled": true
+								"type": "text"
 							}
 						],
 						"url": "{{BaseUrl}}api/useraccess/loggedinuserdetail"
