@@ -2220,8 +2220,8 @@
 								"id": "6b98fa16-80ee-46c0-9fbc-4afd61eec636",
 								"exec": [
 									"\r",
-									"pm.test(\"Response is not null\", function () {\r",
-									"    pm.expect(pm.response.json()).to.not.be.null;\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([204]);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -2231,7 +2231,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "ccefa437-b778-4495-bba9-654729f4f82b",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
