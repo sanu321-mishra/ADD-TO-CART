@@ -2301,8 +2301,14 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
-						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}"
+						"header": [
+							{
+								"key": "X-SF-Code",
+								"value": "{{sfcode}}",
+								"type": "text"
+							}
+						],
+						"url": "{{BaseUrl}}api/inventory/dailyrequisitions"
 					},
 					"response": []
 				},
@@ -2355,7 +2361,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/edrlogs"
+						"url": "{{BaseUrl}}api/inventory/edrlog/sfcode/{{sfcode}}"
 					},
 					"response": []
 				},
