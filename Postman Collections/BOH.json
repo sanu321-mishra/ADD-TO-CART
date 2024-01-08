@@ -304,30 +304,92 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9c69a6fb-b223-46a2-b9b9-512b91bd8743",
+								"id": "c48c4fca-b559-4780-865e-e63cd4bea180",
 								"exec": [
-									"pm.test(\"Schema is valid\", function () {\r",
-									"  var schema = {\r",
-									"    type: \"object\",\r",
-									"    properties: {\r",
-									"      title: {\r",
-									"        type: \"string\"\r",
-									"      },\r",
-									"      data: {\r",
-									"        type: \"object\",\r",
+									"pm.test('Schema is valid', function () {\r",
+									"    var schema = {\r",
+									"        type: 'object',\r",
 									"        properties: {\r",
-									"          id: { type: \"string\" },\r",
-									"          sfcode: { type: \"string\" }\r",
+									"            title: { type: 'string' },\r",
+									"            data: {\r",
+									"                type: 'object',\r",
+									"                properties: {\r",
+									"                    id: { type: 'string' },\r",
+									"                    sfcode: { type: 'string' },\r",
+									"                    workflowStateId: { type: 'string' },\r",
+									"                    occurrenceIncidentTypeId: { type: 'string' },\r",
+									"                    occurrenceDate: { type: 'string' },\r",
+									"                    occurrenceSfcodeList: { type: 'string' },\r",
+									"                    occurrenceStartTime: { type: 'string' },\r",
+									"                    occurrenceEndTime: { type: 'string' },\r",
+									"                    isFieldOfficeCalled: { type: 'boolean' },\r",
+									"                    isSendEmail: { type: 'boolean' },\r",
+									"                    emailSentStatus: { type: 'number' },\r",
+									"                    additionalNote: { type: 'string' },\r",
+									"                    createdBy: { type: 'string' },\r",
+									"                    updatedBy: { type: 'string' },\r",
+									"                    createdOn: { type: 'string' },\r",
+									"                    updatedOn: { type: 'string' },\r",
+									"                    isDeleted: { type: 'boolean' },\r",
+									"                    isActive: { type: 'boolean' },\r",
+									"                    otherIncidentType: { type: 'string' }\r",
+									"                },\r",
+									"                required: [\r",
+									"                    'id',\r",
+									"                    'sfcode',\r",
+									"                    'workflowStateId',\r",
+									"                    'occurrenceIncidentTypeId',\r",
+									"                    'occurrenceDate',\r",
+									"                    'occurrenceSfcodeList',\r",
+									"                    'occurrenceStartTime',\r",
+									"                    'occurrenceEndTime',\r",
+									"                    'isFieldOfficeCalled',\r",
+									"                    'isSendEmail',\r",
+									"                    'emailSentStatus',\r",
+									"                    'additionalNote',\r",
+									"                    'createdBy',\r",
+									"                    'updatedBy',\r",
+									"                    'createdOn',\r",
+									"                    'updatedOn',\r",
+									"                    'isDeleted',\r",
+									"                    'isActive',\r",
+									"                    'otherIncidentType'\r",
+									"                ]\r",
+									"            },\r",
+									"            statusCode: { type: 'number' },\r",
+									"            isSuccess: { type: 'boolean' }\r",
 									"        },\r",
-									"        required: [\"id\", \"sfcode\"]\r",
-									"      },\r",
-									"      statusCode: { type: \"number\" },\r",
-									"      isSuccess: { type: \"boolean\" }\r",
-									"    },\r",
-									"    required: [\"title\", \"data\", \"statusCode\", \"isSuccess\"]\r",
-									"  };\r",
+									"        required: [\r",
+									"            'title',\r",
+									"            'data',\r",
+									"            'statusCode',\r",
+									"            'isSuccess'\r",
+									"        ]\r",
+									"    };\r",
+									"})\r",
 									"\r",
-									"});"
+									"pm.test('Response status code is 200', function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"})\r",
+									"\r",
+									"pm.test('Content-Type header is application/json', function () {\r",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Response has the required fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.data.occurrenceDate).to.exist;\r",
+									"});\r",
+									"\r",
+									"pm.test('IsFieldOfficeCalled and IsSendEmail are boolean values', function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.data.isFieldOfficeCalled).to.be.a('boolean');\r",
+									"    pm.expect(responseData.data.isSendEmail).to.be.a('boolean');\r",
+									"})\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -340,7 +402,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/4184363a-6116-48e3-9bcd-06bd62d59a5e"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/D2F47C03-C7FB-46E9-98B6-EEFF6BCAB0FC"
 					},
 					"response": []
 				},
@@ -350,11 +412,72 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "893fa8fa-b482-49e0-af52-ddc55246cc3d",
+								"id": "7c352c2b-fc1d-485d-bf6e-60db8b4a6cde",
 								"exec": [
 									"pm.test(\"Response status code is 201\", function () {\r",
 									"    pm.response.to.have.status(201);\r",
-									"});"
+									"});\r",
+									"pm.test(\"Response Content-Type is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Title is a non-empty string\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"StatusCode is a non-negative integer\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.statusCode).to.be.a('number');\r",
+									"    pm.expect(responseData.statusCode).to.be.at.least(0);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"IsSuccess is a boolean value\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data field is present in the response\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  pm.expect(responseData).to.have.property('data');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data field should not be null or undefined\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData).to.have.property('data').that.is.not.null.and.not.undefined;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validate response has required fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.title).to.exist;\r",
+									"    pm.expect(responseData.data).to.exist;\r",
+									"    pm.expect(responseData.statusCode).to.exist;\r",
+									"    pm.expect(responseData.isSuccess).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Title is a string with a minimum length of 1\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");\r",
+									"});\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -369,7 +492,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"sfcode\": \"sf-0145\",\r\n  \"statusId\": \"6C63E7E4-7A1E-4520-805A-E41DC0966C07\",\r\n  \"occuranceDate\": \"2023-11-28T09:20:15.061Z\",\r\n  \"note\": \"Hello villain\",\r\n  \"occuranceSfcodeList\": \"string\",\r\n  \"occuranceStartDateTime\": \"2023-11-28T09:20:15.061Z\",\r\n  \"ocurranceEndDateTime\": \"2023-11-28T09:20:15.061Z\",\r\n  \"isFieldOfficeCalled\": true,\r\n  \"isSendEmail\": true,\r\n  \"emailSentStatus\": 0,\r\n  \"isActive\": true\r\n}",
+							"raw": "{\r\n  \"occurrenceDate\": \"2024-01-06T10:42:38.108Z\",\r\n  \"note\": \"string\",\r\n  \"workFlowActionId\": \"Create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -377,6 +500,45 @@
 							}
 						},
 						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Update OccurrenceLog Header",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6ffecea7-4aa5-4897-9659-9c41fc70dd68",
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 204\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(204);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "3e4c148e-33c0-4919-b235-8b71290fc2f9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"occurrenceDate\": \"2024-01-06T10:42:38.108Z\",\r\n  \"note\": \"Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/D2F47C03-C7FB-46E9-98B6-EEFF6BCAB0FC/header"
 					},
 					"response": []
 				},
@@ -464,76 +626,6 @@
 						"method": "DELETE",
 						"header": [],
 						"url": "{{BaseUrl}}api/production/occurrencelogs/f0a096b0-9f5b-48fc-ba86-e9903cab528b"
-					},
-					"response": []
-				},
-				{
-					"name": "Update OccurrenceLog Header",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "204b1228-b6d9-4f60-bab6-0d69c6766596",
-								"exec": [
-									"\r",
-									"pm.test(\"Response status code is 405\", function () {\r",
-									"    pm.expect(pm.response.code).to.equal(405);\r",
-									"});\r",
-									"\r",
-									"\r",
-									"pm.test(\"Content-Type is application/problem+json\", function () {\r",
-									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/problem+json\");\r",
-									"});\r",
-									"\r",
-									"\r",
-									"pm.test(\"Response has the required fields\", function () {\r",
-									"    const responseData = pm.response.json();\r",
-									"    \r",
-									"    pm.expect(responseData).to.be.an('object');\r",
-									"    pm.expect(responseData.title).to.exist;\r",
-									"    pm.expect(responseData.statusCode).to.exist;\r",
-									"    pm.expect(responseData.error).to.exist;\r",
-									"    pm.expect(responseData.isSuccess).to.exist;\r",
-									"});\r",
-									"\r",
-									"\r",
-									"pm.test(\"Verify that traceId is present in the error object\", function () {\r",
-									"    const responseData = pm.response.json();\r",
-									"    \r",
-									"    pm.expect(responseData.error).to.exist;\r",
-									"    pm.expect(responseData.error.traceId).to.exist;\r",
-									"});\r",
-									"\r",
-									"\r",
-									"pm.test(\"IsSuccess field is a boolean\", function () {\r",
-									"    const responseData = pm.response.json();\r",
-									"    \r",
-									"    pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
-									"});\r",
-									"\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "3e4c148e-33c0-4919-b235-8b71290fc2f9",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"occurrenceDate\": \"2024-01-06T10:42:38.108Z\",\r\n  \"note\": \"Updated\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/D2F47C03-C7FB-46E9-98B6-EEFF6BCAB0FC/header"
 					},
 					"response": []
 				}
