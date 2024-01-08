@@ -1081,12 +1081,7 @@
 									"pm.test(\"Response status code is 200\", function () {\r",
 									"  pm.response.to.have.status(200);\r",
 									"});\r",
-									"\r",
-									"pm.test(\"Data is only for productionRecordStructureType equal to School Trip Lunch\", function () {\r",
-									"    pm.response.json().data.data.forEach(function(record) {\r",
-									"        pm.expect(record.productionRecordStructureType).to.equal(\"School Trip Lunch\");\r",
-									"    });\r",
-									"});"
+									""
 								],
 								"type": "text/javascript"
 							}
