@@ -141,13 +141,11 @@
 									"        items: {\r",
 									"          type: \"object\",\r",
 									"          properties: {\r",
-									"            serviceDate: { type: \"string\" },\r",
-									"            status: { type: \"string\" },\r",
-									"            statusId: { type: \"string\" },\r",
+									"            serviceDate: { type: \"string\" },           \r",
 									"            transferType: { type: \"string\" },\r",
 									"            id: { type: \"string\" },\r",
 									"          },\r",
-									"          required: [\"serviceDate\", \"status\", \"statusId\", \"transferType\", \"id\"]\r",
+									"          required: [\"serviceDate\", \"transferType\", \"id\"]\r",
 									"        }\r",
 									"      },\r",
 									"      statusCode: { type: \"number\" },\r",
@@ -177,7 +175,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "2bc3858d-a8ed-4417-9d3e-4c147a65391f",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
