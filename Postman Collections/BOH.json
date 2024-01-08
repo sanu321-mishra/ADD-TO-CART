@@ -522,9 +522,18 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/7BE4209A-C049-4260-A8C6-6AFDBF7F5EFB/header"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"occurrenceDate\": \"2024-01-06T10:42:38.108Z\",\r\n  \"note\": \"Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/D2F47C03-C7FB-46E9-98B6-EEFF6BCAB0FC/header"
 					},
 					"response": []
 				}
