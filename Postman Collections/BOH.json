@@ -1998,7 +1998,28 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/modulesettings/district/7cc87a30-5031-4bc9-a005-747c9e215062"
+						"url": {
+							"raw": "{{BaseUrl}}api/administration/modulesettings/district/820419af-fefa-48bb-b537-f991196ac3a5?page=1&pageSize=5",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"administration",
+								"modulesettings",
+								"district",
+								"820419af-fefa-48bb-b537-f991196ac3a5"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
 					},
 					"response": []
 				},
