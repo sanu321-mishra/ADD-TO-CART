@@ -1355,82 +1355,6 @@
 					"response": []
 				},
 				{
-					"name": "Recons statement",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "d46c3f4b-9f52-491a-b604-c63891679ef7",
-								"exec": [
-									"pm.test(\"Response status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Response is an object with data property\", function () {\r",
-									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Response data contains count, data, and total properties\", function () {\r",
-									"    var data = pm.response.json().data;\r",
-									"    pm.expect(data).to.have.property('count');\r",
-									"    pm.expect(data).to.have.property('data');\r",
-									"    pm.expect(data).to.have.property('total');\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Response contains isSuccess property with value true\", function () {\r",
-									"    pm.expect(pm.response.json()).to.have.property('isSuccess', true);\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "482120ca-3ea6-4163-b7ae-f3e8eef3760f",
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "93e4f42e-4c75-4e08-93b9-54ac3f3d227a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From={{From}}&To={{To}}",
-							"host": [
-								"{{BaseUrl}}api"
-							],
-							"path": [
-								"reports",
-								"inventories",
-								"reconcilliations"
-							],
-							"query": [
-								{
-									"key": "SfCode",
-									"value": "{{sfcode}}"
-								},
-								{
-									"key": "From",
-									"value": "{{From}}"
-								},
-								{
-									"key": "To",
-									"value": "{{To}}"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Recons Statement Pending Review Only",
 					"event": [
 						{
@@ -1488,14 +1412,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsPendingReviewOnly=true",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconciliationstatement?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsPendingReviewOnly=true",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
 								"inventories",
-								"reconcilliations"
+								"reconciliationstatement"
 							],
 							"query": [
 								{
@@ -1922,6 +1846,82 @@
 								"reports",
 								"inventories",
 								"reconciliationrecords"
+							],
+							"query": [
+								{
+									"key": "SfCode",
+									"value": "{{sfcode}}"
+								},
+								{
+									"key": "From",
+									"value": "{{From}}"
+								},
+								{
+									"key": "To",
+									"value": "{{To}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recons statement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d46c3f4b-9f52-491a-b604-c63891679ef7",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response data contains count, data, and total properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    pm.expect(data).to.have.property('count');\r",
+									"    pm.expect(data).to.have.property('data');\r",
+									"    pm.expect(data).to.have.property('total');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains isSuccess property with value true\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('isSuccess', true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "482120ca-3ea6-4163-b7ae-f3e8eef3760f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "a02c5818-df5c-46d4-adbe-c00417c95729",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/reconciliationstatement?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"reconciliationstatement"
 							],
 							"query": [
 								{
@@ -3254,10 +3254,10 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"clientSecret": "h3nzHimJUG",
-			"username": "dsmith",
-			"tokenName": "BOH-CKing",
 			"password": "bohpass1",
+			"username": "smyles",
+			"clientSecret": "h3nzHimJUG",
+			"tokenName": "BOH-CKing",
 			"clientId": "{{clientId}}",
 			"grant_type": "password_credentials",
 			"accessTokenUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/token",
@@ -3271,7 +3271,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "09674209-429a-47fd-a2dc-1ec1e87d6685",
+				"id": "45697df0-3bb3-4341-965a-7d3033410880",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -3281,7 +3281,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "0f956b9b-1301-4491-a9f6-d7b78d998808",
+				"id": "db6c0bac-184e-420d-86fc-6244b4d4a594",
 				"type": "text/javascript",
 				"exec": [
 					""
