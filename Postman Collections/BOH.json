@@ -3075,12 +3075,12 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"clientSecret": "h3nzHimJUG",
 			"username": "dsmith",
 			"tokenName": "BOH-CKing",
 			"password": "bohpass1",
 			"clientId": "{{clientId}}",
 			"grant_type": "password_credentials",
-			"clientSecret": "h3nzHimJUG",
 			"accessTokenUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/token",
 			"authUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/authorize",
 			"redirect_uri": "https://oauth.pstmn.io/v1/callback",
@@ -3092,7 +3092,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "42b3fb7d-49e7-4b87-884b-3b9d3cd98c5f",
+				"id": "09674209-429a-47fd-a2dc-1ec1e87d6685",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -3102,7 +3102,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "b2f3b363-c553-4344-b9eb-c9d63f729ddc",
+				"id": "0f956b9b-1301-4491-a9f6-d7b78d998808",
 				"type": "text/javascript",
 				"exec": [
 					""
