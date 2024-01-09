@@ -629,11 +629,26 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9781aa8a-5f0d-4722-aee4-200f264224dc",
+								"id": "b2cc0391-5430-4f4f-9630-914c1107924d",
 								"exec": [
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
 									"});\r",
+									"\r",
+									"pm.test(\"Response body is null\", function () {\r",
+									"    const responseData = xml2Json(pm.response.text());\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.null;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response body should be empty or null\", function () {\r",
+									"    const responseData = xml2Json(pm.response.text());\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.null;\r",
+									"});\r",
+									"\r",
+									"\r",
 									""
 								],
 								"type": "text/javascript"
@@ -642,7 +657,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "69a6dbca-f220-4809-aa63-2126f06d6cdc",
+								"id": "f5213160-f6c7-4c4f-8399-c6039d002d79",
 								"exec": [
 									""
 								],
@@ -659,14 +674,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"sfcode\": \"sf-0146\",\r\n  \"statusId\": \"06030ff3-651d-4b2b-9e18-575d1b890df0\",\r\n  \"occurenceDate\": \"2023-11-28T09:20:15.061Z\",\r\n  \"note\": \"Hello villain 46\",\r\n  \"occurenceSfcodeList\": \"string\",\r\n  \"occurenceStartTime\": \"09:20:15.061\",\r\n  \"ocurrenceEndTime\": \"09:20:15.061\",\r\n  \"isFieldOfficeCalled\": true,\r\n  \"isSendEmail\": true,\r\n  \"emailSentStatus\": 0,\r\n  \"isActive\": true\r\n}",
+							"raw": "{\r\n\t\"workFlowActionId\": \"Submit\",\r\n    \"occurrenceIncidentTypeId\": \"E7F079E2-D157-4C64-8924-2A70EE2FCACF\",\r\n    \"occurrenceDate\": \"2024-02-02T14:06:04.050Z\",\r\n    \"occurrenceStartTime\": \"13:58:41.658\",\r\n    \"occurrenceEndTime\": \"13:58:41.698\",\r\n    \"isFieldOfficeCalled\": true,\r\n    \"isSendEmail\": false,\r\n    \"emailSentStatus\": 0,\r\n    \"additionalNote\": \"Edit test\",\r\n    \"otherIncidentType\": \"Edit test\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/7BE4209A-C049-4260-A8C6-6AFDBF7F5EFB"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/7773e3e6-b621-48c3-9029-4c0054c31f23"
 					},
 					"response": []
 				},
