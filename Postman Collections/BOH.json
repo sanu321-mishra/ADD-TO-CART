@@ -3254,9 +3254,9 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"username": "sammons",
 			"clientSecret": "h3nzHimJUG",
 			"password": "bohpass1",
-			"username": "smyles",
 			"tokenName": "BOH-CKing",
 			"clientId": "{{clientId}}",
 			"grant_type": "password_credentials",
@@ -3271,7 +3271,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "caf9085e-03bd-4897-817e-7add4ad45939",
+				"id": "5e9f6001-9d4a-472d-96a8-8afb4399fb4c",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -3281,7 +3281,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "8b8296f5-4c67-4514-accc-d8fbe1224d9d",
+				"id": "433546f7-244a-41c1-be01-5e142963bda2",
 				"type": "text/javascript",
 				"exec": [
 					""
