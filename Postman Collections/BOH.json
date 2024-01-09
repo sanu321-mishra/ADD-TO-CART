@@ -709,7 +709,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "5224b93a-8e1f-4737-a468-0b13c90ef152",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -721,7 +723,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/f0a096b0-9f5b-48fc-ba86-e9903cab528b"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/610D55EE-CF82-49B6-A842-61819F503A39"
 					},
 					"response": []
 				}
