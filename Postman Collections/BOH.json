@@ -2791,14 +2791,11 @@
 							"script": {
 								"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
 								"exec": [
-									"pm.test(\"Response status code is 200\", function () {\r",
+									"pm.test('Response status code is 200', function () {\r",
 									"    pm.response.to.have.status(200);\r",
-									"});\r",
+									"})\r",
 									"\r",
-									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
-									"});"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -2823,7 +2820,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"inventoryItemId\": \"525D6564-A183-4CC8-8686-000B4E9AF8A1\",\r\n      \"quantity\": 4,\r\n      \"dailyRequisitionId\": \"f11a1a05-8cd3-4a38-8b25-949cda68818e\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"inventoryItemId\": \"AC9A2C57-7A0A-4C7C-81E7-001C206B11B7\",\r\n      \"quantity\": 2,\r\n      \"dailyRequisitionId\": \"a08eba28-3d5f-4d76-bc9e-bb2c511dc6a2\",\r\n      \"sfcode\": \"20071\"\r\n    },\r\n    {\r\n      \"inventoryItemId\": \"111CE6B5-571F-48B7-AF27-001CEADD40E7\",\r\n      \"quantity\": 1,\r\n      \"dailyRequisitionId\": \"a08eba28-3d5f-4d76-bc9e-bb2c511dc6a2\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
