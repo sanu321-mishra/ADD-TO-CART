@@ -3138,6 +3138,68 @@
 						"url": "{{BaseUrl}}api/administration/workflows/histories/7108f230-0673-4893-9cab-4c2a1d8ce1ae"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Workflow Actions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "39dc9560-8136-458e-a889-9fe331e9ab9d",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "30552feb-8b89-4a06-bf63-4405117a6246",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "ec4fe396-288a-4933-a4b8-ec6250231822",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/administration/workflows/actions?entity=daily_requisition&currentstate=",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"administration",
+								"workflows",
+								"actions"
+							],
+							"query": [
+								{
+									"key": "entity",
+									"value": "daily_requisition"
+								},
+								{
+									"key": "currentstate",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "39035c1a-4976-4a22-ad8e-b3a8e09d3027"
