@@ -3249,6 +3249,24 @@
 				}
 			],
 			"id": "f3f0c345-d793-4466-a5bd-d1f622b25d5b"
+		},
+		{
+			"name": "Adjustments",
+			"item": [
+				{
+					"name": "CreateAdjustment",
+					"id": "39ebe501-53fc-40bb-b471-3ae1cb0f9891",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "4d4748fb-1da9-4aaa-8070-1711f747fa05"
 		}
 	],
 	"auth": {
