@@ -3098,6 +3098,75 @@
 				}
 			],
 			"id": "532f4277-3725-41f0-b332-e9e05f44fcd7"
+		},
+		{
+			"name": "Common",
+			"item": [
+				{
+					"name": "Get Workflow Histories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "39dc9560-8136-458e-a889-9fe331e9ab9d",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "30552feb-8b89-4a06-bf63-4405117a6246",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "7ac447ec-5272-4ff9-99a3-af7fbb84e345",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/administration/audittrails/primarykey/03ce9b7b-438e-440e-8f3d-0b2e6f56b9cd?page=1&pagesize=2",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"administration",
+								"audittrails",
+								"primarykey",
+								"03ce9b7b-438e-440e-8f3d-0b2e6f56b9cd"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "39035c1a-4976-4a22-ad8e-b3a8e09d3027"
 		}
 	],
 	"auth": {
