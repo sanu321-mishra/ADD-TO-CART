@@ -1829,14 +1829,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconcilliations?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconciliationrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
 								"inventories",
-								"reconcilliations"
+								"reconciliationrecords"
 							],
 							"query": [
 								{
@@ -1914,7 +1914,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconciliationrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsPendingReviewOnly=true",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconciliationrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1935,10 +1935,6 @@
 								{
 									"key": "To",
 									"value": "{{To}}"
-								},
-								{
-									"key": "IsPendingReviewOnly",
-									"value": "true"
 								}
 							]
 						}
