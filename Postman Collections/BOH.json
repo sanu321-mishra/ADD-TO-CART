@@ -1021,7 +1021,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/occurrences?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/productions/occurrences?SfCode={{sfcode}}&From={{From}}&To={{To}}&page=1&pageSize=10",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1042,6 +1042,14 @@
 								{
 									"key": "To",
 									"value": "{{To}}"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
 								}
 							]
 						}
