@@ -483,7 +483,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/D2F47C03-C7FB-46E9-98B6-EEFF6BCAB0FC"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/1558ae39-0343-4a14-aaeb-3672a1be03ed"
 					},
 					"response": []
 				},
