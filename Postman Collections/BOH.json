@@ -2852,7 +2852,31 @@
 						},
 						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/requisitiondetails"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "1989b873-0fc1-4234-b2b5-75d88b040909",
+							"name": "Add Daily Requisition Detail",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"inventoryItemId\": \"AC9A2C57-7A0A-4C7C-81E7-001C206B11B7\",\r\n      \"quantity\": 2,\r\n      \"dailyRequisitionId\": \"a08eba28-3d5f-4d76-bc9e-bb2c511dc6a2\",\r\n      \"sfcode\": \"20071\"\r\n    },\r\n    {\r\n      \"inventoryItemId\": \"111CE6B5-571F-48B7-AF27-001CEADD40E7\",\r\n      \"quantity\": 1,\r\n      \"dailyRequisitionId\": \"a08eba28-3d5f-4d76-bc9e-bb2c511dc6a2\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/requisitiondetails"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
 				},
 				{
 					"name": "Update Daily Requisition Detail",
