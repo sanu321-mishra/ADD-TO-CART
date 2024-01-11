@@ -2172,7 +2172,8 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/statictext"
 					},
 					"response": []
 				}
