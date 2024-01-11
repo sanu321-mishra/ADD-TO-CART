@@ -2163,6 +2163,18 @@
 						"url": "{{BaseUrl}}api/administration/modulesettings/district/820419af-fefa-48bb-b537-f991196ac3a5/sfcode/{{sfcode}}"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Static Text",
+					"id": "4e352a57-f1fc-4614-904a-d91d0cfe7abe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "626f27b8-14cb-4814-8b99-655e58c6fb52"
