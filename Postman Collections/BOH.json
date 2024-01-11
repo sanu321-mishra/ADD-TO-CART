@@ -3497,6 +3497,31 @@
 						"url": "https://apicstg.nycboe.net/doe/stgint/v1/authorization/tasks/72FC7A52-9508-4CDE-9532-A27A0EEB9744"
 					},
 					"response": []
+				},
+				{
+					"name": "Role Member By Role",
+					"id": "b8ccc15e-dc46-41f5-859c-a3bab40534c0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "AAIgOTAxOThlNjk1ZmY1Yzc2MWQzZjhmOWMyYmRiMmNhYmHdcv0Nycg_MyIP7kIhAOUtKceDImIZfjCtKyhjX8al4Yyi_Tcc0QP9JaJIF6PhouEVaZDFvB-Hsn8nCJBRuD9CwRxXqv-BJ4IY6XlZLUcdhw"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "serviceAccountID",
+								"value": "4903827682082835",
+								"type": "text"
+							}
+						],
+						"url": "https://apicstg.nycboe.net/doe/stgint/v1/authorization/rolemembers-by-role/00BE8A96-FEE2-4449-842D-E161A7906A2E/role/cook/users/1"
+					},
+					"response": []
 				}
 			],
 			"id": "0c3403e5-17b2-4751-9e84-f3224f8bef96"
