@@ -3118,7 +3118,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/administration/workflows/actions?entity=daily_requisition&currentstate=",
+							"raw": "{{BaseUrl}}api/administration/workflows/actions?entitytypeid=daily_requisition&currentstateid=initiation",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -3129,12 +3129,12 @@
 							],
 							"query": [
 								{
-									"key": "entity",
+									"key": "entitytypeid",
 									"value": "daily_requisition"
 								},
 								{
-									"key": "currentstate",
-									"value": ""
+									"key": "currentstateid",
+									"value": "initiation"
 								}
 							]
 						}
