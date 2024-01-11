@@ -3519,7 +3519,7 @@
 								"type": "text"
 							}
 						],
-						"url": "https://apicstg.nycboe.net/doe/stgint/v1/authorization/rolemembers-by-role/00BE8A96-FEE2-4449-842D-E161A7906A2E/role/cook/users/1"
+						"url": "https://apicstg.nycboe.net/doe/stgint/v1/authorization/rolemembers-by-role/00BE8A96-FEE2-4449-842D-E161A7906A2E/role/School Food Manager/users/1"
 					},
 					"response": []
 				}
