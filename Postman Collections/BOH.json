@@ -3624,7 +3624,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "5e9f6001-9d4a-472d-96a8-8afb4399fb4c",
+				"id": "42315af2-decd-4f57-97a8-b404f6eba9d6",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -3634,12 +3634,19 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "433546f7-244a-41c1-be01-5e142963bda2",
+				"id": "1a939c92-727a-4dc5-9230-5e9bc1c8461c",
 				"type": "text/javascript",
 				"exec": [
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "{{baseurl}}",
+			"value": "https://boh-api.svamdev.com/",
+			"type": "string"
 		}
 	]
 }
