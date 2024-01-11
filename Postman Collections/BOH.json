@@ -3001,14 +3001,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/administration/audittrails/primarykey/03ce9b7b-438e-440e-8f3d-0b2e6f56b9cd?page=1&pagesize=2",
+							"raw": "{{BaseUrl}}api/administration/audittrails/03ce9b7b-438e-440e-8f3d-0b2e6f56b9cd?page=1&pagesize=2",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"administration",
 								"audittrails",
-								"primarykey",
 								"03ce9b7b-438e-440e-8f3d-0b2e6f56b9cd"
 							],
 							"query": [
