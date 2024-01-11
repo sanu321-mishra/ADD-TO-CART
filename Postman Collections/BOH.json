@@ -3321,6 +3321,60 @@
 				}
 			],
 			"id": "4d4748fb-1da9-4aaa-8070-1711f747fa05"
+		},
+		{
+			"name": "RBAC",
+			"item": [
+				{
+					"name": "Token",
+					"id": "27d18eaa-3b27-4ce9-bff6-5a09b1e4abfc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "82cd273d2fd2b1df1af37300de728b3b",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "47c126862ea8a3dadadb1b046d94bf06",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "authorization",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "service.OFNS",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "2nBd2Jz",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://apicstg.nycboe.net/doe/stgint/v1/oauth/oauth2/token"
+					},
+					"response": []
+				}
+			],
+			"id": "0c3403e5-17b2-4751-9e84-f3224f8bef96"
 		}
 	],
 	"auth": {
