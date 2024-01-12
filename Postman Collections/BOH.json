@@ -2462,6 +2462,19 @@
 						"url": "{{BaseUrl}}api/administration/statictext"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Notification Settings",
+					"id": "30b152cc-b6d7-49ca-a01c-d7ff3392c3ed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseurl}}api/administration/notificationsetting"
+					},
+					"response": []
 				}
 			],
 			"id": "626f27b8-14cb-4814-8b99-655e58c6fb52"
