@@ -496,7 +496,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/e6f52237-a345-4c00-8096-e293935d8821"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/fbe74309-0cc6-40c4-a828-527898d7e873"
 					},
 					"response": []
 				},
@@ -765,7 +765,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"e6f52237-a345-4c00-8096-e293935d8821\",\r\n\t\"workFlowActionId\": \"Submit\",\r\n    \"occurrenceIncidentTypeId\": \"E7F079E2-D157-4C64-8924-2A70EE2FCACF\",\r\n    \"occurrenceDate\": \"2024-02-02T14:06:04.050Z\",\r\n    \"occurrenceSfcodeList\": \"Xyz\",\r\n    \"occurrenceStartTime\": \"13:58:41.658\",\r\n    \"occurrenceEndTime\": \"13:58:41.698\",\r\n    \"isFieldOfficeCalled\": true,\r\n    \"isSendEmail\": false,\r\n    \"emailSentStatus\": 0,\r\n    \"additionalNote\": \"Edit test 102\",\r\n    \"otherIncidentType\": \"Edit test 102\"\r\n}",
+							"raw": "{\r\n    \"id\": \"30a3b6ab-5c27-405b-a998-adf455bf31fe\",\r\n\t\"workFlowActionId\": \"Submit\",\r\n    \"occurrenceIncidentTypeId\": \"E7F079E2-D157-4C64-8924-2A70EE2FCACF\",\r\n    \"occurrenceDate\": \"2024-02-02T14:06:04.050Z\",\r\n    \"occurrenceSfcodeList\": \"Xyz\",\r\n    \"occurrenceStartTime\": \"13:58:41.658\",\r\n    \"occurrenceEndTime\": \"13:58:41.698\",\r\n    \"isFieldOfficeCalled\": true,\r\n    \"isSendEmail\": false,\r\n    \"emailSentStatus\": 0,\r\n    \"additionalNote\": \"Edit test 102\",\r\n    \"otherIncidentType\": \"Edit test 102\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -785,13 +785,52 @@
 								"id": "47ebdb08-1959-44cf-a977-8caa905516e7",
 								"exec": [
 									"\r",
-									"pm.test(\"Response status code is 404\", function () {\r",
-									"    pm.response.to.have.status(404);\r",
-									"    pm.expect(pm.response.text()).to.equal('null');\r",
-									"    pm.expect(pm.request.url).to.contain('/api/production/occurrencelogs/f0a096b0-9f5b-48fc-ba86-e9903cab528b');\r",
-									"    pm.expect(pm.request.method).to.equal('DELETE');\r",
-									"    pm.expect(pm.response.text()).to.equal('null', 'For this occurrence id, delete is not present');\r",
-									"});"
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.title).to.exist;\r",
+									"    pm.expect(responseData.statusCode).to.exist;\r",
+									"    pm.expect(responseData.isSuccess).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Title is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"StatusCode is a number\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.statusCode).to.be.a('number');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"IsSuccess is a boolean value\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -814,7 +853,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/610D55EE-CF82-49B6-A842-61819F503A39"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/fbe74309-0cc6-40c4-a828-527898d7e873"
 					},
 					"response": []
 				},
