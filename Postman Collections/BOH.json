@@ -1265,7 +1265,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsSchoolTripOnly=true",
+							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?sfCode=20071&sfCode=40771&from=2023-12-13&to=2024-01-12&page=1&pageSize=10&IsSchoolTripOnly=false",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1276,20 +1276,32 @@
 							],
 							"query": [
 								{
-									"key": "SfCode",
-									"value": "{{sfcode}}"
+									"key": "sfCode",
+									"value": "20071"
 								},
 								{
-									"key": "From",
-									"value": "{{From}}"
+									"key": "sfCode",
+									"value": "40771"
 								},
 								{
-									"key": "To",
-									"value": "{{To}}"
+									"key": "from",
+									"value": "2023-12-13"
+								},
+								{
+									"key": "to",
+									"value": "2024-01-12"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
 								},
 								{
 									"key": "IsSchoolTripOnly",
-									"value": "true"
+									"value": "false"
 								}
 							]
 						}
