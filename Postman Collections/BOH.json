@@ -3629,14 +3629,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"serviceDate\": \"2024-01-09T18:32:28.302Z\",\r\n    \"comments\": \"Notes\"\r\n}",
+							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": \"\",\r\n      \"adjustmentId\": \"4e5812b2-a06a-460a-a289-c23adcbab2e1\",\r\n      \"inventoryItemId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n      \"adjustedQuantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"comments\": \"Add qty\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/4e5812b2-a06a-460a-a289-c23adcbab2e1/details"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details"
 					},
 					"response": []
 				},
