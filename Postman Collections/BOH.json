@@ -3662,7 +3662,25 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/4e5812b2-a06a-460a-a289-c23adcbab2e1/details"
+						"url": {
+							"raw": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details?adjustmentId=4e5812b2-a06a-460a-a289-c23adcbab2e1",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"inventory",
+								"adjustment",
+								"sfCode",
+								"{{sfcode}}",
+								"details"
+							],
+							"query": [
+								{
+									"key": "adjustmentId",
+									"value": "4e5812b2-a06a-460a-a289-c23adcbab2e1"
+								}
+							]
+						}
 					},
 					"response": []
 				}
