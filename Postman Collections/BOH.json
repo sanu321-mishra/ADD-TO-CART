@@ -385,7 +385,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c48c4fca-b559-4780-865e-e63cd4bea180",
+								"id": "b5a35c5f-a7ce-48f3-b734-2a1d43d52452",
 								"exec": [
 									"pm.test('Schema is valid', function () {\r",
 									"    var schema = {\r",
@@ -464,12 +464,25 @@
 									"    pm.expect(responseData.data.occurrenceDate).to.exist;\r",
 									"});\r",
 									"\r",
-									"pm.test('IsFieldOfficeCalled and IsSendEmail are boolean values', function () {\r",
+									"pm.test('IsSendEmail are boolean values', function () {\r",
 									"    const responseData = pm.response.json();\r",
 									"    pm.expect(responseData).to.be.an('object');\r",
-									"    pm.expect(responseData.data.isFieldOfficeCalled).to.be.a('boolean');\r",
 									"    pm.expect(responseData.data.isSendEmail).to.be.a('boolean');\r",
 									"})\r",
+									"\r",
+									"pm.test(\"Response has a valid workflow state id\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"\r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData.data.workflowState.id).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Workflow state id should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
 									""
 								],
 								"type": "text/javascript"
@@ -483,7 +496,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/1558ae39-0343-4a14-aaeb-3672a1be03ed"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/e6f52237-a345-4c00-8096-e293935d8821"
 					},
 					"response": []
 				},
