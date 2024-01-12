@@ -3619,6 +3619,28 @@
 					"response": []
 				},
 				{
+					"name": "SaveAdjustmentDetails",
+					"id": "e266a5f5-af2c-461a-938d-92aad3b55f8a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"serviceDate\": \"2024-01-09T18:32:28.302Z\",\r\n    \"comments\": \"Notes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/4e5812b2-a06a-460a-a289-c23adcbab2e1/details"
+					},
+					"response": []
+				},
+				{
 					"name": "GetAdjustmentById",
 					"id": "b6216631-dd6b-462c-bcd8-0fa3705b1b74",
 					"protocolProfileBehavior": {
@@ -3628,6 +3650,19 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/4e5812b2-a06a-460a-a289-c23adcbab2e1"
+					},
+					"response": []
+				},
+				{
+					"name": "GetAdjustmentDetailsByAdjustmentId",
+					"id": "2bb189ce-336a-4112-a904-17dee3b273db",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/4e5812b2-a06a-460a-a289-c23adcbab2e1/details"
 					},
 					"response": []
 				}
