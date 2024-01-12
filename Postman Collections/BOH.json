@@ -1175,6 +1175,15 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{BaseUrl}}api/production/productionrecords/sfcode/{{sfcode}}/calendar?from=2020-01-01&to=2025-01-01",
 							"host": [
