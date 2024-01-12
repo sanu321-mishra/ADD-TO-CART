@@ -3619,6 +3619,28 @@
 					"response": []
 				},
 				{
+					"name": "UpdateAdjustment",
+					"id": "e9342cde-bb7b-49c5-aa9d-c680b681ff42",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"serviceDate\": \"2024-01-09T18:32:28.302Z\",\r\n    \"comments\": \"Notes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/4E5812B2-A06A-460A-A289-C23ADCBAB2E1"
+					},
+					"response": []
+				},
+				{
 					"name": "SaveAdjustmentDetails",
 					"id": "e266a5f5-af2c-461a-938d-92aad3b55f8a",
 					"protocolProfileBehavior": {
@@ -3629,7 +3651,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"4e5812b2-a06a-460a-a289-c23adcbab2e1\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"notes\": \"Add qty\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": \"a56ff290-0b7e-41be-a463-aa34087c23b9\",\r\n      \"adjustmentId\": \"4e5812b2-a06a-460a-a289-c23adcbab2e1\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Add qty\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
