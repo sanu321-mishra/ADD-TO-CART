@@ -3629,7 +3629,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"4e5812b2-a06a-460a-a289-c23adcbab2e1\",\r\n      \"inventoryItemId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"comments\": \"Add qty\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": \"A08B4A41-5402-4792-9587-6F4774E460EB\",\r\n      \"adjustmentId\": \"4e5812b2-a06a-460a-a289-c23adcbab2e1\",\r\n      \"inventoryItemId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n      \"quantity\": 0,\r\n      \"adjustmentType\": 1,\r\n      \"notes\": \"Add qty\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
