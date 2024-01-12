@@ -2465,6 +2465,33 @@
 				},
 				{
 					"name": "Get Notification Settings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ea8ab79f-0838-4c2a-a916-6430e1700009",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c362a237-d942-47b5-a074-802c11d141b8",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "30b152cc-b6d7-49ca-a01c-d7ff3392c3ed",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -2472,7 +2499,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{baseurl}}api/administration/notificationsetting"
+						"url": "{{BaseUrl}}api/administration/notificationsetting"
 					},
 					"response": []
 				}
