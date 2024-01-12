@@ -3627,7 +3627,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfCode}}/{id}"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfCode}}/FD27B5FA-14AA-41B7-B22B-108A2F3AD6CA"
 					},
 					"response": []
 				}
