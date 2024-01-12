@@ -961,7 +961,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/1558ae39-0343-4a14-aaeb-3672a1be03ed/emailtemplate"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/63f6b2ea-8421-41c7-a8f1-fcb020ae3927/emailtemplate"
 					},
 					"response": []
 				}
