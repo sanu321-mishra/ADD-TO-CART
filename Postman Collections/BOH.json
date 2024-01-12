@@ -573,7 +573,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"occurrenceDate\": \"2024-01-06T10:42:38.108Z\",\r\n  \"note\": \"string\",\r\n  \"workFlowActionId\": \"Create\"\r\n}",
+							"raw": "{\r\n  \"occurrenceDate\": \"2024-02-08T10:42:38.108Z\",\r\n  \"note\": \"1001111\",\r\n  \"workFlowActionId\": \"Create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -590,11 +590,49 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "6ffecea7-4aa5-4897-9659-9c41fc70dd68",
+								"id": "3ceb9422-cd64-4269-af21-85830a049f19",
 								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
 									"\r",
-									"pm.test(\"Response status code is 204\", function () {\r",
-									"    pm.expect(pm.response.code).to.equal(204);\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required fields - title, statusCode, and isSuccess\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.title).to.exist;\r",
+									"    pm.expect(responseData.statusCode).to.exist;\r",
+									"    pm.expect(responseData.isSuccess).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Title is a non-empty string\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"StatusCode is a non-negative integer\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.statusCode).to.be.a('number');\r",
+									"    pm.expect(responseData.statusCode).to.be.at.least(0);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Ensure that isSuccess is a boolean value\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
 									"});\r",
 									"\r",
 									""
@@ -612,14 +650,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"occurrenceDate\": \"2024-01-06T10:42:38.108Z\",\r\n  \"note\": \"Updated\"\r\n}",
+							"raw": "{\r\n    \r\n    \"id\": \"e6f52237-a345-4c00-8096-e293935d8821\",\r\n  \"occurrenceDate\": \"2024-01-08T10:42:38.108Z\",\r\n  \"note\": \"Updated note\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/D2F47C03-C7FB-46E9-98B6-EEFF6BCAB0FC/header"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/header"
 					},
 					"response": []
 				},
@@ -629,25 +667,65 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b2cc0391-5430-4f4f-9630-914c1107924d",
+								"id": "9544217d-68e3-49dc-9845-a5db8bba3e02",
 								"exec": [
-									"pm.test(\"Status code is 204\", function () {\r",
-									"    pm.response.to.have.status(204);\r",
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.expect(pm.response.code).to.equal(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Response body is null\", function () {\r",
-									"    const responseData = xml2Json(pm.response.text());\r",
+									"\r",
+									"pm.test(\"Content-Type is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Title field should exist and be a non-empty string\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"\r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"StatusCode field exists and is not null\", function () {\r",
+									"    const responseData = pm.response.json();\r",
 									"    \r",
-									"    pm.expect(responseData).to.be.null;\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.statusCode).to.exist.and.to.not.be.null;\r",
 									"});\r",
 									"\r",
 									"\r",
-									"pm.test(\"Response body should be empty or null\", function () {\r",
-									"    const responseData = xml2Json(pm.response.text());\r",
+									"pm.test(\"IsSuccess field should exist and be true\", function () {\r",
+									"    const responseData = pm.response.json();\r",
 									"    \r",
-									"    pm.expect(responseData).to.be.null;\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.isSuccess).to.exist.and.to.be.true;\r",
 									"});\r",
 									"\r",
+									"\r",
+									"pm.test(\"Ensure that the response contains only the expected fields - 'title', 'statusCode', and 'isSuccess'\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData).to.have.all.keys('title', 'statusCode', 'isSuccess');\r",
+									"    pm.expect(Object.keys(responseData)).to.have.lengthOf(3, \"Response should only contain the expected fields\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"StatusCode is a non-negative integer\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.statusCode).to.be.a('number');\r",
+									"    pm.expect(responseData.statusCode).to.satisfy((statusCode) => statusCode >= 0, \"StatusCode should be a non-negative integer\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"IsSuccess field is a boolean value\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
+									"});\r",
 									"\r",
 									""
 								],
@@ -657,7 +735,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "f5213160-f6c7-4c4f-8399-c6039d002d79",
+								"id": "65d65a7a-8f59-4218-a7c2-c46c3be34703",
 								"exec": [
 									""
 								],
@@ -674,7 +752,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"1558ae39-0343-4a14-aaeb-3672a1be03ed\",\r\n\t\"workFlowActionId\": \"Submit\",\r\n    \"occurrenceIncidentTypeId\": \"E7F079E2-D157-4C64-8924-2A70EE2FCACF\",\r\n    \"occurrenceDate\": \"2024-02-02T14:06:04.050Z\",\r\n    \"occurrenceStartTime\": \"13:58:41.658\",\r\n    \"occurrenceEndTime\": \"13:58:41.698\",\r\n    \"isFieldOfficeCalled\": true,\r\n    \"isSendEmail\": false,\r\n    \"emailSentStatus\": 0,\r\n    \"additionalNote\": \"Edit test 102\",\r\n    \"otherIncidentType\": \"Edit test 102\"\r\n}",
+							"raw": "{\r\n    \"id\": \"e6f52237-a345-4c00-8096-e293935d8821\",\r\n\t\"workFlowActionId\": \"Submit\",\r\n    \"occurrenceIncidentTypeId\": \"E7F079E2-D157-4C64-8924-2A70EE2FCACF\",\r\n    \"occurrenceDate\": \"2024-02-02T14:06:04.050Z\",\r\n    \"occurrenceSfcodeList\": \"Xyz\",\r\n    \"occurrenceStartTime\": \"13:58:41.658\",\r\n    \"occurrenceEndTime\": \"13:58:41.698\",\r\n    \"isFieldOfficeCalled\": true,\r\n    \"isSendEmail\": false,\r\n    \"emailSentStatus\": 0,\r\n    \"additionalNote\": \"Edit test 102\",\r\n    \"otherIncidentType\": \"Edit test 102\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
