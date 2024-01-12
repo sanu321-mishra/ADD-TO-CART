@@ -2763,9 +2763,41 @@
 							"script": {
 								"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
 								"exec": [
-									"pm.test(\"Response status code is 204\", function () {\r",
-									"    pm.response.to.have.status(204);\r",
-									"});"
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.includes.all.keys('title', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Title is a non-empty string\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"StatusCode is a non-negative integer\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.statusCode).to.be.a('number');\r",
+									"    pm.expect(responseData.statusCode).to.be.at.least(0);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"IsSuccess is a boolean\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -2790,7 +2822,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"RequisitionId\" : \"a5f87c8b-ef85-40af-b2b8-4a9dca9ca92c\",\r\n    \"WorkFlowActionId\" : \"Submit\"\r\n}",
+							"raw": "{\r\n    \"RequisitionId\" : \"cc21f23b-57ec-4cd4-af70-0108a15d9955\",\r\n    \"WorkFlowActionId\" : \"Submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
