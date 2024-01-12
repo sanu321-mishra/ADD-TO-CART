@@ -3617,6 +3617,19 @@
 						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}"
 					},
 					"response": []
+				},
+				{
+					"name": "GetAdjustmentById",
+					"id": "b6216631-dd6b-462c-bcd8-0fa3705b1b74",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfCode}}/{id}"
+					},
+					"response": []
 				}
 			],
 			"id": "4d4748fb-1da9-4aaa-8070-1711f747fa05"
