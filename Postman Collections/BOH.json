@@ -3651,7 +3651,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"edd26d4f-0015-4958-9047-2033df84899c\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 2,\r\n      \"note\": \"Add qty\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": \"38361BBF-C185-4F37-ADB2-CB4CA616FF40\",\r\n      \"adjustmentId\": \"edd26d4f-0015-4958-9047-2033df84899c\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 3,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
