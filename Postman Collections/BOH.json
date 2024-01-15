@@ -3647,6 +3647,52 @@
 						"url": "{{BaseUrl}}api/administration/notifications/sfcode/{{sfcode}}"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Notification Template",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "df619c9f-b255-42d7-a100-ffde447eea1f",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object');\r",
+									"    pm.expect(jsonData).to.have.property('title');\r",
+									"    pm.expect(jsonData).to.have.property('data');\r",
+									"    pm.expect(jsonData).to.have.property('statusCode');\r",
+									"    pm.expect(jsonData).to.have.property('isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c5a84bbe-bde1-434b-8131-f334b43c4c44",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "658decf0-60aa-4ecf-981d-f6d72d428f00",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/notifications/sfcode/{{sfcode}}/notificationtype/occurrence_log/template"
+					},
+					"response": []
 				}
 			],
 			"id": "f3f0c345-d793-4466-a5bd-d1f622b25d5b"
