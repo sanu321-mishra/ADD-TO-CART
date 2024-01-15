@@ -3828,7 +3828,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"serviceDate\": \"2024-01-18T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 new\"\r\n}",
+							"raw": "{\r\n    \"workFlowActionId\": \"Submit\",\r\n    \"serviceDate\": \"2024-01-18T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 new\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
