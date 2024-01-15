@@ -3629,14 +3629,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"workFlowActionId\": \"Submit\",\r\n    \"serviceDate\": \"2024-01-09T18:32:28.302Z\",\r\n    \"note\": \"Notes 1234\"\r\n}",
+							"raw": "{\r\n    \"workFlowActionId\": \"Submit\",\r\n    \"serviceDate\": \"2024-01-22T18:32:28.302Z\",\r\n    \"note\": \"Notes 1234555\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/edd26d4f-0015-4958-9047-2033df84899c"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/342FD85D-3E87-49A9-B547-E67621010C4E"
 					},
 					"response": []
 				},
