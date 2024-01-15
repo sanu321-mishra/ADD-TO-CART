@@ -3521,7 +3521,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/inappnotifications/unseentotal/sfcode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/administration/notifications/unseentotal/sfcode/{{sfcode}}"
 					},
 					"response": []
 				},
@@ -3553,7 +3553,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "c5a84bbe-bde1-434b-8131-f334b43c4c44",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -3566,15 +3568,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/administration/inappnotifications/sfcode/{{sfcode}}?Page=1&PageSize=1",
+							"raw": "{{BaseUrl}}api/administration/notifications/sfcode/{{sfcode}}/inapp?Page=1&PageSize=1",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"administration",
-								"inappnotifications",
+								"notifications",
 								"sfcode",
-								"{{sfcode}}"
+								"{{sfcode}}",
+								"inapp"
 							],
 							"query": [
 								{
@@ -3587,6 +3590,52 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Notification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "df619c9f-b255-42d7-a100-ffde447eea1f",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object');\r",
+									"    pm.expect(jsonData).to.have.property('title');\r",
+									"    pm.expect(jsonData).to.have.property('data');\r",
+									"    pm.expect(jsonData).to.have.property('statusCode');\r",
+									"    pm.expect(jsonData).to.have.property('isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c5a84bbe-bde1-434b-8131-f334b43c4c44",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "f4306640-3625-4d1a-831c-5f6879cf9e02",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/notifications/sfcode/{{sfcode}}"
 					},
 					"response": []
 				}
