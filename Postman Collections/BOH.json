@@ -3733,14 +3733,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"workFlowActionId\": \"Submit\",\r\n    \"serviceDate\": \"2024-01-20T18:32:28.302Z\",\r\n    \"note\": \"Notes\"\r\n}",
+							"raw": "{\r\n    \"workFlowActionId\": \"Submit\",\r\n    \"serviceDate\": \"2024-01-21T18:32:28.302Z\",\r\n    \"note\": \"Notes 2546_a\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/492076fb-46cb-4da8-9cbf-64c1dc8e6149"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/7fb8c102-78e2-4072-931d-e315f63f7587"
 					},
 					"response": []
 				},
