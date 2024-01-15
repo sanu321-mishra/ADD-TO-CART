@@ -3835,7 +3835,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/aef3a824-46a3-400d-b7a0-2d62b091ade6"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/d4548eb3-9ba9-4996-b062-95a5fafc858c"
 					},
 					"response": []
 				},
