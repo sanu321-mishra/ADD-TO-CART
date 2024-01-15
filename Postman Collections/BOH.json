@@ -3828,14 +3828,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"workFlowActionId\": \"Submit\",\r\n    \"serviceDate\": \"2024-01-25T18:32:28.302Z\",\r\n    \"note\": \"Notes 2546\"\r\n}",
+							"raw": "{\r\n    \"workFlowActionId\": \"Submit\",\r\n    \"serviceDate\": \"2024-01-25T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/c3559e6d-6fad-4cec-908e-a994cec8c9ff"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/93cf8f9f-984d-41e1-a64c-0e8f40ff758f"
 					},
 					"response": []
 				},
