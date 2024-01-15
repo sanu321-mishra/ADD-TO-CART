@@ -3886,7 +3886,7 @@
 					"response": []
 				},
 				{
-					"name": "Role Member By Role",
+					"name": "Member By Role",
 					"id": "b8ccc15e-dc46-41f5-859c-a3bab40534c0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
