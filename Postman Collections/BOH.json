@@ -3635,6 +3635,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"notificationTypeId\": \"af655439-7dc1-41ff-becb-0e845e1fd631\",\r\n    \"EmailSubject\": \"Occurrence Log\",\r\n    \"emailBodyTemplate\": \"<html>\\r\\n\\t<head>\\r\\n\\t</head>\\r\\n\\t<body>\\r\\n\\t\\t<p>\\r\\n\\t\\t\\tHi,\\r\\n\\t\\t</p>\\r\\n\\t\\t<p>\\r\\n\\t\\t\\tOccurrence Log Id : {{OccurrenceLogId}}\\r\\n            Occurrence Incedent Type: {{OccurrenceIncedentType}}\\r\\n            Was Occurrence Called into field office? : {{FieldOfficeCalled}}\\r\\n            List of sf codes : {{SfCodes}}\\r\\n            Occurrence Date : {{OccurrenceDate}}\\r\\n            Occurrence Start Time : {{OccurrenceStartTime}}\\r\\n            Occurrence End time : {{OccurrenceEndTime}}\\r\\n            Additional Notes/Comments : {{Comment}}\\r\\n\\t\\t</p>\\r\\n\\t\\t<br />\\r\\n\\t\\t<p style=\\\"margin-bottom:0px;\\\">\\r\\n\\t\\t\\tThanks,\\r\\n\\t\\t</p>\\r\\n\\t\\t<p style=\\\"margin-top:6px;\\\">\\r\\n\\t\\t\\tNYCSCA Administrator\\r\\n\\t\\t</p>\\r\\n\\t</body>\\r\\n</html>\\r\\n\",\r\n    \"to\": \"mzafar@svam.com,test@svam.com\",\r\n    \"cc\": \"mzafar@svam.com,test@svam.com\",\r\n    \"bcc\": \"mzafar@svam.com,test@svam.com\",\r\n    \"entityTypeId\": \"occurrence_log\",\r\n    \"entityId\": \"63f6b2ea-8421-41c7-a8f1-fcb020ae3927\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "{{BaseUrl}}api/administration/notifications/sfcode/{{sfcode}}"
 					},
 					"response": []
