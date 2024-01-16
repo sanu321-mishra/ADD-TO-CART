@@ -3641,16 +3641,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/administration/notifications/sfcode/{{sfcode}}/inapp?Page=1&PageSize=1",
+							"raw": "{{BaseUrl}}api/administration/inappnotifications/sfcode/{{sfcode}}?Page=1&PageSize=10",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"administration",
-								"notifications",
+								"inappnotifications",
 								"sfcode",
-								"{{sfcode}}",
-								"inapp"
+								"{{sfcode}}"
 							],
 							"query": [
 								{
@@ -3659,7 +3658,7 @@
 								},
 								{
 									"key": "PageSize",
-									"value": "1"
+									"value": "10"
 								}
 							]
 						}
