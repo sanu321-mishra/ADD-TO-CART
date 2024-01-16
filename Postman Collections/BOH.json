@@ -3612,6 +3612,19 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get All Inventory Items",
+					"id": "d0f519a5-03d9-473a-acbd-776a3821dc0c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/inventory/inventoryitems/sfCode/{{sfcode}}"
+					},
+					"response": []
 				}
 			],
 			"id": "39035c1a-4976-4a22-ad8e-b3a8e09d3027"
