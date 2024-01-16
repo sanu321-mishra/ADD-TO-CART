@@ -2425,7 +2425,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/modulesettings/district/820419af-fefa-48bb-b537-f991196ac3a5"
+						"url": "{{BaseUrl}}api/administration/modulesettings/district/5fa25767-2eb8-4d12-92b2-851299095c52"
 					},
 					"response": []
 				},
