@@ -3688,7 +3688,7 @@
 					"response": []
 				},
 				{
-					"name": "Save Notification",
+					"name": "Send Email",
 					"event": [
 						{
 							"listen": "test",
