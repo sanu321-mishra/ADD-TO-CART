@@ -3090,7 +3090,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
+								"id": "d1ae2c78-a49a-4986-93af-7f2317ac1234",
 								"exec": [
 									"pm.test('Response status code is 200', function () {\r",
 									"    pm.response.to.have.status(200);\r",
@@ -3101,11 +3101,52 @@
 									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
 									"})\r",
 									"\r",
-									"pm.test(\"Each element in the data array has non-empty itemName and inventoryItemId\", function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    jsonData.data.forEach(function(item) {\r",
-									"        pm.expect(item.itemName).to.be.a('string').and.to.not.be.empty;\r",
-									"    });\r",
+									"\r",
+									"pm.test(\"Response Content-Type is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data array should have at least one element\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData.data).to.be.an('array').that.is.not.empty;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"StatusCode is a non-negative integer\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.statusCode).to.be.a('number');\r",
+									"  pm.expect(responseData.statusCode).to.be.at.least(0, \"StatusCode should be a non-negative integer\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"IsSuccess is a boolean value\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Title is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"StatusCode is a non-null value\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.statusCode).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"IsSuccess property should be true\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.isSuccess).to.be.true;\r",
 									"});\r",
 									"\r",
 									""
@@ -3116,7 +3157,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "f5894cd7-91e2-4681-bd86-adfa5ea0c58e",
+								"id": "233eade7-9082-43a6-b00b-8a91c8460e4a",
 								"exec": [
 									""
 								],
@@ -3141,7 +3182,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/requisitiondetails?id=13b9049c-5b6e-40da-a9a9-0ca249ff466b",
+							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/details?id=10393012-bb19-4d38-8f44-7450ab6e1e99",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -3150,12 +3191,12 @@
 								"dailyrequisitions",
 								"sfCode",
 								"{{sfcode}}",
-								"requisitiondetails"
+								"details"
 							],
 							"query": [
 								{
 									"key": "id",
-									"value": "13b9049c-5b6e-40da-a9a9-0ca249ff466b"
+									"value": "10393012-bb19-4d38-8f44-7450ab6e1e99"
 								}
 							]
 						}
