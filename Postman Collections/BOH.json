@@ -3625,6 +3625,19 @@
 						"url": "{{BaseUrl}}api/inventory/inventoryitems/sfCode/{{sfcode}}"
 					},
 					"response": []
+				},
+				{
+					"name": "GetReceivingSchools",
+					"id": "1428c0b7-5645-419f-a9f4-57f7bc5f2cb9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/school/receivingschools/{{sfcode}}"
+					},
+					"response": []
 				}
 			],
 			"id": "39035c1a-4976-4a22-ad8e-b3a8e09d3027"
