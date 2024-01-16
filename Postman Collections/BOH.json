@@ -2583,6 +2583,28 @@
 						"url": "{{BaseUrl}}api/administration/notificationsetting"
 					},
 					"response": []
+				},
+				{
+					"name": "Update Static Text Row",
+					"id": "3ea55da3-6ba3-4980-8f35-84de2be56836",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"dash_inventory\",\r\n  \"item\": \"Inventory Homepage Title\",\r\n  \"text\": \"Inventory\",\r\n  \"description\": \"Click here to view Inventory.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/administration/statictext"
+					},
+					"response": []
 				}
 			],
 			"id": "626f27b8-14cb-4814-8b99-655e58c6fb52"
