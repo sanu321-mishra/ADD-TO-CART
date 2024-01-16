@@ -1363,7 +1363,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/occurrences?SfCode={{sfcode}}&From={{From}}&To={{To}}&page=1&pageSize=10",
+							"raw": "{{BaseUrl}}api/reports/productions/occurrences?SfCode={{sfcode}}&From={{From}}&To={{To}}&page=1&pageSize=10&statusId=inprogress",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -1392,6 +1392,10 @@
 								{
 									"key": "pageSize",
 									"value": "10"
+								},
+								{
+									"key": "statusId",
+									"value": "inprogress"
 								}
 							]
 						}
