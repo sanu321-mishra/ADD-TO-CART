@@ -3933,6 +3933,25 @@
 				},
 				{
 					"name": "GetAdjustmentById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b563e65c-f398-4db0-a5ea-499be15fcb98",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "b6216631-dd6b-462c-bcd8-0fa3705b1b74",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3956,9 +3975,14 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
 									"pm.test(\"data array should not be empty\", function () {\r",
 									"    const responseData = pm.response.json();   \r",
-									"    pm.expect(responseData).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
+									"    pm.expect(responseData.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
 									"});"
 								],
 								"type": "text/javascript"
