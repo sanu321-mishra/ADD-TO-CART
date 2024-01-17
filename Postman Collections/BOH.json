@@ -4203,17 +4203,20 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "42315af2-decd-4f57-97a8-b404f6eba9d6",
+				"id": "976f6747-6d85-4b82-96d4-590dd43f381f",
 				"type": "text/javascript",
 				"exec": [
-					""
+					"",
+					"",
+					"",
+					"pm.collectionVariables.set(\"jwtToken\", \"variable_value\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "1a939c92-727a-4dc5-9230-5e9bc1c8461c",
+				"id": "813c3fba-2684-4da1-9ace-669c04d11904",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -4226,6 +4229,10 @@
 			"key": "{{baseurl}}",
 			"value": "https://boh-api.svamdev.com/",
 			"type": "string"
+		},
+		{
+			"key": "jwtToken",
+			"value": ""
 		}
 	]
 }
