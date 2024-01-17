@@ -4183,14 +4183,15 @@
 			"id": "0c3403e5-17b2-4751-9e84-f3224f8bef96"
 		},
 		{
-			"name": "New Request",
+			"name": "token",
 			"id": "1d2da6ea-7a9d-4741-8a3e-320cfdfd8db9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"url": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/token"
 			},
 			"response": []
 		}
