@@ -3867,6 +3867,25 @@
 			"item": [
 				{
 					"name": "CreateAdjustment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "840dbe15-94cc-4b7f-bd40-b2a68bb9fc04",
+								"exec": [
+									"pm.test(\"Response status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "39ebe501-53fc-40bb-b471-3ae1cb0f9891",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3876,7 +3895,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"serviceDate\": \"2024-01-16T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546\"\r\n}",
+							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"serviceDate\": \"2024-01-23T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3889,6 +3908,25 @@
 				},
 				{
 					"name": "UpdateAdjustment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae927a90-e929-49ec-997a-6951995d8b4e",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "e9342cde-bb7b-49c5-aa9d-c680b681ff42",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3898,14 +3936,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"workFlowActionId\": \"Submit\",\r\n    \"serviceDate\": \"2024-01-18T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 new\"\r\n}",
+							"raw": "{\r\n    \"workFlowActionId\": \"Submit\",\r\n    \"serviceDate\": \"2024-01-24T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 m1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/d4548eb3-9ba9-4996-b062-95a5fafc858c"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/df7e8cdd-1322-493b-8465-658329bb04e3"
 					},
 					"response": []
 				},
