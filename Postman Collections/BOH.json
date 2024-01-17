@@ -3920,7 +3920,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": \"10E19D91-4168-4DF4-BA00-5101138EAD7A\",\r\n      \"adjustmentId\": \"342FD85D-3E87-49A9-B547-E67621010C4E\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"342FD85D-3E87-49A9-B547-E67621010C4E\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 5,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": \"10E19D91-4168-4DF4-BA00-5101138EAD7A\",\r\n      \"adjustmentId\": \"342FD85D-3E87-49A9-B547-E67621010C4E\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": \"894FC496-6C84-42A2-8CC6-5A3E08F73036\",\r\n      \"adjustmentId\": \"342FD85D-3E87-49A9-B547-E67621010C4E\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 0,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": \"A1C33EC5-CAAF-4254-8281-78A32ADCE179\",\r\n      \"adjustmentId\": \"342FD85D-3E87-49A9-B547-E67621010C4E\",\r\n      \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n      \"quantity\": 0,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
