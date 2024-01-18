@@ -2347,7 +2347,7 @@
 					"response": []
 				},
 				{
-					"name": "Admin App Setting",
+					"name": "Get App Setting",
 					"event": [
 						{
 							"listen": "test",
@@ -2386,6 +2386,28 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"url": "{{BaseUrl}}api/administration/appsetting"
+					},
+					"response": []
+				},
+				{
+					"name": "Update App Setting Value",
+					"id": "c148ee63-e2b0-430b-b095-895d5b0eeca2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"key\": \"audit_link\",\r\n  \"value\": \"Disabled\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "{{BaseUrl}}api/administration/appsetting"
 					},
 					"response": []
@@ -2607,28 +2629,6 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{BaseUrl}}api/administration/notificationsetting"
-					},
-					"response": []
-				},
-				{
-					"name": "Update App Setting Value",
-					"id": "c148ee63-e2b0-430b-b095-895d5b0eeca2",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"key\": \"audit_link\",\r\n  \"value\": \"Disabled\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{BaseUrl}}api/administration/appsetting"
 					},
 					"response": []
 				}
