@@ -2609,6 +2609,28 @@
 						"url": "{{BaseUrl}}api/administration/notificationsetting"
 					},
 					"response": []
+				},
+				{
+					"name": "Update App Setting Value",
+					"id": "c148ee63-e2b0-430b-b095-895d5b0eeca2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"key\": \"audit_link\",\r\n  \"value\": \"Disabled\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/administration/appsetting"
+					},
+					"response": []
 				}
 			],
 			"id": "626f27b8-14cb-4814-8b99-655e58c6fb52"
@@ -4358,9 +4380,9 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "sammons",
-			"clientSecret": "h3nzHimJUG",
 			"password": "bohpass1",
+			"username": "saddison",
+			"clientSecret": "h3nzHimJUG",
 			"tokenName": "BOH-CKing",
 			"clientId": "{{clientId}}",
 			"grant_type": "password_credentials",
@@ -4375,7 +4397,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "976f6747-6d85-4b82-96d4-590dd43f381f",
+				"id": "ebc7a1fe-19fa-4388-ad8f-24a25a3a0b5e",
 				"type": "text/javascript",
 				"exec": [
 					"",
@@ -4388,7 +4410,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "813c3fba-2684-4da1-9ace-669c04d11904",
+				"id": "ec7924ee-07b1-4585-9e76-85d253614bc2",
 				"type": "text/javascript",
 				"exec": [
 					""
