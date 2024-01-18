@@ -3728,7 +3728,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/school/receivingschools/{{sfcode}}"
+						"url": "{{BaseUrl}}api/administration/school/receivingschools/{{feederSFCodeID}}"
 					},
 					"response": []
 				}
