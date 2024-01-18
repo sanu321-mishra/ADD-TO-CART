@@ -3522,7 +3522,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "39dc9560-8136-458e-a889-9fe331e9ab9d",
+								"id": "f7fdf222-d547-4511-b260-0b7b08db61a7",
 								"exec": [
 									"pm.test(\"Response status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
@@ -3532,7 +3532,6 @@
 									"    var jsonData = pm.response.json();\r",
 									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
 									"});\r",
-									"\r",
 									"\r",
 									"pm.test(\"data array should not be empty\", function () {\r",
 									"    const responseData = pm.response.json();   \r",
@@ -3545,7 +3544,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "30552feb-8b89-4a06-bf63-4405117a6246",
+								"id": "dd59d33d-3511-4a1a-9822-21a1f0f8766c",
 								"exec": [
 									""
 								],
@@ -3559,7 +3558,14 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"url": "{{BaseUrl}}api/administration/workflows/histories/7108f230-0673-4893-9cab-4c2a1d8ce1ae"
 					},
 					"response": []
