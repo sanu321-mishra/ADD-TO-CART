@@ -2633,14 +2633,15 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Get Notification Setting Details",
 					"id": "71b06a08-a33e-4bf2-861f-cce54d3bae87",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/notificationsetting/detail/73E8A4A6-2576-468A-B036-41624ABB6484"
 					},
 					"response": []
 				}
@@ -4398,10 +4399,10 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"username": "saddison",
 			"clientSecret": "h3nzHimJUG",
-			"tokenName": "BOH-CKing",
 			"clientId": "{{clientId}}",
 			"grant_type": "password_credentials",
 			"accessTokenUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/token",
@@ -4415,7 +4416,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ebc7a1fe-19fa-4388-ad8f-24a25a3a0b5e",
+				"id": "5002245b-9745-4803-a771-afed6efc4fcf",
 				"type": "text/javascript",
 				"exec": [
 					"",
@@ -4428,7 +4429,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ec7924ee-07b1-4585-9e76-85d253614bc2",
+				"id": "fadb9c44-363a-488a-8399-4f58b57f80e6",
 				"type": "text/javascript",
 				"exec": [
 					""
