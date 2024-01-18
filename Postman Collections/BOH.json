@@ -2397,11 +2397,11 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"key\": \"audit_link\",\r\n  \"value\": \"Disabled\"\r\n}",
+							"raw": "{\r\n  \"key\": \"audit_link\",\r\n  \"value\": \"Enabled\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
