@@ -2631,6 +2631,18 @@
 						"url": "{{BaseUrl}}api/administration/notificationsetting"
 					},
 					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "71b06a08-a33e-4bf2-861f-cce54d3bae87",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "626f27b8-14cb-4814-8b99-655e58c6fb52"
