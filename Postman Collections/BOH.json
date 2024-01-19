@@ -4447,7 +4447,7 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "sammons",
+			"username": "dsmith",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"clientSecret": "h3nzHimJUG",
@@ -4464,7 +4464,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "87e5838f-9661-4ae6-8fd6-e375d83ad4bc",
+				"id": "c2c1f6f4-6499-447f-aaa4-56682142e473",
 				"type": "text/javascript",
 				"exec": [
 					"",
@@ -4477,7 +4477,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "8010de3a-cf54-4f35-8883-65ea139f009f",
+				"id": "377f9df7-9960-4569-b106-c3de900ebaec",
 				"type": "text/javascript",
 				"exec": [
 					""
