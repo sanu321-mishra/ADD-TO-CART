@@ -2727,6 +2727,51 @@
 				},
 				{
 					"name": "Get Notification Setting Details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7d5435c9-412d-465d-90c3-528e40f12e5a",
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Verify that the response has the required fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData).to.have.property('title');\r",
+									"    pm.expect(responseData).to.have.property('data');\r",
+									"    pm.expect(responseData).to.have.property('statusCode');\r",
+									"    pm.expect(responseData).to.have.property('isSuccess');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"InAppBodyTemplate and emailBodyTemplate are non-empty strings\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData.data.inAppBodyTemplate).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+									"  pm.expect(responseData.data.emailBodyTemplate).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "503a6c84-21ce-412c-9970-89c5c08b4b19",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "71b06a08-a33e-4bf2-861f-cce54d3bae87",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
