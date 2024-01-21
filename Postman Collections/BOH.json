@@ -2772,16 +2772,6 @@
 									"});\r",
 									"\r",
 									"\r",
-									"pm.test(\"Recipients object contains 'to', 'cc', and 'bcc' arrays\", function () {\r",
-									"    const responseData = pm.response.json();\r",
-									"    \r",
-									"    pm.expect(responseData.recipients).to.be.an('object');\r",
-									"    pm.expect(responseData.recipients.to).to.be.an('array');\r",
-									"    pm.expect(responseData.recipients.cc).to.be.an('array');\r",
-									"    pm.expect(responseData.recipients.bcc).to.be.an('array');\r",
-									"});\r",
-									"\r",
-									"\r",
 									""
 								],
 								"type": "text/javascript"
@@ -2806,6 +2796,88 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{BaseUrl}}api/administration/notificationsetting/detail/73E8A4A6-2576-468A-B036-41624ABB6484"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Notification Setting Detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c90e1943-a866-445c-ab3f-6afdb800e675",
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData).to.have.property('title');\r",
+									"    pm.expect(responseData).to.have.property('statusCode');\r",
+									"    pm.expect(responseData).to.have.property('isSuccess');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Title is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"StatusCode is a non-negative integer\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.statusCode).to.exist;\r",
+									"  pm.expect(responseData.statusCode).to.be.a('number');\r",
+									"  pm.expect(responseData.statusCode).to.satisfy((statusCode) => statusCode >= 0, \"StatusCode should be a non-negative integer\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Ensure that 'isSuccess' is a boolean value\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "041f68ed-020a-493d-b69e-2d0e05cbd290",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "0a1179e0-0efa-4717-ba54-d6efe7d05c7b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"c1385497-73fb-4806-ab53-3bb1dcee4245\",\r\n  \"notificationTypeId\": \"430c2d2b-6827-455d-a2f4-e5d6fde6294c\",\r\n  \"isInApp\": false,\r\n  \"isEmail\": true,\r\n  \"inAppBodyTemplate\": \"MsgTemp\",\r\n  \"emailBodyTemplate\": \"EmailTemp\",\r\n  \"subject\": \"emailsubject\",\r\n  \"to\": [\r\n    \"gmct\"\r\n  ],\r\n  \"cc\": [\r\n    \"s@gmail.com\"\r\n  ],\r\n  \"bcc\": [\r\n    \"pm@gmail.com\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/administration/notificationsetting"
 					},
 					"response": []
 				}
