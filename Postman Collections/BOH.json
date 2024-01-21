@@ -2758,6 +2758,38 @@
 									"  pm.expect(responseData.data.emailBodyTemplate).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
 									"});\r",
 									"\r",
+									"\r",
+									"pm.test(\"Id in the response data must be a non-empty string\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.data.id).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Id should be a non-empty string\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"NotificationTypeId is present and is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.have.property('data');\r",
+									"    pm.expect(responseData.data).to.have.property('notificationTypeId').that.is.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Recipients object contains 'to', 'cc', and 'bcc' arrays\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.recipients).to.be.an('object');\r",
+									"    pm.expect(responseData.recipients.to).to.be.an('array');\r",
+									"    pm.expect(responseData.recipients.cc).to.be.an('array');\r",
+									"    pm.expect(responseData.recipients.bcc).to.be.an('array');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Subject is a non-empty string\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.subject).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Subject should not be empty\");\r",
+									"});\r",
+									"\r",
 									""
 								],
 								"type": "text/javascript"
@@ -2767,7 +2799,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "503a6c84-21ce-412c-9970-89c5c08b4b19",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
