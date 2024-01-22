@@ -591,7 +591,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/fbe74309-0cc6-40c4-a828-527898d7e873"
+						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/865d441f-02eb-4f55-bf86-15b048e128ca"
 					},
 					"response": []
 				},
@@ -758,7 +758,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \r\n    \"id\": \"e6f52237-a345-4c00-8096-e293935d8821\",\r\n  \"occurrenceDate\": \"2024-01-08T10:42:38.108Z\",\r\n  \"note\": \"Updated note\"\r\n}",
+							"raw": "{\r\n    \r\n    \"id\": \"865d441f-02eb-4f55-bf86-15b048e128ca\",\r\n  \"occurrenceDate\": \"2024-01-08T10:42:38.108Z\",\r\n  \"note\": \"Updated note\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
