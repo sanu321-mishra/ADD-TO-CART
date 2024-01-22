@@ -4346,6 +4346,213 @@
 			"id": "4d4748fb-1da9-4aaa-8070-1711f747fa05"
 		},
 		{
+			"name": "ProductTransfer",
+			"item": [
+				{
+					"name": "CreateAdjustment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "840dbe15-94cc-4b7f-bd40-b2a68bb9fc04",
+								"exec": [
+									"pm.test(\"Response status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "1b6555c6-7f5d-4ac8-898c-d3ef5785895d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"serviceDate\": \"2024-01-23T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAdjustment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae927a90-e929-49ec-997a-6951995d8b4e",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "750af0d5-3d92-4812-a586-ef28313cbd8c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"workFlowActionId\": \"Submit\",\r\n    \"serviceDate\": \"2024-01-24T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 m1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/df7e8cdd-1322-493b-8465-658329bb04e3"
+					},
+					"response": []
+				},
+				{
+					"name": "SaveAdjustmentDetails",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "abbc9634-c1e2-4a0e-9a6f-e8e42c3e1f92",
+								"exec": [
+									"pm.test('Response status code is 200', function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "58971861-426c-4263-b79b-177617fb941f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": \"10E19D91-4168-4DF4-BA00-5101138EAD7A\",\r\n      \"adjustmentId\": \"342FD85D-3E87-49A9-B547-E67621010C4E\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": \"96C738B7-45B2-41B0-BD8F-FE7BFA8FFD71\",\r\n      \"adjustmentId\": \"342FD85D-3E87-49A9-B547-E67621010C4E\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 0,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": \"5DD1712D-2F9A-430A-838C-B0F8442C1BE8\",\r\n      \"adjustmentId\": \"342FD85D-3E87-49A9-B547-E67621010C4E\",\r\n      \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n      \"quantity\": 0,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details"
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductTransferById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b563e65c-f398-4db0-a5ea-499be15fcb98",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "6cb980f3-d407-4551-b1cb-55364f361b73",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/{{sfcode}}/FDBF8CAC-64F6-4365-9833-54FD53C68226"
+					},
+					"response": []
+				},
+				{
+					"name": "GetAdjustmentDetailsByAdjustmentId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2d3b542c-5300-4190-83f7-282ecfaf53f6",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();   \r",
+									"    pm.expect(responseData.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "8a9a9028-7144-446a-9196-0e2bbde0d465",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details?adjustmentId=4e5812b2-a06a-460a-a289-c23adcbab2e1",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"inventory",
+								"adjustment",
+								"sfCode",
+								"{{sfcode}}",
+								"details"
+							],
+							"query": [
+								{
+									"key": "adjustmentId",
+									"value": "4e5812b2-a06a-460a-a289-c23adcbab2e1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "4b16d038-11b7-4386-8cf4-c187e35a5669"
+		},
+		{
 			"name": "RBAC",
 			"item": [
 				{
