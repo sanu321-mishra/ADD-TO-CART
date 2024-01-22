@@ -4349,7 +4349,7 @@
 			"name": "ProductTransfer",
 			"item": [
 				{
-					"name": "CreateAdjustment",
+					"name": "CreateProductTransfer",
 					"event": [
 						{
 							"listen": "test",
@@ -4378,14 +4378,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"serviceDate\": \"2024-01-23T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546\"\r\n}",
+							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"transferFrom\": \"20071\",\r\n    \"transferTo\": \"29071\",\r\n\r\n    \"notes\": \"Notes 2546\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/reports/producttransfer/transferfrom/{{sfcode}}"
 					},
 					"response": []
 				},
@@ -4495,7 +4495,7 @@
 					"response": []
 				},
 				{
-					"name": "GetAdjustmentDetailsByAdjustmentId",
+					"name": "GetProductTransferDetailByProductTransferId",
 					"event": [
 						{
 							"listen": "test",
@@ -4528,13 +4528,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details?adjustmentId=4e5812b2-a06a-460a-a289-c23adcbab2e1",
+							"raw": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/details?adjustmentId=4e5812b2-a06a-460a-a289-c23adcbab2e1",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
-								"inventory",
-								"adjustment",
+								"reports",
+								"producttransfer",
 								"sfCode",
 								"{{sfcode}}",
 								"details"
