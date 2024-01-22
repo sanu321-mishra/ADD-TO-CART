@@ -2651,7 +2651,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"code\": \"dash_inventory\",\r\n  \"item\": \"Inventory Homepage Title\",\r\n  \"text\": \"Inventory\",\r\n  \"description\": \"Click here to view Inventory Application.\"\r\n}",
+							"raw": "{\r\n  \"code\": \"dash_inventory\",\r\n  \"text\": \"Inventory\",\r\n  \"description\": \"Click here to view Inventory.\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
