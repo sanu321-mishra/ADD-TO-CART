@@ -4490,7 +4490,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/{{sfcode}}/FDBF8CAC-64F6-4365-9833-54FD53C68226"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/FDBF8CAC-64F6-4365-9833-54FD53C68226"
 					},
 					"response": []
 				},
