@@ -3697,7 +3697,7 @@
 			"name": "Physical Inventory",
 			"item": [
 				{
-					"name": "Submit Daily Requisition",
+					"name": "Process Workflow Physical Inventory",
 					"event": [
 						{
 							"listen": "test",
@@ -3775,7 +3775,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Daily Requisition",
+					"name": "Get Physical Inventory",
 					"event": [
 						{
 							"listen": "test",
@@ -3843,7 +3843,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Daily Requisition Detail",
+					"name": "Get Physical Inventory Detail",
 					"event": [
 						{
 							"listen": "test",
@@ -3962,7 +3962,7 @@
 					"response": []
 				},
 				{
-					"name": "Add Daily Requisition",
+					"name": "Add Physical Inventory",
 					"event": [
 						{
 							"listen": "test",
@@ -4013,7 +4013,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Daily Requisition",
+					"name": "Update Physical Inventory",
 					"event": [
 						{
 							"listen": "test",
@@ -4081,7 +4081,7 @@
 					"response": []
 				},
 				{
-					"name": "Save Daily Requisition Detail",
+					"name": "Save Physical Inventory Detail",
 					"event": [
 						{
 							"listen": "test",
