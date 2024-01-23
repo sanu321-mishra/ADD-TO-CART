@@ -4124,12 +4124,12 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}/requisitiondetails"
+						"url": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}/details"
 					},
 					"response": [
 						{
 							"id": "de99df5a-9ef4-473c-bab4-771cfa9e33ed",
-							"name": "Add Daily Requisition Detail",
+							"name": "Add Physical Inventory Detail",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -4142,7 +4142,7 @@
 										}
 									}
 								},
-								"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/requisitiondetails"
+								"url": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}/details"
 							},
 							"_postman_previewlanguage": null,
 							"header": null,
@@ -4152,7 +4152,7 @@
 						},
 						{
 							"id": "d405f195-13c4-4258-a0fb-34a45cde446f",
-							"name": "Update daily Requisition Detail",
+							"name": "Update Physical Inventory Detail",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -4165,7 +4165,7 @@
 										}
 									}
 								},
-								"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/requisitiondetails"
+								"url": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}/details"
 							},
 							"_postman_previewlanguage": null,
 							"header": null,
