@@ -2897,7 +2897,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"c1385497-73fb-4806-ab53-3bb1dcee4245\",\r\n  \"notificationTypeId\": \"430c2d2b-6827-455d-a2f4-e5d6fde6294c\",\r\n  \"isInApp\": false,\r\n  \"isEmail\": true,\r\n  \"inAppBodyTemplate\": \"\",\r\n  \"emailBodyTemplate\": \"EmailTemplate test\",\r\n  \"subject\": \"emailsubjectHas Body\",\r\n  \"to\": [\r\n    \"District Supervisor\",\"Cook\"\r\n  ],\r\n  \"cc\": [\r\n    \"s@gmail.com\",\"aman@gmail.com\",\"abhay@gmail.com\"\r\n  ],\r\n  \"bcc\": [\r\n    \"pm@gmail.com\"\r\n  ]\r\n}",
+							"raw": "{\r\n  \"id\": \"c1385497-73fb-4806-ab53-3bb1dcee4245\",\r\n  \"notificationTypeId\": \"430c2d2b-6827-455d-a2f4-e5d6fde6294c\",\r\n  \"isInApp\": false,\r\n  \"isEmail\": true,\r\n  \"inAppBodyTemplate\": \"MsgTemplate\",\r\n  \"emailBodyTemplate\": \"EmailTemplate\",\r\n  \"subject\": \"emailsubjectHas\",\r\n  \"to\": [\r\n    \"gmct\"\r\n  ],\r\n  \"cc\": [\r\n    \"s@gmail.com\",\"abhay@gmail.com\"\r\n  ],\r\n  \"bcc\": [\r\n    \"pm@gmail.com\",\"modi@gmail.com\"\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
