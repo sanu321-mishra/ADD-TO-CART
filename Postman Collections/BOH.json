@@ -4451,7 +4451,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": \"10E19D91-4168-4DF4-BA00-5101138EAD7A\",\r\n      \"adjustmentId\": \"342FD85D-3E87-49A9-B547-E67621010C4E\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": \"96C738B7-45B2-41B0-BD8F-FE7BFA8FFD71\",\r\n      \"adjustmentId\": \"342FD85D-3E87-49A9-B547-E67621010C4E\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 0,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": \"5DD1712D-2F9A-430A-838C-B0F8442C1BE8\",\r\n      \"adjustmentId\": \"342FD85D-3E87-49A9-B547-E67621010C4E\",\r\n      \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n      \"quantity\": 0,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"productTransferDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"f2b4cd4c-bfae-4ef8-8c14-572b3f27abcc\",\r\n            \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"f2b4cd4c-bfae-4ef8-8c14-572b3f27abcc\",\r\n            \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"f2b4cd4c-bfae-4ef8-8c14-572b3f27abcc\",\r\n            \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4527,25 +4527,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/details?adjustmentId=4e5812b2-a06a-460a-a289-c23adcbab2e1",
-							"host": [
-								"{{BaseUrl}}api"
-							],
-							"path": [
-								"reports",
-								"producttransfer",
-								"sfCode",
-								"{{sfcode}}",
-								"details"
-							],
-							"query": [
-								{
-									"key": "adjustmentId",
-									"value": "4e5812b2-a06a-460a-a289-c23adcbab2e1"
-								}
-							]
-						}
+						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/f2b4cd4c-bfae-4ef8-8c14-572b3f27abcc/details"
 					},
 					"response": []
 				}
