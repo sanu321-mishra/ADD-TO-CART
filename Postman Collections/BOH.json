@@ -2554,7 +2554,7 @@
 								"exec": [
 									"\r",
 									"pm.test(\"Successful POST request\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([204]);\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -3697,7 +3697,7 @@
 			"name": "Common",
 			"item": [
 				{
-					"name": "Get Audit Trail",
+					"name": "Get Audit Logs",
 					"event": [
 						{
 							"listen": "test",
@@ -3740,13 +3740,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/administration/audittrails/03ce9b7b-438e-440e-8f3d-0b2e6f56b9cd?page=1&pagesize=2",
+							"raw": "{{BaseUrl}}api/administration/auditlogs/03ce9b7b-438e-440e-8f3d-0b2e6f56b9cd?page=1&pagesize=2",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"administration",
-								"audittrails",
+								"auditlogs",
 								"03ce9b7b-438e-440e-8f3d-0b2e6f56b9cd"
 							],
 							"query": [
