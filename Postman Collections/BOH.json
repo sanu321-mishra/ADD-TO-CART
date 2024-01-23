@@ -4421,7 +4421,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/3515cdb6-27bf-4bc0-bb3f-5918b2f12318"
+						"url": "{{BaseUrl}}api/reports/producttransfer/sfcode/{{sfcode}}/3515cdb6-27bf-4bc0-bb3f-5918b2f12318"
 					},
 					"response": []
 				},
