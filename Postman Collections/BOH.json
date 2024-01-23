@@ -4439,7 +4439,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventoryitems"
+						"url": "{{BaseUrl}}api/inventory/inventoryitem"
 					},
 					"response": []
 				},
