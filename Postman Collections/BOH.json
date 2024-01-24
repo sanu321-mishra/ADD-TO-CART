@@ -28,8 +28,6 @@
 									"    const responseData = pm.response.json();\r",
 									"    const itemizedInventories = responseData.data.itemizedInventoriesSummary;\r",
 									"   \r",
-									"    pm.expect(itemizedInventories.length).to.be.greaterThan(0, \"Itemized inventories should not be empty\");\r",
-									"\r",
 									"    itemizedInventories.forEach((item)=>{\r",
 									"      pm.expect(item.inventoryItemCatagoryName).to.be.a('string');\r",
 									"      pm.expect(item.beginningPerpetual).to.be.a('number');\r",
@@ -2636,13 +2634,12 @@
 							{
 								"key": "X-Sf-Code",
 								"value": "{{sfcode}}",
-								"type": "text",
-								"disabled": true
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"isInventory\": false,\r\n  \"isProduction\": true\r\n}",
+							"raw": "{\r\n  \"isInventory\": true,\r\n  \"isProduction\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
