@@ -4097,10 +4097,35 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
-									"});"
+									"pm.test(\"Response is a JSON object with title, statusCode, and isSuccess properties\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.all.keys('title', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"pm.test(\"Response Content-Type is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Title is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.title).to.exist.and.to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"StatusCode is a number\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    pm.expect(responseData.statusCode).to.be.a('number');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"IsSuccess is a boolean\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -4125,7 +4150,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"serviceDate\": \"2024-01-04T05:00:27.459Z\",\r\n  \"isService\": true\r\n}",
+							"raw": "{\r\n  \"id\" : \"09a019f1-5f32-4efe-b10a-d4d823a66415\",\r\n  \"note\": \"update\",\r\n  \"serviceDate\": \"2023-01-22\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4133,7 +4158,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}?id=f11a1a05-8cd3-4a38-8b25-949cda68818e",
+							"raw": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -4146,7 +4171,8 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "f11a1a05-8cd3-4a38-8b25-949cda68818e"
+									"value": "6025760b-6925-4316-b820-6f219c34bb50",
+									"disabled": true
 								}
 							]
 						}
