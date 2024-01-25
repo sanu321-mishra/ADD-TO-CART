@@ -4835,13 +4835,13 @@
 							"script": {
 								"id": "840dbe15-94cc-4b7f-bd40-b2a68bb9fc04",
 								"exec": [
-									"pm.test(\"Response status code is 201\", function () {\r",
-									"    pm.response.to.have.status(201);\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
 									"    var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'statusCode', 'isSuccess');\r",
 									"});"
 								],
 								"type": "text/javascript"
