@@ -4864,7 +4864,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/submit"
 					},
 					"response": []
 				},
