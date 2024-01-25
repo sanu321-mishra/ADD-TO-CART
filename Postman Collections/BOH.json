@@ -4857,7 +4857,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentId\": \"04f72f0c-5bfc-4082-9805-68b076c2b31c\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
+							"raw": "{\r\n    \"adjustmentId\": \"c804990a-0d99-46cf-b3bc-9363cb02cb9b\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4900,7 +4900,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/04f72f0c-5bfc-4082-9805-68b076c2b31c"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/c804990a-0d99-46cf-b3bc-9363cb02cb9b"
 					},
 					"response": []
 				},
