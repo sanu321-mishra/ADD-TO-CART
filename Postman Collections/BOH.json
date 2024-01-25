@@ -4857,7 +4857,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentId\": \"04f72f0c-5bfc-4082-9805-68b076c2b31c\",\r\n    \"workFlowActionId\": \"Create\"\r\n}",
+							"raw": "{\r\n    \"adjustmentId\": \"04f72f0c-5bfc-4082-9805-68b076c2b31c\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
