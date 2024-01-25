@@ -4828,6 +4828,47 @@
 					"response": []
 				},
 				{
+					"name": "SubmitAdjustment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "840dbe15-94cc-4b7f-bd40-b2a68bb9fc04",
+								"exec": [
+									"pm.test(\"Response status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "af604366-5629-4d84-b63c-a3627969824a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adjustmentId\": \"04f72f0c-5bfc-4082-9805-68b076c2b31c\",\r\n    \"workFlowActionId\": \"Create\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}"
+					},
+					"response": []
+				},
+				{
 					"name": "UpdateAdjustment",
 					"event": [
 						{
@@ -4852,7 +4893,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"workFlowActionId\": \"Submit\",\r\n    \"serviceDate\": \"2024-01-24T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 m1\"\r\n}",
+							"raw": "{\r\n    \"serviceDate\": \"2024-01-24T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 m1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
