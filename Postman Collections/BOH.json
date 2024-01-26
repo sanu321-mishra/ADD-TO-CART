@@ -3277,6 +3277,163 @@
 						"url": "{{BaseUrl}}api/useraccess/loggedinuserdetail"
 					},
 					"response": []
+				},
+				{
+					"name": "Save Impersonation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3c8fff73-9e25-4d0e-9707-bdf2841cd0a4",
+								"exec": [
+									"pm.test(\"Response Content-Type is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Response data has roleID, roleName, and hierarchy properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    pm.expect(data).to.have.property('roleName').that.is.a('string');\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Response data has employeeID, fullName, and totalUnseenNotificationCount properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    pm.expect(data).to.have.property('fullName').that.is.a('string');\r",
+									"    pm.expect(data).to.have.property('totalUnseenNotificationCount').that.is.a('number');\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Response data has menus, schools, and permissions properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    pm.expect(data).to.have.property('menus').that.is.an('array');\r",
+									"    pm.expect(data).to.have.property('schools').that.is.an('array');\r",
+									"    pm.expect(data).to.have.property('permissions').that.is.an('array');\r",
+									"    pm.expect(data).to.have.property('staticTexts').that.is.an('array');\r",
+									"    pm.expect(data).to.have.property('applicationSettings').that.is.an('array');\r",
+									"});\r",
+									" \r",
+									" \r",
+									"pm.test(\"Response data has statusCode and isSuccess properties\", function () {\r",
+									"    var data = pm.response.json();\r",
+									"    pm.expect(data).to.have.property('statusCode').that.is.a('number');\r",
+									"    pm.expect(data).to.have.property('isSuccess').that.is.a('boolean');\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Permissions array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"   \r",
+									"    pm.expect(responseData.data.permissions).to.be.an('array').and.to.have.lengthOf.at.least(1, \"Permissions array should not be empty\");\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Static texts array contains objects with required properties\", function () {\r",
+									"    const responseData = pm.response.json().data;\r",
+									" \r",
+									"    pm.expect(responseData.staticTexts).to.be.an('array');\r",
+									"    responseData.staticTexts.forEach(function(staticText) {\r",
+									"        pm.expect(staticText).to.have.property('code').that.is.a('string');\r",
+									"        pm.expect(staticText).to.have.property('text').that.is.a('string');\r",
+									"        pm.expect(staticText).to.have.property('description').that.is.a('string');\r",
+									"    });\r",
+									"});\r",
+									"pm.test(\"Response data has roleName property\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"   \r",
+									"    pm.expect(responseData).to.have.property('data');\r",
+									"    pm.expect(responseData.data).to.have.property('roleName');\r",
+									"});\r",
+									" \r",
+									" \r",
+									"pm.test(\"Response data has userID property\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"   \r",
+									"    pm.expect(responseData).to.have.property('data');\r",
+									"    pm.expect(responseData.data).to.have.property('userID');\r",
+									"});\r",
+									" \r",
+									" \r",
+									"pm.test(\"Response data has email property\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"   \r",
+									"    pm.expect(responseData).to.have.property('data');\r",
+									"    pm.expect(responseData.data).to.have.property('email');\r",
+									"});\r",
+									" \r",
+									" \r",
+									"pm.test(\"Response data has totalUnseenNotificationCount property\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"   \r",
+									"    pm.expect(responseData.data).to.have.property('totalUnseenNotificationCount');\r",
+									"});\r",
+									" \r",
+									" \r",
+									"pm.test(\"Response data has menus property\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"   \r",
+									"    pm.expect(responseData.data).to.have.property('menus');\r",
+									"});\r",
+									" \r",
+									" pm.test(\"Static Text array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();   \r",
+									"    pm.expect(responseData.data.staticTexts).to.be.an('array').and.to.have.lengthOf.at.least(1, \"Static Text array should not be empty\");\r",
+									"});\r",
+									"\r",
+									" pm.test(\"Application Settings array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();   \r",
+									"    pm.expect(responseData.data.applicationSettings).to.be.an('array').and.to.have.lengthOf.at.least(1, \"Application Settings should not be empty\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Permissions array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"   \r",
+									"    pm.expect(responseData.data.permissions).to.be.an('array').and.to.have.lengthOf.at.least(1, \"Permissions array should not be empty\");\r",
+									"});\r",
+									" "
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d8beffe4-ff84-40e9-9582-0fe945fa2132",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "de5447f3-544c-4fd5-86d5-0062ed422393",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Id-Token",
+								"value": "{{jwtToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"impersonatedUserId\": \"cking\",\r\n    \"note\": \"test impersonation\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/useraccess/impersonation"
+					},
+					"response": []
 				}
 			],
 			"id": "5eccd812-c47e-4f1d-b118-c9a30e28492d"
