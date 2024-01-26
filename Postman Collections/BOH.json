@@ -5459,7 +5459,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"32bc4101-a915-4370-817f-e6fca27ff2ac\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
+							"raw": "{\r\n    \"productTransferId\": \"32bc4101-a915-4370-817f-e6fca27ff2ac\",\r\n    \"workFlowActionId\": \"confirm\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
