@@ -2951,6 +2951,65 @@
 						"url": "{{BaseUrl}}api/administration/notificationsetting"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Notification Type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6705e776-b3af-40b0-9766-a552d5b895e6",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is in JSON format\", function () {\r",
+									"    pm.response.to.have.header('Content-Type', 'application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a title property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('title');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a data array with id, name, and description properties\", function () {\r",
+									"    pm.response.json().data.forEach(function(item) {\r",
+									"        pm.expect(item).to.have.property('id');\r",
+									"        pm.expect(item).to.have.property('name');\r",
+									"        pm.expect(item).to.have.property('description');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has a statusCode property with value 200\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('statusCode', 0);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has an isSuccess property set to true\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('isSuccess', true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "6a3c29dd-e363-40e9-9673-426ee2560420",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "6f96906a-0ee4-4109-a3aa-af5702b16f52",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/notifications/types"
+					},
+					"response": []
 				}
 			],
 			"id": "626f27b8-14cb-4814-8b99-655e58c6fb52"
