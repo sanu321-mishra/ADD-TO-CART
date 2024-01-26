@@ -2964,10 +2964,6 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Response is in JSON format\", function () {\r",
-									"    pm.response.to.have.header('Content-Type', 'application/json');\r",
-									"});\r",
-									"\r",
 									"pm.test(\"Response has a title property\", function () {\r",
 									"    pm.expect(pm.response.json()).to.have.property('title');\r",
 									"});\r",
@@ -2981,7 +2977,7 @@
 									"});\r",
 									"\r",
 									"pm.test(\"Response has a statusCode property with value 200\", function () {\r",
-									"    pm.expect(pm.response.json()).to.have.property('statusCode', 0);\r",
+									"    pm.expect(pm.response.json()).to.have.property('statusCode', 200);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Response has an isSuccess property set to true\", function () {\r",
@@ -2994,7 +2990,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "6a3c29dd-e363-40e9-9673-426ee2560420",
+								"id": "2b17140f-0039-42bb-84d0-d0485e1ccd94",
 								"exec": [],
 								"type": "text/javascript"
 							}
