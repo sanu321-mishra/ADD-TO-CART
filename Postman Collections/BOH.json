@@ -3475,6 +3475,11 @@
 								"key": "X-Id-Token",
 								"value": "{{jwtToken}}",
 								"type": "text"
+							},
+							{
+								"key": "X-Sf-Code",
+								"value": "{{sfcode}}",
+								"type": "text"
 							}
 						],
 						"body": {
