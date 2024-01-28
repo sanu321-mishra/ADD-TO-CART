@@ -2350,7 +2350,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/summary?districtId=&sfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/inventories/summary?districtId=&sfCode=&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2366,7 +2366,7 @@
 								},
 								{
 									"key": "sfCode",
-									"value": "{{sfcode}}"
+									"value": ""
 								},
 								{
 									"key": "From",
