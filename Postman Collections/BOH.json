@@ -2342,6 +2342,34 @@
 				},
 				{
 					"name": "InventorySummary",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b71b2588-2a73-4e1a-86c5-fb6f2bb99edb",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response data contains count, data, and total properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    pm.expect(data).to.have.property('data');\r",
+									"    pm.expect(data).to.have.property('total');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains isSuccess property with value true\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('isSuccess', true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "e46d196b-acab-443f-b569-d36d936a6aea",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -2350,7 +2378,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/summary?districtId=&sfCode=&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/inventories/summary?districtId=&sfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2366,7 +2394,7 @@
 								},
 								{
 									"key": "sfCode",
-									"value": ""
+									"value": "{{sfcode}}"
 								},
 								{
 									"key": "From",
