@@ -2339,6 +2339,43 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "InventorySummary",
+					"id": "e46d196b-acab-443f-b569-d36d936a6aea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/summary?sfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"summary"
+							],
+							"query": [
+								{
+									"key": "sfCode",
+									"value": "{{sfcode}}"
+								},
+								{
+									"key": "From",
+									"value": "{{From}}"
+								},
+								{
+									"key": "To",
+									"value": "{{To}}"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "37e79f11-107a-493a-ad88-3e66a46489be"
