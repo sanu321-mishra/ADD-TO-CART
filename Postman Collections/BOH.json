@@ -5959,7 +5959,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/roles"
+						"url": "{{BaseUrl}}api/administration/lookup/roles"
 					},
 					"response": []
 				}
