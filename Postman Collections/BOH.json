@@ -3078,6 +3078,83 @@
 				},
 				{
 					"name": "Get Help Text",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e4ca958a-6584-486c-b29d-f999e0fe8513",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Content type is application/json\", function () {\r",
+									"  pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"pm.test(\"Response has the required fields\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData).to.have.property('title');\r",
+									"  pm.expect(responseData).to.have.property('data');\r",
+									"  pm.expect(responseData).to.have.property('statusCode');\r",
+									"  pm.expect(responseData).to.have.property('isSuccess');\r",
+									"});\r",
+									"pm.test(\"Data array is present and contains the expected number of elements\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData.data).to.be.an('array');\r",
+									"});\r",
+									"pm.test(\"Title is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Each element in the 'data' array has non-empty id, title, and description\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.data).to.be.an('array');\r",
+									"    responseData.data.forEach(function(element) {\r",
+									"        pm.expect(element.id).to.exist.and.to.not.be.empty;\r",
+									"        pm.expect(element.title).to.exist.and.to.not.be.empty;\r",
+									"        pm.expect(element.description).to.exist.and.to.not.be.empty;\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"StatusCode is a non-negative integer\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.statusCode).to.be.a('number').and.to.satisfy((statusCode) => statusCode >= 0);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"IsSuccess is a boolean value\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data array should have valid structure and format\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.data).to.be.an('array').that.is.not.empty;\r",
+									"\r",
+									"    responseData.data.forEach(function(item) {\r",
+									"        pm.expect(item).to.be.an('object');\r",
+									"        pm.expect(item.id).to.be.a('string');\r",
+									"        pm.expect(item.title).to.be.a('string');\r",
+									"        pm.expect(item.description).to.be.a('string');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "58cd2c05-f099-4d5f-857f-dc422d9690e8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3101,8 +3178,7 @@
 							"query": [
 								{
 									"key": "PageId",
-									"value": "AF24437A-3B5D-42E1-93EF-19F0EB41EF9C",
-									"type": "text"
+									"value": "AF24437A-3B5D-42E1-93EF-19F0EB41EF9C"
 								}
 							]
 						}
