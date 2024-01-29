@@ -6064,6 +6064,53 @@
 						"url": "{{BaseUrl}}api/administration/lookup/incidenttypes"
 					},
 					"response": []
+				},
+				{
+					"name": "Get receiving schools",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "39dc9560-8136-458e-a889-9fe331e9ab9d",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();   \r",
+									"    pm.expect(responseData.data.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "30552feb-8b89-4a06-bf63-4405117a6246",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "3a322912-b3df-411b-a037-0bb168cff2fe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/lookup/receivingschools/sfcode/{{sfcode}}}"
+					},
+					"response": []
 				}
 			],
 			"id": "e3c1455b-fa7d-497a-a9e7-de424686aff8"
