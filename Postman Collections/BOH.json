@@ -6111,6 +6111,19 @@
 						"url": "{{BaseUrl}}api/administration/lookup/receivingschools/sfcode/{{sfcode}}}"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Pages",
+					"id": "7b1d7361-d3b1-44d8-a29e-38dc03309a50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/lookup/pages"
+					},
+					"response": []
 				}
 			],
 			"id": "e3c1455b-fa7d-497a-a9e7-de424686aff8"
