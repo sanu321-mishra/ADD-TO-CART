@@ -5914,6 +5914,59 @@
 			"id": "0c3403e5-17b2-4751-9e84-f3224f8bef96"
 		},
 		{
+			"name": "Lookup",
+			"item": [
+				{
+					"name": "Get Roles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "39dc9560-8136-458e-a889-9fe331e9ab9d",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();   \r",
+									"    pm.expect(responseData.data.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "30552feb-8b89-4a06-bf63-4405117a6246",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "180c1e4d-2b4a-44ec-bf34-82f9fdd43113",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/roles"
+					},
+					"response": []
+				}
+			],
+			"id": "e3c1455b-fa7d-497a-a9e7-de424686aff8"
+		},
+		{
 			"name": "token",
 			"id": "1d2da6ea-7a9d-4741-8a3e-320cfdfd8db9",
 			"protocolProfileBehavior": {
