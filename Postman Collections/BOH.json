@@ -3075,6 +3075,18 @@
 						"url": "{{BaseUrl}}api/administration/notifications/types"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Help Text",
+					"id": "58cd2c05-f099-4d5f-857f-dc422d9690e8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "626f27b8-14cb-4814-8b99-655e58c6fb52"
@@ -6006,7 +6018,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/lookup/roles"
+						"url": "{{BaseUrl}}api/administration/lookup/incidenttypes"
 					},
 					"response": []
 				}
