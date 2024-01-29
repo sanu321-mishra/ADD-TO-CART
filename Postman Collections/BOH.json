@@ -3084,7 +3084,50 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}api/administration/helptext?PageId=AF24437A-3B5D-42E1-93EF-19F0EB41EF9C",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"administration",
+								"helptext"
+							],
+							"query": [
+								{
+									"key": "PageId",
+									"value": "AF24437A-3B5D-42E1-93EF-19F0EB41EF9C",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Help Text",
+					"id": "b9cd6b7a-4d73-4152-b34a-b0813f4a8d61",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"C87CD44E-BAAF-4D31-9BC0-6A0F18312527\",\r\n  \"title\": \"Header\",\r\n  \"description\": \"The Title bar shows the production Record Title\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/administration/helptext"
 					},
 					"response": []
 				}
