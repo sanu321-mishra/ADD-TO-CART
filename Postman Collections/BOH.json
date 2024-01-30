@@ -6363,20 +6363,20 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c2c1f6f4-6499-447f-aaa4-56682142e473",
+				"id": "5ebff2c6-e007-4785-878b-3401ed0f7570",
 				"type": "text/javascript",
 				"exec": [
 					"",
 					"",
 					"",
-					"pm.collectionVariables.set(\"jwtToken\", \"variable_value\");"
+					"pm.collectionVariables.set(\"jwtToken\", \"XXXXXXX\")"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "377f9df7-9960-4569-b106-c3de900ebaec",
+				"id": "c9449b1e-3285-43d5-80a8-e78165d11a15",
 				"type": "text/javascript",
 				"exec": [
 					""
