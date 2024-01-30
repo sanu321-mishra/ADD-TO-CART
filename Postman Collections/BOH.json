@@ -5541,7 +5541,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentId\": \"8e9330c9-8633-4b9d-9c13-917fc45fdd1e\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
+							"raw": "{\r\n    \"adjustmentId\": \"f6a70747-2379-49fb-9d1b-0744598e24dc\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5584,7 +5584,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/8e9330c9-8633-4b9d-9c13-917fc45fdd1e"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/f6a70747-2379-49fb-9d1b-0744598e24dc"
 					},
 					"response": []
 				},
@@ -5653,7 +5653,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/8e9330c9-8633-4b9d-9c13-917fc45fdd1e"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/f6a70747-2379-49fb-9d1b-0744598e24dc"
 					},
 					"response": []
 				},
