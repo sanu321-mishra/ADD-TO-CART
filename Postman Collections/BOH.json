@@ -5594,7 +5594,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"serviceDate\": \"2024-01-24T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 m1\"\r\n}",
+							"raw": "{\r\n    \"serviceDate\": \"2024-01-25T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 m123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5670,7 +5670,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/04f72f0c-5bfc-4082-9805-68b076c2b31c"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/8e9330c9-8633-4b9d-9c13-917fc45fdd1e"
 					},
 					"response": []
 				},
