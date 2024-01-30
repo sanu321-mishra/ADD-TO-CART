@@ -4290,7 +4290,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ServiceDate\": \"2024-01-01\",\r\n    \"Note\": \"test note\",\r\n    \"IsService\": true,\r\n    \"WorkFlowActionId\":\"Create\"\r\n}",
+							"raw": "{\r\n    \"ServiceDate\": \"2024-01-28\",\r\n    \"Note\": \"test note\",\r\n    \"IsService\": true,\r\n    \"WorkFlowActionId\":\"Create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4341,31 +4341,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"serviceDate\": \"2024-01-04T05:00:27.459Z\",\r\n  \"isService\": true\r\n}",
+							"raw": "{\r\n    \"id\": \"f11a1a05-8cd3-4a38-8b25-949cda68818e\",\r\n    \"serviceDate\": \"2024-01-29T05:00:27.459Z\",\r\n    \"isService\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": {
-							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}?id=f11a1a05-8cd3-4a38-8b25-949cda68818e",
-							"host": [
-								"{{BaseUrl}}api"
-							],
-							"path": [
-								"inventory",
-								"dailyrequisitions",
-								"sfCode",
-								"{{sfcode}}"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "f11a1a05-8cd3-4a38-8b25-949cda68818e"
-								}
-							]
-						}
+						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}"
 					},
 					"response": []
 				},
@@ -5631,7 +5614,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"8e9330c9-8633-4b9d-9c13-917fc45fdd1e\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"8e9330c9-8633-4b9d-9c13-917fc45fdd1e\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"8e9330c9-8633-4b9d-9c13-917fc45fdd1e\",\r\n      \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"04f72f0c-5bfc-4082-9805-68b076c2b31c\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"04f72f0c-5bfc-4082-9805-68b076c2b31c\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"04f72f0c-5bfc-4082-9805-68b076c2b31c\",\r\n      \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
