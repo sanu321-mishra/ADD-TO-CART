@@ -2378,7 +2378,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/summary?districtId=&sfCode={{sfcode}}&page=1&pageSize=1",
+							"raw": "{{BaseUrl}}api/reports/inventories/summary?districtId=5FA25767-2EB8-4D12-92B2-851299095C52&sfCode={{sfcode}}&page=1&pageSize=1",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2390,7 +2390,7 @@
 							"query": [
 								{
 									"key": "districtId",
-									"value": ""
+									"value": "5FA25767-2EB8-4D12-92B2-851299095C52"
 								},
 								{
 									"key": "sfCode",
