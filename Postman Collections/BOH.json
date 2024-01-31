@@ -3328,6 +3328,18 @@
 						"url": "{{BaseUrl}}api/administration/roleprofile/1"
 					},
 					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "4f230a2b-411e-48ec-9bfd-4ec6479ceabc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "626f27b8-14cb-4814-8b99-655e58c6fb52"
