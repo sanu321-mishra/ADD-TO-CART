@@ -3328,6 +3328,48 @@
 				},
 				{
 					"name": "Update Role Profile Columns",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7cb9f6b4-ce30-4819-9f51-114d36c95db1",
+								"exec": [
+									"pm.test('Response status code is 200', function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									"pm.test('Response has the required fields - title, statusCode, and isSuccess', function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData).to.have.property('title');\r",
+									"    pm.expect(responseData).to.have.property('statusCode');\r",
+									"    pm.expect(responseData).to.have.property('isSuccess');\r",
+									"})\r",
+									"\r",
+									"pm.test('Title is a non-empty string', function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, 'Title should not be empty');\r",
+									"})\r",
+									"\r",
+									"pm.test('Status code is a non-negative integer', function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    pm.expect(responseData.statusCode).to.be.a('number');\r",
+									"    pm.expect(responseData.statusCode).to.be.at.least(0);\r",
+									"})\r",
+									"\r",
+									"pm.test('Verify that isSuccess is set to true', function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    pm.expect(responseData.isSuccess).to.be.true;\r",
+									"})\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "4f230a2b-411e-48ec-9bfd-4ec6479ceabc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
