@@ -5519,7 +5519,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentId\": \"04876e60-41c3-4a29-b575-a32816c75111\",\r\n    \"adjustmentDetailIds\": [\r\n        \"a3435216-44a9-4bc4-b889-00a8d2a853b0\",\r\n        \"0e206641-b5b7-4818-b918-0443acb70838\"\r\n    ]\r\n}",
+							"raw": "{\r\n    \"adjustmentId\": \"eb08c8be-c1bd-48cc-8372-21399a4f93c2\",\r\n    \"adjustmentDetailIds\": [\r\n        \"44e4370a-058a-4ced-8c51-08e3ad2e3563\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
