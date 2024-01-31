@@ -5494,7 +5494,7 @@
 					"response": []
 				},
 				{
-					"name": "SaveAdjustmentDetails Copy",
+					"name": "DeleteAdjustmentDetails",
 					"event": [
 						{
 							"listen": "test",
@@ -5519,7 +5519,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"04876e60-41c3-4a29-b575-a32816c75111\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"04876e60-41c3-4a29-b575-a32816c75111\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"04876e60-41c3-4a29-b575-a32816c75111\",\r\n      \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"adjustmentId\": \"04876e60-41c3-4a29-b575-a32816c75111\",\r\n    \"adjustmentDetailIds\": [\r\n        \"a3435216-44a9-4bc4-b889-00a8d2a853b0\",\r\n        \"0e206641-b5b7-4818-b918-0443acb70838\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
