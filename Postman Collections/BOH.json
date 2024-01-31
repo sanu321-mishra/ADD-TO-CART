@@ -6214,7 +6214,7 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "saddison",
+			"username": "dsmith",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"clientSecret": "h3nzHimJUG",
@@ -6231,20 +6231,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ebf25b8e-3464-48e7-a29f-3d2932d3b769",
+				"id": "24015242-1da0-4128-83d5-37455e33073a",
 				"type": "text/javascript",
 				"exec": [
-					"",
-					"",
-					"",
-					"pm.collectionVariables.set(\"jwtToken\", \"XXXXXXX\")"
+					"pm.request.headers.add(\"X-Sf-Code: 20071\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "14eca212-4768-4f96-a274-b9f5038a8d8a",
+				"id": "464713b7-0709-4e84-b43a-34c6d523c1b2",
 				"type": "text/javascript",
 				"exec": [
 					""
