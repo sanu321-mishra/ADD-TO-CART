@@ -6385,13 +6385,10 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "96fe297c-04d6-4861-98f5-9cc5daf3d304",
+				"id": "b8631bc1-ea7d-4089-818e-ee9b64d1e966",
 				"type": "text/javascript",
 				"exec": [
 					"",
-					"",
-					"",
-					"pm.collectionVariables.set(\"jwtToken\", \"XXXXXXX\")",
 					"pm.request.headers.add({key: 'X-Sf-Code', value: '20071' })",
 					""
 				]
@@ -6400,7 +6397,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "417c0198-c1fb-47b1-acf5-0f2120392632",
+				"id": "0dbc7f4a-b1a0-437f-b525-e03035fe52fe",
 				"type": "text/javascript",
 				"exec": [
 					""
