@@ -3330,14 +3330,24 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Update Role Profile Columns",
 					"id": "4f230a2b-411e-48ec-9bfd-4ec6479ceabc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"roleId\": 1,\r\n  \"data\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n      \"isActive\": true\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/administration/roleprofile"
 					},
 					"response": []
 				}
