@@ -3296,7 +3296,13 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
 						"url": "{{BaseUrl}}api/administration/roleprofile/1"
 					},
 					"response": []
@@ -3312,7 +3318,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"roleId\": 1,\r\n  \"columnRoleMappings\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"5EEACE63-9A33-4E86-8E0F-86E9F1B96725\",\r\n      \"isActive\": true\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"roleId\": 1,\r\n  \"columnRoleMappings\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"5EEACE63-9A33-4E86-8E0F-86E9F1B96725\",\r\n      \"isActive\": true\r\n    },\r\n    {\r\n      \"defaultDisplayColumnId\": \"02092ACB-FDFC-49BC-997D-74C1698812F7\",\r\n      \"isActive\": true\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6357,19 +6363,20 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b8631bc1-ea7d-4089-818e-ee9b64d1e966",
+				"id": "ebf25b8e-3464-48e7-a29f-3d2932d3b769",
 				"type": "text/javascript",
 				"exec": [
 					"",
-					"pm.request.headers.add({key: 'X-Sf-Code', value: '20071' })",
-					""
+					"",
+					"",
+					"pm.collectionVariables.set(\"jwtToken\", \"XXXXXXX\")"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "0dbc7f4a-b1a0-437f-b525-e03035fe52fe",
+				"id": "14eca212-4768-4f96-a274-b9f5038a8d8a",
 				"type": "text/javascript",
 				"exec": [
 					""
