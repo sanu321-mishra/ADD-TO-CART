@@ -3340,7 +3340,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"roleId\": 1,\r\n  \"data\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n      \"isActive\": true\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"roleId\": 1,\r\n  \"columnRoleMappings\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"5EEACE63-9A33-4E86-8E0F-86E9F1B96725\",\r\n      \"isActive\": true\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6368,7 +6368,7 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "dsmith",
+			"username": "saddison",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"clientSecret": "h3nzHimJUG",
@@ -6385,20 +6385,22 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "5ebff2c6-e007-4785-878b-3401ed0f7570",
+				"id": "96fe297c-04d6-4861-98f5-9cc5daf3d304",
 				"type": "text/javascript",
 				"exec": [
 					"",
 					"",
 					"",
-					"pm.collectionVariables.set(\"jwtToken\", \"XXXXXXX\")"
+					"pm.collectionVariables.set(\"jwtToken\", \"XXXXXXX\")",
+					"pm.request.headers.add({key: 'X-Sf-Code', value: '20071' })",
+					""
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "c9449b1e-3285-43d5-80a8-e78165d11a15",
+				"id": "417c0198-c1fb-47b1-acf5-0f2120392632",
 				"type": "text/javascript",
 				"exec": [
 					""
