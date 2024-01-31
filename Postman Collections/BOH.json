@@ -5519,7 +5519,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentId\": \"eb08c8be-c1bd-48cc-8372-21399a4f93c2\",\r\n    \"adjustmentDetailIds\": [\r\n        \"03991c44-8148-4aa2-80dd-0cd6c16c3bb4\",\r\n        \"8c24bdbd-2057-4ab7-b0f8-0f9d4239638a\",\r\n        \"35798cba-81ad-4aac-965c-10f52d0126ab\"\r\n    ]\r\n}",
+							"raw": "{\r\n    \"adjustmentId\": \"04876e60-41c3-4a29-b575-a32816c75111\",\r\n    \"adjustmentDetailIds\": [\r\n            \"42928b6c-8b01-4f0e-80c1-8b0067f04a96\",\"893048ca-30de-404c-b280-91b9587ece55\",\"04fdb3d5-634c-4756-b1aa-bf8828ccf659\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5596,7 +5596,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details?adjustmentId=eb08c8be-c1bd-48cc-8372-21399a4f93c2",
+							"raw": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details?adjustmentId=04876e60-41c3-4a29-b575-a32816c75111",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -5610,7 +5610,7 @@
 							"query": [
 								{
 									"key": "adjustmentId",
-									"value": "eb08c8be-c1bd-48cc-8372-21399a4f93c2"
+									"value": "04876e60-41c3-4a29-b575-a32816c75111"
 								}
 							]
 						}
