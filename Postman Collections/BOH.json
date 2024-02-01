@@ -6270,17 +6270,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ac2d8d8d-7c25-4b44-865d-1567dd5fa0a2",
+				"id": "53c8e87a-fa50-43e2-a4b1-ab44d26b722e",
 				"type": "text/javascript",
 				"exec": [
-					""
+					"pm.request.headers.add(\"X-Sf-Code: 20071\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "7ff30af6-91c0-4728-87da-af780e50b3fc",
+				"id": "da3075ec-218b-4095-a6cc-ffbe0d002117",
 				"type": "text/javascript",
 				"exec": [
 					""
