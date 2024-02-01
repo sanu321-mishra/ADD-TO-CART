@@ -3317,13 +3317,7 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "X-Sf-Code",
-								"value": "20071",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": "{{BaseUrl}}api/administration/roleprofile/1"
 					},
 					"response": []
