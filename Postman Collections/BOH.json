@@ -3387,14 +3387,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"roleId\": 1,\r\n  \"columnRoleMappings\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"5EEACE63-9A33-4E86-8E0F-86E9F1B96725\",\r\n      \"isActive\": true\r\n    },\r\n    {\r\n      \"defaultDisplayColumnId\": \"12475b0f-e4e6-4f59-9dc4-862fed6d6dbc\",\r\n      \"isActive\": true\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"columnRoleMappings\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"0e877500-f909-432a-9bbf-645c52cd0907\",\r\n      \"isActive\": true\r\n    },\r\n    {\r\n        \"defaultDisplayColumnId\": \"B37E19A7-6788-445E-AE7F-570B14000E57\",\r\n        \"isActive\" : true\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/administration/roleprofile"
+						"url": "{{BaseUrl}}api/administration/roleprofile/1"
 					},
 					"response": []
 				}
