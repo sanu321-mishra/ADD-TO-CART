@@ -5686,7 +5686,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/reports/producttransfer/sfcode/{{sfcode}}/f2b4cd4c-bfae-4ef8-8c14-572b3f27abcc"
+						"url": "{{BaseUrl}}api/reports/producttransfer/sfcode/{{sfcode}}/8519fd80-838d-4390-8dbe-88b0a8248941"
 					},
 					"response": []
 				},
@@ -5716,7 +5716,44 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"32bc4101-a915-4370-817f-e6fca27ff2ac\",\r\n            \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"32bc4101-a915-4370-817f-e6fca27ff2ac\",\r\n            \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"32bc4101-a915-4370-817f-e6fca27ff2ac\",\r\n            \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"productTransferDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"8519fd80-838d-4390-8dbe-88b0a8248941\",\r\n            \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"8519fd80-838d-4390-8dbe-88b0a8248941\",\r\n            \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"8519fd80-838d-4390-8dbe-88b0a8248941\",\r\n            \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/details"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProductTransferDetails",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "abbc9634-c1e2-4a0e-9a6f-e8e42c3e1f92",
+								"exec": [
+									"pm.test('Response status code is 200', function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "8c829db0-aab9-40ad-bb74-95ad939308df",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productTransferId\": \"8519fd80-838d-4390-8dbe-88b0a8248941\",\r\n    \"productTransferDetailIds\": [\r\n        \"4b406fdc-7714-4afc-ad54-231ed0d44800\",\r\n        \"7bbc4232-ba83-445c-8286-f971cb8bfd60\",\r\n        \"54ba3644-7526-480e-b410-33d3e90d3950\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5755,7 +5792,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/reports/producttransfer/sfcode/{{sfcode}}/ad22b636-e3a9-485f-ac11-0e209c016a1b"
+						"url": "{{BaseUrl}}api/reports/producttransfer/sfcode/{{sfcode}}/8519fd80-838d-4390-8dbe-88b0a8248941"
 					},
 					"response": []
 				},
@@ -5792,7 +5829,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/ad22b636-e3a9-485f-ac11-0e209c016a1b/details"
+						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/8519fd80-838d-4390-8dbe-88b0a8248941/details"
 					},
 					"response": []
 				},
