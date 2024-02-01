@@ -3372,13 +3372,7 @@
 					},
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
-								"key": "X-Sf-Code",
-								"value": "20071",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"columnRoleMappings\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"0e877500-f909-432a-9bbf-645c52cd0907\",\r\n      \"isActive\": true\r\n    },\r\n    {\r\n        \"defaultDisplayColumnId\": \"B37E19A7-6788-445E-AE7F-570B14000E57\",\r\n        \"isActive\" : true\r\n    }\r\n  ]\r\n}",
