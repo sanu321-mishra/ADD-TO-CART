@@ -4033,7 +4033,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}?id=f11a1a05-8cd3-4a38-8b25-949cda68818e",
+							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}?id=36b5a0b5-0145-4f46-bd94-27c60335bfb8",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -4046,7 +4046,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "f11a1a05-8cd3-4a38-8b25-949cda68818e"
+									"value": "36b5a0b5-0145-4f46-bd94-27c60335bfb8"
 								}
 							]
 						}
