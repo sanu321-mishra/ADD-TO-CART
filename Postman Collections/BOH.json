@@ -2384,7 +2384,7 @@
 					"response": []
 				},
 				{
-					"name": "InventorySummary Copy",
+					"name": "ReconciliationStatementStatusReport",
 					"event": [
 						{
 							"listen": "test",
@@ -2421,7 +2421,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconciliation/statement?districtId=&sfCode={{sfcode}}&page=1&pageSize=1",
+							"raw": "{{BaseUrl}}api/reports/inventories/reconciliation/statement?districtId=5FA25767-2EB8-4D12-92B2-851299095C52&sfCode={{sfcode}}&page=1&pageSize=2&from=01 Jan 2020&to=01 Feb 2024",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2434,7 +2434,7 @@
 							"query": [
 								{
 									"key": "districtId",
-									"value": ""
+									"value": "5FA25767-2EB8-4D12-92B2-851299095C52"
 								},
 								{
 									"key": "sfCode",
@@ -2446,7 +2446,17 @@
 								},
 								{
 									"key": "pageSize",
-									"value": "1"
+									"value": "2"
+								},
+								{
+									"key": "from",
+									"value": "01 Jan 2020",
+									"type": "text"
+								},
+								{
+									"key": "to",
+									"value": "01 Feb 2024",
+									"type": "text"
 								}
 							]
 						}
@@ -6376,7 +6386,7 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "saddison",
+			"username": "sammons",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"clientSecret": "h3nzHimJUG",
@@ -6393,7 +6403,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ceb31793-537a-4d00-bea8-c021b5612640",
+				"id": "77f0e6af-fd2d-44fc-b2f9-6974fe0dc46c",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add(\"X-Sf-Code: 20071\");"
@@ -6403,7 +6413,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "493bb4e2-4430-4d0c-8eb6-528033e45a6d",
+				"id": "6aafa76d-7850-4d51-9c08-c1789ee4f186",
 				"type": "text/javascript",
 				"exec": [
 					""
