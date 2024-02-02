@@ -3138,7 +3138,13 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "file",
 							"file": {}
@@ -3203,7 +3209,13 @@
 					},
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"id\": \"C87CD44E-BAAF-4D31-9BC0-6A0F18312527\",\r\n  \"title\": \"Header\",\r\n  \"description\": \"The Title bar shows the production Record Title\"\r\n}",
