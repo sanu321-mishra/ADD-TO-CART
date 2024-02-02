@@ -6246,8 +6246,39 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
-						"url": "{{BaseUrl}}api/administration/lookup/users"
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}api/administration/lookup/users?Username=Rosen",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"administration",
+								"lookup",
+								"users"
+							],
+							"query": [
+								{
+									"key": "Username",
+									"value": "Rosen"
+								}
+							]
+						}
 					},
 					"response": []
 				}
