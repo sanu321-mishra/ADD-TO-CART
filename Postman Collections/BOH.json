@@ -6237,6 +6237,19 @@
 						"url": "{{BaseUrl}}api/administration/lookup/pages"
 					},
 					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"id": "b2d2ed62-aed2-4e25-8012-42c149f20349",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/administration/lookup/users"
+					},
+					"response": []
 				}
 			],
 			"id": "e3c1455b-fa7d-497a-a9e7-de424686aff8"
