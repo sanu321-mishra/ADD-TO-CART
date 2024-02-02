@@ -2382,6 +2382,76 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "InventorySummary Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b71b2588-2a73-4e1a-86c5-fb6f2bb99edb",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with data property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response data contains count, data, and total properties\", function () {\r",
+									"    var data = pm.response.json().data;\r",
+									"    pm.expect(data).to.have.property('data');\r",
+									"    pm.expect(data).to.have.property('total');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains isSuccess property with value true\", function () {\r",
+									"    pm.expect(pm.response.json()).to.have.property('isSuccess', true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "f56de0e1-c064-44e5-8309-7748c671e8e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/reports/inventories/reconciliation/statement?districtId=&sfCode={{sfcode}}&page=1&pageSize=1",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"reports",
+								"inventories",
+								"reconciliation",
+								"statement"
+							],
+							"query": [
+								{
+									"key": "districtId",
+									"value": ""
+								},
+								{
+									"key": "sfCode",
+									"value": "{{sfcode}}"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "37e79f11-107a-493a-ad88-3e66a46489be"
@@ -5456,7 +5526,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"04876e60-41c3-4a29-b575-a32816c75111\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"04876e60-41c3-4a29-b575-a32816c75111\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"04876e60-41c3-4a29-b575-a32816c75111\",\r\n      \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"89fb43db-9eab-4b8e-a8b3-d69a3c6ffd76\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"89fb43db-9eab-4b8e-a8b3-d69a3c6ffd76\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"89fb43db-9eab-4b8e-a8b3-d69a3c6ffd76\",\r\n      \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5532,7 +5602,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/eb08c8be-c1bd-48cc-8372-21399a4f93c2"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/89fb43db-9eab-4b8e-a8b3-d69a3c6ffd76"
 					},
 					"response": []
 				},
