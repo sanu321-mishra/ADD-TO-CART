@@ -5570,7 +5570,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details?adjustmentId=04876e60-41c3-4a29-b575-a32816c75111",
+							"raw": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details?adjustmentId=89fb43db-9eab-4b8e-a8b3-d69a3c6ffd76",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -5584,7 +5584,7 @@
 							"query": [
 								{
 									"key": "adjustmentId",
-									"value": "04876e60-41c3-4a29-b575-a32816c75111"
+									"value": "89fb43db-9eab-4b8e-a8b3-d69a3c6ffd76"
 								}
 							]
 						}
