@@ -6403,17 +6403,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "8a02ff8d-ca20-42f9-b857-b28e2a75ed86",
+				"id": "1e4d30d5-9731-41cd-af05-baa1b7959df1",
 				"type": "text/javascript",
 				"exec": [
-					""
+					"pm.request.headers.add(\"X-Sf-Code: 20071\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "dc3bc9ee-3d40-4600-8fd3-885812561631",
+				"id": "50943155-0772-4e09-9b95-390d50c6addc",
 				"type": "text/javascript",
 				"exec": [
 					""
