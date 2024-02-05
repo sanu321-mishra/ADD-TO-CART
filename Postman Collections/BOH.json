@@ -2987,7 +2987,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/notificationsetting/detail/{{notificationSettingId}}"
+						"url": "{{BaseUrl}}api/administration/notificationsetting/detail/73e8a4a6-2576-468a-b036-41624abb6484"
 					},
 					"response": []
 				},
@@ -3064,7 +3064,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"c1385497-73fb-4806-ab53-3bb1dcee4245\",\r\n  \"notificationTypeId\": \"430c2d2b-6827-455d-a2f4-e5d6fde6294c\",\r\n  \"isInApp\": false,\r\n  \"isEmail\": true,\r\n  \"inAppBodyTemplate\": \"\",\r\n  \"emailBodyTemplate\": \"EmailTemplate test\",\r\n  \"subject\": \"emailsubjectHas Body\",\r\n  \"to\": [\r\n    \"District Supervisor\",\"Cook\"\r\n  ],\r\n  \"cc\": [\r\n    \"s@gmail.com\",\"aman@gmail.com\",\"abhay@gmail.com\"\r\n  ],\r\n  \"bcc\": [\r\n    \"pm@gmail.com\"\r\n  ]\r\n}",
+							"raw": "{\r\n  \"id\": \"73e8a4a6-2576-468a-b036-41624abb6484\",\r\n  \"notificationTypeId\": \"430c2d2b-6827-455d-a2f4-e5d6fde6294c\",\r\n  \"isInApp\": false,\r\n  \"isEmail\": true,\r\n  \"inAppBodyTemplate\": \"\",\r\n  \"emailBodyTemplate\": \"EmailTemplate test 2\",\r\n  \"subject\": \"emailsubjectHas Body\",\r\n  \"to\": [\r\n    \"District Supervisor\",\"Cook\"\r\n  ],\r\n  \"cc\": [\r\n    \"s@gmail.com\",\"aman@gmail.com\",\"abhay@gmail.com\"\r\n  ],\r\n  \"bcc\": [\r\n    \"pm@gmail.com\"\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3286,7 +3286,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"C87CD44E-BAAF-4D31-9BC0-6A0F18312527\",\r\n  \"title\": \"Header\",\r\n  \"description\": \"The Title bar shows the production Record Title\"\r\n}",
+							"raw": "{\r\n  \"id\": \"C87CD44E-BAAF-4D31-9BC0-6A0F18312527\",\r\n  \"title\": \"Header\",\r\n  \"description\": \"The Title bar shows the production Record\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3439,14 +3439,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"columnRoleMappings\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"0e877500-f909-432a-9bbf-645c52cd0907\",\r\n      \"isActive\": true\r\n    },\r\n    {\r\n        \"defaultDisplayColumnId\": \"B37E19A7-6788-445E-AE7F-570B14000E57\",\r\n        \"isActive\" : true\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"columnRoleMappings\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"39baef58-d00f-4de4-b62e-0ddd75269cb7\",\r\n      \"isActive\": true\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/administration/roleprofile/1"
+						"url": "{{BaseUrl}}api/administration/roleprofile/2"
 					},
 					"response": []
 				}
@@ -6326,23 +6326,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{BaseUrl}}api/administration/lookup/users?Username=Rosen",
-							"host": [
-								"{{BaseUrl}}api"
-							],
-							"path": [
-								"administration",
-								"lookup",
-								"users"
-							],
-							"query": [
-								{
-									"key": "Username",
-									"value": "Rosen"
-								}
-							]
-						}
+						"url": "{{BaseUrl}}api/administration/lookup/users"
 					},
 					"response": []
 				}
