@@ -3382,7 +3382,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/roleprofile/1"
+						"url": "{{BaseUrl}}api/administration/roleprofile/2"
 					},
 					"response": []
 				},
