@@ -6386,7 +6386,7 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "dsmith",
+			"username": "cking",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"clientSecret": "h3nzHimJUG",
@@ -6403,17 +6403,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1e4d30d5-9731-41cd-af05-baa1b7959df1",
+				"id": "a6eb0878-42e2-4a5d-8d88-7f07c6d6e483",
 				"type": "text/javascript",
 				"exec": [
-					"pm.request.headers.add(\"X-Sf-Code: 20071\");"
+					""
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "50943155-0772-4e09-9b95-390d50c6addc",
+				"id": "499b4ee1-42ef-4883-a033-8a6988536bfd",
 				"type": "text/javascript",
 				"exec": [
 					""
