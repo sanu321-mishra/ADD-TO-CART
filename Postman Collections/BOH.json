@@ -5856,7 +5856,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/reports/producttransfer/sfcode/{{sfcode}}/35b6912d-bd3f-4584-b1db-e27c456e220e"
+						"url": "{{BaseUrl}}api/reports/producttransfer/sfcode/{{sfcode}}/589e14fe-f252-4e1b-9227-ee83602f47e7"
 					},
 					"response": []
 				},
