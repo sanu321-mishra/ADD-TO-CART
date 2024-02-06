@@ -5927,7 +5927,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"bd05e34b-46f7-48b1-8dd1-5e90e9916ea3\",\r\n    \"workFlowActionId\": \"confirm\"\r\n}",
+							"raw": "{\r\n    \"productTransferId\": \"bd05e34b-46f7-48b1-8dd1-5e90e9916ea3\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5935,6 +5935,47 @@
 							}
 						},
 						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/submit"
+					},
+					"response": []
+				},
+				{
+					"name": "ConfirmDeliveryProductTransfer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "840dbe15-94cc-4b7f-bd40-b2a68bb9fc04",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "c21bb547-1959-43cc-95ae-f15615cc6b3b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productTransferId\": \"bd05e34b-46f7-48b1-8dd1-5e90e9916ea3\",\r\n    \"workFlowActionId\": \"confirm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/confirmdelivery"
 					},
 					"response": []
 				}
