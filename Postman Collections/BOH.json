@@ -6370,7 +6370,7 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "cking",
+			"username": "sammons",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"clientSecret": "h3nzHimJUG",
@@ -6387,7 +6387,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "a6eb0878-42e2-4a5d-8d88-7f07c6d6e483",
+				"id": "15f90c3d-bf35-4a4a-8ef2-f51a3fb37b08",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -6397,7 +6397,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "499b4ee1-42ef-4883-a033-8a6988536bfd",
+				"id": "a978d32f-b171-4af9-9a7e-68841ef054c2",
 				"type": "text/javascript",
 				"exec": [
 					""
