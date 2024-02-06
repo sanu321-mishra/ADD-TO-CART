@@ -5975,7 +5975,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/confirmdelivery"
+						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/29071/confirmdelivery"
 					},
 					"response": []
 				}
