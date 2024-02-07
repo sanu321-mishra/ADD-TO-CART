@@ -5968,7 +5968,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"589e14fe-f252-4e1b-9227-ee83602f47e7\",\r\n    \"workFlowActionId\": \"confirm\"\r\n}",
+							"raw": "{\r\n    \"productTransferId\": \"589e14fe-f252-4e1b-9227-ee83602f47e7\",\r\n    \"workFlowActionId\": \"\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
