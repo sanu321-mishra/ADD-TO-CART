@@ -5714,7 +5714,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/reports/producttransfer/transferfrom/{{sfcode}}"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/transferfrom/{{sfcode}}"
 					},
 					"response": []
 				},
@@ -5856,7 +5856,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/reports/producttransfer/sfcode/{{sfcode}}/589e14fe-f252-4e1b-9227-ee83602f47e7"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/589e14fe-f252-4e1b-9227-ee83602f47e7"
 					},
 					"response": []
 				},
@@ -5893,7 +5893,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/35b6912d-bd3f-4584-b1db-e27c456e220e/details"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/{{sfcode}}/35b6912d-bd3f-4584-b1db-e27c456e220e/details"
 					},
 					"response": []
 				},
@@ -5934,7 +5934,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/{{sfcode}}/submit"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/{{sfcode}}/submit"
 					},
 					"response": []
 				},
@@ -5975,7 +5975,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/reports/producttransfer/sfCode/29071/confirmdelivery"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/29071/confirmdelivery"
 					},
 					"response": []
 				}
