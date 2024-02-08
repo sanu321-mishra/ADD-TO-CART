@@ -5499,14 +5499,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"serviceDate\": \"2024-01-25T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 m123\"\r\n}",
+							"raw": "{\r\n    \"serviceDate\": \"2024-01-25T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 m123\",\r\n    \"transferReason\": \"Yes\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/eb08c8be-c1bd-48cc-8372-21399a4f93c2"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/8b967dd5-067f-4469-96cb-c2e8d4739b7e"
 					},
 					"response": []
 				},
@@ -5707,7 +5707,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"transferFrom\": \"20071\",\r\n    \"transferTo\": \"29071\",\r\n    \"transferredOn\": \"2024-01-11T00:00:00.000Z\",\r\n    \"notes\": \"Notes 0111\"\r\n}",
+							"raw": "{\r\n    \"transferFrom\": \"20071\",\r\n    \"transferTo\": \"29071\",\r\n    \"transferredOn\": \"2024-01-11T00:00:00.000Z\",\r\n    \"notes\": \"Notes 0111\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
