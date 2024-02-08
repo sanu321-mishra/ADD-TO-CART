@@ -5499,7 +5499,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"serviceDate\": \"2024-01-25T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 m123\",\r\n    \"transferReason\": \"Yes\"\r\n}",
+							"raw": "{\r\n    \"serviceDate\": \"2024-01-25T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546 m123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5743,14 +5743,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"transferFrom\": \"20071\",\r\n    \"transferTo\": \"29071\",\r\n    \"transferredOn\": \"2024-01-11T00:00:00.000Z\",\r\n    \"notes\": \"Notes 011124\"\r\n}",
+							"raw": "{\r\n    \"transferFrom\": \"20071\",\r\n    \"transferTo\": \"29071\",\r\n    \"transferredOn\": \"2024-01-11T00:00:00.000Z\",\r\n    \"notes\": \"Notes 011124\",\r\n    \"transferReason\": \"Yes\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/reports/producttransfer/sfcode/{{sfcode}}/8519fd80-838d-4390-8dbe-88b0a8248941"
+						"url": "{{BaseUrl}}api/reports/producttransfer/sfcode/{{sfcode}}/8b967dd5-067f-4469-96cb-c2e8d4739b7e"
 					},
 					"response": []
 				},
