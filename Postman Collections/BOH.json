@@ -5707,7 +5707,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"transferFrom\": \"20071\",\r\n    \"transferTo\": \"29071\",\r\n    \"transferredOn\": \"2024-01-11T00:00:00.000Z\",\r\n    \"notes\": \"Notes 0111\"\r\n}",
+							"raw": "{\r\n    \"transferFrom\": \"20071\",\r\n    \"transferredOn\": \"2024-01-11T00:00:00.000Z\",\r\n    \"notes\": null\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
