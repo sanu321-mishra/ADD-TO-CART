@@ -5743,14 +5743,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"transferFrom\": \"20071\",\r\n    \"transferTo\": \"29071\",\r\n    \"transferredOn\": \"2024-01-11T00:00:00.000Z\",\r\n    \"notes\": \"Notes 011124\",\r\n    \"transferReason\": \"Yes\"\r\n}",
+							"raw": "{\r\n    \"transferTo\": \"29071\",\r\n    \"transferredOn\": \"2024-01-11T00:00:00.000Z\",\r\n    \"notes\": \"Notes 011124\",\r\n    \"transferReason\": \"Yes\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/8b967dd5-067f-4469-96cb-c2e8d4739b7e"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/22c02845-1bc7-4a0f-86b2-00f1c297d009"
 					},
 					"response": []
 				},
