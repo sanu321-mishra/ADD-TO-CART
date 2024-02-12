@@ -5856,7 +5856,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/8b967dd5-067f-4469-96cb-c2e8d4739b7e"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/e1f3082c-6a31-465d-b223-dc9d2a52972d"
 					},
 					"response": []
 				},
