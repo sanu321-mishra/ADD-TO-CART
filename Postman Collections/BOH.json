@@ -5968,7 +5968,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"8e644634-c163-4a3b-8e5f-2a2809a68ed5\",\r\n    \"workFlowActionId\": \"confirm\",\r\n    \"receivedOn\": \"2024-02-12\"\r\n}",
+							"raw": "{\r\n    \"productTransferId\": \"8e644634-c163-4a3b-8e5f-2a2809a68ed5\",\r\n    \"workFlowActionId\": \"confirm\",\r\n    \"receivedOn\": \"2024-02-12\",\r\n    \"receiverNotes\": null\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
