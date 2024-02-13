@@ -5975,7 +5975,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/29071/confirmdelivery"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/20071/confirmdelivery"
 					},
 					"response": []
 				}
