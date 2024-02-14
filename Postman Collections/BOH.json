@@ -6415,6 +6415,19 @@
 						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/meal/counts"
 					},
 					"response": []
+				},
+				{
+					"name": "GetMealTypes",
+					"id": "e8ae9ce3-4b61-4aa2-8790-b2a05288f2dd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/meal/types"
+					},
+					"response": []
 				}
 			],
 			"id": "c9a9edb8-2844-4605-9f17-d2e2fdb57ac4"
