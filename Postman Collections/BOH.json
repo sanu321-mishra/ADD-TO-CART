@@ -6375,6 +6375,24 @@
 			"id": "e3c1455b-fa7d-497a-a9e7-de424686aff8"
 		},
 		{
+			"name": "ProductionSettings",
+			"item": [
+				{
+					"name": "GetProductionSettingBySfCode",
+					"id": "2a924e0b-aad9-436d-8aae-c8e1e12ca992",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "c9a9edb8-2844-4605-9f17-d2e2fdb57ac4"
+		},
+		{
 			"name": "token",
 			"id": "1d2da6ea-7a9d-4741-8a3e-320cfdfd8db9",
 			"protocolProfileBehavior": {
