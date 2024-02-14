@@ -6428,6 +6428,19 @@
 						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/meal/types"
 					},
 					"response": []
+				},
+				{
+					"name": "GetSpecialProgramsBySfCode",
+					"id": "8e44fefe-3763-475c-84db-280b5d11fe01",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/specialprograms"
+					},
+					"response": []
 				}
 			],
 			"id": "c9a9edb8-2844-4605-9f17-d2e2fdb57ac4"
