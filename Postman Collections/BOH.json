@@ -5856,7 +5856,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/cb303c05-ea4a-4b16-a959-88e247f20f3b"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/6dac055a-e0a7-4270-bf3e-2fe9ea3d6348"
 					},
 					"response": []
 				},
@@ -6385,7 +6385,21 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/{{sfcode}}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetSchoolsForSettings",
+					"id": "7f8be4f4-a070-48ee-beaf-b069eeba0e90",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/{{sfcode}}/schools"
 					},
 					"response": []
 				}
