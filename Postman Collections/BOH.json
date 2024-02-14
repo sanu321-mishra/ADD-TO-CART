@@ -6402,6 +6402,19 @@
 						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/{{sfcode}}/schools"
 					},
 					"response": []
+				},
+				{
+					"name": "GetMealCounts",
+					"id": "d70ccc72-670a-4567-b06e-de3865503505",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/meal/counts"
+					},
+					"response": []
 				}
 			],
 			"id": "c9a9edb8-2844-4605-9f17-d2e2fdb57ac4"
