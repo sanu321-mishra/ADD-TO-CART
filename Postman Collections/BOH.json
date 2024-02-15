@@ -5612,7 +5612,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/e155070d-742f-4f46-98d7-346f9c0c96ff"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/2904f584-36ac-4667-89bf-4e2894cc201c"
 					},
 					"response": []
 				},
