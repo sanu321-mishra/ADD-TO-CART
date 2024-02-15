@@ -5506,7 +5506,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/7ec35ce3-077e-4b79-9cd5-8a26cb93768a"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/e155070d-742f-4f46-98d7-346f9c0c96ff"
 					},
 					"response": []
 				},
@@ -5536,7 +5536,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"7ec35ce3-077e-4b79-9cd5-8a26cb93768a\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"7ec35ce3-077e-4b79-9cd5-8a26cb93768a\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"7ec35ce3-077e-4b79-9cd5-8a26cb93768a\",\r\n      \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"e155070d-742f-4f46-98d7-346f9c0c96ff\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"e155070d-742f-4f46-98d7-346f9c0c96ff\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"e155070d-742f-4f46-98d7-346f9c0c96ff\",\r\n      \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5612,7 +5612,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/7ec35ce3-077e-4b79-9cd5-8a26cb93768a"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/e155070d-742f-4f46-98d7-346f9c0c96ff"
 					},
 					"response": []
 				},
@@ -5650,7 +5650,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details?adjustmentId=7ec35ce3-077e-4b79-9cd5-8a26cb93768a",
+							"raw": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details?adjustmentId=e155070d-742f-4f46-98d7-346f9c0c96ff",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -5664,7 +5664,7 @@
 							"query": [
 								{
 									"key": "adjustmentId",
-									"value": "7ec35ce3-077e-4b79-9cd5-8a26cb93768a"
+									"value": "e155070d-742f-4f46-98d7-346f9c0c96ff"
 								}
 							]
 						}
@@ -5750,7 +5750,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/c0fe3054-b52d-4156-811c-daeb0be46e7d"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/dd65df92-8540-462d-a0e3-5c6e9e3f7fec"
 					},
 					"response": []
 				},
@@ -5780,7 +5780,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"c0fe3054-b52d-4156-811c-daeb0be46e7d\",\r\n            \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"c0fe3054-b52d-4156-811c-daeb0be46e7d\",\r\n            \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"c0fe3054-b52d-4156-811c-daeb0be46e7d\",\r\n            \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"productTransferDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"dd65df92-8540-462d-a0e3-5c6e9e3f7fec\",\r\n            \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"dd65df92-8540-462d-a0e3-5c6e9e3f7fec\",\r\n            \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"dd65df92-8540-462d-a0e3-5c6e9e3f7fec\",\r\n            \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5856,7 +5856,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/c0fe3054-b52d-4156-811c-daeb0be46e7d"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/dd65df92-8540-462d-a0e3-5c6e9e3f7fec"
 					},
 					"response": []
 				},
@@ -5927,7 +5927,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"c0fe3054-b52d-4156-811c-daeb0be46e7d\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
+							"raw": "{\r\n    \"productTransferId\": \"dd65df92-8540-462d-a0e3-5c6e9e3f7fec\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
