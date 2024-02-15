@@ -1330,24 +1330,24 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/production/productionrecords/calendar/holidays?from=2024-01-01&to=2025-01-01",
+							"raw": "{{BaseUrl}}api/administration/lookup/calendar/holidays?from=2024-06-01&to=2024-06-26",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
-								"production",
-								"productionrecords",
+								"administration",
+								"lookup",
 								"calendar",
 								"holidays"
 							],
 							"query": [
 								{
 									"key": "from",
-									"value": "2024-01-01"
+									"value": "2024-06-01"
 								},
 								{
 									"key": "to",
-									"value": "2025-01-01"
+									"value": "2024-06-26"
 								}
 							]
 						}
