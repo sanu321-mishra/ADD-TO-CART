@@ -5463,7 +5463,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentId\": \"7ec35ce3-077e-4b79-9cd5-8a26cb93768a\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
+							"raw": "{\r\n    \"adjustmentId\": \"BOH.Modules.Inventory.Domain\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
