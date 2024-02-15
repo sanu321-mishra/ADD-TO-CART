@@ -1319,6 +1319,40 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Holidays",
+					"id": "eac18f9e-54b4-4c31-b1e1-344d6498ce40",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/production/productionrecords/calendar/holidays?from=2024-01-01&to=2025-01-01",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"production",
+								"productionrecords",
+								"calendar",
+								"holidays"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "to",
+									"value": "2025-01-01"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "6c99d971-f25f-4c92-a39d-e83c32534b61"
