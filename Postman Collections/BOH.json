@@ -1322,6 +1322,25 @@
 				},
 				{
 					"name": "Holidays",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3ae05025-23c5-4fe6-ad9c-593c8d0b38e1",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "eac18f9e-54b4-4c31-b1e1-344d6498ce40",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
