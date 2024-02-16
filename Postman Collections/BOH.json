@@ -5540,7 +5540,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/2904f584-36ac-4667-89bf-4e2894cc201c"
+						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/61b6bbea-fdab-4ca1-807e-4186e1c7e127"
 					},
 					"response": []
 				},
@@ -5784,7 +5784,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/dd65df92-8540-462d-a0e3-5c6e9e3f7fec"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/08045625-90d3-4914-ad33-30310ad296ed"
 					},
 					"response": []
 				},
@@ -5890,7 +5890,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/dd65df92-8540-462d-a0e3-5c6e9e3f7fec"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/08045625-90d3-4914-ad33-30310ad296ed"
 					},
 					"response": []
 				},
