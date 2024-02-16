@@ -6470,6 +6470,28 @@
 					"response": []
 				},
 				{
+					"name": "SaveMealCounts",
+					"id": "752d7fb9-b580-498a-9938-61c02d5537db",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/meal/counts"
+					},
+					"response": []
+				},
+				{
 					"name": "GetMealTypes",
 					"id": "e8ae9ce3-4b61-4aa2-8790-b2a05288f2dd",
 					"protocolProfileBehavior": {
