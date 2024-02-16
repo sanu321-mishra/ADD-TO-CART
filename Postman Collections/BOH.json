@@ -5814,7 +5814,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"dd65df92-8540-462d-a0e3-5c6e9e3f7fec\",\r\n            \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"dd65df92-8540-462d-a0e3-5c6e9e3f7fec\",\r\n            \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"dd65df92-8540-462d-a0e3-5c6e9e3f7fec\",\r\n            \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"productTransferDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"08045625-90d3-4914-ad33-30310ad296ed\",\r\n            \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"08045625-90d3-4914-ad33-30310ad296ed\",\r\n            \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"08045625-90d3-4914-ad33-30310ad296ed\",\r\n            \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5927,7 +5927,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/{{sfcode}}/cb303c05-ea4a-4b16-a959-88e247f20f3b/details"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/{{sfcode}}/08045625-90d3-4914-ad33-30310ad296ed/details"
 					},
 					"response": []
 				},
@@ -5961,7 +5961,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"dd65df92-8540-462d-a0e3-5c6e9e3f7fec\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
+							"raw": "{\r\n    \"productTransferId\": \"08045625-90d3-4914-ad33-30310ad296ed\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6002,7 +6002,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"dd65df92-8540-462d-a0e3-5c6e9e3f7fec\",\r\n    \"workFlowActionId\": \"confirm\",\r\n    \"receivedOn\": \"2024-02-12\",\r\n    \"receiverNotes\": null,\r\n    \"receiverUserName\": \"John\"\r\n}",
+							"raw": "{\r\n    \"productTransferId\": \"08045625-90d3-4914-ad33-30310ad296ed\",\r\n    \"workFlowActionId\": \"confirm\",\r\n    \"receivedOn\": \"2024-02-12\",\r\n    \"receiverNotes\": null,\r\n    \"receiverUserName\": \"John test\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
