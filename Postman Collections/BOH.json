@@ -6454,14 +6454,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"productionRecordSettingId\": \"e5e95ec2-c69a-4e59-8004-325103d96a56\",\r\n  \"isService\": false,\r\n  \"serviceStartDate\": \"2024-02-04T00:00:00\",\r\n  \"registeredStudentCount\": 5\r\n}",
+							"raw": "{\r\n  \"productionRecordSettingId\": \"e5e95ec2-c69a-4e59-8004-325103d96a56\",\r\n  \"sfCode\": \"20071\",\r\n  \"isService\": false,\r\n  \"serviceStartDate\": \"2024-02-04T00:00:00\",\r\n  \"registeredStudentCount\": 5\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/production/productionrecord/settings"
 					},
 					"response": []
 				},
