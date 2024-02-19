@@ -6454,7 +6454,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productionRecordSettingId\": null,\r\n    \"isService\": true,\r\n    \"serviceStartDate\": \"2024-02-19T05:00:00.706Z\",\r\n    \"registeredStudentCount\": 0,\r\n    \"sfCode\": \"14171\"\r\n}",
+							"raw": "{\r\n    \"productionRecordSettingId\": null,\r\n    \"registeredStudentCount\": 12,\r\n    \"sfCode\": \"20071\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
