@@ -5760,14 +5760,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"transferredOn\": \"2024-01-11T00:00:00.000Z\",\r\n    \"notes\": null,\r\n    \"workFlowActionId\": \"create\"\r\n}",
+							"raw": "{\r\n    \"transferredOn\": \"2024-02-20T00:00:00.000Z\",\r\n    \"notes\": \"Mahesh Test\",\r\n    \"workFlowActionId\": \"create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/producttransfer/transferfrom/{{sfcode}}"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/from"
 					},
 					"response": []
 				},
@@ -5803,7 +5803,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/08045625-90d3-4914-ad33-30310ad296ed"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/17ecc2b4-cebd-4f78-a037-9023bc7bae1f"
 					},
 					"response": []
 				},
@@ -5833,14 +5833,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"08045625-90d3-4914-ad33-30310ad296ed\",\r\n            \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"08045625-90d3-4914-ad33-30310ad296ed\",\r\n            \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"08045625-90d3-4914-ad33-30310ad296ed\",\r\n            \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"productTransferDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"17ecc2b4-cebd-4f78-a037-9023bc7bae1f\",\r\n            \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"17ecc2b4-cebd-4f78-a037-9023bc7bae1f\",\r\n            \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"17ecc2b4-cebd-4f78-a037-9023bc7bae1f\",\r\n            \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/{{sfcode}}/details"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/details"
 					},
 					"response": []
 				},
