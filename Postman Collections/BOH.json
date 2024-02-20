@@ -5909,7 +5909,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfcode/{{sfcode}}/08045625-90d3-4914-ad33-30310ad296ed"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/17ecc2b4-cebd-4f78-a037-9023bc7bae1f"
 					},
 					"response": []
 				},
@@ -5946,7 +5946,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/{{sfcode}}/08045625-90d3-4914-ad33-30310ad296ed/details"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/17ecc2b4-cebd-4f78-a037-9023bc7bae1f/details"
 					},
 					"response": []
 				},
@@ -5980,14 +5980,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"08045625-90d3-4914-ad33-30310ad296ed\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
+							"raw": "{\r\n    \"productTransferId\": \"17ecc2b4-cebd-4f78-a037-9023bc7bae1f\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/producttransfer/sfCode/{{sfcode}}/submit"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/submit"
 					},
 					"response": []
 				},
@@ -6021,7 +6021,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"08045625-90d3-4914-ad33-30310ad296ed\",\r\n    \"workFlowActionId\": \"confirm\",\r\n    \"receivedOn\": \"2024-02-12\",\r\n    \"receiverNotes\": null,\r\n    \"receiverUserName\": \"John test\"\r\n}",
+							"raw": "{\r\n    \"productTransferId\": \"17ecc2b4-cebd-4f78-a037-9023bc7bae1f\",\r\n    \"workFlowActionId\": \"confirm\",\r\n    \"receivedOn\": \"2024-02-20\",\r\n    \"receiverNotes\": null,\r\n    \"receiverUserName\": \"John test\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
