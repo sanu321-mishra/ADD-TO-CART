@@ -6535,7 +6535,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/special-programs"
+						"url": "{{BaseUrl}}api/production/specialprogram/sfcode/{{sfcode}}"
 					},
 					"response": []
 				}
