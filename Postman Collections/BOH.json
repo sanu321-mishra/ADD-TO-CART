@@ -6487,7 +6487,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/meal/counts"
+						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/meal-counts"
 					},
 					"response": []
 				},
@@ -6522,7 +6522,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/meal/types"
+						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/meal-types"
 					},
 					"response": []
 				},
