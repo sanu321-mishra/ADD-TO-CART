@@ -6596,17 +6596,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "15f90c3d-bf35-4a4a-8ef2-f51a3fb37b08",
+				"id": "6820e850-8373-4bcb-a271-36e87c1ec064",
 				"type": "text/javascript",
 				"exec": [
-					""
+					"pm.request.headers.add({key: 'X-Sf-Code', value: '20071' })"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "a978d32f-b171-4af9-9a7e-68841ef054c2",
+				"id": "cff25466-3665-40c3-8b65-2e6b76f6ba03",
 				"type": "text/javascript",
 				"exec": [
 					""
