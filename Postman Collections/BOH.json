@@ -5760,7 +5760,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"transferredOn\": \"2024-02-20T00:00:00.000Z\",\r\n    \"notes\": \"Mahesh Test\",\r\n    \"workFlowActionId\": \"create\"\r\n}",
+							"raw": "{\r\n    \"transferredOn\": \"2024-02-20T00:00:00.000Z\",\r\n    \"notes\": \"Mahesh test2\",\r\n    \"workFlowActionId\": \"create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6535,7 +6535,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/specialprograms"
+						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/special-programs"
 					},
 					"response": []
 				}
