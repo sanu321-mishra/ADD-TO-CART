@@ -5848,7 +5848,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/producttransfer/b82c117a-4a42-4ea3-8f2d-a9a46863650b"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/5b815820-0619-49a6-a028-aa8c71272c28"
 					},
 					"response": []
 				},
@@ -5954,7 +5954,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/b82c117a-4a42-4ea3-8f2d-a9a46863650b"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/5b815820-0619-49a6-a028-aa8c71272c28"
 					},
 					"response": []
 				},
