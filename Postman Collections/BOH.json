@@ -3691,21 +3691,29 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/edrlog/sfcode/{{sfcode}}/details?EDRLogId=e1075fe0-8bbb-4584-affa-9c0ffa950aff",
+							"raw": "{{BaseUrl}}api/inventory/edrlog/items?EDRLogId=e1075fe0-8bbb-4584-affa-9c0ffa950aff&from=2024-02-20&to=2024-02-21",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"inventory",
 								"edrlog",
-								"sfcode",
-								"{{sfcode}}",
-								"details"
+								"items"
 							],
 							"query": [
 								{
 									"key": "EDRLogId",
 									"value": "e1075fe0-8bbb-4584-affa-9c0ffa950aff"
+								},
+								{
+									"key": "from",
+									"value": "2024-02-20",
+									"type": "text"
+								},
+								{
+									"key": "to",
+									"value": "2024-02-21",
+									"type": "text"
 								}
 							]
 						}
