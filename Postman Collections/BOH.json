@@ -5909,7 +5909,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/4b1e600f-7d2f-443d-bdec-1cdae39e424e"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/b82c117a-4a42-4ea3-8f2d-a9a46863650b"
 					},
 					"response": []
 				},
@@ -5946,7 +5946,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/17ecc2b4-cebd-4f78-a037-9023bc7bae1f/details"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/b82c117a-4a42-4ea3-8f2d-a9a46863650b/details"
 					},
 					"response": []
 				},
@@ -5980,7 +5980,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"4b1e600f-7d2f-443d-bdec-1cdae39e424e\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
+							"raw": "{\r\n    \"productTransferId\": \"b82c117a-4a42-4ea3-8f2d-a9a46863650b\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
