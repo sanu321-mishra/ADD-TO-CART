@@ -1349,12 +1349,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/administration/lookup/calendar/holidays?from=2024-06-01&to=2024-06-26",
+							"raw": "{{BaseUrl}}api/production/lookup/calendar/holidays?from=2024-06-01&to=2024-06-26",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
-								"administration",
+								"production",
 								"lookup",
 								"calendar",
 								"holidays"
