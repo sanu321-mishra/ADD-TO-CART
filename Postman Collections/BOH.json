@@ -5878,7 +5878,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"b82c117a-4a42-4ea3-8f2d-a9a46863650b\",\r\n            \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"b82c117a-4a42-4ea3-8f2d-a9a46863650b\",\r\n            \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"b82c117a-4a42-4ea3-8f2d-a9a46863650b\",\r\n            \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"productTransferDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"5b815820-0619-49a6-a028-aa8c71272c28\",\r\n            \"inventoryItemId\": \"C68B650D-7858-4612-AB24-00B8BE9807B4\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"5b815820-0619-49a6-a028-aa8c71272c28\",\r\n            \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"productTransferId\": \"5b815820-0619-49a6-a028-aa8c71272c28\",\r\n            \"inventoryItemId\": \"0822E4D9-114D-4AE7-87CA-027E6EF16C95\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5991,7 +5991,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/b82c117a-4a42-4ea3-8f2d-a9a46863650b/details"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/5b815820-0619-49a6-a028-aa8c71272c28/details"
 					},
 					"response": []
 				},
