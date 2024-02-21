@@ -6432,6 +6432,25 @@
 			"item": [
 				{
 					"name": "GetProductionSettingBySfCode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "29981869-ffa6-43d0-8f35-82fa34fb07ae",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "2a924e0b-aad9-436d-8aae-c8e1e12ca992",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -6445,6 +6464,25 @@
 				},
 				{
 					"name": "SaveProductionSetting",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "88a7a7c5-22f2-443f-b109-72ec0bf7683e",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title',  'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "1fc0930c-2b85-4a5d-b6dd-cea78b749c2e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -6467,6 +6505,25 @@
 				},
 				{
 					"name": "GetSchoolsForSettings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "30850374-f17b-48f7-ac2f-665d4dd50b70",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "7f8be4f4-a070-48ee-beaf-b069eeba0e90",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -6474,12 +6531,31 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/{{sfcode}}/schools"
+						"url": "{{BaseUrl}}api/production/productionrecord/settings/schools"
 					},
 					"response": []
 				},
 				{
 					"name": "GetMealCounts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d9ad8d5a-7ebb-43a0-a7f5-bb1caed3f024",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "d70ccc72-670a-4567-b06e-de3865503505",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -6493,6 +6569,25 @@
 				},
 				{
 					"name": "SaveMealCounts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "99cebd4b-dd3a-41a6-a94f-d2a549ddaecf",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title',  'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "752d7fb9-b580-498a-9938-61c02d5537db",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -6515,6 +6610,25 @@
 				},
 				{
 					"name": "GetMealTypes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bfd0d38b-63ae-48f1-ba89-68e82791d565",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "e8ae9ce3-4b61-4aa2-8790-b2a05288f2dd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -6528,6 +6642,25 @@
 				},
 				{
 					"name": "GetSpecialProgramsBySfCode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5db9dd41-7132-454b-9b1a-55ec1d1bd116",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "8e44fefe-3763-475c-84db-280b5d11fe01",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
