@@ -408,7 +408,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/item/transactions?lastReconciliationDate=null&inventoryItemId=7fb26cb7-bb16-429e-b301-00e48a786343&transactionDirection=in",
+							"raw": "{{BaseUrl}}api/inventory/item/transactions?lastReconciliationDate=2024-02-21&inventoryItemId=7fb26cb7-bb16-429e-b301-00e48a786343&transactionDirection=in",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -420,7 +420,7 @@
 							"query": [
 								{
 									"key": "lastReconciliationDate",
-									"value": "null"
+									"value": "2024-02-21"
 								},
 								{
 									"key": "inventoryItemId",
