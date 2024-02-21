@@ -3607,7 +3607,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/edrlog/sfcode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/inventory/edrlog"
 					},
 					"response": []
 				},
