@@ -397,6 +397,43 @@
 						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/pendingforms"
 					},
 					"response": []
+				},
+				{
+					"name": "InventoryItemTransaction",
+					"id": "898e8584-7809-4150-b76c-9632ad5d9667",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/inventory/item/transactions?lastReconciliationDate=null&inventoryItemId=7fb26cb7-bb16-429e-b301-00e48a786343&transactionDirection=in",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"inventory",
+								"item",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "lastReconciliationDate",
+									"value": "null"
+								},
+								{
+									"key": "inventoryItemId",
+									"value": "7fb26cb7-bb16-429e-b301-00e48a786343"
+								},
+								{
+									"key": "transactionDirection",
+									"value": "in"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "eece15e7-f2bf-45f2-aa4e-14bc3283b4df",
@@ -6712,7 +6749,7 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "sammons",
+			"username": "smyles",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"clientSecret": "h3nzHimJUG",
@@ -6729,7 +6766,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "6820e850-8373-4bcb-a271-36e87c1ec064",
+				"id": "4dedfaaf-f18b-4933-87ef-365401fb76b6",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add({key: 'X-Sf-Code', value: '20071' })"
@@ -6739,7 +6776,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "cff25466-3665-40c3-8b65-2e6b76f6ba03",
+				"id": "142ef2ee-5f38-4e5d-8f4e-027a4de30158",
 				"type": "text/javascript",
 				"exec": [
 					""
