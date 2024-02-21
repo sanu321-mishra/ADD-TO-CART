@@ -89,7 +89,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/summary"
+						"url": "{{BaseUrl}}api/inventory/summary"
 					},
 					"response": []
 				},
@@ -2405,13 +2405,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/summary?districtId=5FA25767-2EB8-4D12-92B2-851299095C52&sfCode={{sfcode}}&page=1&pageSize=1",
+							"raw": "{{BaseUrl}}api/reports/inventory/summary?districtId=5FA25767-2EB8-4D12-92B2-851299095C52&sfCode={{sfcode}}&page=1&pageSize=1",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"inventories",
+								"inventory",
 								"summary"
 							],
 							"query": [
