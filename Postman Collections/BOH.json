@@ -5561,14 +5561,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentId\": \"61b6bbea-fdab-4ca1-807e-4186e1c7e127\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
+							"raw": "{\r\n    \"adjustmentId\": \"43b7f077-85ba-4a5a-aa6f-a8d850908ece\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/submit"
+						"url": "{{BaseUrl}}api/inventory/adjustment/submit"
 					},
 					"response": []
 				},
@@ -5671,14 +5671,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentId\": \"2904f584-36ac-4667-89bf-4e2894cc201c\",\r\n    \"adjustmentDetailIds\": [\r\n            \"d518db85-dae0-4ee6-8182-6cef33ad03a2\"\r\n    ]\r\n}",
+							"raw": "{\r\n    \"adjustmentId\": \"43b7f077-85ba-4a5a-aa6f-a8d850908ece\",\r\n    \"adjustmentDetailIds\": [\r\n            \"9b2219c1-0102-45bc-bc34-f1452aea46cb\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details"
+						"url": "{{BaseUrl}}api/inventory/adjustment/details"
 					},
 					"response": []
 				},
@@ -5748,21 +5748,19 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/details?adjustmentId=61b6bbea-fdab-4ca1-807e-4186e1c7e127",
+							"raw": "{{BaseUrl}}api/inventory/adjustment/details?adjustmentId=43b7f077-85ba-4a5a-aa6f-a8d850908ece",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"inventory",
 								"adjustment",
-								"sfCode",
-								"{{sfcode}}",
 								"details"
 							],
 							"query": [
 								{
 									"key": "adjustmentId",
-									"value": "61b6bbea-fdab-4ca1-807e-4186e1c7e127"
+									"value": "43b7f077-85ba-4a5a-aa6f-a8d850908ece"
 								}
 							]
 						}
