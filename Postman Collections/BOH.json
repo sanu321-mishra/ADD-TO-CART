@@ -6542,7 +6542,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/14171"
+						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfCode/14171"
 					},
 					"response": []
 				},
