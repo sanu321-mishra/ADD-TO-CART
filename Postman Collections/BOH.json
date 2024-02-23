@@ -1955,13 +1955,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/adjustments?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/inventory/adjustments?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"inventories",
+								"inventory",
 								"adjustments"
 							],
 							"query": [
@@ -2051,14 +2051,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/requisitions?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/inventory/daily-requisitions?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"inventories",
-								"requisitions"
+								"inventory",
+								"daily-requisitions"
 							],
 							"query": [
 								{
@@ -2127,14 +2127,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/requisitions?sfCode={{sfcode}}&from={{From}}&to={{To}}&page=1&pageSize=10",
+							"raw": "{{BaseUrl}}api/reports/inventory/daily-requisitions?sfCode={{sfcode}}&from={{From}}&to={{To}}&page=1&pageSize=10",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"inventories",
-								"requisitions"
+								"inventory",
+								"daily-requisitions"
 							],
 							"query": [
 								{
@@ -2211,14 +2211,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconciliationrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/inventory/reconciliation-records?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"inventories",
-								"reconciliationrecords"
+								"inventory",
+								"reconciliation-records"
 							],
 							"query": [
 								{
