@@ -175,16 +175,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/itemtransactiondetails?inventorysummarydetailid=7A69CCB5-E8BA-4652-83BA-05F509040D2E&inventoryitemid=87665EAC-9780-48C5-998B-00CE5A05C965&transactionDirection=",
+							"raw": "{{BaseUrl}}api/inventory/item/transactions?inventorysummarydetailid=7A69CCB5-E8BA-4652-83BA-05F509040D2E&inventoryitemid=87665EAC-9780-48C5-998B-00CE5A05C965&transactionDirection=",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"inventory",
-								"inventories",
-								"sfcode",
-								"{{sfcode}}",
-								"itemtransactiondetails"
+								"item",
+								"transactions"
 							],
 							"query": [
 								{
@@ -394,7 +392,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/pending-forms"
+						"url": "{{BaseUrl}}api/inventory/incomplete-forms"
 					},
 					"response": []
 				},
@@ -513,7 +511,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrenceincidenttypes"
+						"url": "{{BaseUrl}}api/production/lookup/occurrence-incident-types"
 					},
 					"response": []
 				},
@@ -1184,7 +1182,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/{{sfcode}}/todaysforms"
+						"url": "{{BaseUrl}}api/production/todays-forms"
 					},
 					"response": []
 				},
@@ -1230,7 +1228,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/{{sfcode}}/incompleteforms"
+						"url": "{{BaseUrl}}api/production/incomplete-forms"
 					},
 					"response": []
 				},
@@ -1279,7 +1277,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecords/sfcode/{{sfcode}}/upcomingschooltripforms"
+						"url": "{{BaseUrl}}api/production/upcoming-school-trips"
 					},
 					"response": []
 				},
@@ -1331,16 +1329,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/production/productionrecords/sfcode/{{sfcode}}/calendar?from=2020-01-01&to=2025-01-01",
+							"raw": "{{BaseUrl}}api/production/planning?from=2020-01-01&to=2025-01-01",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"production",
-								"productionrecords",
-								"sfcode",
-								"{{sfcode}}",
-								"calendar"
+								"planning"
 							],
 							"query": [
 								{
