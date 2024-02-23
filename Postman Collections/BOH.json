@@ -4441,7 +4441,7 @@
 										}
 									}
 								},
-								"url": "{{BaseUrl}}api/inventory/daily-requisitions/requisitiondetails"
+								"url": "{{BaseUrl}}api/inventory/daily-requisitions/items"
 							},
 							"_postman_previewlanguage": null,
 							"header": null,
@@ -4464,7 +4464,7 @@
 										}
 									}
 								},
-								"url": "{{BaseUrl}}api/inventory/daily-requisitions/requisitiondetails"
+								"url": "{{BaseUrl}}api/inventory/daily-requisitions/items"
 							},
 							"_postman_previewlanguage": null,
 							"header": null,
@@ -4554,7 +4554,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}/submit"
+						"url": "{{BaseUrl}}api/inventory/physical-inventory/submit"
 					},
 					"response": []
 				},
@@ -4652,15 +4652,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}?id=09a019f1-5f32-4efe-b10a-d4d823a66415",
+							"raw": "{{BaseUrl}}api/inventory/physical-inventory/?id=09a019f1-5f32-4efe-b10a-d4d823a66415",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"inventory",
-								"physicalinventories",
-								"sfCode",
-								"{{sfcode}}"
+								"physical-inventory",
+								""
 							],
 							"query": [
 								{
@@ -4906,7 +4905,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/inventory/physical-inventory"
 					},
 					"response": []
 				},
