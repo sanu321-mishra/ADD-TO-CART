@@ -4090,7 +4090,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/submit"
+						"url": "{{BaseUrl}}api/inventory/daily-requisitions/submit"
 					},
 					"response": []
 				},
@@ -4142,15 +4142,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}?id=36b5a0b5-0145-4f46-bd94-27c60335bfb8",
+							"raw": "{{BaseUrl}}api/inventory/daily-requisitions?id=36b5a0b5-0145-4f46-bd94-27c60335bfb8",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"inventory",
-								"dailyrequisitions",
-								"sfCode",
-								"{{sfcode}}"
+								"daily-requisitions"
 							],
 							"query": [
 								{
@@ -4260,15 +4258,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/details?id=10393012-bb19-4d38-8f44-7450ab6e1e99",
+							"raw": "{{BaseUrl}}api/inventory/daily-requisitions/details?id=10393012-bb19-4d38-8f44-7450ab6e1e99",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"inventory",
-								"dailyrequisitions",
-								"sfCode",
-								"{{sfcode}}",
+								"daily-requisitions",
 								"details"
 							],
 							"query": [
@@ -4328,7 +4324,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/inventory/daily-requisitions"
 					},
 					"response": []
 				},
@@ -4427,7 +4423,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}/api/inventory/dailyrequisitions/sfCode/{{sfcode}}/details"
+						"url": "{{BaseUrl}}/api/inventory/daily-requisitions/details"
 					},
 					"response": [
 						{
@@ -4445,7 +4441,7 @@
 										}
 									}
 								},
-								"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/requisitiondetails"
+								"url": "{{BaseUrl}}api/inventory/daily-requisitions/requisitiondetails"
 							},
 							"_postman_previewlanguage": null,
 							"header": null,
@@ -4468,7 +4464,7 @@
 										}
 									}
 								},
-								"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfCode/{{sfcode}}/requisitiondetails"
+								"url": "{{BaseUrl}}api/inventory/daily-requisitions/requisitiondetails"
 							},
 							"_postman_previewlanguage": null,
 							"header": null,
