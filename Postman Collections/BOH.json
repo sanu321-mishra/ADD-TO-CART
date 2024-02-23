@@ -1462,13 +1462,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/occurrences?SfCode={{sfcode}}&SfCode={{sfcode}}&From={{From}}&To={{To}}&page=1&pageSize=10&statusId=inprogress",
+							"raw": "{{BaseUrl}}api/reports/production/occurrences?SfCode={{sfcode}}&SfCode={{sfcode}}&From={{From}}&To={{To}}&page=1&pageSize=10",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"productions",
+								"production",
 								"occurrences"
 							],
 							"query": [
@@ -1498,7 +1498,8 @@
 								},
 								{
 									"key": "statusId",
-									"value": "inprogress"
+									"value": "inprogress",
+									"disabled": true
 								}
 							]
 						}
@@ -1544,14 +1545,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/production/production-records?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"productions",
-								"productionrecords"
+								"production",
+								"production-records"
 							],
 							"query": [
 								{
@@ -1606,14 +1607,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/productions/productionrecords?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsSchoolTripOnly=true",
+							"raw": "{{BaseUrl}}api/reports/production/production-records?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsSchoolTripOnly=true",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"productions",
-								"productionrecords"
+								"production",
+								"production-records"
 							],
 							"query": [
 								{
@@ -1686,14 +1687,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/physicalinventories?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/inventory/physical-inventory?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"inventories",
-								"physicalinventories"
+								"inventory",
+								"physical-inventory"
 							],
 							"query": [
 								{
@@ -1784,14 +1785,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/producttransfers?SfCode={{sfcode}}&From={{From}}&To={{To}}",
+							"raw": "{{BaseUrl}}api/reports/inventory/product-transfers?SfCode={{sfcode}}&From={{From}}&To={{To}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"inventories",
-								"producttransfers"
+								"inventory",
+								"product-transfers"
 							],
 							"query": [
 								{
@@ -1869,14 +1870,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconciliationstatement?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsPendingReviewOnly=true",
+							"raw": "{{BaseUrl}}api/reports/inventory/reconciliation-statements?SfCode={{sfcode}}&From={{From}}&To={{To}}&IsPendingReviewOnly=true",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"inventories",
-								"reconciliationstatement"
+								"inventory",
+								"reconciliation-statements"
 							],
 							"query": [
 								{
