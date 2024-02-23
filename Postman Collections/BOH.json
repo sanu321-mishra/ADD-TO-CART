@@ -634,7 +634,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/865d441f-02eb-4f55-bf86-15b048e128ca"
+						"url": "{{BaseUrl}}api/production/occurrence-logs/b7d0c476-70db-4a57-94c7-fa007d9a7517"
 					},
 					"response": []
 				},
@@ -731,7 +731,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/production/occurrence-logs"
 					},
 					"response": []
 				},
@@ -801,14 +801,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \r\n    \"id\": \"865d441f-02eb-4f55-bf86-15b048e128ca\",\r\n  \"occurrenceDate\": \"2024-01-08T10:42:38.108Z\",\r\n  \"note\": \"Updated note\"\r\n}",
+							"raw": "{\r\n    \r\n    \"id\": \"b7d0c476-70db-4a57-94c7-fa007d9a7517\",\r\n  \"occurrenceDate\": \"2024-01-08T10:42:38.108Z\",\r\n  \"note\": \"Updated note\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/header"
+						"url": "{{BaseUrl}}api/production/occurrence-logs/header"
 					},
 					"response": []
 				},
@@ -843,8 +843,7 @@
 									"\r",
 									"pm.test(\"Ensure that the response contains only the expected fields - 'title', 'statusCode', and 'isSuccess'\", function () {\r",
 									"    const responseData = pm.response.json();\r",
-									"    pm.expect(responseData).to.have.all.keys('title', 'statusCode', 'error','isSuccess');\r",
-									"    pm.expect(Object.keys(responseData)).to.have.lengthOf(4, \"Response should only contain the expected fields\");\r",
+									"    pm.expect(responseData).to.have.all.keys('title', 'statusCode','isSuccess');\r",
 									"});\r",
 									"\r",
 									"pm.test(\"StatusCode is a non-negative integer\", function () {\r",
@@ -881,14 +880,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"30a3b6ab-5c27-405b-a998-adf455bf31fe\",\r\n\t\"workFlowActionId\": \"Submit\",\r\n    \"occurrenceIncidentTypeId\": \"E7F079E2-D157-4C64-8924-2A70EE2FCACF\",\r\n    \"occurrenceDate\": \"2024-02-02T14:06:04.050Z\",\r\n    \"occurrenceSfcodeList\": \"Xyz\",\r\n    \"occurrenceStartTime\": \"13:58:41.658\",\r\n    \"occurrenceEndTime\": \"13:58:41.698\",\r\n    \"isFieldOfficeCalled\": true,\r\n    \"isSendEmail\": false,\r\n    \"emailSentStatus\": 0,\r\n    \"additionalNote\": \"Edit test 102\",\r\n    \"otherIncidentType\": \"Edit test 102\"\r\n}",
+							"raw": "{\r\n    \"id\": \"3bc9bb74-4e81-449f-8d59-26f3d076e845\",\r\n\t\"workFlowActionId\": \"Submit\",\r\n    \"occurrenceIncidentTypeId\": \"other\",\r\n    \"occurrenceDate\": \"2024-02-02T14:06:04.050Z\",\r\n    \"occurrenceSfcodeList\": \"Xyz\",\r\n    \"occurrenceStartTime\": \"13:58:41.658\",\r\n    \"occurrenceEndTime\": \"13:58:41.698\",\r\n    \"isFieldOfficeCalled\": true,\r\n    \"isSendEmail\": false,\r\n    \"emailSentStatus\": 0,\r\n    \"additionalNote\": \"Edit test 102\",\r\n    \"otherIncidentType\": \"Edit test 102\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/production/occurrence-logs"
 					},
 					"response": []
 				},
@@ -970,7 +969,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/fbe74309-0cc6-40c4-a828-527898d7e873"
+						"url": "{{BaseUrl}}api/production/occurrence-logs/b7d0c476-70db-4a57-94c7-fa007d9a7517"
 					},
 					"response": []
 				},
@@ -1053,7 +1052,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/63f6b2ea-8421-41c7-a8f1-fcb020ae3927/emailtemplate"
+						"url": "{{BaseUrl}}api/production/occurrence-logs/3bc9bb74-4e81-449f-8d59-26f3d076e845/email-template"
 					},
 					"response": []
 				},
@@ -1108,7 +1107,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/occurrencelogs/sfcode/{{sfcode}}/email"
+						"url": "{{BaseUrl}}api/production/occurrence-logs/email"
 					},
 					"response": []
 				}
