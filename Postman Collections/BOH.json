@@ -3529,7 +3529,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"columnRoleMappings\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"39baef58-d00f-4de4-b62e-0ddd75269cb7\",\r\n      \"isActive\": true\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"columnRoleMappings\": [\r\n    {\r\n      \"defaultDisplayColumnId\": \"02092acb-fdfc-49bc-997d-74c1698812f7\",\r\n      \"isActive\": true\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3591,7 +3591,7 @@
 								"disabled": true
 							}
 						],
-						"url": "{{BaseUrl}}api/inventory/dailyrequisitions/sfcode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/inventory/daily-requisitions"
 					},
 					"response": []
 				},
@@ -3644,7 +3644,29 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/edrlog"
+						"url": {
+							"raw": "{{BaseUrl}}api/inventory/edrlog/items?from=2020-02-20&to=2025-01-01",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"inventory",
+								"edrlog",
+								"items"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2020-02-20",
+									"type": "text"
+								},
+								{
+									"key": "to",
+									"value": "2025-01-01",
+									"type": "text"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -3691,29 +3713,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/edrlog/items?EDRLogId=e1075fe0-8bbb-4584-affa-9c0ffa950aff&from=2024-02-20&to=2024-02-21",
+							"raw": "{{BaseUrl}}api/inventory/edrlog?EDRLogId=e1075fe0-8bbb-4584-affa-9c0ffa950aff",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"inventory",
-								"edrlog",
-								"items"
+								"edrlog"
 							],
 							"query": [
 								{
 									"key": "EDRLogId",
 									"value": "e1075fe0-8bbb-4584-affa-9c0ffa950aff"
-								},
-								{
-									"key": "from",
-									"value": "2024-02-20",
-									"type": "text"
-								},
-								{
-									"key": "to",
-									"value": "2024-02-21",
-									"type": "text"
 								}
 							]
 						}
@@ -3870,7 +3881,7 @@
 								"type": "text"
 							}
 						],
-						"url": "{{BaseUrl}}api/useraccess/loggedinuserdetail"
+						"url": "{{BaseUrl}}api/useraccess/user"
 					},
 					"response": []
 				},
