@@ -6535,7 +6535,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productionRecordSettingId\": null,\r\n    \"registeredStudentCount\": 101,\r\n    \"sfCode\": \"14171\"\r\n}",
+							"raw": "{\r\n    \"productionRecordSettingId\": null,\r\n    \"registeredStudentCount\": 101\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
