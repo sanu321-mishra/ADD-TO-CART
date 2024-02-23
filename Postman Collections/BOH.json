@@ -4795,15 +4795,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}/details?id=93d38159-e457-4f94-baa4-21ab2331fab6",
+							"raw": "{{BaseUrl}}api/inventory/physical-inventory/details?id=93d38159-e457-4f94-baa4-21ab2331fab6",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"inventory",
-								"physicalinventories",
-								"sfCode",
-								"{{sfcode}}",
+								"physical-inventory",
 								"details"
 							],
 							"query": [
@@ -4982,15 +4980,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}",
+							"raw": "{{BaseUrl}}api/inventory/physical-inventory",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"inventory",
-								"physicalinventories",
-								"sfCode",
-								"{{sfcode}}"
+								"physical-inventory"
 							],
 							"query": [
 								{
@@ -5047,7 +5043,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}/details"
+						"url": "{{BaseUrl}}api/inventory/physical-inventory/details"
 					},
 					"response": [
 						{
@@ -5088,7 +5084,7 @@
 										}
 									}
 								},
-								"url": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}/details"
+								"url": "{{BaseUrl}}api/inventory/physical-inventory/details"
 							},
 							"_postman_previewlanguage": null,
 							"header": null,
