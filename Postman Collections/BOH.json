@@ -2511,13 +2511,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventories/reconciliation/statement?districtId=5FA25767-2EB8-4D12-92B2-851299095C52&sfCode={{sfcode}}&page=1&pageSize=2&from=01 Jan 2020&to=01 Feb 2024",
+							"raw": "{{BaseUrl}}api/reports/inventory/reconciliation/statement?districtId=5FA25767-2EB8-4D12-92B2-851299095C52&sfCode={{sfcode}}&page=1&pageSize=2&from=01 Jan 2020&to=01 Feb 2024",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"reports",
-								"inventories",
+								"inventory",
 								"reconciliation",
 								"statement"
 							],
@@ -2540,13 +2540,11 @@
 								},
 								{
 									"key": "from",
-									"value": "01 Jan 2020",
-									"type": "text"
+									"value": "01 Jan 2020"
 								},
 								{
 									"key": "to",
-									"value": "01 Feb 2024",
-									"type": "text"
+									"value": "01 Feb 2024"
 								}
 							]
 						}
@@ -2596,7 +2594,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/modulesettings/district/5fa25767-2eb8-4d12-92b2-851299095c52"
+						"url": "{{BaseUrl}}api/admin/boh-settings/district/5fa25767-2eb8-4d12-92b2-851299095c52"
 					},
 					"response": []
 				},
@@ -2682,7 +2680,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/appsetting"
+						"url": "{{BaseUrl}}api/admin/app-settings"
 					},
 					"response": []
 				},
@@ -2755,7 +2753,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/administration/appsetting"
+						"url": "{{BaseUrl}}api/admin/app-settings"
 					},
 					"response": []
 				},
@@ -2798,7 +2796,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/modulesettings/district/5fa25767-2eb8-4d12-92b2-851299095c52"
+						"url": "{{BaseUrl}}api/admin/boh-settings/district/5fa25767-2eb8-4d12-92b2-851299095c52"
 					},
 					"response": []
 				},
