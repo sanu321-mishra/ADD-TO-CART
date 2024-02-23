@@ -5327,7 +5327,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventories"
+						"url": "{{BaseUrl}}api/inventory"
 					},
 					"response": []
 				},
@@ -5634,7 +5634,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"ad509126-c6b0-4ff5-99e9-a360671b7065\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"ad509126-c6b0-4ff5-99e9-a360671b7065\",\r\n      \"inventoryItemId\": \"B867CA49-8097-4CCF-B7ED-005715A2B908\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"AD509126-C6B0-4FF5-99E9-A360671B7065\",\r\n      \"inventoryItemId\": \"112C3790-294C-4791-8ED9-007E64911FA9\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"43b7f077-85ba-4a5a-aa6f-a8d850908ece\",\r\n      \"inventoryItemId\": \"0C2F7F81-C65C-49F9-B0EF-0021669FF139\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"43b7f077-85ba-4a5a-aa6f-a8d850908ece\",\r\n      \"inventoryItemId\": \"c68b650d-7858-4612-ab24-00b8be9807b4\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"43b7f077-85ba-4a5a-aa6f-a8d850908ece\",\r\n      \"inventoryItemId\": \"7fb26cb7-bb16-429e-b301-00e48a786343\",\r\n      \"quantity\": 1,\r\n      \"adjustmentType\": 1,\r\n      \"note\": \"Test Note 2\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
