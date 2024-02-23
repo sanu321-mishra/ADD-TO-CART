@@ -2849,7 +2849,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/administration/modulesettings/district/5fa25767-2eb8-4d12-92b2-851299095c52/sfcode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/admin/boh-settings/district/5fa25767-2eb8-4d12-92b2-851299095c52/sfcode/{{sfcode}}"
 					},
 					"response": []
 				},
@@ -2910,7 +2910,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/statictext"
+						"url": "{{BaseUrl}}api/admin/static-text"
 					},
 					"response": []
 				},
@@ -2932,7 +2932,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/administration/statictext"
+						"url": "{{BaseUrl}}api/admin/static-text"
 					},
 					"response": []
 				},
@@ -3001,7 +3001,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/notificationsetting"
+						"url": "{{BaseUrl}}api/admin/notification-setting"
 					},
 					"response": []
 				},
@@ -3075,7 +3075,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/notificationsetting/detail/73e8a4a6-2576-468a-b036-41624abb6484"
+						"url": "{{BaseUrl}}api/admin/notification-setting/73e8a4a6-2576-468a-b036-41624abb6484"
 					},
 					"response": []
 				},
@@ -3159,7 +3159,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/administration/notificationsetting"
+						"url": "{{BaseUrl}}api/admin/notification-setting"
 					},
 					"response": []
 				},
@@ -3202,7 +3202,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "2b17140f-0039-42bb-84d0-d0485e1ccd94",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -3214,7 +3216,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/notifications/types"
+						"url": "{{BaseUrl}}api/admin/lookup/notification-types"
 					},
 					"response": []
 				},
@@ -3311,7 +3313,7 @@
 							"mode": "file",
 							"file": {}
 						},
-						"url": "{{BaseUrl}}api/administration/helptext/AF24437A-3B5D-42E1-93EF-19F0EB41EF9C"
+						"url": "{{BaseUrl}}api/admin/help-text/AF24437A-3B5D-42E1-93EF-19F0EB41EF9C"
 					},
 					"response": []
 				},
@@ -3381,7 +3383,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/administration/helptext"
+						"url": "{{BaseUrl}}api/admin/help-text"
 					},
 					"response": []
 				},
@@ -3470,7 +3472,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/roleprofile/2"
+						"url": "{{BaseUrl}}api/admin/roleprofile/2"
 					},
 					"response": []
 				},
@@ -3534,7 +3536,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/administration/roleprofile/2"
+						"url": "{{BaseUrl}}api/admin/roleprofile/2"
 					},
 					"response": []
 				}
