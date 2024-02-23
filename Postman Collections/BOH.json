@@ -317,7 +317,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/pendingproducttransfers"
+						"url": "{{BaseUrl}}api/inventory/pending-product-transfers"
 					},
 					"response": []
 				},
@@ -354,7 +354,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/todaysforms"
+						"url": "{{BaseUrl}}api/inventory/todays-forms"
 					},
 					"response": []
 				},
@@ -394,7 +394,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/inventories/sfcode/{{sfcode}}/pendingforms"
+						"url": "{{BaseUrl}}api/inventory/pending-forms"
 					},
 					"response": []
 				},
@@ -6757,7 +6757,7 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "sammons",
+			"username": "saddison",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"clientSecret": "h3nzHimJUG",
@@ -6774,7 +6774,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "498d2f05-3160-4f28-a71b-45bcaa04aa2c",
+				"id": "a6d25dac-711b-4301-bf93-26790c8f4050",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add({key: 'X-Sf-Code', value: '20071' })"
@@ -6784,7 +6784,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "e714f559-45ad-4e80-9940-a99d78dd3965",
+				"id": "8797b099-931a-4036-9645-9ce7b2b1fe6f",
 				"type": "text/javascript",
 				"exec": [
 					""
