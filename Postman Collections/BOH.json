@@ -6501,7 +6501,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/20071"
+						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/14171"
 					},
 					"response": []
 				},
@@ -6542,7 +6542,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/productionrecord/settings"
+						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/14171"
 					},
 					"response": []
 				},
