@@ -6758,17 +6758,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "90120112-ec4d-4e85-9ee3-4f20eb3e4a22",
+				"id": "7cdab63f-c0e9-4e4e-a93a-32c66d5f37d1",
 				"type": "text/javascript",
 				"exec": [
-					"pm.request.headers.add({key: 'X-Sf-Code', value: '20071' })"
+					""
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "c9a003b2-b458-4b93-b20f-614dcd7df772",
+				"id": "ec59aced-85b6-4c07-b32c-8425d4ae5640",
 				"type": "text/javascript",
 				"exec": [
 					""
