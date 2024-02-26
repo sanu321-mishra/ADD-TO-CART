@@ -6207,7 +6207,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/specialprogram/sfcode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/production/specialprogram/sfcode/20127"
 					},
 					"response": []
 				}
