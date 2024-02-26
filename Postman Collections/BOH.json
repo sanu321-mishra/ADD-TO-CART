@@ -6070,7 +6070,24 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecord/settings/schools"
+						"url": {
+							"raw": "{{BaseUrl}}api/production/productionrecord/settings/schools?sfCode=20071",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"production",
+								"productionrecord",
+								"settings",
+								"schools"
+							],
+							"query": [
+								{
+									"key": "sfCode",
+									"value": "20071"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -6741,7 +6758,7 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "sammons",
+			"username": "smyles",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"clientSecret": "h3nzHimJUG",
@@ -6758,7 +6775,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "7cdab63f-c0e9-4e4e-a93a-32c66d5f37d1",
+				"id": "92ca1e39-8dd8-4021-ad91-421f208a86e2",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -6768,7 +6785,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ec59aced-85b6-4c07-b32c-8425d4ae5640",
+				"id": "42ca722a-e96e-474e-b080-3ab21d2985c8",
 				"type": "text/javascript",
 				"exec": [
 					""
