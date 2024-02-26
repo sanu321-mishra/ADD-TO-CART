@@ -6700,6 +6700,43 @@
 						"url": "{{BaseUrl}}api/inventory/lookup/receiving-schools"
 					},
 					"response": []
+				},
+				{
+					"name": "GetReceivingSchoolsNew",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "38ebd626-cd27-457d-b4dc-207b0cd33c8c",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();   \r",
+									"    pm.expect(responseData.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "f00063d7-80c2-40f3-bc77-0c91874f8f57",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/inventory/lookup/receiving-schools-new"
+					},
+					"response": []
 				}
 			],
 			"id": "33b6cbbc-7385-40cd-98f6-f3bb06ce7df7"
