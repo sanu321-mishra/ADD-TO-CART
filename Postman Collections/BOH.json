@@ -5318,7 +5318,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"43b7f077-85ba-4a5a-aa6f-a8d850908ece\",\r\n      \"inventoryItemId\": \"C68B650D-7858-4612-AB24-00B8BE9807B4\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"adjustmentDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"adjustmentId\": \"492611F3-75EF-46AD-BD7B-A0D33EF62E17\",\r\n      \"inventoryItemId\": \"C68B650D-7858-4612-AB24-00B8BE9807B4\",\r\n      \"quantity\": 2,\r\n      \"adjustmentType\": 2,\r\n      \"note\": null\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5394,7 +5394,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/adjustment/sfCode/{{sfcode}}/61b6bbea-fdab-4ca1-807e-4186e1c7e127"
+						"url": "{{BaseUrl}}api/inventory/adjustment/2A1E188B-8830-44D3-8A63-9EAE6F4212CC"
 					},
 					"response": []
 				},
@@ -5432,7 +5432,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/adjustment/details?adjustmentId=43b7f077-85ba-4a5a-aa6f-a8d850908ece",
+							"raw": "{{BaseUrl}}api/inventory/adjustment/details?adjustmentId=492611F3-75EF-46AD-BD7B-A0D33EF62E17",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -5444,7 +5444,7 @@
 							"query": [
 								{
 									"key": "adjustmentId",
-									"value": "43b7f077-85ba-4a5a-aa6f-a8d850908ece"
+									"value": "492611F3-75EF-46AD-BD7B-A0D33EF62E17"
 								}
 							]
 						}
