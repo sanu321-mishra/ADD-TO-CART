@@ -5142,23 +5142,26 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/administration/auditlogs/03ce9b7b-438e-440e-8f3d-0b2e6f56b9cd?page=1&pagesize=10",
+							"raw": "{{BaseUrl}}api/admin/lookup/audit-logs/d2002ad9-b609-4ac5-9508-12181bdf8faf",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
-								"administration",
-								"auditlogs",
-								"03ce9b7b-438e-440e-8f3d-0b2e6f56b9cd"
+								"admin",
+								"lookup",
+								"audit-logs",
+								"d2002ad9-b609-4ac5-9508-12181bdf8faf"
 							],
 							"query": [
 								{
 									"key": "page",
-									"value": "1"
+									"value": "1",
+									"disabled": true
 								},
 								{
 									"key": "pagesize",
-									"value": "10"
+									"value": "10lookup",
+									"disabled": true
 								}
 							]
 						}
@@ -5215,7 +5218,7 @@
 								"disabled": true
 							}
 						],
-						"url": "{{BaseUrl}}api/administration/workflows/histories/7108f230-0673-4893-9cab-4c2a1d8ce1ae"
+						"url": "{{BaseUrl}}api/admin/lookup/workflow-history/2A1E188B-8830-44D3-8A63-9EAE6F4212CC"
 					},
 					"response": []
 				},
@@ -5271,14 +5274,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/administration/workflows/actions?entitytypeid=daily_requisition&currentstateid=initiation",
+							"raw": "{{BaseUrl}}api/admin/lookup/workflow-actions?entitytypeid=daily_requisition&currentstateid=initiation",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
-								"administration",
-								"workflows",
-								"actions"
+								"admin",
+								"lookup",
+								"workflow-actions"
 							],
 							"query": [
 								{
