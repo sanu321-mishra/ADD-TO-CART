@@ -5355,7 +5355,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"adjustmentId\": \"43b7f077-85ba-4a5a-aa6f-a8d850908ece\",\r\n    \"adjustmentDetailIds\": [\r\n            \"9b2219c1-0102-45bc-bc34-f1452aea46cb\"\r\n    ]\r\n}",
+							"raw": "{\r\n    \"adjustmentId\": \"492611F3-75EF-46AD-BD7B-A0D33EF62E17\",\r\n    \"adjustmentDetailIds\": [\r\n            \"C8082CD2-FC54-475D-812D-6E3C77F82CFF\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
