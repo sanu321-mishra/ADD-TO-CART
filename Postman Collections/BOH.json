@@ -6070,24 +6070,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "{{BaseUrl}}api/production/productionrecord/settings/schools?sfCode=20071",
-							"host": [
-								"{{BaseUrl}}api"
-							],
-							"path": [
-								"production",
-								"productionrecord",
-								"settings",
-								"schools"
-							],
-							"query": [
-								{
-									"key": "sfCode",
-									"value": "20071"
-								}
-							]
-						}
+						"url": "{{BaseUrl}}api/production/productionrecord/settings/schools/20071"
 					},
 					"response": []
 				},
