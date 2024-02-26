@@ -5288,7 +5288,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/adjustment/43b7f077-85ba-4a5a-aa6f-a8d850908ece"
+						"url": "{{BaseUrl}}api/inventory/adjustment/2A1E188B-8830-44D3-8A63-9EAE6F4212CC"
 					},
 					"response": []
 				},
@@ -6136,14 +6136,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"sfcodePlanMealCounts\": [\r\n        {\r\n            \"mealTypeId\": \"4c1a9ed4-5de0-442f-9263-6eb436d7a140\",\r\n            \"monCount\": 150,\r\n            \"tueCount\": 500,\r\n            \"wedCount\": 150,\r\n            \"thuCount\": 500,\r\n            \"friCount\": 500,\r\n            \"satCount\": 150,\r\n            \"sunCount\": 500\r\n        },\r\n        {\r\n            \"mealTypeId\": \"4d8705cf-fc53-48e1-b552-f81b9d47301c\",\r\n            \"monCount\": 250,\r\n            \"tueCount\": 250,\r\n            \"wedCount\": 250,\r\n            \"thuCount\": 150,\r\n            \"friCount\": 150,\r\n            \"satCount\": 110,\r\n            \"sunCount\": 111\r\n        }\r\n    ]\r\n}",
+							"raw": "    {\r\n    \"sfcode\": \"20071\",\r\n    \"sfcodePlanMealCounts\": [\r\n        {\r\n            \"mealTypeId\": \"4c1a9ed4-5de0-442f-9263-6eb436d7a140\",\r\n            \"monCount\": 150,\r\n            \"tueCount\": 500,\r\n            \"wedCount\": 150,\r\n            \"thuCount\": 500,\r\n            \"friCount\": 500,\r\n            \"satCount\": 150,\r\n            \"sunCount\": 500\r\n        },\r\n        {\r\n            \"mealTypeId\": \"4d8705cf-fc53-48e1-b552-f81b9d47301c\",\r\n            \"monCount\": 250,\r\n            \"tueCount\": 250,\r\n            \"wedCount\": 250,\r\n            \"thuCount\": 150,\r\n            \"friCount\": 150,\r\n            \"satCount\": 110,\r\n            \"sunCount\": 111\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/menu/sfcode/{{sfcode}}/meal/counts"
+						"url": "{{BaseUrl}}api/production/menu/meal-counts"
 					},
 					"response": []
 				},
