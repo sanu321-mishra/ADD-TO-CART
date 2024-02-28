@@ -6778,12 +6778,13 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"grant_type": "password_credentials",
+			"clientSecret": "h3nzHimJUG",
+			"client_authentication": "header",
 			"username": "sammons",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
-			"clientSecret": "h3nzHimJUG",
 			"clientId": "{{clientId}}",
-			"grant_type": "password_credentials",
 			"accessTokenUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/token",
 			"authUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/authorize",
 			"redirect_uri": "https://oauth.pstmn.io/v1/callback",
@@ -6795,17 +6796,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "0b5e27c4-af45-47a2-9ce3-960bbdab046c",
+				"id": "eacd36ef-1087-4ca8-8174-e928bbfe0de0",
 				"type": "text/javascript",
 				"exec": [
-					""
+					"pm.request.headers.add(\"X-SF-Code: 20071\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "e3c202af-c126-4a7c-ac56-c5e8acb1d519",
+				"id": "a34ca83f-5314-4f4d-bbb9-9712e40854f5",
 				"type": "text/javascript",
 				"exec": [
 					""
