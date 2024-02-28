@@ -6742,6 +6742,42 @@
 			"id": "33b6cbbc-7385-40cd-98f6-f3bb06ce7df7"
 		},
 		{
+			"name": "Inventory Reconciliation",
+			"item": [
+				{
+					"name": "GetRecon",
+					"id": "caccf336-4daf-41b8-a2fe-aca16a2e7210",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}?id=7AED7D1A-C62B-4509-B80F-BC4E19BF0CAD",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"inventory",
+								"reconciliation",
+								"sfCode",
+								"{{sfcode}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "7AED7D1A-C62B-4509-B80F-BC4E19BF0CAD"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "58bbf09a-5ecc-449a-87a1-713ca43e7ef5"
+		},
+		{
 			"name": "token",
 			"id": "1d2da6ea-7a9d-4741-8a3e-320cfdfd8db9",
 			"protocolProfileBehavior": {
@@ -6778,10 +6814,10 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"username": "saddison",
 			"grant_type": "password_credentials",
 			"clientSecret": "h3nzHimJUG",
 			"client_authentication": "header",
-			"username": "sammons",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"clientId": "{{clientId}}",
@@ -6796,7 +6832,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "eacd36ef-1087-4ca8-8174-e928bbfe0de0",
+				"id": "28f392e3-d8c3-4cde-823f-5a016186584b",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add(\"X-SF-Code: 20071\");"
@@ -6806,7 +6842,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "a34ca83f-5314-4f4d-bbb9-9712e40854f5",
+				"id": "5cf8f214-5d07-4350-9add-a5cc698b2033",
 				"type": "text/javascript",
 				"exec": [
 					""
