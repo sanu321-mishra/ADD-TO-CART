@@ -6775,6 +6775,37 @@
 					"response": []
 				},
 				{
+					"name": "GetReconDetails",
+					"id": "409f068c-0546-43b3-99e2-2b56a6f31c7b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}/details?id=4E70C953-2644-4BA5-8814-2F55A094E9C0",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"inventory",
+								"reconciliation",
+								"sfCode",
+								"{{sfcode}}",
+								"details"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4E70C953-2644-4BA5-8814-2F55A094E9C0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "GetPendingForms",
 					"id": "daeba4c4-ed2b-4886-abf7-f8260306a6c6",
 					"protocolProfileBehavior": {
