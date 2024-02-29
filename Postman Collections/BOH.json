@@ -6783,24 +6783,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}?id=4E70C953-2644-4BA5-8814-2F55A094E9C0",
-							"host": [
-								"{{BaseUrl}}api"
-							],
-							"path": [
-								"inventory",
-								"reconciliation",
-								"sfCode",
-								"{{sfcode}}"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "4E70C953-2644-4BA5-8814-2F55A094E9C0"
-								}
-							]
-						}
+						"url": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}/pendingforms"
 					},
 					"response": []
 				}
