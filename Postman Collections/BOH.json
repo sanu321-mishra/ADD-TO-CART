@@ -6814,9 +6814,9 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"clientSecret": "00BE8A96-FEE2-4449-842D-E161A7906A2E",
 			"username": "sammons",
 			"grant_type": "password_credentials",
-			"clientSecret": "h3nzHimJUG",
 			"client_authentication": "header",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
@@ -6832,7 +6832,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "6a71ebb9-fd7c-4f63-b9f7-875c3c18b77e",
+				"id": "76ed0200-980a-45e7-8ae6-864df5c4f250",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add(\"X-SF-Code: 20071\");"
@@ -6842,7 +6842,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "04f0123b-82ac-4a52-b0c8-e2093c512166",
+				"id": "e172dc8d-9c3b-4a29-9644-0b7762632245",
 				"type": "text/javascript",
 				"exec": [
 					""
