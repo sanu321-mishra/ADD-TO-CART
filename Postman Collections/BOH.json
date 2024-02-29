@@ -6754,7 +6754,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}?id=7AED7D1A-C62B-4509-B80F-BC4E19BF0CAD",
+							"raw": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}?id=4E70C953-2644-4BA5-8814-2F55A094E9C0",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -6767,7 +6767,37 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "7AED7D1A-C62B-4509-B80F-BC4E19BF0CAD"
+									"value": "4E70C953-2644-4BA5-8814-2F55A094E9C0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPendingForms",
+					"id": "daeba4c4-ed2b-4886-abf7-f8260306a6c6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}?id=4E70C953-2644-4BA5-8814-2F55A094E9C0",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"inventory",
+								"reconciliation",
+								"sfCode",
+								"{{sfcode}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4E70C953-2644-4BA5-8814-2F55A094E9C0"
 								}
 							]
 						}
