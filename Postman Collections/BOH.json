@@ -5636,7 +5636,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/producttransfer/5b815820-0619-49a6-a028-aa8c71272c28"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/96D9B1CB-6C2E-4837-A922-71BDFA180A11"
 					},
 					"response": []
 				},
@@ -5997,7 +5997,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/14171"
+						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/20071"
 					},
 					"response": []
 				},
