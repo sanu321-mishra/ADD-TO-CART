@@ -6830,6 +6830,28 @@
 						"url": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}/pendingforms"
 					},
 					"response": []
+				},
+				{
+					"name": "CreateInvRecon",
+					"id": "31ee13ca-51f5-4466-a4ae-b6ebb375d699",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"physicalInventoryId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"reconciliationDate\": \"2024-03-01T16:11:51.536Z\",\r\n  \"note\": \"Test\",\r\n  \"workFlowActionId\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/reconciliation/sfCode/29071"
+					},
+					"response": []
 				}
 			],
 			"id": "58bbf09a-5ecc-449a-87a1-713ca43e7ef5"
