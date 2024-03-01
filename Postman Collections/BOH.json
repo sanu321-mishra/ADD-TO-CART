@@ -6775,6 +6775,19 @@
 					"response": []
 				},
 				{
+					"name": "GetActivePhysicalInventoryBySfCode",
+					"id": "f1376782-d213-4ee6-9ef1-54e9e0d86af3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/inventory/physical-inventory/active/sfcode/{{sfcode}}"
+					},
+					"response": []
+				},
+				{
 					"name": "GetReconDetails",
 					"id": "409f068c-0546-43b3-99e2-2b56a6f31c7b",
 					"protocolProfileBehavior": {
