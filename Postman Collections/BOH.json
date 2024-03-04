@@ -6928,7 +6928,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"recordDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"reconciliationRecordId\": \"d31044c7-c570-4c72-a939-b888524a85d9\",\r\n      \"inventoryItemId\": \"ac9a2c57-7a0a-4c7c-81e7-001c206b11b7\",\r\n      \"quantity\": 2\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"reconciliationRecordId\": \"d31044c7-c570-4c72-a939-b888524a85d9\",\r\n      \"inventoryItemId\": \"111ce6b5-571f-48b7-af27-001ceadd40e7\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"recordDetails\": [\r\n    {\r\n      \"id\": \"b8e8cb72-6767-4a3c-bd2a-2caa6f1216fa\",\r\n      \"reconciliationRecordId\": \"d31044c7-c570-4c72-a939-b888524a85d9\",\r\n      \"inventoryItemId\": \"ac9a2c57-7a0a-4c7c-81e7-001c206b11b7\",\r\n      \"quantity\": 2\r\n    },\r\n    {\r\n      \"id\": \"c551ccbc-d57a-4eef-8cf0-c48ebb4a3c17\",\r\n      \"reconciliationRecordId\": \"d31044c7-c570-4c72-a939-b888524a85d9\",\r\n      \"inventoryItemId\": \"111ce6b5-571f-48b7-af27-001ceadd40e7\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
