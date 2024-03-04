@@ -5080,14 +5080,14 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"inventoryItemId\": \"AC9A2C57-7A0A-4C7C-81E7-001C206B11B7\",\r\n      \"quantity\": 2,\r\n      \"physicalInventoryId\": \"a08eba28-3d5f-4d76-bc9e-bb2c511dc6a2\",\r\n      \"sfcode\": \"20071\"\r\n    },\r\n    {\r\n      \"inventoryItemId\": \"111CE6B5-571F-48B7-AF27-001CEADD40E7\",\r\n      \"quantity\": 1,\r\n      \"physicalInventoryId\": \"a08eba28-3d5f-4d76-bc9e-bb2c511dc6a2\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"physicalInventoryDetailList\": [\r\n    {\r\n      \"inventoryItemId\": \"AC9A2C57-7A0A-4C7C-81E7-001C206B11B7\",\r\n      \"quantity\": 2,\r\n      \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n      \"sfcode\": \"20071\"\r\n    },\r\n    {\r\n      \"inventoryItemId\": \"111CE6B5-571F-48B7-AF27-001CEADD40E7\",\r\n      \"quantity\": 1,\r\n      \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{BaseUrl}}api/inventory/physicalinventories/sfCode/{{sfcode}}/details"
+								"url": "{{BaseUrl}}api/inventory/physical-inventory/details"
 							},
 							"_postman_previewlanguage": null,
 							"header": null,
@@ -5119,6 +5119,54 @@
 							"body": null
 						}
 					]
+				},
+				{
+					"name": "PhysicalInventoryDetails",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f5693fa7-6bad-402f-9260-c9ae795aacb2",
+								"exec": [
+									"pm.test('Response status code is 200', function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f5894cd7-91e2-4681-bd86-adfa5ea0c58e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "ea390aae-ac0f-49ea-bb04-8262dd955b12",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"physicalInventoryDetailList\": [\r\n    {\r\n      \"inventoryItemId\": \"AC9A2C57-7A0A-4C7C-81E7-001C206B11B7\",\r\n      \"quantity\": 2,\r\n      \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n      \"sfcode\": \"20071\"\r\n    },\r\n    {\r\n      \"inventoryItemId\": \"111CE6B5-571F-48B7-AF27-001CEADD40E7\",\r\n      \"quantity\": 1,\r\n      \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/physicalinventory/details"
+					},
+					"response": []
 				}
 			],
 			"id": "406227f5-5df2-49e5-915f-8ae5d4da3cb4"
@@ -6852,7 +6900,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliation/sfCode/29071"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}"
 					},
 					"response": []
 				},
