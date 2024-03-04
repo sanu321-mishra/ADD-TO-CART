@@ -5997,7 +5997,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/14171"
+						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/20071"
 					},
 					"response": []
 				},
@@ -6797,7 +6797,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}/details?id=4E70C953-2644-4BA5-8814-2F55A094E9C0",
+							"raw": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}/details?reconciliationRecordId=4E70C953-2644-4BA5-8814-2F55A094E9C0",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -6810,7 +6810,7 @@
 							],
 							"query": [
 								{
-									"key": "id",
+									"key": "reconciliationRecordId",
 									"value": "4E70C953-2644-4BA5-8814-2F55A094E9C0"
 								}
 							]
@@ -6838,11 +6838,14 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"physicalInventoryId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"reconciliationDate\": \"2024-03-01T16:11:51.536Z\",\r\n  \"note\": \"Test\",\r\n  \"workFlowActionId\": \"string\"\r\n}",
+							"raw": "{\r\n  \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n  \"reconciliationDate\": \"2024-03-01\",\r\n  \"note\": \"Test\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6860,18 +6863,18 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "POST",
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"physicalInventoryId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"reconciliationDate\": \"2024-03-01T16:11:51.536Z\",\r\n  \"note\": \"Test\",\r\n  \"workFlowActionId\": \"string\"\r\n}",
+							"raw": "{\r\n  \"reconciliationDate\": \"2024-02-29\",\r\n  \"note\": \"Test 2\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliation/sfCode/29071"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/sfCode/29071/4AE3BA8F-B3E1-470C-AEFB-EC97A236D1D9"
 					},
 					"response": []
 				}
