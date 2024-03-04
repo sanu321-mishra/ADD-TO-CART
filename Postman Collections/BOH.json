@@ -6802,7 +6802,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/reconciliation?id=4E70C953-2644-4BA5-8814-2F55A094E9C0",
+							"raw": "{{BaseUrl}}api/inventory/reconciliation?id=d31044c7-c570-4c72-a939-b888524a85d9",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -6813,7 +6813,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "4E70C953-2644-4BA5-8814-2F55A094E9C0"
+									"value": "d31044c7-c570-4c72-a939-b888524a85d9"
 								}
 							]
 						}
@@ -6871,7 +6871,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}/pendingforms"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/pendingforms"
 					},
 					"response": []
 				},
