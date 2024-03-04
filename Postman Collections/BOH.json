@@ -6909,6 +6909,37 @@
 					"response": []
 				},
 				{
+					"name": "CreateInvRecon Copy",
+					"id": "d1f71883-11f9-44df-a814-30980abf682f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n  \"reconciliationDate\": \"2024-03-01\",\r\n  \"note\": \"Test\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/reconciliation/details"
+					},
+					"response": []
+				},
+				{
 					"name": "UpdateRecon",
 					"id": "df4a63fc-4b4f-482d-a42e-749fc3e07ea0",
 					"protocolProfileBehavior": {
