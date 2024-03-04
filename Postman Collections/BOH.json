@@ -6890,7 +6890,13 @@
 							"type": "noauth"
 						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n  \"reconciliationDate\": \"2024-03-01\",\r\n  \"note\": \"Test\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
