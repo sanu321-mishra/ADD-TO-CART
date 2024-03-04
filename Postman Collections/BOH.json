@@ -6900,7 +6900,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliation/sfCode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/inventory/reconciliation"
 					},
 					"response": []
 				},
@@ -6922,7 +6922,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliation/sfCode/29071/4AE3BA8F-B3E1-470C-AEFB-EC97A236D1D9"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/4AE3BA8F-B3E1-470C-AEFB-EC97A236D1D9"
 					},
 					"response": []
 				}
