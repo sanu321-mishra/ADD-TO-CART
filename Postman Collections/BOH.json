@@ -6918,17 +6918,23 @@
 					},
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"reconciliationDate\": \"2024-02-29\",\r\n  \"note\": \"Test 2\"\r\n}",
+							"raw": "{\r\n  \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n  \"reconciliationDate\": \"2024-03-04\",\r\n  \"note\": \"Test 5687\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliation/4AE3BA8F-B3E1-470C-AEFB-EC97A236D1D9"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/d31044c7-c570-4c72-a939-b888524a85d9"
 					},
 					"response": []
 				}
