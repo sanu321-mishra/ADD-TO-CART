@@ -6828,8 +6828,14 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
-						"url": "{{BaseUrl}}api/inventory/physical-inventory/active/sfcode/{{sfcode}}"
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
+						"url": "{{BaseUrl}}api/inventory/physical-inventory/active"
 					},
 					"response": []
 				},
