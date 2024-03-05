@@ -5157,14 +5157,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"physicalInventoryDetailList\": [\r\n    {\r\n      \"inventoryItemId\": \"AC9A2C57-7A0A-4C7C-81E7-001C206B11B7\",\r\n      \"quantity\": 2,\r\n      \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n      \"sfcode\": \"20071\"\r\n    },\r\n    {\r\n      \"inventoryItemId\": \"111CE6B5-571F-48B7-AF27-001CEADD40E7\",\r\n      \"quantity\": 1,\r\n      \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"physicalInventoryDetailList\": [\r\n    {\r\n      \"inventoryItemId\": \"C68B650D-7858-4612-AB24-00B8BE9807B4\",\r\n      \"quantity\": 2,\r\n      \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n      \"sfcode\": \"20071\"\r\n    },\r\n    {\r\n      \"inventoryItemId\": \"10DCA8D4-8F1B-4022-A8A5-076B05151090\",\r\n      \"quantity\": 1,\r\n      \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/physicalinventory/details"
+						"url": "{{BaseUrl}}api/inventory/physical-inventory/details"
 					},
 					"response": []
 				}
@@ -6926,7 +6926,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"recordDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"reconciliationRecordId\": \"d31044c7-c570-4c72-a939-b888524a85d9\",\r\n      \"inventoryItemId\": \"7FB26CB7-BB16-429E-B301-00E48A786343\",\r\n      \"quantity\": 2\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"reconciliationRecordId\": \"d31044c7-c570-4c72-a939-b888524a85d9\",\r\n      \"inventoryItemId\": \"7055FB70-2BD2-4941-A72E-0508CB064F2F\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"recordDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"reconciliationRecordId\": \"ef995e0a-5a2f-4425-b807-71fabf378b6c\",\r\n      \"inventoryItemId\": \"7FB26CB7-BB16-429E-B301-00E48A786343\",\r\n      \"quantity\": 102\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"reconciliationRecordId\": \"ef995e0a-5a2f-4425-b807-71fabf378b6c\",\r\n      \"inventoryItemId\": \"7055FB70-2BD2-4941-A72E-0508CB064F2F\",\r\n      \"quantity\": 96\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
