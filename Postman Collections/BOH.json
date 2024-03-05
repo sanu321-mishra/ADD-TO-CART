@@ -6843,7 +6843,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/reconciliation/details?reconciliationRecordId=f0672681-b2fd-45b2-a349-1b9acbfe5619",
+							"raw": "{{BaseUrl}}api/inventory/reconciliation/details?reconciliationRecordId=d31044c7-c570-4c72-a939-b888524a85d9",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -6855,7 +6855,7 @@
 							"query": [
 								{
 									"key": "reconciliationRecordId",
-									"value": "f0672681-b2fd-45b2-a349-1b9acbfe5619"
+									"value": "d31044c7-c570-4c72-a939-b888524a85d9"
 								}
 							]
 						}
