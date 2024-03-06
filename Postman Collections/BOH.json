@@ -3962,14 +3962,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"impersonatedUserId\": \"cking\",\r\n    \"note\": \"test impersonation\"\r\n}",
+							"raw": "{\r\n    \"impersonatedUserId\": \"ACastillo45\",\r\n    \"reason\": \"test impersonation\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/useraccess/impersonation"
+						"url": "{{BaseUrl}}api/useraccess/user/change"
 					},
 					"response": []
 				},
