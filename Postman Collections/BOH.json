@@ -6832,8 +6832,7 @@
 							{
 								"key": "X-Sf-Code",
 								"value": "20071",
-								"type": "text",
-								"disabled": true
+								"type": "text"
 							}
 						],
 						"url": "{{BaseUrl}}api/inventory/physical-inventory/active"
@@ -6848,9 +6847,15 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/reconciliation/details?reconciliationRecordId=3772D8BD-BF9C-4156-B0E9-EE0D1C7346B5",
+							"raw": "{{BaseUrl}}api/inventory/reconciliation/details?reconciliationRecordId=7aaae71d-868c-4e35-9db8-1e8907e2bae8",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -6862,7 +6867,7 @@
 							"query": [
 								{
 									"key": "reconciliationRecordId",
-									"value": "3772D8BD-BF9C-4156-B0E9-EE0D1C7346B5"
+									"value": "7aaae71d-868c-4e35-9db8-1e8907e2bae8"
 								}
 							]
 						}
