@@ -4010,7 +4010,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "DELETE",
+						"method": "PUT",
 						"header": [
 							{
 								"key": "X-Id-Token",
@@ -4018,8 +4018,8 @@
 								"type": "text"
 							},
 							{
-								"key": "X-Sf-Code",
-								"value": "{{sfcode}}",
+								"key": "X-Impersonated-User-Id",
+								"value": "cking",
 								"type": "text"
 							}
 						],
@@ -4032,7 +4032,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/useraccess/impersonation"
+						"url": "{{BaseUrl}}api/useraccess/user/release"
 					},
 					"response": []
 				}
