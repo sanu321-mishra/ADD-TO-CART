@@ -6875,7 +6875,7 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "X-SF-Code",
+								"key": "X-Sf-Code",
 								"value": "20071",
 								"type": "text"
 							}
