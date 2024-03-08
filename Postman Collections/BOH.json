@@ -6793,7 +6793,7 @@
 			"name": "Inventory Reconciliation",
 			"item": [
 				{
-					"name": "GetRecon",
+					"name": "GetInventoryReconciliationById",
 					"id": "caccf336-4daf-41b8-a2fe-aca16a2e7210",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -6840,7 +6840,7 @@
 					"response": []
 				},
 				{
-					"name": "GetReconDetails",
+					"name": "GetInventoryReconciliationDetails",
 					"id": "409f068c-0546-43b3-99e2-2b56a6f31c7b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -6938,7 +6938,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"recordDetails\": [\r\n    {\r\n      \"id\": null,\r\n      \"reconciliationRecordId\": \"ef995e0a-5a2f-4425-b807-71fabf378b6c\",\r\n      \"inventoryItemId\": \"7FB26CB7-BB16-429E-B301-00E48A786343\",\r\n      \"quantity\": 102\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"reconciliationRecordId\": \"ef995e0a-5a2f-4425-b807-71fabf378b6c\",\r\n      \"inventoryItemId\": \"7055FB70-2BD2-4941-A72E-0508CB064F2F\",\r\n      \"quantity\": 96\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n    \"recordDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"physicalInventoryDetailId\": \"c879557b-9566-421c-b7ec-29690a56740a\",\r\n            \"reconciliationRecordId\": \"d31044c7-c570-4c72-a939-b888524a85d9\",\r\n            \"inventoryItemId\": \"7fb26cb7-bb16-429e-b301-00e48a786343\",\r\n            \"beginningPerpetual\": 0,\r\n            \"totalIn\": 0,\r\n            \"totalOut\": 0,\r\n            \"physicalOnHand\": 2,\r\n            \"adjusted\": 2\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"physicalInventoryDetailId\": \"6dd244e3-4a3e-4766-9448-795b81f0f444\",\r\n            \"reconciliationRecordId\": \"d31044c7-c570-4c72-a939-b888524a85d9\",\r\n            \"inventoryItemId\": \"7055fb70-2bd2-4941-a72e-0508cb064f2f\",\r\n            \"inventoryItemName\": \"Pizza, French Bread\",\r\n            \"categoryId\": \"f4a72d39-873d-4459-84aa-5a31e17acf81\",\r\n            \"categoryName\": \"Most Popular Items\",\r\n            \"referenceNumber\": \"BF  FS166\",\r\n            \"unitOfMearure\": \"CS\",\r\n            \"beginningPerpetual\": 0,\r\n            \"totalIn\": 0,\r\n            \"totalOut\": 0,\r\n            \"physicalOnHand\": 1\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
