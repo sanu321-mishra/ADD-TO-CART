@@ -6800,23 +6800,14 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{BaseUrl}}api/inventory/reconciliation?id=d31044c7-c570-4c72-a939-b888524a85d9",
-							"host": [
-								"{{BaseUrl}}api"
-							],
-							"path": [
-								"inventory",
-								"reconciliation"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "d31044c7-c570-4c72-a939-b888524a85d9"
-								}
-							]
-						}
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
+						"url": "{{BaseUrl}}api/inventory/reconciliation/d31044c7-c570-4c72-a939-b888524a85d9"
 					},
 					"response": []
 				},
@@ -6882,8 +6873,14 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
-						"url": "{{BaseUrl}}api/inventory/reconciliation/pendingforms"
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
+						"url": "{{BaseUrl}}api/inventory/reconciliation/pending-forms"
 					},
 					"response": []
 				},
