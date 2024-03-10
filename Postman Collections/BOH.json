@@ -6988,6 +6988,34 @@
 						"url": "{{BaseUrl}}api/inventory/reconciliation/d31044c7-c570-4c72-a939-b888524a85d9"
 					},
 					"response": []
+				},
+				{
+					"name": "CompleteReconciliation",
+					"id": "4f4d714c-ce99-4bc4-810f-b396c8ba31a0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "29071",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"reconciliationRecordId\": \"A360F709-7CAD-44BC-9E8D-52CE00FF7A97\",\r\n  \"workFlowActionId\": \"complete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/reconciliation/complete"
+					},
+					"response": []
 				}
 			],
 			"id": "58bbf09a-5ecc-449a-87a1-713ca43e7ef5"
