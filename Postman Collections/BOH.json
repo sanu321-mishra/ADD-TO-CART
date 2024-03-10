@@ -6990,6 +6990,25 @@
 					"response": []
 				},
 				{
+					"name": "UpdateRecon Copy",
+					"id": "06d457d8-f935-4f64-a6ac-a6247c2f21ef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
+						"url": "{{BaseUrl}}api/inventory/reconciliation/d31044c7-c570-4c72-a939-b888524a85d9"
+					},
+					"response": []
+				},
+				{
 					"name": "CompleteReconciliation",
 					"id": "4f4d714c-ce99-4bc4-810f-b396c8ba31a0",
 					"protocolProfileBehavior": {
