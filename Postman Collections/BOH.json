@@ -3644,6 +3644,15 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{BaseUrl}}api/inventory/edrlog/items?from=2024-02-21&to=2024-02-23",
 							"host": [
@@ -3662,6 +3671,12 @@
 								{
 									"key": "to",
 									"value": "2024-02-23"
+								},
+								{
+									"key": "",
+									"value": null,
+									"type": "text",
+									"disabled": true
 								}
 							]
 						}
