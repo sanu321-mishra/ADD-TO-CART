@@ -6990,13 +6990,13 @@
 					"response": []
 				},
 				{
-					"name": "UpdateRecon Copy",
+					"name": "ResetNotes For Inv Recon",
 					"id": "06d457d8-f935-4f64-a6ac-a6247c2f21ef",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [
 							{
 								"key": "X-Sf-Code",
@@ -7004,7 +7004,7 @@
 								"type": "text"
 							}
 						],
-						"url": "{{BaseUrl}}api/inventory/reconciliation/d31044c7-c570-4c72-a939-b888524a85d9"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/reset-notes/d31044c7-c570-4c72-a939-b888524a85d9"
 					},
 					"response": []
 				},
