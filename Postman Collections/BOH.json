@@ -6384,31 +6384,10 @@
 						"method": "GET",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"mode": "formdata",
+							"formdata": []
 						},
-						"url": {
-							"raw": "{{BaseUrl}}api/production/lookup/production-record-header?ProdRecType=24293",
-							"host": [
-								"{{BaseUrl}}api"
-							],
-							"path": [
-								"production",
-								"lookup",
-								"production-record-header"
-							],
-							"query": [
-								{
-									"key": "ProdRecType",
-									"value": "24293"
-								}
-							]
-						}
+						"url": "{{BaseUrl}}api/production/lookup/production-record-header/9F2F7B35-B01D-426E-BEC7-01FE6ABA1BFF"
 					},
 					"response": []
 				},
@@ -6455,17 +6434,8 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "{{BaseUrl}}api/production/lookup/production-record-header?ProdRecType=24293",
+							"raw": "{{BaseUrl}}api/production/lookup/production-record-header?ServiceDate=2024-03-11&prodRecType=high_school",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -6476,8 +6446,12 @@
 							],
 							"query": [
 								{
-									"key": "ProdRecType",
-									"value": "24293"
+									"key": "ServiceDate",
+									"value": "2024-03-11"
+								},
+								{
+									"key": "prodRecType",
+									"value": "high_school"
 								}
 							]
 						}
