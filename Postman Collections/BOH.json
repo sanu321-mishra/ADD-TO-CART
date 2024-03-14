@@ -6341,7 +6341,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Production Record Header",
+					"name": "Get Production Record Header by Id",
 					"event": [
 						{
 							"listen": "test",
@@ -6383,7 +6383,104 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/lookup/production-record-header"
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}api/production/lookup/production-record-header?ProdRecType=24293",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"production",
+								"lookup",
+								"production-record-header"
+							],
+							"query": [
+								{
+									"key": "ProdRecType",
+									"value": "24293"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Production Record Header All",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "39dc9560-8136-458e-a889-9fe331e9ab9d",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();   \r",
+									"    pm.expect(responseData.data.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "30552feb-8b89-4a06-bf63-4405117a6246",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "431edc66-477d-43cc-bda0-d85d379542c4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}api/production/lookup/production-record-header?ProdRecType=24293",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"production",
+								"lookup",
+								"production-record-header"
+							],
+							"query": [
+								{
+									"key": "ProdRecType",
+									"value": "24293"
+								}
+							]
+						}
 					},
 					"response": []
 				}
