@@ -6341,7 +6341,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Production Record Header by Id",
+					"name": "Production Record Header Update",
 					"event": [
 						{
 							"listen": "test",
@@ -6460,6 +6460,70 @@
 				}
 			],
 			"id": "e3c1455b-fa7d-497a-a9e7-de424686aff8"
+		},
+		{
+			"name": "Production Record",
+			"item": [
+				{
+					"name": "Production Record Header Update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "39dc9560-8136-458e-a889-9fe331e9ab9d",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();   \r",
+									"    pm.expect(responseData.data.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "30552feb-8b89-4a06-bf63-4405117a6246",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "4d3cd9ed-4ff2-4ae7-bc25-11ae29123df4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"note\": \"Test\",\r\n  \"isMenuChange\": true,\r\n  \"menuChangeReason\": \"Menu 123\",\r\n  \"serviceScope\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/production/7AAA0228-FDD0-4522-B7D3-00CA980090D4/header"
+					},
+					"response": []
+				}
+			],
+			"id": "c183080b-f0bc-48db-8b5a-6bbda1835457"
 		},
 		{
 			"name": "Admin Lookup",
