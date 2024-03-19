@@ -7000,11 +7000,11 @@
 						"header": [
 							{
 								"key": "X-Sf-Code",
-								"value": "20071",
+								"value": "29071",
 								"type": "text"
 							}
 						],
-						"url": "{{BaseUrl}}api/inventory/reconciliation/d31044c7-c570-4c72-a939-b888524a85d9"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/9FDA7092-1C95-4552-9294-F25DB93B5AAB"
 					},
 					"response": []
 				},
@@ -7038,12 +7038,12 @@
 						"header": [
 							{
 								"key": "X-Sf-Code",
-								"value": "20071",
+								"value": "29071",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/reconciliation/details?reconciliationRecordId=7aaae71d-868c-4e35-9db8-1e8907e2bae8",
+							"raw": "{{BaseUrl}}api/inventory/reconciliation/details?reconciliationRecordId=9FDA7092-1C95-4552-9294-F25DB93B5AAB",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -7055,7 +7055,7 @@
 							"query": [
 								{
 									"key": "reconciliationRecordId",
-									"value": "7aaae71d-868c-4e35-9db8-1e8907e2bae8"
+									"value": "9FDA7092-1C95-4552-9294-F25DB93B5AAB"
 								}
 							]
 						}
@@ -7101,7 +7101,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"physicalInventoryId\": \"BF2002AB-2C0D-437C-A58B-F9994056D329\",\r\n  \"reconciliationDate\": \"2024-03-01\",\r\n  \"note\": \"Test\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
+							"raw": "{\r\n  \"physicalInventoryId\": \"E895CB2A-FEC5-43EB-90C1-FDE3C9452F94\",\r\n  \"reconciliationDate\": \"2024-03-12\",\r\n  \"note\": \"Test 2\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
