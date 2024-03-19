@@ -5232,6 +5232,130 @@
 						"url": "{{BaseUrl}}api/admin/in-app-notifications/unseen_total"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Notification with pagination",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "df619c9f-b255-42d7-a100-ffde447eea1f",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object');\r",
+									"    pm.expect(jsonData).to.have.property('title');\r",
+									"    pm.expect(jsonData).to.have.property('data');\r",
+									"    pm.expect(jsonData).to.have.property('statusCode');\r",
+									"    pm.expect(jsonData).to.have.property('isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c5a84bbe-bde1-434b-8131-f334b43c4c44",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "3bb71032-c98a-405f-9e42-c0da8c8f050e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/admin/in-app-notifications?Page=1&PageSize=10",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"admin",
+								"in-app-notifications"
+							],
+							"query": [
+								{
+									"key": "Page",
+									"value": "1"
+								},
+								{
+									"key": "PageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Notifications By Seen",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "df619c9f-b255-42d7-a100-ffde447eea1f",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object');\r",
+									"    pm.expect(jsonData).to.have.property('title');\r",
+									"    pm.expect(jsonData).to.have.property('data');\r",
+									"    pm.expect(jsonData).to.have.property('statusCode');\r",
+									"    pm.expect(jsonData).to.have.property('isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c5a84bbe-bde1-434b-8131-f334b43c4c44",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "793c470e-7c87-47ca-8fd7-e19b66b97e91",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\": [\r\n        {\r\n            \"dc4a2604-42b8-4b83-adc9-ab0c3d57a20a\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/admin/in-app-notifications"
+					},
+					"response": []
 				}
 			],
 			"id": "f3f0c345-d793-4466-a5bd-d1f622b25d5b"
@@ -6723,72 +6847,6 @@
 								{
 									"key": "currentstateid",
 									"value": "initiation"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Notification with pagination",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "df619c9f-b255-42d7-a100-ffde447eea1f",
-								"exec": [
-									"pm.test(\"Response status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData).to.be.an('object');\r",
-									"    pm.expect(jsonData).to.have.property('title');\r",
-									"    pm.expect(jsonData).to.have.property('data');\r",
-									"    pm.expect(jsonData).to.have.property('statusCode');\r",
-									"    pm.expect(jsonData).to.have.property('isSuccess');\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "c5a84bbe-bde1-434b-8131-f334b43c4c44",
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "3bb71032-c98a-405f-9e42-c0da8c8f050e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{BaseUrl}}api/admin/lookup/in-app-notifications?Page=1&PageSize=10",
-							"host": [
-								"{{BaseUrl}}api"
-							],
-							"path": [
-								"admin",
-								"lookup",
-								"in-app-notifications"
-							],
-							"query": [
-								{
-									"key": "Page",
-									"value": "1"
-								},
-								{
-									"key": "PageSize",
-									"value": "10"
 								}
 							]
 						}
