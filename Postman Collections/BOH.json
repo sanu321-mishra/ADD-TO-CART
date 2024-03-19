@@ -5206,7 +5206,8 @@
 									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -5216,7 +5217,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -5227,7 +5229,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/administration/notifications/unseentotal/sfcode/{{sfcode}}"
+						"url": "{{BaseUrl}}api/admin/in-app-notifications/unseen_total"
 					},
 					"response": []
 				}
