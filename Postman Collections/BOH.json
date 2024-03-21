@@ -7352,9 +7352,9 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"username": "sammons",
 			"accessTokenUrl": "https://backoffice.verify.ibm.com/v1.0/endpoint/default/token",
 			"clientSecret": "PV82LUNTKG",
-			"username": "cking",
 			"grant_type": "password_credentials",
 			"client_authentication": "header",
 			"tokenName": "BOH-sammons",
@@ -7370,7 +7370,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "14ac5aaf-e30c-40c1-a1c3-c51e3f6e8268",
+				"id": "372ee455-ebe8-4828-b1f2-92bf7930a6c1",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add(\"X-SF-Code: 24293\");"
@@ -7380,7 +7380,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "aeebfe10-81f6-49d5-a833-a84ee42a30f7",
+				"id": "6a7b56f5-7196-4dd9-b76d-95fc3fdaf3d0",
 				"type": "text/javascript",
 				"exec": [
 					""
