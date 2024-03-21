@@ -7291,6 +7291,31 @@
 			"id": "58bbf09a-5ecc-449a-87a1-713ca43e7ef5"
 		},
 		{
+			"name": "Reconciliation Statement",
+			"item": [
+				{
+					"name": "GetActiveReconciliationRecordBySfCode",
+					"id": "7b1305a9-6989-4d55-b2bc-b5d02dae9db0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
+						"url": "{{BaseUrl}}api/inventory/physical-inventory/active"
+					},
+					"response": []
+				}
+			],
+			"id": "bd7b4404-526d-461e-85d1-029eab5e6fce"
+		},
+		{
 			"name": "token",
 			"id": "1d2da6ea-7a9d-4741-8a3e-320cfdfd8db9",
 			"protocolProfileBehavior": {
