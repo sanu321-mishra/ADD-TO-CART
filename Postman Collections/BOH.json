@@ -7294,7 +7294,7 @@
 			"name": "Reconciliation Statement",
 			"item": [
 				{
-					"name": "GetActiveReconciliationRecordBySfCode",
+					"name": "GetLastReconciliationRecordBySfCode",
 					"id": "7b1305a9-6989-4d55-b2bc-b5d02dae9db0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -7304,11 +7304,42 @@
 						"header": [
 							{
 								"key": "X-Sf-Code",
+								"value": "24293",
+								"type": "text"
+							}
+						],
+						"url": "{{BaseUrl}}api/inventory/reconciliation/completed"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateReconStatement",
+					"id": "9573f796-60e2-4958-b744-a25abdf609d3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Sf-Code",
 								"value": "20071",
 								"type": "text"
 							}
 						],
-						"url": "{{BaseUrl}}api/inventory/physical-inventory/active"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"physicalInventoryId\": \"E895CB2A-FEC5-43EB-90C1-FDE3C9452F94\",\r\n  \"reconciliationDate\": \"2024-03-12\",\r\n  \"note\": \"Test 2\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/reconciliation"
 					},
 					"response": []
 				}
