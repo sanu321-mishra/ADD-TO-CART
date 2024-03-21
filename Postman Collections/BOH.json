@@ -7327,14 +7327,14 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "sammons",
-			"clientSecret": "9v6CjNfSLn",
+			"accessTokenUrl": "https://backoffice.verify.ibm.com/v1.0/endpoint/default/token",
+			"clientSecret": "PV82LUNTKG",
+			"username": "cking",
 			"grant_type": "password_credentials",
 			"client_authentication": "header",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
 			"clientId": "{{clientId}}",
-			"accessTokenUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/token",
 			"authUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/authorize",
 			"redirect_uri": "https://oauth.pstmn.io/v1/callback",
 			"useBrowser": false,
@@ -7345,7 +7345,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "4c52a113-5247-4a9e-897f-4504eabf50bc",
+				"id": "14ac5aaf-e30c-40c1-a1c3-c51e3f6e8268",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add(\"X-SF-Code: 24293\");"
@@ -7355,7 +7355,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "4b29a477-e83e-4193-9435-0966f0cfa9d5",
+				"id": "aeebfe10-81f6-49d5-a833-a84ee42a30f7",
 				"type": "text/javascript",
 				"exec": [
 					""
