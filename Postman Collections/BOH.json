@@ -7319,27 +7319,24 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "noauth"
-						},
 						"method": "POST",
 						"header": [
 							{
 								"key": "X-Sf-Code",
-								"value": "20071",
+								"value": "24293",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"physicalInventoryId\": \"E895CB2A-FEC5-43EB-90C1-FDE3C9452F94\",\r\n  \"reconciliationDate\": \"2024-03-12\",\r\n  \"note\": \"Test 2\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
+							"raw": "{\r\n  \"InventoryReconciliationId\": \"536CA58A-8CAC-420B-81C4-8329105676E1\",\r\n  \"ServiceDate\": \"2024-03-21\",\r\n  \"note\": \"Test 1\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliation"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement"
 					},
 					"response": []
 				},
@@ -7378,7 +7375,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [
 							{
 								"key": "X-Sf-Code",
@@ -7388,14 +7385,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{\r\n  \"id\": \"D589CE01-A396-4A1B-998B-434F973140AC\",\r\n  \"note\": \"Test 2\",\r\n  \"serviceDate\": \"2024-03-22T18:26:46.032Z\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliation/39D28E23-A22A-440E-A03D-14C031BB0C1F"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/D589CE01-A396-4A1B-998B-434F973140AC"
 					},
 					"response": []
 				}
