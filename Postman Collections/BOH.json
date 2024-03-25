@@ -7369,6 +7369,34 @@
 					"response": []
 				},
 				{
+					"name": "GetReconciliationStatementDetailById",
+					"id": "b39f6c9f-fd77-4988-8807-e471725c4494",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "24293",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/D589CE01-A396-4A1B-998B-434F973140AC"
+					},
+					"response": []
+				},
+				{
 					"name": "UpdateReconciliationStatementById",
 					"id": "db8e74aa-005e-4170-a828-10f1d5013bd8",
 					"protocolProfileBehavior": {
