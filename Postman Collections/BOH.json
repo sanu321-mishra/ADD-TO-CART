@@ -7426,39 +7426,6 @@
 				}
 			],
 			"id": "bd7b4404-526d-461e-85d1-029eab5e6fce"
-		},
-		{
-			"name": "token",
-			"id": "1d2da6ea-7a9d-4741-8a3e-320cfdfd8db9",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "grant_type",
-							"value": " password",
-							"type": "text"
-						},
-						{
-							"key": "username",
-							"value": " sammons",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": " bohpass1",
-							"type": "text"
-						}
-					]
-				},
-				"url": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/token"
-			},
-			"response": []
 		}
 	],
 	"auth": {
