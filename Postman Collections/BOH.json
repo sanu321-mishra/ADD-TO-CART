@@ -6925,6 +6925,19 @@
 						"url": "{{BaseUrl}}api/admin/lookup/notification-types"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Help Text for Page",
+					"id": "3e44f354-67cf-4347-95c2-a49e177576af",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/admin/lookup/productionrec"
+					},
+					"response": []
 				}
 			],
 			"id": "39035c1a-4976-4a22-ad8e-b3a8e09d3027"
