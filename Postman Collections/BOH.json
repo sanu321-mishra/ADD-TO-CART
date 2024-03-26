@@ -7405,7 +7405,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/D589CE01-A396-4A1B-998B-434F973140AC/details"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/B4836F3F-F7D2-497A-B40B-25C3B1F4DA8B/details"
 					},
 					"response": []
 				},
@@ -7426,14 +7426,42 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"D589CE01-A396-4A1B-998B-434F973140AC\",\r\n  \"note\": \"Test 2\",\r\n  \"serviceDate\": \"2024-03-22T18:26:46.032Z\"\r\n}",
+							"raw": "{\r\n  \"id\": \"B4836F3F-F7D2-497A-B40B-25C3B1F4DA8B\",\r\n  \"note\": \"Test 2.1\",\r\n  \"serviceDate\": \"2024-03-22T18:26:46.032Z\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/D589CE01-A396-4A1B-998B-434F973140AC"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/B4836F3F-F7D2-497A-B40B-25C3B1F4DA8B"
+					},
+					"response": []
+				},
+				{
+					"name": "SubmitReconciliationStatementDetailById",
+					"id": "3613e4ca-4d4d-4fed-9004-52db5f54b62e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "29071",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"reconciliationRecordId\": \"A360F709-7CAD-44BC-9E8D-52CE00FF7A97\",\r\n  \"workFlowActionId\": \"complete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/reconciliation/complete"
 					},
 					"response": []
 				}
