@@ -6935,7 +6935,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/admin/lookup/productionrec"
+						"url": "{{BaseUrl}}api/admin/lookup/help-text/productionrec"
 					},
 					"response": []
 				}
