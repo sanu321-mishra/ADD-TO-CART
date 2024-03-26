@@ -7405,7 +7405,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/B4836F3F-F7D2-497A-B40B-25C3B1F4DA8B/details"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/4251CE51-A3AF-45BF-B928-C1F944A398C1/details"
 					},
 					"response": []
 				},
@@ -7454,7 +7454,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"reconciliationStatementId\": \"ADDB108C-14DF-4FF5-8168-339A95FB729D\",\r\n  \"workFlowActionId\": \"submit\",\r\n  \"submittedBy\": \"sammons\",\r\n  \"submitComment\": \"Test 1\",\r\n  \"submittedOn\": \"2024-03-25T18:26:46.819Z\",\r\n  \"details\": [\r\n    {\r\n      \"id\": \"E8311A84-3D8B-4990-A72E-255B318C879B\",\r\n      \"questionId\": \"8B8122A3-3F7A-44D9-9CAA-5B39E7BAFE62\",\r\n      \"questionResponse\":\"Test response1\",\r\n      \"reconciliationStatementId\": \"ADDB108C-14DF-4FF5-8168-339A95FB729D\",\r\n      \"sfcode\": \"24293\",\r\n      \"isQuestionResponse\": false\r\n    },\r\n    {\r\n      \"id\": \"7E626651-F9D6-4E29-A823-3DE78E294560\",\r\n      \"questionId\": \"8B8122A3-3F7A-44D9-9CAA-5B39E7BAFE62\",\r\n      \"questionResponse\":null,\r\n      \"reconciliationStatementId\": \"ADDB108C-14DF-4FF5-8168-339A95FB729D\",\r\n      \"sfcode\": \"24293\",\r\n      \"isQuestionResponse\": true\r\n    },\r\n    {\r\n      \"id\": \"7DC9BE04-516C-44DC-9C81-5D5FBB9C23DA\",\r\n      \"questionId\": \"28B8DDFB-8D91-40B9-9B27-EBB0D72C1D86\",\r\n      \"questionResponse\":\"Test response 3\",\r\n      \"reconciliationStatementId\": \"ADDB108C-14DF-4FF5-8168-339A95FB729D\",\r\n      \"sfcode\": \"24293\",\r\n      \"isQuestionResponse\": false\r\n    },\r\n    {\r\n      \"id\": \"412ED2BB-A0D2-40CB-9D78-7B6638282698\",\r\n      \"questionId\": \"9EC3EA76-5266-404A-B357-34F11B62AF66\",\r\n      \"questionResponse\":\"Test response 4\",\r\n      \"reconciliationStatementId\": \"ADDB108C-14DF-4FF5-8168-339A95FB729D\",\r\n      \"sfcode\": \"24293\",\r\n      \"isQuestionResponse\": false\r\n    },\r\n    {\r\n      \"id\": \"A3C2CC55-9885-4E10-A199-AD1A4985665C\",\r\n      \"questionId\": \"1F544A98-5928-45B5-9993-33891D88E086\",\r\n      \"questionResponse\":null,\r\n      \"reconciliationStatementId\": \"ADDB108C-14DF-4FF5-8168-339A95FB729D\",\r\n      \"sfcode\": \"24293\",\r\n      \"isQuestionResponse\": true\r\n    },\r\n    {\r\n      \"id\": \"B2340413-BF51-4200-89F8-E9D38D89641F\",\r\n      \"questionId\": \"3E139791-E205-4583-A4A6-85EA61232B8E\",\r\n      \"questionResponse\":\"Test response 6\",\r\n      \"reconciliationStatementId\": \"ADDB108C-14DF-4FF5-8168-339A95FB729D\",\r\n      \"sfcode\": \"24293\",\r\n      \"isQuestionResponse\": false\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"reconciliationStatementId\": \"4251CE51-A3AF-45BF-B928-C1F944A398C1\",\r\n  \"workFlowActionId\": \"submit\",\r\n  \"submittedBy\": \"sammons\",\r\n  \"submitComment\": \"Test 1\",\r\n  \"submittedOn\": \"2024-03-25T18:26:46.819Z\",\r\n  \"details\": [\r\n    {\r\n      \"id\": \"C1D25472-33C5-4E28-AC9E-13222E78AA98\",\r\n      \"questionId\": \"8B8122A3-3F7A-44D9-9CAA-5B39E7BAFE62\",\r\n      \"questionResponse\":null,\r\n      \"reconciliationStatementId\": \"4251CE51-A3AF-45BF-B928-C1F944A398C1\",\r\n      \"sfcode\": \"24293\",\r\n      \"isQuestionResponse\": true\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
