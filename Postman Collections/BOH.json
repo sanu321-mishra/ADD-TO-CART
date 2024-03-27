@@ -7489,7 +7489,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/verify"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/verify-sendback"
 					},
 					"response": []
 				}
