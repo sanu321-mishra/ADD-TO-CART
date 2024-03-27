@@ -7464,6 +7464,34 @@
 						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/submit"
 					},
 					"response": []
+				},
+				{
+					"name": "VerifyReconciliationStatementDetailById",
+					"id": "88990263-c52a-4ca4-a024-6d7c5ae65be5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "24293",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"reconciliationStatementId\": \"4251CE51-A3AF-45BF-B928-C1F944A398C1\",\r\n  \"workFlowActionId\": \"send_back\",\r\n  \"verifiedBy\": \"dsmith\",\r\n  \"verifyComment\": \"Test 1\",\r\n  \"verifiedOn\": \"2024-03-25T18:26:46.819Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/verify"
+					},
+					"response": []
 				}
 			],
 			"id": "bd7b4404-526d-461e-85d1-029eab5e6fce"
