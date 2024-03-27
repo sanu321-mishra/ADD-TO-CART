@@ -7405,7 +7405,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/4251CE51-A3AF-45BF-B928-C1F944A398C1/details"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/6fda34b4-c339-4bb1-b23b-5fa8c2e43ffe/details"
 					},
 					"response": []
 				},
