@@ -7377,7 +7377,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/B4836F3F-F7D2-497A-B40B-25C3B1F4DA8B"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/6fda34b4-c339-4bb1-b23b-5fa8c2e43ffe"
 					},
 					"response": []
 				},
@@ -7405,7 +7405,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/6fda34b4-c339-4bb1-b23b-5fa8c2e43ffe/details"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/6281c61f-edd3-40d6-88a7-b4c229efd916/details"
 					},
 					"response": []
 				},
