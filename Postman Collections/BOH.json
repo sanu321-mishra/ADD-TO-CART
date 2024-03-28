@@ -7426,14 +7426,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"B4836F3F-F7D2-497A-B40B-25C3B1F4DA8B\",\r\n  \"note\": \"Test 2.1\",\r\n  \"serviceDate\": \"2024-03-22T18:26:46.032Z\"\r\n}",
+							"raw": "{\r\n  \"id\": \"34B0D260-07FA-41C8-95A8-663CCCF72574\",\r\n  \"note\": \"Test 2.1\",\r\n  \"serviceDate\": \"2024-03-28T18:26:46.032Z\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/B4836F3F-F7D2-497A-B40B-25C3B1F4DA8B"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/34B0D260-07FA-41C8-95A8-663CCCF72574"
 					},
 					"response": []
 				},
