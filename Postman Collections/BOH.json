@@ -7356,6 +7356,26 @@
 				},
 				{
 					"name": "GetReconciliationStatementById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9c7ddbf4-2417-4530-b740-2830aa4eb27c",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "f09ad832-32bb-404b-afed-af5b67d7589c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
