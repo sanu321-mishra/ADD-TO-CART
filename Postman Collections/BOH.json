@@ -7309,6 +7309,57 @@
 			"item": [
 				{
 					"name": "GetLastReconciliationRecordBySfCode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "65c40f76-9dce-4032-a29c-13c4f019f76f",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Data array should have at least one element\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData.data).to.be.an('array').that.is.not.empty;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"StatusCode is a non-negative integer\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.statusCode).to.be.a('number');\r",
+									"  pm.expect(responseData.statusCode).to.be.at.least(0, \"StatusCode should be a non-negative integer\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"StatusCode is a non-null value\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.statusCode).to.exist;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Title is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.title).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Title should not be empty\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"IsSuccess property should be true\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.isSuccess).to.be.true;\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "7b1305a9-6989-4d55-b2bc-b5d02dae9db0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -7328,6 +7379,26 @@
 				},
 				{
 					"name": "CreateReconStatement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "dd1f13d3-3bf7-4d83-b699-ee61b684f1d2",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "9573f796-60e2-4958-b744-a25abdf609d3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -7369,6 +7440,13 @@
 									"pm.test(\"Response is an object with title, statusCode, and isSuccess properties\", function () {\r",
 									"    var jsonData = pm.response.json();\r",
 									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"StatusCode is a non-negative integer\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData.statusCode).to.be.a('number');\r",
+									"  pm.expect(responseData.statusCode).to.be.at.least(0, \"StatusCode should be a non-negative integer\");\r",
 									"});"
 								],
 								"type": "text/javascript",
@@ -7432,6 +7510,26 @@
 				},
 				{
 					"name": "UpdateReconciliationStatementById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce9f4f2c-986e-45f9-807f-ec77df61ec83",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "db8e74aa-005e-4170-a828-10f1d5013bd8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -7460,6 +7558,26 @@
 				},
 				{
 					"name": "SubmitReconciliationStatementDetailById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "de8894c1-eb22-40a8-b6ab-67513e3c5099",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "3613e4ca-4d4d-4fed-9004-52db5f54b62e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -7488,6 +7606,26 @@
 				},
 				{
 					"name": "VerifyReconciliationStatementDetailById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cd88e2af-2f12-44bb-8460-2dffd52c64a5",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'statusCode', 'isSuccess');\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "88990263-c52a-4ca4-a024-6d7c5ae65be5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
