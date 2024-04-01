@@ -7238,20 +7238,17 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "noauth"
-						},
 						"method": "POST",
 						"header": [
 							{
 								"key": "X-Sf-Code",
-								"value": "20071",
+								"value": "24293",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"physicalInventoryId\": \"E895CB2A-FEC5-43EB-90C1-FDE3C9452F94\",\r\n  \"reconciliationDate\": \"2024-03-12\",\r\n  \"note\": \"Test 2\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
+							"raw": "{\r\n  \"physicalInventoryId\": \"FB8334A8-3DA9-4B4C-876C-52C278D7FB81\",\r\n  \"reconciliationDate\": \"2024-04-01\",\r\n  \"note\": \"Test 1\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
