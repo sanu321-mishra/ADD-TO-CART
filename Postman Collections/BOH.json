@@ -3551,7 +3551,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/admin/roleprofile/page?RoleId=4&PageId=\"productionrec\"",
+							"raw": "{{BaseUrl}}api/admin/roleprofile/page?RoleId=5&PageId=productionrec",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -3563,13 +3563,11 @@
 							"query": [
 								{
 									"key": "RoleId",
-									"value": "4",
-									"type": "text"
+									"value": "5"
 								},
 								{
 									"key": "PageId",
-									"value": "\"productionrec\"",
-									"type": "text"
+									"value": "productionrec"
 								}
 							]
 						}
