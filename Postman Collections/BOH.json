@@ -4906,7 +4906,8 @@
 									"\r",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -4916,7 +4917,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -4937,7 +4939,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/physical-inventory/details?id=93d38159-e457-4f94-baa4-21ab2331fab6",
+							"raw": "{{BaseUrl}}api/inventory/physical-inventory/details?id=41347D92-8A75-413F-A804-E788B26275ED",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -4949,7 +4951,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "93d38159-e457-4f94-baa4-21ab2331fab6"
+									"value": "41347D92-8A75-413F-A804-E788B26275ED"
 								}
 							]
 						}
@@ -6486,7 +6488,8 @@
 									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -6497,7 +6500,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/specialprogram/sfcode/20071"
+						"url": "{{BaseUrl}}api/production/specialprogram/sfcode/24293"
 					},
 					"response": []
 				}
@@ -7221,27 +7224,11 @@
 						"header": [
 							{
 								"key": "X-Sf-Code",
-								"value": "29071",
+								"value": "24293",
 								"type": "text"
 							}
 						],
-						"url": {
-							"raw": "{{BaseUrl}}api/inventory/reconciliation/details?reconciliationRecordId=9FDA7092-1C95-4552-9294-F25DB93B5AAB",
-							"host": [
-								"{{BaseUrl}}api"
-							],
-							"path": [
-								"inventory",
-								"reconciliation",
-								"details"
-							],
-							"query": [
-								{
-									"key": "reconciliationRecordId",
-									"value": "9FDA7092-1C95-4552-9294-F25DB93B5AAB"
-								}
-							]
-						}
+						"url": "{{BaseUrl}}api/inventory/reconciliation/b19aaf29-ed4d-46f3-912a-b70267961a0a/details"
 					},
 					"response": []
 				},
@@ -7387,7 +7374,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"reconciliationRecordId\": \"A360F709-7CAD-44BC-9E8D-52CE00FF7A97\",\r\n  \"workFlowActionId\": \"complete\"\r\n}",
+							"raw": "{\r\n  \"reconciliationRecordId\": \"b19aaf29-ed4d-46f3-912a-b70267961a0a\",\r\n  \"workFlowActionId\": \"complete\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7511,7 +7498,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"InventoryReconciliationId\": \"B5E74641-C0F3-4A95-AB66-E32ED4203B6A\",\r\n  \"ServiceDate\": \"2024-04-01\",\r\n  \"note\": \"Test 1\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
+							"raw": "{\r\n  \"InventoryReconciliationId\": \"6A1870F9-35B2-4F44-8EB7-CCA63384A127\",\r\n  \"ServiceDate\": \"2024-04-02\",\r\n  \"note\": \"Test 1\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7601,7 +7588,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/bf878969-c6e3-4b34-842b-2f816ebf7e21/details"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/011CE2A8-3C83-46E4-9DD3-7296CE676EF3/details"
 					},
 					"response": []
 				},
@@ -7642,14 +7629,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"bf878969-c6e3-4b34-842b-2f816ebf7e21\",\r\n  \"note\": \"Test 2.1\",\r\n  \"serviceDate\": \"2024-04-01\"\r\n}",
+							"raw": "{\r\n  \"id\": \"011CE2A8-3C83-46E4-9DD3-7296CE676EF3\",\r\n  \"note\": \"Ashish Mahesh test2\",\r\n  \"serviceDate\": \"2024-04-02\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/bf878969-c6e3-4b34-842b-2f816ebf7e21"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/011CE2A8-3C83-46E4-9DD3-7296CE676EF3"
 					},
 					"response": []
 				},
@@ -7690,14 +7677,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"9DEECD6D-2432-47C8-8845-B7D1F1C7671F\",\r\n  \"workFlowActionId\": \"submit\",\r\n  \"submittedBy\": \"sammons\",\r\n  \"submitComment\": \"Test 1\",\r\n  \"submittedOn\": \"2024-04-01\",\r\n  \"details\": [\r\n    \r\n  ]\r\n}",
+							"raw": "{\r\n  \"id\": \"B74929F9-A4E1-4C54-846F-ACA6FBE4DFB7\",\r\n  \"workFlowActionId\": \"submit\",\r\n  \"submittedBy\": \"sammons\",\r\n  \"submitComment\": \"Test 1\",\r\n  \"submittedOn\": \"2024-04-02\",\r\n  \"details\": [\r\n    \r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliation-statement/id/submit"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/submit"
 					},
 					"response": []
 				},
