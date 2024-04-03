@@ -4044,7 +4044,8 @@
 									"});\r",
 									" "
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -4054,7 +4055,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -4078,14 +4080,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"impersonatedUserId\": \"ACastillo45\",\r\n    \"reason\": \"test impersonation\"\r\n}",
+							"raw": "{\r\n    \"impersonatedUserId\": \"cking\",\r\n    \"reason\": \"test impersonation\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/useraccess/user/change"
+						"url": "{{BaseUrl}}api/useraccess/impersonation"
 					},
 					"response": []
 				},
