@@ -5186,7 +5186,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"physicalInventoryDetailList\": [\r\n    {\r\n      \"id\": null,\r\n      \"inventoryItemId\": \"0a8d4706-0e9b-4161-a98f-0a16a5c0d6ec\",\r\n      \"quantity\": 25,\r\n      \"physicalInventoryId\": \"ad8ab033-7bd0-4a81-a311-756506d459e8\",\r\n      \"sfcode\": \"24293\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"physicalInventoryDetailList\": [\r\n    {\r\n      \"id\": null,\r\n      \"inventoryItemId\": \"6d77d047-591a-4777-951b-8dea950559da\",\r\n      \"quantity\": 80,\r\n      \"physicalInventoryId\": \"c6caa54d-6b20-4aa5-b8c4-7048d9973bda\",\r\n      \"sfcode\": \"24293\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
