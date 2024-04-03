@@ -2430,7 +2430,8 @@
 									"    pm.expect(pm.response.json()).to.have.property('isSuccess', true);\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -2442,7 +2443,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventory/summary?districtId=5FA25767-2EB8-4D12-92B2-851299095C52&sfCode={{sfcode}}&page=1&pageSize=1",
+							"raw": "{{BaseUrl}}api/reports/inventory/summary?districtId=DD75A063-4ADA-4FC1-AB8C-96039D312A8A&sfCode={{sfcode}}&page=1&pageSize=1",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2454,7 +2455,7 @@
 							"query": [
 								{
 									"key": "districtId",
-									"value": "5FA25767-2EB8-4D12-92B2-851299095C52"
+									"value": "DD75A063-4ADA-4FC1-AB8C-96039D312A8A"
 								},
 								{
 									"key": "sfCode",
