@@ -7098,6 +7098,43 @@
 					"response": []
 				},
 				{
+					"name": "Get All School Inventory Items",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "947a903e-faa4-4a6d-a3d6-a52ce55fc8df",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();   \r",
+									"    pm.expect(responseData.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "4d940b44-6799-4305-ae4a-ad15c06d1499",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/inventory/lookup/items"
+					},
+					"response": []
+				},
+				{
 					"name": "GetReceivingSchools",
 					"event": [
 						{
