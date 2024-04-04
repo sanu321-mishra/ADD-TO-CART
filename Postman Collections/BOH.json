@@ -7119,7 +7119,8 @@
 									"    pm.expect(responseData.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -7130,7 +7131,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/inventory/lookup/items"
+						"url": "{{BaseUrl}}api/inventory/lookup/school-items"
 					},
 					"response": []
 				},
@@ -7810,17 +7811,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c2ee7e2f-9eec-4118-9144-0d8492db3e77",
+				"id": "d4f6a663-58af-41d0-8006-f19dba1583be",
 				"type": "text/javascript",
 				"exec": [
-					"pm.request.headers.add(\"X-SF-Code: 17002\");"
+					"pm.request.headers.add(\"X-SF-Code: 24293\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "3781abb7-b25b-490b-9e51-45d9898a2279",
+				"id": "7b7d6185-bc97-49b0-81aa-0f4544e7e75f",
 				"type": "text/javascript",
 				"exec": [
 					""
