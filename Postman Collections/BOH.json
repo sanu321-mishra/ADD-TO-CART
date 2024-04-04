@@ -2513,7 +2513,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventory/reconciliation/statement?districtId=71D04707-CB13-449F-A9D0-42B6B1858010&sfCode={{sfcode}}&page=1&pageSize=2&from=01 Jan 2020&to=30 Mar 2024",
+							"raw": "{{BaseUrl}}api/reports/inventory/reconciliation/statement?districtId=DD75A063-4ADA-4FC1-AB8C-96039D312A8A&sfCode={{sfcode}}&page=1&pageSize=2&from=01 Jan 2020&to=03 Apr 2024",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2526,7 +2526,7 @@
 							"query": [
 								{
 									"key": "districtId",
-									"value": "71D04707-CB13-449F-A9D0-42B6B1858010"
+									"value": "DD75A063-4ADA-4FC1-AB8C-96039D312A8A"
 								},
 								{
 									"key": "sfCode",
@@ -2546,7 +2546,7 @@
 								},
 								{
 									"key": "to",
-									"value": "30 Mar 2024"
+									"value": "03 Apr 2024"
 								}
 							]
 						}
@@ -6299,7 +6299,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/24293"
+						"url": "{{BaseUrl}}api/production/productionrecord/settings/sfcode/24277"
 					},
 					"response": []
 				},
@@ -6511,7 +6511,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/specialprogram/sfcode/24293"
+						"url": "{{BaseUrl}}api/production/specialprogram/sfcode/24277"
 					},
 					"response": []
 				}
