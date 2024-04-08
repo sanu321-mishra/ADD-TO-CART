@@ -2517,7 +2517,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventory/reconciliation/statement?districtId=DD75A063-4ADA-4FC1-AB8C-96039D312A8A&sfCode={{sfcode}}&page=1&pageSize=2&from=01 Jan 2020&to=03 Apr 2024",
+							"raw": "{{BaseUrl}}api/reports/inventory/reconciliation/statement?districtId=DD75A063-4ADA-4FC1-AB8C-96039D312A8A&sfCode={{sfcode}}",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2535,22 +2535,6 @@
 								{
 									"key": "sfCode",
 									"value": "{{sfcode}}"
-								},
-								{
-									"key": "page",
-									"value": "1"
-								},
-								{
-									"key": "pageSize",
-									"value": "2"
-								},
-								{
-									"key": "from",
-									"value": "01 Jan 2020"
-								},
-								{
-									"key": "to",
-									"value": "03 Apr 2024"
 								}
 							]
 						}
