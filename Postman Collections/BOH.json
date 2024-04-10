@@ -7088,7 +7088,7 @@
 					"response": []
 				},
 				{
-					"name": "Get All School Inventory Items",
+					"name": "Get School Inventory Items",
 					"event": [
 						{
 							"listen": "test",
