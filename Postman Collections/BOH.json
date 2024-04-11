@@ -5179,7 +5179,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"physicalInventoryDetailList\": [\r\n    {\r\n      \"id\": null,\r\n      \"inventoryItemId\": \"6d77d047-591a-4777-951b-8dea950559da\",\r\n      \"quantity\": 80,\r\n      \"physicalInventoryId\": \"c6caa54d-6b20-4aa5-b8c4-7048d9973bda\",\r\n      \"sfcode\": \"24293\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"physicalInventoryDetailList\": [\r\n    {\r\n      \"id\": null,\r\n      \"inventoryItemId\": \"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\r\n      \"quantity\": 10,\r\n      \"physicalInventoryId\": \"64378842-62ea-406c-8261-9353ebcded5e\",\r\n      \"sfcode\": \"17002\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"inventoryItemId\": \"4869bbb3-c75a-447e-af7e-269a9d476069\",\r\n      \"quantity\": 167,\r\n      \"physicalInventoryId\": \"64378842-62ea-406c-8261-9353ebcded5e\",\r\n      \"sfcode\": \"17002\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"inventoryItemId\": \"fcb7582b-5719-48f6-80a0-7742880de331\",\r\n      \"quantity\": 15,\r\n      \"physicalInventoryId\": \"64378842-62ea-406c-8261-9353ebcded5e\",\r\n      \"sfcode\": \"17002\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"inventoryItemId\": \"60060314-c0fc-454c-a944-923934b2c79b\",\r\n      \"quantity\": 450,\r\n      \"physicalInventoryId\": \"64378842-62ea-406c-8261-9353ebcded5e\",\r\n      \"sfcode\": \"17002\"\r\n    },\r\n    {\r\n      \"id\": null,\r\n      \"inventoryItemId\": \"57500eb2-4a8f-4e43-8b5b-f86af93e5470\",\r\n      \"quantity\": 494,\r\n      \"physicalInventoryId\": \"64378842-62ea-406c-8261-9353ebcded5e\",\r\n      \"sfcode\": \"17002\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
