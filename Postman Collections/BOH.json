@@ -7307,7 +7307,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"physicalInventoryId\": \"2d5e1f9e-baac-46f9-9451-0d902e59a95c\",\r\n  \"reconciliationDate\": \"2024-04-12\",\r\n  \"note\": \"Test 1\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
+							"raw": "{\r\n  \"physicalInventoryId\": \"38f879f4-0351-4ced-8f87-2dcd28165b81\",\r\n  \"reconciliationDate\": \"2024-04-12\",\r\n  \"note\": \"Test 1\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7410,7 +7410,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"reconciliationRecordId\": \"659DB3C5-0F07-480E-B2E0-12988393E524\",\r\n  \"workFlowActionId\": \"complete\"\r\n}",
+							"raw": "{\r\n  \"reconciliationRecordId\": \"BEF1C23A-BB56-4B19-9D6C-8FA7EAB5A031\",\r\n  \"workFlowActionId\": \"complete\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7547,7 +7547,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"InventoryReconciliationId\": \"785a3ce9-0183-432c-8f10-0a7bed91347c\",\r\n  \"ServiceDate\": \"2024-04-02\",\r\n  \"note\": \"Test 1\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
+							"raw": "{\r\n  \"InventoryReconciliationId\": \"BEF1C23A-BB56-4B19-9D6C-8FA7EAB5A031\",\r\n  \"ServiceDate\": \"2024-04-12\",\r\n  \"note\": \"Test 1\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7609,7 +7609,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/faa3a409-6bb1-4514-9838-6f62e4a4df08"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/d6b92e8d-378e-46ff-9844-c8e8f3ecc16d"
 					},
 					"response": []
 				},
@@ -7637,7 +7637,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/faa3a409-6bb1-4514-9838-6f62e4a4df08/details"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/d6b92e8d-378e-46ff-9844-c8e8f3ecc16d/details"
 					},
 					"response": []
 				},
