@@ -7408,7 +7408,16 @@
 								"type": "text"
 							}
 						],
-						"url": "{{BaseUrl}}api/inventory/reconciliation/reset-notes/d31044c7-c570-4c72-a939-b888524a85d9"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"21B2B9AE-90F4-439C-87CC-BE5CE6DA0871\",\r\n    \"sfCode\": \"17002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/inventory/reconciliation/delete"
 					},
 					"response": []
 				},
