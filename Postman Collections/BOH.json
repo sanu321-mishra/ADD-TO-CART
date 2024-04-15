@@ -7394,6 +7394,25 @@
 					"response": []
 				},
 				{
+					"name": "DeleteDetail",
+					"id": "9fe0c17e-7211-480a-8d27-309eb51a4e70",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Sf-Code",
+								"value": "20071",
+								"type": "text"
+							}
+						],
+						"url": "{{BaseUrl}}api/inventory/reconciliation/reset-notes/d31044c7-c570-4c72-a939-b888524a85d9"
+					},
+					"response": []
+				},
+				{
 					"name": "CompleteReconciliation",
 					"id": "4f4d714c-ce99-4bc4-810f-b396c8ba31a0",
 					"protocolProfileBehavior": {
