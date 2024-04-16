@@ -2443,7 +2443,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventory/summary?sfCode=17002&from=2024-03-05&to=2024-04-05&page=1&pageSize=10",
+							"raw": "{{BaseUrl}}api/reports/inventory/summary?sfCode=17002&from=2024-03-05&to=2024-04-16&page=1&pageSize=10",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2463,7 +2463,7 @@
 								},
 								{
 									"key": "to",
-									"value": "2024-04-05"
+									"value": "2024-04-16"
 								},
 								{
 									"key": "page",
@@ -4429,7 +4429,8 @@
 									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -4439,7 +4440,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -4452,7 +4454,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ServiceDate\": \"2024-01-28\",\r\n    \"Note\": \"test note\",\r\n    \"IsService\": true,\r\n    \"WorkFlowActionId\":\"Create\"\r\n}",
+							"raw": "{\r\n    \"ServiceDate\": \"2024-04-16\",\r\n    \"Note\": \"Mahesh\",\r\n    \"IsService\": true,\r\n    \"WorkFlowActionId\":\"Create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5482,7 +5484,8 @@
 									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -5495,7 +5498,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"serviceDate\": \"2024-01-23T00:00:00.000Z\",\r\n    \"note\": \"Notes 2546\"\r\n}",
+							"raw": "{\r\n    \"workFlowActionId\": \"Create\",\r\n    \"serviceDate\": \"2024-04-15\",\r\n    \"note\": \"test\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7405,19 +7408,20 @@
 							{
 								"key": "X-Sf-Code",
 								"value": "20071",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"21B2B9AE-90F4-439C-87CC-BE5CE6DA0871\",\r\n    \"sfCode\": \"17002\"\r\n}",
+							"raw": "{\r\n    \"InventoryReconciliationId\": \"DEE52938-8F54-4602-8699-687F2AD46C1F\",\r\n    \"InventoryReconciliationDetailId\": \"10772AD4-C643-4D44-A90E-816B8F17644B\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliation/delete"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/details"
 					},
 					"response": []
 				},
