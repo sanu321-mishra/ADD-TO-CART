@@ -7454,7 +7454,7 @@
 					"response": []
 				},
 				{
-					"name": "{{BaseUrl}}api/inventory/reconciliation/checklist",
+					"name": "Reconciliation checklist",
 					"id": "be0c41a3-85c0-473f-8966-ed42a21e2867",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
