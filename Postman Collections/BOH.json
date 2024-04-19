@@ -2443,7 +2443,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventory/summary?sfCode=17783&from=2024-03-05&to=2024-04-19&page=1&pageSize=10",
+							"raw": "{{BaseUrl}}api/reports/inventory/summary?sfCode=24293&from=2024-03-05&to=2024-04-19&page=1&pageSize=10",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2455,7 +2455,7 @@
 							"query": [
 								{
 									"key": "sfCode",
-									"value": "17783"
+									"value": "24293"
 								},
 								{
 									"key": "from",
