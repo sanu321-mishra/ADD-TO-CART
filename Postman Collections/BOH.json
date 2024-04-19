@@ -2443,7 +2443,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventory/summary?sfCode=24293&from=2024-03-05&to=2024-04-19&page=1&pageSize=10",
+							"raw": "{{BaseUrl}}api/reports/inventory/summary?sfCode=17783&from=2024-03-05&to=2024-04-19&page=1&pageSize=10",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2455,7 +2455,7 @@
 							"query": [
 								{
 									"key": "sfCode",
-									"value": "24293"
+									"value": "17783"
 								},
 								{
 									"key": "from",
@@ -7845,17 +7845,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f0ce332c-4642-4d19-bb7c-3659ec001a2d",
+				"id": "f641bd2f-a4bd-4793-8dc3-ff2abb8899f1",
 				"type": "text/javascript",
 				"exec": [
-					"pm.request.headers.add(\"X-SF-Code: 17783\");"
+					"pm.request.headers.add(\"X-SF-Code: 24293\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "dafdf3df-0fbd-463a-ae01-1927c93e4ce5",
+				"id": "62897253-fd3d-4d6b-b9cf-d848caa75de7",
 				"type": "text/javascript",
 				"exec": [
 					""
