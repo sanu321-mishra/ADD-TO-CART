@@ -6753,6 +6753,19 @@
 						"url": "{{BaseUrl}}api/production/lookup/production-record-structure-type"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Production Record Structure Type Copy",
+					"id": "3204a63a-a943-4388-995c-73009ef22da8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/lookup/production-record-structure-type"
+					},
+					"response": []
 				}
 			],
 			"id": "e3c1455b-fa7d-497a-a9e7-de424686aff8"
