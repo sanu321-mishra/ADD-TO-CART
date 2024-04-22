@@ -7111,6 +7111,19 @@
 						"url": "{{BaseUrl}}api/production/swap"
 					},
 					"response": []
+				},
+				{
+					"name": "{{BaseUrl}}api/production/c893d287-4f0d-45d5-a99d-f22708427c86/detail",
+					"id": "80ef944c-d8d5-4080-b484-7bf33f3b9ffd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/c893d287-4f0d-45d5-a99d-f22708427c86/detail"
+					},
+					"response": []
 				}
 			],
 			"id": "c183080b-f0bc-48db-8b5a-6bbda1835457"
