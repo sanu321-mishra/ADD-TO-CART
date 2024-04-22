@@ -7047,6 +7047,64 @@
 						"url": "{{BaseUrl}}api/production/7AAA0228-FDD0-4522-B7D3-00CA980090D4/header"
 					},
 					"response": []
+				},
+				{
+					"name": "Swap Production Record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "39dc9560-8136-458e-a889-9fe331e9ab9d",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();   \r",
+									"    pm.expect(responseData.data.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "30552feb-8b89-4a06-bf63-4405117a6246",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "fa5702a1-be4f-43ad-9a2c-f034fea5ce4a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"note\": \"Test\",\r\n  \"isMenuChange\": true,\r\n  \"menuChangeReason\": \"Menu 123\",\r\n  \"serviceScope\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/production/swap"
+					},
+					"response": []
 				}
 			],
 			"id": "c183080b-f0bc-48db-8b5a-6bbda1835457"
@@ -7620,7 +7678,7 @@
 						"header": [
 							{
 								"key": "X-Sf-Code",
-								"value": "20071",
+								"value": "24293",
 								"type": "text"
 							}
 						],
@@ -7673,7 +7731,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"recordDetails\": [\r\n        {\r\n            \"id\": null,\r\n            \"physicalInventoryDetailId\": \"6E10EED6-803C-4B93-9BE6-11F285E99D52\",\r\n            \"reconciliationRecordId\": \"ad788e1c-5f4a-43d9-b476-265837e35673\",\r\n            \"inventoryItemId\": \"6F0D3CA2-4689-430C-8650-5A7D9105D5A4\",\r\n            \"beginningPerpetual\": 0,\r\n            \"totalIn\": 1400,\r\n            \"totalOut\": 5,\r\n            \"currentPerpetual\": 1395,\r\n            \"physicalOnHand\": 1450,\r\n            \"adjustmentNote\": \"One item added\",\r\n            \"adjustmentQuantity\": 55\r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"physicalInventoryDetailId\": \"67BB2EF1-A0CF-4843-B992-9E3A8E50ECB9\",\r\n            \"reconciliationRecordId\": \"ad788e1c-5f4a-43d9-b476-265837e35673\",\r\n            \"inventoryItemId\": \"60060314-C0FC-454C-A944-923934B2C79B\",\r\n            \"beginningPerpetual\": 0,\r\n            \"totalIn\": 1200,\r\n            \"totalOut\": 4,\r\n            \"currentPerpetual\": 1196,\r\n            \"physicalOnHand\": 1140,\r\n            \"adjustmentNote\": \"One item added\",\r\n            \"adjustmentQuantity\": -56\r\n        }\r\n    ]\r\n}",
+							"raw": "{\"recordDetails\":[{\"id\":\"1f2a4db9-b4e1-454a-bfbd-edbc2caef12d\",\"reconciliationRecordId\":\"acf3bd17-380c-40b7-888b-1ff65df77340\",\"inventoryItemId\":\"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\"adjustmentNote\":\"ashish mishra\",\"physicalOnHand\":1,\"physicalInventoryDetailId\":\"0d2ba63c-a575-41f1-a273-38edd1435a7d\",\"beginningPerpetual\":100,\"totalIn\":400,\"totalOut\":0,\"currentPerpetual\":500}]}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7747,16 +7805,7 @@
 								"disabled": true
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"InventoryReconciliationId\": \"DEE52938-8F54-4602-8699-687F2AD46C1F\",\r\n    \"InventoryReconciliationDetailId\": \"10772AD4-C643-4D44-A90E-816B8F17644B\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{BaseUrl}}api/inventory/reconciliation/details"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/8268c4f0-2a1a-41ba-aa1c-f6215cfb938e/detail/A38E56EB-33CF-47BE-8EB6-CD27716B2367"
 					},
 					"response": []
 				},
