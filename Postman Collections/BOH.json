@@ -7096,7 +7096,8 @@
 							{
 								"key": "X-SF-Code",
 								"value": "17002",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
@@ -7155,24 +7156,25 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [
 							{
 								"key": "X-SF-Code",
 								"value": "17002",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"productionRecordDataID\": \"36b5a0b5-0145-4f46-bd94-27c60335bfb8\",\r\n  \"date\": \"2024-04-22\",\r\n  \"reason\": \"test\"\r\n}",
+							"raw": "{\r\n  \"date\": \"2024-04-19\",\r\n  \"Note\": \"test\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/swap"
+						"url": "{{BaseUrl}}api/production/school-trip"
 					},
 					"response": []
 				},
