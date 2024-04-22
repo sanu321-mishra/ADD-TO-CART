@@ -6742,6 +6742,19 @@
 					"response": []
 				},
 				{
+					"name": "Get All Menus",
+					"id": "75f3d2e9-b451-409c-b68b-037680f6fd97",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/lookup/menu"
+					},
+					"response": []
+				},
+				{
 					"name": "Get Production Record Structure Type",
 					"id": "871b2c18-e474-452f-80dc-ee661ce0b129",
 					"protocolProfileBehavior": {
@@ -6755,7 +6768,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Production Record Structure Type Copy",
+					"name": "Get Production Record Column Template",
 					"id": "3204a63a-a943-4388-995c-73009ef22da8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -6763,7 +6776,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{BaseUrl}}api/production/lookup/production-record-structure-type"
+						"url": "{{BaseUrl}}api/production/lookup/production-record-column-template"
 					},
 					"response": []
 				}
@@ -7937,6 +7950,24 @@
 				}
 			],
 			"id": "bd7b4404-526d-461e-85d1-029eab5e6fce"
+		},
+		{
+			"name": "Production Menu",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "1b147a7d-db5d-40f0-a15e-08b1b3d1bf26",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "396013ca-5f69-47a5-b933-8992665736a7"
 		}
 	],
 	"auth": {
