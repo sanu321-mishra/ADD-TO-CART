@@ -8237,7 +8237,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Menu Structure Type Copy",
+					"name": "Update Menu Structure Type",
 					"event": [
 						{
 							"listen": "test",
@@ -8260,18 +8260,8 @@
 									"    \r",
 									"    pm.expect(responseData).to.be.an('object');\r",
 									"    pm.expect(responseData).to.have.property('title');\r",
-									"    pm.expect(responseData).to.have.property('data');\r",
 									"    pm.expect(responseData).to.have.property('statusCode');\r",
 									"    pm.expect(responseData).to.have.property('isSuccess');\r",
-									"});\r",
-									"\r",
-									"\r",
-									"pm.test(\"Data array is present and contains expected number of elements\", function () {\r",
-									"    const responseData = pm.response.json();\r",
-									"    \r",
-									"    pm.expect(responseData).to.be.an('object');\r",
-									"    pm.expect(responseData.data).to.be.an('array');\r",
-									"    pm.expect(responseData.data.length).to.be.above(0);\r",
 									"});\r",
 									"\r",
 									"\r",
@@ -8310,23 +8300,16 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"url": {
-							"raw": "{{BaseUrl}}api/production/menu-structure-type?id=D4A961E9-AEBC-4B4D-BF88-00D50FD55476",
-							"host": [
-								"{{BaseUrl}}api"
-							],
-							"path": [
-								"production",
-								"menu-structure-type"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "D4A961E9-AEBC-4B4D-BF88-00D50FD55476",
-									"type": "text"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productionRecordStructureTypeId\": \"high_school\",\r\n  \"productionRecordColumnsTemplateId\": \"lunch\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
-						}
+							}
+						},
+						"url": "{{BaseUrl}}api/production/menu-structure-type/D4A961E9-AEBC-4B4D-BF88-00D50FD55476"
 					},
 					"response": []
 				}
