@@ -8452,7 +8452,7 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"username": "smyles",
+			"username": "sammons",
 			"refreshTokenUrl": "https://backoffice.verify.ibm.com/v1.0/endpoint/default/token",
 			"accessTokenUrl": "https://backoffice.verify.ibm.com/v1.0/endpoint/default/token",
 			"clientSecret": "PV82LUNTKG",
@@ -8471,7 +8471,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c728c202-53b7-4a24-9eaf-741c8cfd9acd",
+				"id": "f0a6ea7c-3ee7-4a11-9a42-adec709a8d6f",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add(\"X-SF-Code: 24293\");"
@@ -8481,7 +8481,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "3eb4b299-4e80-4f28-9dc2-aa44dbc6dacc",
+				"id": "6959a217-a37c-4ca1-8073-d03fc9b1dac7",
 				"type": "text/javascript",
 				"exec": [
 					""
