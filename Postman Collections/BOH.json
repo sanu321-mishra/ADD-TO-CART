@@ -3119,7 +3119,8 @@
 									"\r",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -3129,7 +3130,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -3142,7 +3144,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"id\": \"73e8a4a6-2576-468a-b036-41624abb6484\",\r\n  \"notificationTypeId\": \"430c2d2b-6827-455d-a2f4-e5d6fde6294c\",\r\n  \"isInApp\": false,\r\n  \"isEmail\": true,\r\n  \"inAppBodyTemplate\": \"\",\r\n  \"emailBodyTemplate\": \"EmailTemplate test 2\",\r\n  \"subject\": \"emailsubjectHas Body\",\r\n  \"to\": [\r\n    \"District Supervisor\",\"Cook\"\r\n  ],\r\n  \"cc\": [\r\n    \"s@gmail.com\",\"aman@gmail.com\",\"abhay@gmail.com\"\r\n  ],\r\n  \"bcc\": [\r\n    \"pm@gmail.com\"\r\n  ]\r\n}",
+							"raw": "{\r\n  \"id\": \"73e8a4a6-2576-468a-b036-41624abb6484\",\r\n  \"notificationTypeId\": \"430c2d2b-6827-455d-a2f4-e5d6fde6294c\",\r\n  \"isInApp\": false,\r\n  \"isEmail\": true,\r\n  \"inAppBodyTemplate\": \"\",\r\n  \"emailBodyTemplate\": \"EmailTemplate test 2\",\r\n  \"subject\": \"emailsubjectHas Body\",\r\n  \"userName\": \"Sammons\",\r\n  \"to\": [\r\n    \"District Supervisor\",\"Cook\"\r\n  ],\r\n  \"cc\": [\r\n    \"s@gmail.com\",\"aman@gmail.com\",\"abhay@gmail.com\"\r\n  ],\r\n  \"bcc\": [\r\n    \"pm@gmail.com\"\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3532,6 +3534,51 @@
 				},
 				{
 					"name": "Get Columns for Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c57d31ff-4843-4474-9d58-47c8da7614a7",
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.title).to.exist;\r",
+									"    pm.expect(responseData.data).to.exist;\r",
+									"    pm.expect(responseData.statusCode).to.exist;\r",
+									"    pm.expect(responseData.isSuccess).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"IsColumnSelected field in the data array is a boolean value\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData.data).to.be.an('array');\r",
+									"    \r",
+									"    responseData.data.forEach(function(item) {\r",
+									"        pm.expect(item.isColumnSelected).to.be.a('boolean');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "084b9fb0-a7a5-4e61-87b0-30c5197b0dc3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -6693,6 +6740,19 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get Production Record Structure Type",
+					"id": "871b2c18-e474-452f-80dc-ee661ce0b129",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BaseUrl}}api/production/lookup/production-record-structure-type"
+					},
+					"response": []
 				}
 			],
 			"id": "e3c1455b-fa7d-497a-a9e7-de424686aff8"
@@ -7038,6 +7098,49 @@
 				},
 				{
 					"name": "Get Help Text for Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "89801311-3997-435c-8662-71554e903398",
+								"exec": [
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required fields\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData).to.have.property('title');\r",
+									"    pm.expect(responseData).to.have.property('data');\r",
+									"    pm.expect(responseData).to.have.property('statusCode');\r",
+									"    pm.expect(responseData).to.have.property('isSuccess');\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Data array is present and contains expected number of elements\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.data).to.exist.and.to.be.an('array');\r",
+									"    pm.expect(responseData.data).to.have.lengthOf.at.least(1);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "3e44f354-67cf-4347-95c2-a49e177576af",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
