@@ -7221,7 +7221,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [
 							{
 								"key": "X-SF-Code",
@@ -7230,16 +7230,7 @@
 								"disabled": true
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"date\": \"2024-04-19\",\r\n  \"Note\": \"test\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{BaseUrl}}api/production/school-trip"
+						"url": "{{BaseUrl}}api/production/special-program/2024-04-23"
 					},
 					"response": []
 				},
