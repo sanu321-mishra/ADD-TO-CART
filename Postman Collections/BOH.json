@@ -7179,7 +7179,7 @@
 					"response": []
 				},
 				{
-					"name": "school-trip Copy",
+					"name": "Special Program for production record",
 					"event": [
 						{
 							"listen": "test",
@@ -7230,7 +7230,7 @@
 								"disabled": true
 							}
 						],
-						"url": "{{BaseUrl}}api/production/special-program/2024-04-23"
+						"url": "{{BaseUrl}}api/production/2024-04-23/special-program"
 					},
 					"response": []
 				},
