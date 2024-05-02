@@ -4840,7 +4840,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/physical-inventory/?id=c6caa54d-6b20-4aa5-b8c4-7048d9973bda",
+							"raw": "{{BaseUrl}}api/inventory/physical-inventory/?id=04f819a5-2936-4e20-8e17-38778d5f1a26",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -4852,7 +4852,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "c6caa54d-6b20-4aa5-b8c4-7048d9973bda"
+									"value": "04f819a5-2936-4e20-8e17-38778d5f1a26"
 								}
 							]
 						}
