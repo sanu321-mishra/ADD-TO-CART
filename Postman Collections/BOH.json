@@ -7804,7 +7804,7 @@
 								"type": "text"
 							}
 						],
-						"url": "{{BaseUrl}}api/inventory/reconciliation/6ca90df3-22d9-409f-962c-8fcc14e8729e/details"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/b987422b-39ca-45cd-b92f-2b60973d5848/details"
 					},
 					"response": []
 				},
@@ -7873,7 +7873,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"recordDetails\":[{\"id\":\"62ed7eab-08cc-49d9-b5c3-a6fafc4bcdf8\",\"reconciliationRecordId\":\"acf3bd17-380c-40b7-888b-1ff65df77340\",\"inventoryItemId\":\"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\"adjustmentNote\":\"ashish mishra 1\",\"physicalOnHand\":1,\"physicalInventoryDetailId\":\"0d2ba63c-a575-41f1-a273-38edd1435a7d\",\"beginningPerpetual\":100,\"totalIn\":400,\"totalOut\":10,\"currentPerpetual\":490}]}",
+							"raw": "{\"recordDetails\":[{\"id\":null,\"reconciliationRecordId\":\"b987422b-39ca-45cd-b92f-2b60973d5848\",\"inventoryItemId\":\"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\"adjustmentNote\":\"Test 1\",\"physicalOnHand\":100,\"physicalInventoryDetailId\":\"d4215b5b-f1d2-4c57-b495-0a244eb69cc3\",\"beginningPerpetual\":10,\"totalIn\":400,\"totalOut\":4,\"currentPerpetual\":6}]}",
 							"options": {
 								"raw": {
 									"language": "json"
