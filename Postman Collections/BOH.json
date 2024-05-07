@@ -6177,7 +6177,7 @@
 								"type": "text"
 							}
 						],
-						"url": "https://apicstg.nycboe.net/doe/stgint/v1/authorization/roles/00BE8A96-FEE2-4449-842D-E161A7906A2E"
+						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/roles/00BE8A96-FEE2-4449-842D-E161A7906A2E"
 					},
 					"response": []
 				},
@@ -6191,7 +6191,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "AAIgOTAxOThlNjk1ZmY1Yzc2MWQzZjhmOWMyYmRiMmNhYmHdcv0Nycg_MyIP7kIhAOUtKceDImIZfjCtKyhjX8al4Yyi_Tcc0QP9JaJIF6PhouEVaZDFvB-Hsn8nCJBRuD9CwRxXqv-BJ4IY6XlZLUcdhw"
+								"token": "AAIgOTAxOThlNjk1ZmY1Yzc2MWQzZjhmOWMyYmRiMmNhYmF4IdhtUFmGIGRQkTo7MVdkRlxC03Xj4rKuKVTDK65P6OamzDDyw3UBSmJu97ZKXiMk7Vx8m0RhleUVTD6HCzGeO7OJzhSuF18aunMZbUjtOQ"
 							}
 						},
 						"method": "GET",
@@ -6202,7 +6202,7 @@
 								"type": "text"
 							}
 						],
-						"url": "https://apicstg.nycboe.net/doe/stgint/v1/authorization/tasks-by-user/00BE8A96-FEE2-4449-842D-E161A7906A2E/user/testuser6"
+						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/tasks-by-user/00BE8A96-FEE2-4449-842D-E161A7906A2E/user/testuser10"
 					},
 					"response": []
 				},
@@ -6227,7 +6227,7 @@
 								"type": "text"
 							}
 						],
-						"url": "https://apicstg.nycboe.net/doe/stgint/v1/authorization/tasks-by-role/00BE8A96-FEE2-4449-842D-E161A7906A2E/role/cook"
+						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/tasks-by-role/00BE8A96-FEE2-4449-842D-E161A7906A2E/role/cook"
 					},
 					"response": []
 				},
@@ -6241,7 +6241,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "AAIgOTAxOThlNjk1ZmY1Yzc2MWQzZjhmOWMyYmRiMmNhYmHdcv0Nycg_MyIP7kIhAOUtKceDImIZfjCtKyhjX8al4Yyi_Tcc0QP9JaJIF6PhouEVaZDFvB-Hsn8nCJBRuD9CwRxXqv-BJ4IY6XlZLUcdhw"
+								"token": "AAIgOTAxOThlNjk1ZmY1Yzc2MWQzZjhmOWMyYmRiMmNhYmGP1B8L7XsqWY_V2gZl5Qx7zNy5FePgqIHFnsIKHR_k0ASbMo-H-bo4UTR4ORu9nC5es8i9GyIePG9UveSSxSsHCs9cIbn5CUvklyiBjXqX-Q"
 							}
 						},
 						"method": "GET",
@@ -6252,7 +6252,7 @@
 								"type": "text"
 							}
 						],
-						"url": "https://apicstg.nycboe.net/doe/stgint/v1/authorization/rolemembers-by-user/00BE8A96-FEE2-4449-842D-E161A7906A2E/user/testuser6"
+						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/rolemembers-by-user/00BE8A96-FEE2-4449-842D-E161A7906A2E/user/testuser6"
 					},
 					"response": []
 				},
