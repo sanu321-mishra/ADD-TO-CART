@@ -6122,12 +6122,12 @@
 							"urlencoded": [
 								{
 									"key": "client_id",
-									"value": "90198e695ff5c761d3f8f9c2bdb2caba",
+									"value": "20654d6b7a85f2a4c2b286b3961e3d1c",
 									"type": "text"
 								},
 								{
 									"key": "client_secret",
-									"value": "d42a3f0a381a515b053b1b03431d1833",
+									"value": "f34d926ab8d943b61bdd1d8287dca6c6",
 									"type": "text"
 								},
 								{
@@ -6152,7 +6152,7 @@
 								}
 							]
 						},
-						"url": "https://apicstg.nycboe.net/doe/stgint/v1/oauth/oauth2/token"
+						"url": "https://apistgint.schools.nyc/doe/stgint/v1/oauth/oauth2/token"
 					},
 					"response": []
 				},
