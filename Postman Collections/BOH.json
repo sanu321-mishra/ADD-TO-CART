@@ -7800,11 +7800,11 @@
 						"header": [
 							{
 								"key": "X-Sf-Code",
-								"value": "17002",
+								"value": "18066",
 								"type": "text"
 							}
 						],
-						"url": "{{BaseUrl}}api/inventory/reconciliation/b987422b-39ca-45cd-b92f-2b60973d5848/details"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/b3497f8d-9d98-4e0a-a7c8-f72e3b63e1b1/details"
 					},
 					"response": []
 				},
@@ -8531,17 +8531,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "323005c6-45f6-469c-b3c0-259a670ebbdd",
+				"id": "95246d9a-39f6-44ee-b25a-f6e3753423fc",
 				"type": "text/javascript",
 				"exec": [
-					"pm.request.headers.add(\"X-SF-Code: 17002\");"
+					"// pm.request.headers.add(\"X-SF-Code: 17002\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "e7d27e97-ec4f-495e-8e1a-b4f82595f7e5",
+				"id": "47288071-07e4-4566-90be-8d8d07a8dcba",
 				"type": "text/javascript",
 				"exec": [
 					""
