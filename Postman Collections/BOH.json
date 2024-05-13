@@ -2443,7 +2443,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/reports/inventory/summary?sfCode=18066&from=2024-03-05&to=2024-05-07&page=1&pageSize=10",
+							"raw": "{{BaseUrl}}api/reports/inventory/summary?sfCode=18066&from=2024-03-05&to=2024-05-09&page=1&pageSize=10",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -2463,7 +2463,7 @@
 								},
 								{
 									"key": "to",
-									"value": "2024-05-07"
+									"value": "2024-05-09"
 								},
 								{
 									"key": "page",
@@ -5817,7 +5817,8 @@
 									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -5830,7 +5831,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"transferredOn\": \"2024-02-20T00:00:00.000Z\",\r\n    \"notes\": \"Mahesh test3\",\r\n    \"workFlowActionId\": \"create\"\r\n}",
+							"raw": "{\r\n    \"transferredOn\": \"2024-05-10\",\r\n    \"notes\": \"Mahesh test3\",\r\n    \"workFlowActionId\": \"create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6051,7 +6052,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"7fb0b004-3e92-483b-9873-d09359826aff\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
+							"raw": "{\r\n    \"productTransferId\": \"e722ecd3-3d28-447b-94fd-4561f2299c5a\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7874,7 +7875,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"recordDetails\":[{\"id\":null,\"reconciliationRecordId\":\"b987422b-39ca-45cd-b92f-2b60973d5848\",\"inventoryItemId\":\"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\"adjustmentNote\":\"Test 1\",\"physicalOnHand\":100,\"physicalInventoryDetailId\":\"d4215b5b-f1d2-4c57-b495-0a244eb69cc3\",\"beginningPerpetual\":10,\"totalIn\":400,\"totalOut\":4,\"currentPerpetual\":6}]}",
+							"raw": "{\"recordDetails\":[{\"id\":null,\"reconciliationRecordId\":\"243cf9a1-a079-4a79-b79c-586be5a25810\",\"inventoryItemId\":\"fcb7582b-5719-48f6-80a0-7742880de331\",\"adjustmentNote\":\"test\",\"physicalOnHand\":60,\"physicalInventoryDetailId\":\"0661a7e0-b5e1-4332-ba53-5814d747173a\",\"beginningPerpetual\":100,\"totalIn\":0,\"totalOut\":20,\"currentPerpetual\":80}]}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8196,7 +8197,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/d6b92e8d-378e-46ff-9844-c8e8f3ecc16d/details"
+						"url": "{{BaseUrl}}api/inventory/reconciliationstatement/d44c3bec-fd28-425a-99a2-ee1ed9ef1df5/details"
 					},
 					"response": []
 				},
@@ -8532,17 +8533,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f384bc08-b9ca-44d5-a582-f383ecea1de3",
+				"id": "6e55a8ba-0d1b-44ee-b035-0bf41cf4dc9a",
 				"type": "text/javascript",
 				"exec": [
-					"pm.request.headers.add(\"X-SF-Code: 24293\");"
+					"pm.request.headers.add(\"X-SF-Code: 25250\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "ce8975eb-cc80-4513-815e-ac674893ab04",
+				"id": "8e923da2-348b-415a-b8db-78e761edba21",
 				"type": "text/javascript",
 				"exec": [
 					""
