@@ -4735,7 +4735,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"PhysicalInventoryId\" : \"b4387a50-5168-4bf2-9940-873ddc0d7b01\",\r\n    \"WorkFlowActionId\" : \"Abandon\"\r\n}",
+							"raw": "{\r\n    \"PhysicalInventoryId\" : \"b4387a50-5168-4bf2-9940-873ddc0d7b01\",\r\n    \"WorkFlowActionId\" : \"abandon\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
