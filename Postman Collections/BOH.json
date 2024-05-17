@@ -4710,7 +4710,8 @@
 									"\r",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -4720,7 +4721,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -4733,14 +4735,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"RequisitionId\" : \"cc21f23b-57ec-4cd4-af70-0108a15d9955\",\r\n    \"WorkFlowActionId\" : \"Submit\"\r\n}",
+							"raw": "{\r\n    \"PhysicalInventoryId\" : \"b4387a50-5168-4bf2-9940-873ddc0d7b01\",\r\n    \"WorkFlowActionId\" : \"Abandon\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/physical-inventory/submit"
+						"url": "{{BaseUrl}}api/inventory/physical-inventory/workflow"
 					},
 					"response": []
 				},
