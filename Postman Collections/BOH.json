@@ -7804,11 +7804,11 @@
 						"header": [
 							{
 								"key": "X-Sf-Code",
-								"value": "18066",
+								"value": "25250",
 								"type": "text"
 							}
 						],
-						"url": "{{BaseUrl}}api/inventory/reconciliation/b3497f8d-9d98-4e0a-a7c8-f72e3b63e1b1/details"
+						"url": "{{BaseUrl}}api/inventory/reconciliation/7541b352-d53b-4a9c-a9f4-ced19b1a4679/details"
 					},
 					"response": []
 				},
