@@ -1075,7 +1075,8 @@
 									"    pm.expect(jsonData).to.have.property('isSuccess');\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -1085,7 +1086,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1098,7 +1100,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"entityId\": \"63f6b2ea-8421-41c7-a8f1-fcb020ae3927\",\r\n    \"notificationTypeId\": \"af655439-7dc1-41ff-becb-0e845e1fd631\",\r\n    \"triggerType\": \"custom\",\r\n    \"workFlowActionId\": \"submit\",\r\n    \"entityTypeId\": \"occurrence_log\",\r\n    \"subject\": \"Occurrence Log\",\r\n    \"emailBodyTemplate\": \"<html>\\r\\n\\t<head>\\r\\n\\t</head>\\r\\n\\t<body>\\r\\n\\t\\t<p>\\r\\n\\t\\t\\tHi,\\r\\n\\t\\t</p>\\r\\n\\t\\t<p>\\r\\n\\t\\t\\tOccurrence Log Id : 63f6b2ea-8421-41c7-a8f1-fcb020ae3927\\r\\n            Occurrence Incedent Type: Other\\r\\n            Was Occurrence Called into field office? : Yes\\r\\n            List of sf codes : string\\r\\n            Occurrence Date : Jan 02, 2024\\r\\n            Occurrence Start Time : 13:58 PM\\r\\n            Occurrence End time : 13:58 PM\\r\\n            Additional Notes/Comments : added notes\\r\\n\\t\\t</p>\\r\\n\\t\\t<br />\\r\\n\\t\\t<p style=\\\"margin-bottom:0px;\\\">\\r\\n\\t\\t\\tThanks,\\r\\n\\t\\t</p>\\r\\n\\t\\t<p style=\\\"margin-top:6px;\\\">\\r\\n\\t\\t\\tNYCSCA Administrator\\r\\n\\t\\t</p>\\r\\n\\t</body>\\r\\n</html>\\r\\n\",\r\n    \"to\": \"test@email.com,mzafar@svam.com,test@svam.com\",\r\n    \"cc\": \"test@email.com,mzafar@svam.com,test@svam.com\",\r\n    \"bcc\": \"test@email.com,mzafar@svam.com,test@svam.com\"\r\n}",
+							"raw": "{\r\n    \"notificationTypeId\": \"occurrence_log\",\r\n    \"entityId\": \"3529aac0-346f-4c69-bc2b-1566222d1e22\",\r\n    \"triggerType\": \"custom\",\r\n    \"workFlowActionId\": \"submit\",\r\n    \"entityTypeId\": \"occurrence_log\",\r\n    \"subject\": \"Occurrence Log May 29, 2024\",\r\n    \"emailBodyTemplate\": \"<body><p style='margin-bottom: 25px'>Dear Management</p><p style='margin-bottom: 25px'>I am writing to bring your attention a recent incident occurred. Here are the details:</p><p>Occurrence Log ID: <a href='https://boh-web.svamdev.com/boh/production/occurrence-log?id=3529aac0-346f-4c69-bc2b-1566222d1e22'>May 29, 2024</a></p><p>Occurrence Incident Type:<strong>Equipment Issues</strong></p><p>Was Occurrence Called into field office?: <strong>Yes</strong></p><p>List of sf codes: <strong>17552</strong></p><p>Occurrence Date: <strong>May 29, 2024</strong></p><p>Occurrence Start Time: <strong>12:00 AM</strong></p><p>Occurrence End time: <strong>12:00 AM</strong></p><p>Additional Notes/Comments: <strong>dfgdfg</strong></p><p style='margin-bottom: 25px; margin-top: 25px'>Thank you for your understanding and cooperation</p><p>Sincerely Regards,</p><p>Spencer Ammons</p></body>\",\r\n    \"to\": \"dsmith@svamdev.com\",\r\n    \"cc\": \"\",\r\n    \"bcc\": \"\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8522,17 +8524,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ad4c92cc-9768-4634-8818-759093963c90",
+				"id": "77245f48-ec36-4d8f-890f-56b132dc8e22",
 				"type": "text/javascript",
 				"exec": [
-					"pm.request.headers.add(\"X-SF-Code: 25250\");"
+					"pm.request.headers.add(\"X-SF-Code: 24293\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "082f8950-e98a-43d0-88ca-d1cbd589c8d6",
+				"id": "381be8e6-dc0f-40f3-bb66-2d9c3d4e3a43",
 				"type": "text/javascript",
 				"exec": [
 					""
