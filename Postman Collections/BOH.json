@@ -4334,14 +4334,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"RequisitionId\" : \"e3a6ec3d-ac22-46c0-b88d-4a4d5426f705\",\r\n    \"WorkFlowActionId\" : \"Submit\",\r\n    \"IsService\": false\r\n}",
+							"raw": "{\r\n    \"RequisitionId\" : \"302a3d0f-7a6b-404d-a145-e8783f04af1a\",\r\n    \"WorkFlowActionId\" : \"Edit\",\r\n    \"Reason\": \"Edit Test 1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/daily-requisitions/submit"
+						"url": "{{BaseUrl}}api/inventory/daily-requisitions/correction"
 					},
 					"response": []
 				},
