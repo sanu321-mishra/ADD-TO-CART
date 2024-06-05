@@ -4648,7 +4648,8 @@
 									"\r",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -4658,7 +4659,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -4671,7 +4673,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"inventoryItemId\": \"AC9A2C57-7A0A-4C7C-81E7-001C206B11B7\",\r\n      \"quantity\": 2,\r\n      \"dailyRequisitionId\": \"36b5a0b5-0145-4f46-bd94-27c60335bfb8\",\r\n      \"sfcode\": \"20071\"\r\n    },\r\n    {\r\n      \"inventoryItemId\": \"111CE6B5-571F-48B7-AF27-001CEADD40E7\",\r\n      \"quantity\": 1,\r\n      \"dailyRequisitionId\": \"36b5a0b5-0145-4f46-bd94-27c60335bfb8\",\r\n      \"sfcode\": \"20071\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"Id\": \"9c8f8cb5-0820-41e8-a58e-010aa78c0417\",\r\n      \"inventoryItemId\": \"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\r\n      \"quantity\": 5,\r\n      \"dailyRequisitionId\": \"302a3d0f-7a6b-404d-a145-e8783f04af1a\",\r\n      \"sfcode\": \"25250\",\r\n      \"dailyRequisitionCorrectionId\": null\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
