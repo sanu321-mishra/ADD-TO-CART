@@ -4673,14 +4673,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"Id\": \"9c8f8cb5-0820-41e8-a58e-010aa78c0417\",\r\n      \"inventoryItemId\": \"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\r\n      \"quantity\": 5,\r\n      \"dailyRequisitionId\": \"302a3d0f-7a6b-404d-a145-e8783f04af1a\",\r\n      \"sfcode\": \"25250\",\r\n      \"dailyRequisitionCorrectionId\": null\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"Id\": \"a326e699-8dc7-4255-b995-c902ecb1d205\",\r\n      \"inventoryItemId\": \"4869bbb3-c75a-447e-af7e-269a9d476069\",\r\n      \"quantity\": 25,\r\n      \"dailyRequisitionId\": \"5a564cdf-b46c-441c-9040-ecb940e15cfd\",\r\n      \"sfcode\": \"25250\",\r\n      \"dailyRequisitionCorrectionId\": \"390A4095-26B4-4CE4-853A-C5E7446CC46E\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}/api/inventory/daily-requisitions/details"
+						"url": "{{BaseUrl}}api/inventory/daily-requisitions/items"
 					},
 					"response": [
 						{
