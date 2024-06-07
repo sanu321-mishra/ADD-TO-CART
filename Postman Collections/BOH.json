@@ -4254,7 +4254,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"RequisitionId\" : \"ef46a3ca-b835-4318-942c-6b59e37b5643\",\r\n    \"WorkFlowActionId\" : \"Submit\",\r\n    \"IsService\": true\r\n}",
+							"raw": "{\r\n    \"RequisitionId\" : \"a2206ca5-e203-4bb0-b894-25f26203a0f2\",\r\n    \"WorkFlowActionId\" : \"Submit\",\r\n    \"IsService\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4334,7 +4334,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"RequisitionId\" : \"ef46a3ca-b835-4318-942c-6b59e37b5643\",\r\n    \"WorkFlowActionId\" : \"Edit\",\r\n    \"Reason\": \"Edit Test 1\"\r\n}",
+							"raw": "{\r\n    \"RequisitionId\" : \"a2206ca5-e203-4bb0-b894-25f26203a0f2\",\r\n    \"WorkFlowActionId\" : \"Edit\",\r\n    \"Reason\": \"Edit Test 1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4511,7 +4511,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/daily-requisitions/items?id=ef46a3ca-b835-4318-942c-6b59e37b5643",
+							"raw": "{{BaseUrl}}api/inventory/daily-requisitions/items?id=a2206ca5-e203-4bb0-b894-25f26203a0f2",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -4523,7 +4523,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "ef46a3ca-b835-4318-942c-6b59e37b5643"
+									"value": "a2206ca5-e203-4bb0-b894-25f26203a0f2"
 								}
 							]
 						}
@@ -4673,7 +4673,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"Id\": \"8315d425-1454-4e46-a4fa-38e143d95af6\",\r\n      \"inventoryItemId\": \"4869bbb3-c75a-447e-af7e-269a9d476069\",\r\n      \"quantity\": 25,\r\n      \"dailyRequisitionId\": \"ef46a3ca-b835-4318-942c-6b59e37b5643\",\r\n      \"sfcode\": \"25250\",\r\n      \"dailyRequisitionCorrectionId\": null\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"Id\": null,\r\n      \"inventoryItemId\": \"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\r\n      \"quantity\": 5,\r\n      \"dailyRequisitionId\": \"a2206ca5-e203-4bb0-b894-25f26203a0f2\",\r\n      \"sfcode\": \"25250\",\r\n      \"dailyRequisitionCorrectionId\": \"4eb8c424-d333-4414-ab62-bfec79b9d18c\"\r\n    },\r\n    {\r\n      \"Id\": null,\r\n      \"inventoryItemId\": \"4869bbb3-c75a-447e-af7e-269a9d476069\",\r\n      \"quantity\": 50,\r\n      \"dailyRequisitionId\": \"a2206ca5-e203-4bb0-b894-25f26203a0f2\",\r\n      \"sfcode\": \"25250\",\r\n      \"dailyRequisitionCorrectionId\": \"d08b146b-aad0-4368-8259-4f07c9663b3f\"\r\n    },\r\n    {\r\n      \"Id\": null,\r\n      \"inventoryItemId\": \"fcb7582b-5719-48f6-80a0-7742880de331\",\r\n      \"quantity\": 15,\r\n      \"dailyRequisitionId\": \"a2206ca5-e203-4bb0-b894-25f26203a0f2\",\r\n      \"sfcode\": \"25250\",\r\n      \"dailyRequisitionCorrectionId\": null\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
