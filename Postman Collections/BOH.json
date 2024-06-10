@@ -4254,7 +4254,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"RequisitionId\" : \"a2206ca5-e203-4bb0-b894-25f26203a0f2\",\r\n    \"WorkFlowActionId\" : \"Submit\",\r\n    \"IsService\": true\r\n}",
+							"raw": "{\r\n    \"RequisitionId\" : \"bd4e1309-c71f-4972-bc6b-7947099efc4c\",\r\n    \"WorkFlowActionId\" : \"Submit\",\r\n    \"IsService\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4334,7 +4334,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"RequisitionId\" : \"a2206ca5-e203-4bb0-b894-25f26203a0f2\",\r\n    \"WorkFlowActionId\" : \"Edit\",\r\n    \"Reason\": \"Edit Test 1\"\r\n}",
+							"raw": "{\r\n    \"RequisitionId\" : \"bd4e1309-c71f-4972-bc6b-7947099efc4c\",\r\n    \"WorkFlowActionId\" : \"Edit\",\r\n    \"Reason\": \"Edit Test 2\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4511,7 +4511,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/daily-requisitions/items?id=a2206ca5-e203-4bb0-b894-25f26203a0f2",
+							"raw": "{{BaseUrl}}api/inventory/daily-requisitions/items?id=bd4e1309-c71f-4972-bc6b-7947099efc4c",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -4523,7 +4523,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "a2206ca5-e203-4bb0-b894-25f26203a0f2"
+									"value": "bd4e1309-c71f-4972-bc6b-7947099efc4c"
 								}
 							]
 						}
@@ -4673,7 +4673,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"Id\": \"1adfd6e9-dd1f-4df1-ae16-d318ac884d02\",\r\n      \"inventoryItemId\": \"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\r\n      \"quantity\": 5,\r\n      \"dailyRequisitionId\": \"bd4e1309-c71f-4972-bc6b-7947099efc4c\",\r\n      \"sfcode\": \"25250\"\r\n    },\r\n    {\r\n      \"Id\": \"5c38829f-ab31-485b-8594-c342297cefdb\",\r\n      \"inventoryItemId\": \"4869bbb3-c75a-447e-af7e-269a9d476069\",\r\n      \"quantity\": 25,\r\n      \"dailyRequisitionId\": \"bd4e1309-c71f-4972-bc6b-7947099efc4c\",\r\n      \"sfcode\": \"25250\"\r\n    },\r\n    {\r\n      \"Id\": null,\r\n      \"inventoryItemId\": \"60060314-c0fc-454c-a944-923934b2c79b\",\r\n      \"quantity\": 15,\r\n      \"dailyRequisitionId\": \"bd4e1309-c71f-4972-bc6b-7947099efc4c\",\r\n      \"sfcode\": \"25250\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"Id\": \"5c38829f-ab31-485b-8594-c342297cefdb\",\r\n      \"inventoryItemId\": \"4869bbb3-c75a-447e-af7e-269a9d476069\",\r\n      \"quantity\": 5,\r\n      \"dailyRequisitionId\": \"bd4e1309-c71f-4972-bc6b-7947099efc4c\",\r\n      \"sfcode\": \"25250\"\r\n    },\r\n    {\r\n      \"Id\": \"1ADFD6E9-DD1F-4DF1-AE16-D318AC884D02\",\r\n      \"inventoryItemId\": \"6F0D3CA2-4689-430C-8650-5A7D9105D5A4\",\r\n      \"quantity\": 10,\r\n      \"dailyRequisitionId\": \"bd4e1309-c71f-4972-bc6b-7947099efc4c\",\r\n      \"sfcode\": \"25250\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4806,7 +4806,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"PhysicalInventoryId\" : \"b4387a50-5168-4bf2-9940-873ddc0d7b01\",\r\n    \"WorkFlowActionId\" : \"abandon\"\r\n}",
+							"raw": "{\r\n    \"PhysicalInventoryId\" : \"0b7484a4-79f2-4bb8-83b2-339b461052c3\",\r\n    \"WorkFlowActionId\" : \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7919,7 +7919,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"physicalInventoryId\": \"38f879f4-0351-4ced-8f87-2dcd28165b81\",\r\n  \"reconciliationDate\": \"2024-04-12\",\r\n  \"note\": \"Test 1\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
+							"raw": "{\r\n  \"physicalInventoryId\": \"93a243e7-17bb-4500-a467-8d47a8932f2a\",\r\n  \"reconciliationDate\": \"2024-06-10\",\r\n  \"note\": \"Test 1\",\r\n  \"workFlowActionId\": \"create\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
