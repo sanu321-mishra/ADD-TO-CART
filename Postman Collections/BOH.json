@@ -4334,7 +4334,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"RequisitionId\" : \"bd4e1309-c71f-4972-bc6b-7947099efc4c\",\r\n    \"WorkFlowActionId\" : \"Edit\",\r\n    \"Reason\": \"Edit Test 2\"\r\n}",
+							"raw": "{\r\n    \"RequisitionId\" : \"828adfd6-75c3-4d80-8779-243f7414d0f5\",\r\n    \"WorkFlowActionId\" : \"Edit\",\r\n    \"Reason\": \"Edit Test 2\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4673,7 +4673,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"Id\": \"5c38829f-ab31-485b-8594-c342297cefdb\",\r\n      \"inventoryItemId\": \"4869bbb3-c75a-447e-af7e-269a9d476069\",\r\n      \"quantity\": 5,\r\n      \"dailyRequisitionId\": \"bd4e1309-c71f-4972-bc6b-7947099efc4c\",\r\n      \"sfcode\": \"25250\"\r\n    },\r\n    {\r\n      \"Id\": \"1ADFD6E9-DD1F-4DF1-AE16-D318AC884D02\",\r\n      \"inventoryItemId\": \"6F0D3CA2-4689-430C-8650-5A7D9105D5A4\",\r\n      \"quantity\": 10,\r\n      \"dailyRequisitionId\": \"bd4e1309-c71f-4972-bc6b-7947099efc4c\",\r\n      \"sfcode\": \"25250\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"Id\": \"92e48d77-ad40-46be-844b-7599c4137684\",\r\n      \"inventoryItemId\": \"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\r\n      \"quantity\": 5,\r\n      \"dailyRequisitionId\": \"828adfd6-75c3-4d80-8779-243f7414d0f5\",\r\n      \"sfcode\": \"25250\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
