@@ -4254,7 +4254,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"RequisitionId\" : \"bd4e1309-c71f-4972-bc6b-7947099efc4c\",\r\n    \"WorkFlowActionId\" : \"Submit\",\r\n    \"IsService\": true\r\n}",
+							"raw": "{\r\n    \"RequisitionId\" : \"828adfd6-75c3-4d80-8779-243f7414d0f5\",\r\n    \"WorkFlowActionId\" : \"Submit\",\r\n    \"IsService\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4511,7 +4511,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/daily-requisitions/items?id=bd4e1309-c71f-4972-bc6b-7947099efc4c",
+							"raw": "{{BaseUrl}}api/inventory/daily-requisitions/items?id=828adfd6-75c3-4d80-8779-243f7414d0f5",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -4523,7 +4523,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "bd4e1309-c71f-4972-bc6b-7947099efc4c"
+									"value": "828adfd6-75c3-4d80-8779-243f7414d0f5"
 								}
 							]
 						}
