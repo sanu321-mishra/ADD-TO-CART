@@ -4254,7 +4254,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"RequisitionId\" : \"828adfd6-75c3-4d80-8779-243f7414d0f5\",\r\n    \"WorkFlowActionId\" : \"Submit\",\r\n    \"IsService\": true\r\n}",
+							"raw": "{\r\n    \"RequisitionId\" : \"95a84367-be99-4e46-8aee-539423489f2f\",\r\n    \"WorkFlowActionId\" : \"Submit\",\r\n    \"IsService\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4334,14 +4334,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"RequisitionId\" : \"95a84367-be99-4e46-8aee-539423489f2f\",\r\n    \"WorkFlowActionId\" : \"Edit\",\r\n    \"Reason\": \"Edit Test 2\"\r\n}",
+							"raw": "{\r\n    \"WorkFlowActionId\" : \"Edit\",\r\n    \"Reason\": \"Edit Test 2\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/daily-requisitions/7541b352-d53b-4a9c-a9f4-ced19b1a4679/correction"
+						"url": "{{BaseUrl}}api/inventory/daily-requisitions/95a84367-be99-4e46-8aee-539423489f2f/correction"
 					},
 					"response": []
 				},
@@ -4511,7 +4511,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/daily-requisitions/items?id=828adfd6-75c3-4d80-8779-243f7414d0f5",
+							"raw": "{{BaseUrl}}api/inventory/daily-requisitions/items?id=95a84367-be99-4e46-8aee-539423489f2f",
 							"host": [
 								"{{BaseUrl}}api"
 							],
@@ -4523,7 +4523,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "828adfd6-75c3-4d80-8779-243f7414d0f5"
+									"value": "95a84367-be99-4e46-8aee-539423489f2f"
 								}
 							]
 						}
@@ -4673,7 +4673,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"Id\": \"92e48d77-ad40-46be-844b-7599c4137684\",\r\n      \"inventoryItemId\": \"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\r\n      \"quantity\": 5,\r\n      \"dailyRequisitionId\": \"828adfd6-75c3-4d80-8779-243f7414d0f5\",\r\n      \"sfcode\": \"25250\"\r\n    }\r\n  ]\r\n}",
+							"raw": "{\r\n  \"dailyRequisitionDetailList\": [\r\n    {\r\n      \"Id\": \"27ac684a-45ec-42d8-86ec-edf78f803ef0\",\r\n      \"inventoryItemId\": \"6f0d3ca2-4689-430c-8650-5a7d9105d5a4\",\r\n      \"quantity\": 10,\r\n      \"dailyRequisitionId\": \"95a84367-be99-4e46-8aee-539423489f2f\",\r\n      \"sfcode\": \"25250\"\r\n    }\r\n  ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8136,7 +8136,8 @@
 							{
 								"key": "X-Sf-Code",
 								"value": "24293",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": "{{BaseUrl}}api/inventory/reconciliation/completed"
