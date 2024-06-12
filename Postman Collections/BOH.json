@@ -8587,15 +8587,15 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"clientSecret": "WPCn2mB2um",
+			"clientId": "{{clientId}}",
+			"accessTokenUrl": "https://foodnyc.verify.ibm.com/v1.0/endpoint/default/token",
 			"username": "sammons",
 			"refreshTokenUrl": "https://backoffice.verify.ibm.com/v1.0/endpoint/default/token",
-			"accessTokenUrl": "https://backoffice.verify.ibm.com/v1.0/endpoint/default/token",
-			"clientSecret": "PV82LUNTKG",
 			"grant_type": "password_credentials",
 			"client_authentication": "header",
 			"tokenName": "BOH-sammons",
 			"password": "bohpass1",
-			"clientId": "{{clientId}}",
 			"authUrl": "https://svamdev.verify.ibm.com/v1.0/endpoint/default/authorize",
 			"redirect_uri": "https://oauth.pstmn.io/v1/callback",
 			"useBrowser": false,
@@ -8606,7 +8606,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "9c6ec37c-8133-4327-9acb-169a7288d4db",
+				"id": "a8dc22fb-063c-40bc-8d6f-0c0cb13c976b",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add(\"X-SF-Code: 25250\");"
@@ -8616,7 +8616,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "2eeaaea9-a236-4852-a878-83ff4dfae614",
+				"id": "20e61a90-c574-47c7-baa5-cd00b31d8819",
 				"type": "text/javascript",
 				"exec": [
 					""
