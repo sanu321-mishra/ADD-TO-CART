@@ -8066,19 +8066,6 @@
 						"url": "{{BaseUrl}}api/inventory/reconciliation/checklist"
 					},
 					"response": []
-				},
-				{
-					"name": "completed",
-					"id": "ef23de5d-0cb3-428c-92fb-43c1fb8703d3",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{BaseUrl}}api/inventory/reconciliation/completed"
-					},
-					"response": []
 				}
 			],
 			"id": "58bbf09a-5ecc-449a-87a1-713ca43e7ef5"
