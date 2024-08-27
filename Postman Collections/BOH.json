@@ -8588,8 +8588,8 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"clientId": "63f6e6a7-3e42-4063-a992-4d505f2dbf1b",
 			"clientSecret": "WPCn2mB2um",
-			"clientId": "{{clientId}}",
 			"accessTokenUrl": "https://foodnyc.verify.ibm.com/v1.0/endpoint/default/token",
 			"username": "sammons",
 			"refreshTokenUrl": "https://backoffice.verify.ibm.com/v1.0/endpoint/default/token",
@@ -8607,7 +8607,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f946e5a1-71ca-43d1-900d-0cf51e8a1d7e",
+				"id": "b456f87e-deee-46b7-9ccc-33cf24f7fd65",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add(\"X-SF-Code: 17002\");"
@@ -8617,7 +8617,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "370018db-9458-4f3a-9d35-71c31545bf37",
+				"id": "0aa9d02e-1f55-4ee0-9a9d-879f5bae0046",
 				"type": "text/javascript",
 				"exec": [
 					""
