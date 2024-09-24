@@ -6241,7 +6241,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "AAIgOTAxOThlNjk1ZmY1Yzc2MWQzZjhmOWMyYmRiMmNhYmHdcv0Nycg_MyIP7kIhAOUtKceDImIZfjCtKyhjX8al4Yyi_Tcc0QP9JaJIF6PhouEVaZDFvB-Hsn8nCJBRuD9CwRxXqv-BJ4IY6XlZLUcdhw"
+								"token": "AAIgMjA2NTRkNmI3YTg1ZjJhNGMyYjI4NmIzOTYxZTNkMWOjV7qg-KGytLHEtpCd9nP10jnhGNr5eNdXKo7PdaiH9MCWrm_b5y5WsqbHEv6ppf-XZK9KYSEPVdJg6R7rl7TZzvPD0NA0sOGT1qSJzJRlJw"
 							}
 						},
 						"method": "GET",
@@ -6252,7 +6252,7 @@
 								"type": "text"
 							}
 						],
-						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/roles/00BE8A96-FEE2-4449-842D-E161A7906A2E"
+						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/roles/4b8cf5f7-1e1a-4a3d-9a81-7e8e90fcb7a6"
 					},
 					"response": []
 				},
@@ -6266,7 +6266,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "AAIgOTAxOThlNjk1ZmY1Yzc2MWQzZjhmOWMyYmRiMmNhYmF4IdhtUFmGIGRQkTo7MVdkRlxC03Xj4rKuKVTDK65P6OamzDDyw3UBSmJu97ZKXiMk7Vx8m0RhleUVTD6HCzGeO7OJzhSuF18aunMZbUjtOQ"
+								"token": "AAIgMjA2NTRkNmI3YTg1ZjJhNGMyYjI4NmIzOTYxZTNkMWOjV7qg-KGytLHEtpCd9nP10jnhGNr5eNdXKo7PdaiH9MCWrm_b5y5WsqbHEv6ppf-XZK9KYSEPVdJg6R7rl7TZzvPD0NA0sOGT1qSJzJRlJw"
 							}
 						},
 						"method": "GET",
@@ -6277,7 +6277,7 @@
 								"type": "text"
 							}
 						],
-						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/tasks-by-user/00BE8A96-FEE2-4449-842D-E161A7906A2E/user/testuser10"
+						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/tasks-by-user/4b8cf5f7-1e1a-4a3d-9a81-7e8e90fcb7a6/user/TestUser1"
 					},
 					"response": []
 				},
@@ -6291,7 +6291,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "AAIgOTAxOThlNjk1ZmY1Yzc2MWQzZjhmOWMyYmRiMmNhYmHdcv0Nycg_MyIP7kIhAOUtKceDImIZfjCtKyhjX8al4Yyi_Tcc0QP9JaJIF6PhouEVaZDFvB-Hsn8nCJBRuD9CwRxXqv-BJ4IY6XlZLUcdhw"
+								"token": "AAIgMjA2NTRkNmI3YTg1ZjJhNGMyYjI4NmIzOTYxZTNkMWOjV7qg-KGytLHEtpCd9nP10jnhGNr5eNdXKo7PdaiH9MCWrm_b5y5WsqbHEv6ppf-XZK9KYSEPVdJg6R7rl7TZzvPD0NA0sOGT1qSJzJRlJw"
 							}
 						},
 						"method": "GET",
@@ -6302,7 +6302,7 @@
 								"type": "text"
 							}
 						],
-						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/tasks-by-role/00BE8A96-FEE2-4449-842D-E161A7906A2E/role/cook"
+						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/tasks-by-role/4b8cf5f7-1e1a-4a3d-9a81-7e8e90fcb7a6/role/Receiving_Manager"
 					},
 					"response": []
 				},
@@ -6316,7 +6316,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "AAIgOTAxOThlNjk1ZmY1Yzc2MWQzZjhmOWMyYmRiMmNhYmGP1B8L7XsqWY_V2gZl5Qx7zNy5FePgqIHFnsIKHR_k0ASbMo-H-bo4UTR4ORu9nC5es8i9GyIePG9UveSSxSsHCs9cIbn5CUvklyiBjXqX-Q"
+								"token": "AAIgMjA2NTRkNmI3YTg1ZjJhNGMyYjI4NmIzOTYxZTNkMWOjV7qg-KGytLHEtpCd9nP10jnhGNr5eNdXKo7PdaiH9MCWrm_b5y5WsqbHEv6ppf-XZK9KYSEPVdJg6R7rl7TZzvPD0NA0sOGT1qSJzJRlJw"
 							}
 						},
 						"method": "GET",
@@ -6327,7 +6327,7 @@
 								"type": "text"
 							}
 						],
-						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/rolemembers-by-user/00BE8A96-FEE2-4449-842D-E161A7906A2E/user/testuser6"
+						"url": "https://apistgint.schools.nyc/doe/stgint/v1/authorization/rolemembers-by-user/4b8cf5f7-1e1a-4a3d-9a81-7e8e90fcb7a6/user/testuser1"
 					},
 					"response": []
 				},
