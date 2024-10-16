@@ -8384,8 +8384,8 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"clientSecret": "pd4ncoEy6I",
-			"clientId": "5df0d7b0-44e5-4dde-b68e-970b081d9cf6",
+			"clientSecret": "1gOZNtdpR0",
+			"clientId": "bed831a9-2854-47b8-87ea-1a2e92e6c110",
 			"accessTokenUrl": "https://boh-core-ibm.verify.ibm.com/v1.0/endpoint/default/token",
 			"refreshTokenUrl": "https://boh-core-ibm.verify.ibm.com/v1.0/endpoint/default/token",
 			"username": "sammons",
@@ -8403,7 +8403,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "4778d377-f88c-4aba-8224-aeff2847eed4",
+				"id": "647dc24e-2096-431d-8f28-a531d4716cca",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add(\"X-SF-Code: 17002\");"
@@ -8413,7 +8413,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "54d32b56-e5f8-4585-9923-e17174ae61fd",
+				"id": "e8178528-ac13-4eab-a992-978c2a6d4741",
 				"type": "text/javascript",
 				"exec": [
 					""
