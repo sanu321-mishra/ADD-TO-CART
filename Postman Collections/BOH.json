@@ -5889,7 +5889,8 @@
 									"    pm.expect(responseData.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -5898,22 +5899,22 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{BaseUrl}}api/inventory/adjustment/details?adjustmentId=492611F3-75EF-46AD-BD7B-A0D33EF62E17",
+							"raw": "{{BaseUrl}}api/inventory/adjustment/abandon?id=8b7783cd-b983-49b6-a82e-42b51ffc7c83",
 							"host": [
 								"{{BaseUrl}}api"
 							],
 							"path": [
 								"inventory",
 								"adjustment",
-								"details"
+								"abandon"
 							],
 							"query": [
 								{
-									"key": "adjustmentId",
-									"value": "492611F3-75EF-46AD-BD7B-A0D33EF62E17"
+									"key": "id",
+									"value": "8b7783cd-b983-49b6-a82e-42b51ffc7c83"
 								}
 							]
 						}
