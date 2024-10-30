@@ -5866,6 +5866,59 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "AbandonAdjustment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2d3b542c-5300-4190-83f7-282ecfaf53f6",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with title, data, statusCode, and isSuccess properties\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.be.an('object').that.has.all.keys('title', 'data', 'statusCode', 'isSuccess');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"data array should not be empty\", function () {\r",
+									"    const responseData = pm.response.json();   \r",
+									"    pm.expect(responseData.data).to.be.an('array').and.to.have.lengthOf.at.least(1, \"data should not be empty\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "6a000212-2aaa-471f-8d9c-74aa23c6ead6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}api/inventory/adjustment/details?adjustmentId=492611F3-75EF-46AD-BD7B-A0D33EF62E17",
+							"host": [
+								"{{BaseUrl}}api"
+							],
+							"path": [
+								"inventory",
+								"adjustment",
+								"details"
+							],
+							"query": [
+								{
+									"key": "adjustmentId",
+									"value": "492611F3-75EF-46AD-BD7B-A0D33EF62E17"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "4d4748fb-1da9-4aaa-8070-1711f747fa05"
