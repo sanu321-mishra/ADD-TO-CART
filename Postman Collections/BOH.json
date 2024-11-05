@@ -855,7 +855,8 @@
 									"  pm.expect(responseData.isSuccess).to.be.a('boolean');\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -865,7 +866,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -878,14 +880,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"3bc9bb74-4e81-449f-8d59-26f3d076e845\",\r\n\t\"workFlowActionId\": \"Submit\",\r\n    \"occurrenceIncidentTypeId\": \"other\",\r\n    \"occurrenceDate\": \"2024-02-02T14:06:04.050Z\",\r\n    \"occurrenceSfcodeList\": \"Xyz\",\r\n    \"occurrenceStartTime\": \"13:58:41.658\",\r\n    \"occurrenceEndTime\": \"13:58:41.698\",\r\n    \"isFieldOfficeCalled\": true,\r\n    \"isSendEmail\": false,\r\n    \"emailSentStatus\": 0,\r\n    \"additionalNote\": \"Edit test 102\",\r\n    \"otherIncidentType\": \"Edit test 102\"\r\n}",
+							"raw": "{\r\n    \"id\": \"4deb6b36-f6fc-4fc9-b3a4-2ec161ac9965\",\r\n    \"occurrenceIncidentTypeId\": \"other\",\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/occurrence-logs"
+						"url": "{{BaseUrl}}api/production/occurrence-logs/save"
 					},
 					"response": []
 				},
