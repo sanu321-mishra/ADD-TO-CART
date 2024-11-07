@@ -887,7 +887,7 @@
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/production/occurrence-logs/save"
+						"url": "{{BaseUrl}}api/production/occurrence-logs"
 					},
 					"response": []
 				},
