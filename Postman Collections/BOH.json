@@ -6181,14 +6181,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productTransferId\": \"e722ecd3-3d28-447b-94fd-4561f2299c5a\",\r\n    \"workFlowActionId\": \"submit\"\r\n}",
+							"raw": "{\r\n    \"ProductTransferId\": \"D474ACDF-BCAF-4D73-8657-23B56C4BBBEA\",\r\n    \"RecievedQuantity\": 480,\r\n    \"RecievedComment\": \"\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{BaseUrl}}api/inventory/producttransfer/submit"
+						"url": "{{BaseUrl}}api/inventory/producttransfer/D95EDB3C-72E7-434F-B8BE-3EF61DF45500/save"
 					},
 					"response": []
 				},
