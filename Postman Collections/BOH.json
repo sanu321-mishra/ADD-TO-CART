@@ -8520,10 +8520,10 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
-			"clientSecret": "1gOZNtdpR0",
-			"clientId": "bed831a9-2854-47b8-87ea-1a2e92e6c110",
-			"accessTokenUrl": "https://boh-core-ibm.verify.ibm.com/v1.0/endpoint/default/token",
-			"refreshTokenUrl": "https://boh-core-ibm.verify.ibm.com/v1.0/endpoint/default/token",
+			"refreshTokenUrl": "https://p-18-dec-24.verify.ibm.com/v1.0/endpoint/default/token",
+			"accessTokenUrl": "https://p-18-dec-24.verify.ibm.com/v1.0/endpoint/default/token",
+			"clientSecret": "9v9Md1EnVY",
+			"clientId": "f16c6b95-a1fa-49eb-b310-5f50e51d98be",
 			"username": "sammons",
 			"grant_type": "password_credentials",
 			"client_authentication": "header",
@@ -8539,7 +8539,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b8f4dbb0-4390-42de-afac-44f32cf5b40c",
+				"id": "de048424-316c-4dbc-bac0-ce55c30ea1e6",
 				"type": "text/javascript",
 				"exec": [
 					"pm.request.headers.add(\"X-SF-Code: 25250\");"
@@ -8549,7 +8549,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "08bd867b-e7ed-45b2-abcd-a8d4b21811dd",
+				"id": "4d5a0f78-1271-45d3-b8b4-d9d0934ed870",
 				"type": "text/javascript",
 				"exec": [
 					""
