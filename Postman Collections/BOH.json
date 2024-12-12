@@ -880,7 +880,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"4deb6b36-f6fc-4fc9-b3a4-2ec161ac9965\",\r\n    \"occurrenceIncidentTypeId\": \"other\",\r\n}",
+							"raw": "{\r\n    \"id\": \"67949cf6-5d59-407b-87e3-47673c41d9e9\",\r\n    \"WorkFlowActionId\": \"submit\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8520,11 +8520,11 @@
 	"auth": {
 		"type": "oauth2",
 		"oauth2": {
+			"username": "saddison",
 			"refreshTokenUrl": "https://p-18-dec-24.verify.ibm.com/v1.0/endpoint/default/token",
 			"accessTokenUrl": "https://p-18-dec-24.verify.ibm.com/v1.0/endpoint/default/token",
 			"clientSecret": "9v9Md1EnVY",
 			"clientId": "f16c6b95-a1fa-49eb-b310-5f50e51d98be",
-			"username": "sammons",
 			"grant_type": "password_credentials",
 			"client_authentication": "header",
 			"tokenName": "BOH-sammons",
@@ -8539,17 +8539,17 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e3845aa4-c8c5-4411-a27d-3ce62f622f6b",
+				"id": "6abfe4fd-e5f6-4ae6-b72a-18267e8e9898",
 				"type": "text/javascript",
 				"exec": [
-					"pm.request.headers.add(\"X-SF-Code: 09090\");"
+					"pm.request.headers.add(\"X-SF-Code: 17002\");"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "d6d329cc-e3dd-475d-ba60-c5b7463bade5",
+				"id": "362c99d4-f6fd-44b1-8867-11225030b206",
 				"type": "text/javascript",
 				"exec": [
 					""
